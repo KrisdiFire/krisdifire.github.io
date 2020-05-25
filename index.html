@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <link href="js/side-menu-js.js" rel="javascript">
+    <link href="css/layout-main.css" rel="stylesheet">
+    <link href="css/main-menu.css" rel="stylesheet">
+    <link href="css/side-menu.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<head>
+
+    <title>CV-Site Kris</title>
+
+    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+                <link rel="icon" href="favicon.png" type="image/png*">
+</head>
+
+<script src="js/side-menu-js.js">
+
+</script>
+
+<body>
+
+<div id="whole-page">
+
+<div class="banner-wrapper">
+    <div id="banner-img">
+        <!--/*img src="img/banner.jpg" alt="Gal!">-->
+    </div>
+</div>
+
+    <video autoplay muted loop id="background-video">
+        <source src="vid\nightraffic.mp4" type="video/mp4">
+    </video>
+
+<nav class="main-menu" id="main-nav"> 
+    <p><a class="home" href="index.html">HOME</a></p>
+    <ul class="table-1">
+        <li class="list-1"><a class="menu-item-1" href="#projects">Projects</a>
+            <ul class="un-list1">
+                <li><a href="#design">Design</a></li>
+                <li><a href="#music">Programming</a></li>
+                <li><a href="#programming">Music</a></li>
+            </ul>
+        </li>
+        <li class="list-2"><a class="menu-item-2" href="#news">News</a>
+            <ul class="un-list2">
+                <li><a href="#2010">2010</a></li>
+                <li><a href="#2011">2011</a></li>
+                <li><a href="#2012">2012</a></li>
+            </ul>
+        </li>
+        <li class="list-3"><a class="menu-item-3" href="#contact">Contact</a>
+            <ul class="un-list3">
+                <li><a href="https://www.facebook.com/kristian.firedi">Facebook</a></li>
+                <li><a href="https://www.linkedin.com/in/kristian-firedi-441574178/">LinkedIn</a></li>
+                <li><a href="https://secure.skype.com/portal/profile">Skype</a></li>
+                <li><a href="https://www.instagram.com/naitsirk_firedi">Instagram</a></li>
+            </ul>
+        </li>
+        <li class="list-4"><a class="menu-item-4" href="#about">About</a>
+            <ul class="un-list4">
+                <li>
+                    <a id="cetr" href="#2010">Me</a>
+                </li>
+            </ul> 
+        </li>
+      </ul>
+      <span id="ham-menu">
+          <a href="#null" onclick="openSlideMenu()">
+            <svg class="hamburger" width="3em" height="3em">
+                <g fill="none" stroke="white" stroke-width="2"> 
+                    <path d="M0,5 30,5"></path>
+                    <path d="M0,14 30,14"></path>
+                    <path d="M0,23 30,23"></path>
+                </g>
+            </svg>
+        </a>
+      </span>
+</nav>
+
+<div id="side-nav" class="side-menu">
+    <a href="#null" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+    <nav> 
+        <ul>
+            <li class="dropdown"><a class="dropbtn" onclick="myFunction()" href="#projects">Projects</a>
+                <ul class=dropdown-content id="re-list1">
+                    <li><a href="#design">Design</a></li>
+                    <li><a href="#music">Programming</a></li>
+                    <li><a href="#programming">Music</a></li>
+                </ul>
+            </li>
+            <li class="dropdown"><a class="dropbtn2" onclick="myFunction2()" href="#news">Newbs</a>
+                <ul class=dropdown-content id="re-list2">
+                    <li><a href="#2010">2010</a></li>
+                    <li><a href="#2011">2011</a></li>
+                    <li><a href="#2012">2012</a></li>
+                </ul>
+            </li>
+            <li class="dropdown"><a class="dropbtn3" onclick="myFunction3()" href="#contact">Contact</a>
+                <ul class=dropdown-content id="re-list3">
+                    <li><a href="https://www.facebook.com/kristian.firedi">Facebook</a></li>
+                    <li><a href="https://www.linkedin.com/in/kristian-firedi-441574178/">LinkedIn</a></li>
+                    <li><a href="https://secure.skype.com/portal/profile">Skype</a></li>
+                    <li><a href="https://www.instagram.com/naitsirk_firedi">Instagram</a></li>
+                </ul>
+            </li>
+            <li class="dropdown"><a class="dropbtn4" onclick="myFunction4()" href="#about">About</a>
+                <ul class=dropdown-content id="re-list4">
+                    <li>
+                        <a id="cetr" href="#2010">Me</a>
+                    </li>
+                </ul> 
+            </li>
+          </ul>
+    </nav>
+    <a href="#"> &hearts; &#x2764;</a>
+</div>
+
+<div class="willkommen">
+
+    <h1>Wellcome<br>
+        <hr class="header-line">
+        <span>NDF Hub</span>
+    </h1>
+    
+</div>
+
+<div id="signature">by Kristian Firedi</div>
+
+<div class="content-wrapper">
+    <div class="row">
+        <div class="column">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quis possimus dignissimos, delectus nam saepe modi vel
+                iure atque, amet cupiditate illum ipsa, dolore nemo
+                praesentium sed soluta magnam. Quae, minima!</p>
+        </div>
+
+        <div class="column">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quis possimus dignissimos, delectus nam saepe modi vel
+                    iure atque, amet cupiditate illum ipsa, dolore nemo
+                    praesentium sed soluta magnam. Quae, minima!</p>
+        </div>
+
+        <div class="column">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quis possimus dignissimos, delectus nam saepe modi vel
+                    iure atque, amet cupiditate illum ipsa, dolore nemo
+                    praesentium sed soluta magnam. Quae, minima!</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column-lar">
+            <h2>Column</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Maecenas sit amet pretium urna. Vivamus venenatis velit
+                  nec neque ultricies, eget elementum magna tristique.
+                  Quisque vehicula, risus eget aliquam placerat, purus
+                  leo tincidunt eros, eget luctus quam orci in velit.
+                  Praesent scelerisque tortor sed accumsan convallis.</p>
+        </div>
+    </div>
+        <div class="row">
+        <div class="column-med-75">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quis possimus dignissimos, delectus nam saepe modi vel
+                    iure atque, amet cupiditate illum ipsa, dolore nemo
+                    praesentium sed soluta magnam. Quae, minima!</p>
+        </div>
+        <div class="column-sml-25">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quis possimus dignissimos, delectus nam saepe modi vel
+                    iure atque, amet cupiditate illum ipsa, dolore nemo
+                    praesentium sed soluta magnam. Quae, minima!</p>
+        </div>
+    </div>
+</div>
+
+<div class="footer-wrapper">
+    <hr>
+    <div class="footer">
+
+        <div id="footer-menu">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">Gallery</a></li>
+                <li><a href="/">About</a></li>
+            </ul>
+        </div>
+
+        <div id="social-menu">
+            <ul>
+                <li><a href="https://www.facebook.com/kristian.firedi" class="fa fa-facebook"></a>&nbsp;</li>
+                <li><a href="https://www.linkedin.com/in/kristian-firedi-441574178/" class="fa fa-linkedin"></a>&nbsp;</li>
+                <li><a href="https://secure.skype.com/portal/profile" class="fa fa-skype"></a>&nbsp;</li>
+                <li><a href="https://www.instagram.com/naitsirk_firedi" class="fa fa-instagram"></a>&nbsp;</li>
+            </ul>
+            
+
+        </div>
+      
+    </div>
+
+    <hr>
+        <br>
+            <br>
+
+    <p>© 2019 NDF Hub. All Rights Reserved. <br>
+        <br>
+          <span>This website designed and maintained by <span class="signature">Kristian Firedi</span></span></p>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
