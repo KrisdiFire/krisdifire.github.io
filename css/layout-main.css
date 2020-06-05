@@ -14,6 +14,7 @@ body {
 
 #whole-page {
     transition: 0.2s;
+    position: relative;
 }
 
 .willkommen {
@@ -26,7 +27,7 @@ h1,h2 {
     color: rgb(247, 6, 70);
     text-align: center;
     margin: 0.5em;
-    font-size: 50px;
+    font-size: 4em;
     font-weight: 800;
     font-style: normal;
     font-family: sans-serif;
@@ -42,18 +43,18 @@ h1,h2 {
 #signature {
     color: rgb(247, 6, 70);
     text-align: center;
-    margin-top: -3.2em;
+    margin-top: -4em;
     padding-left: 15%;
-    font-size: 18px;
+    font-size: 1em;
     font-weight: 400;
     font-style: italic;
     font-family: sans-serif;
-    text-shadow: 0 0 32px red;
+    text-shadow: 0 0 2em red;
 }
 
 .signature {
     color: rgb(247, 6, 70);
-    font-size: 18px;
+    font-size: 1em;
     /*font-weight: 400;*/
     font-style: italic;
     font-family: sans-serif;
@@ -66,7 +67,7 @@ h1,h2 {
 }
 
 #background-video {
-    position: fixed;
+      position: fixed;
       top: 50%;
       left: 50%;
       min-width: 100%;
@@ -94,32 +95,18 @@ h1,h2 {
     width: 100%;
     background-image: url(css-img/banner.jpg);
     background-attachment: fixed;
-    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-/*.main-menu-wrapper {
-    height: 2.5em;
-    background: #222;
-}*/
-
-.content-wrapper {
+#content-wrapper {
     margin-top: 1em;
+    margin-left: 7em;
+    margin-right: 7em;
     height: auto;
     color: #f2f2f2;
     position: relative;
     padding: 1em;
-}
-
-/* Create three equal columns that floats next to each other */
-.column {
-    border-radius: 0.5em 0.5em 0.5em 0.5em;
-    width: 33.33%;
-    margin: 0em 0.5em 0em 0.5em;
-    padding: 1em;
-    color: azure;
-    background: #80808080;
 }
 
 /* Clear floats after the columns */
@@ -131,87 +118,83 @@ h1,h2 {
     margin-top: 1em;
 }
 
-.column-lar {
-    margin: 0em 0.5em 0em 0.5em;
+.row div {
+    margin: 0.5em;
+}
+
+.row div p {
+    padding: 1em;
+}
+
+/* Create three equal columns that floats next to each other */
+.column-3 {
+    border-radius: 0.5em 0.5em 0.5em 0.5em;
+    width: 33.33%;
     color: azure;
-    padding: 2em;
+    background: #80808080;
+}
+
+.column-1 {
+    color: azure;
     background: #80808080;
     width: 100%;
     border-radius: 0.5em 0.5em 0.5em 0.5em;
 }
 
-.column-med-75 {
-    margin: 0em 0.5em 0em 0.5em;
-    padding: 1em;
+.column-75 {
     color: azure;
-    padding: 2em;
     background: #80808080;
     width: 75%;
     border-radius: 0.5em 0.5em 0.5em 0.5em;
 }
 
-.column-sml-25 {
-    margin: 0em 0.5em 0em 0.5em;
-    padding: 1em;
+.column-25 {
     color: azure;
-    padding: 2em;
     background: #80808080;
     width: 25%;
     border-radius: 0.5em 0.5em 0.5em 0.5em;
 }
 
-.footer-wrapper {
-    float: left;
+#footer-wrapper {
     color: #f2f2f2;
-    /*position: absolute;*/
     bottom: 0;
     padding: 2em;
-    margin-top: 0.5em;
     box-sizing: border-box;
     background-color: #80808080;
     width: 100%;
 }
 
-.footer {
+#footer {
     display: flex;
     flex-direction: row;
     margin: 1em 2em 1em 2em;
 }
 
-.footer ul {
-    margin-top: -0.5em;
+#footer ul {
     list-style-type: none;
 }
 
-.footer div {
-    width: 33.33%;
+#footer div {
     margin: 0em 0.5em 0em 0.5em;
-    padding: 1em 1em 0.5em 1em;
+    /*padding: 1em 1em 0.5em 1em;*/
 }
 
-.footer div ul li {
+#footer div ul li {
     padding: 0.1em 0em 0.1em 0em;
 }
 
-.footer div ul li a {
+#footer div ul li a {
     text-decoration: none;
 }
 
-.footer div ul li a {
-    text-decoration: none;
-}
-
-.footer-menu {
-    padding: 0;
-}
-
-#social-menu ul {
-    margin-left: -3em;
+#social-menu {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
 }
 
 #social-menu ul li {
-    display: inline-block;
-    list-style-type: none;
+    display: inline-flex;
 }
 
 #social-menu ul li a {
@@ -233,51 +216,4 @@ h1,h2 {
   
 .fa:hover {
       opacity: 0.7;
-}
-
-@media only screen and (max-width: 900px) {
-    .main-menu ul {
-      display: none;
-}
-}
-
-@media only screen and (max-width: 768px) {
-    .row {
-        display: flex;
-        flex-direction: column;
-        content: "";
-        clear: both;
-        margin-right: 1em;
-    }
-    .column {
-        width: 100%;
-        margin-top: 1em;
-    }
-    .column-med-75 {
-        width: 100%;
-        margin-top: 1em;
-    }
-    .column-sml-25 {
-        width: 100%;
-        margin-top: 1em;
-    }
-    .footer {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    #footer-menu {
-        width: 100%;
-        margin-left: -1em;
-        display: flex;
-        justify-content: center;
-        text-align: center;
-    }
-    #social-menu {
-        display: flex;
-        flex-direction: row;
-        list-style-type: none;
-        width: 100%;
-        justify-content: center;
-    }
 }
