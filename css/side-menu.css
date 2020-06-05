@@ -6,11 +6,13 @@
 
 svg g {
     stroke: azure;
+    display: none;
 }
 
 svg g:hover {
     transition: 0.2s;
     stroke: #FF0648;
+    display: none;
 }
 
 .side-menu {
@@ -18,7 +20,7 @@ svg g:hover {
     width: 0%;
     position: fixed;
     color: azure;
-    z-index: 2;
+    z-index: 0;
     top: 0;
     right: 0;
     background: #4b4b4b80;
@@ -34,8 +36,29 @@ svg g:hover {
     display: none;  /* Safari and Chrome */
 }
 
+.btn-close {
+    border-radius: 50%;
+    background-color: #6b6b6b80;
+    padding-left: 0.26em;
+    padding-right: 0.26em;
+    margin-top: 1em;
+    text-decoration: none;
+}
 
-.side-menu a {
+.side-menu .btn-close {
+    position: absolute;
+    top: -0.5em;
+    font-size: 2em;
+    right: 0.5em;
+}
+
+.side-menu .btn-close:hover {
+    color: #FF0648;
+    text-shadow: 0 0 2em #ff0000;
+    background-color: #111;
+}
+
+.side-menu nav a {
     display: block;
     padding-top: 1em;
     padding-bottom: 1em;
@@ -54,22 +77,8 @@ svg g:hover {
     text-shadow: 0 0 2em #ff0000;
 }
 
-.side-menu .btn-close {
-    position: absolute;
-    top: -0.5em;
-    font-size: 2em;
-    right: 0.5em;
-}
-
-.side-menu .btn-close:hover {
-    color: #FF0648;
-    text-shadow: 0 0 2em #ff0000;
-    background-color: rgba(17, 17, 17, 0)
-}
-
 .dropdown-content {
     overflow: hidden;
-   /* display: none;*/
     text-align: left;
     z-index: -2;
     visibility: hidden;
@@ -87,6 +96,35 @@ svg g:hover {
     transition: 0.2s;
     visibility: visible;
     opacity: 1;
-    z-index: 2;
+    z-index: 2222222222222;
     height: auto;
+}
+
+@media only screen and (max-width: 768px) {
+    svg g {
+        stroke: azure;
+        display: block;
+    }
+    
+    svg g:hover {
+        transition: 0.2s;
+        stroke: #FF0648;
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .side-menu {
+        position: fixed;
+        color: azure;
+        z-index: 2;
+        top: 0;
+        right: 0;
+        text-align: center;
+        padding-top: 4em;
+        overflow-x: hidden;
+        -ms-overflow-style: none;  /* IE 10+*/
+        scrollbar-width: none;  /* Firefox*/
+        transition: 0.2s;
+    }
 }
