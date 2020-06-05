@@ -12,8 +12,8 @@
 }
 
 /*NDF stil*/
-.main-menu p .home {
-    padding: 2px 20px;
+.main-menu .home {
+    padding: 0em 1em;
     color: #FF0648;
     float: left;
     font-size: 2em;
@@ -43,7 +43,7 @@
     float: left;
     list-style: none;
     position: relative;
-    width: 88px;
+    width: 5.5em;
 }
 
 .main-menu ul li a {
@@ -58,7 +58,7 @@
 
 /*bez ovoga inicijalno haverom po glav. meniju bi on bio siv, ne crn,
 kao pri hoverovanju preko dropa*/
-.main-menu ul .list-1 .menu-item-1:hover {
+.main-menu ul .list .menu-item-1:hover {
     background-color: #111;  
     text-shadow: 0 0 2em #ff0000;
     color: #FF0648;
@@ -66,14 +66,14 @@ kao pri hoverovanju preko dropa*/
 }
 
 /*cini da kad hoverujes po listi, menu dugme bude zatamljeno.*/
-.main-menu ul .list-1 a:hover, .list-1:hover .menu-item-1 {
+.main-menu ul .list a:hover, .list:hover .menu-item-1 {
     background-color: #222222;
     color: #FF0648;
     text-shadow: 0 0 2em #ff0000;
     transition: 0.1s;
 }
 
-.main-menu .list-1 ul li a:hover {
+.main-menu .list ul li a:hover {
     background-color: #111;
     height: 3em;
     color: #FF0648;
@@ -84,21 +84,14 @@ kao pri hoverovanju preko dropa*/
     transition: 0.1s;
 }
 
-.main-menu ul .list-2 .menu-item-2:hover {
-    background-color: #111; 
-    text-shadow: 0 0 2em #ff0000;
-    color: #FF0648; 
-    transition: 0.1s;
-}
-
-.main-menu ul .list-2 a:hover, .list-2:hover .menu-item-2 {
+.main-menu ul .list a:hover, .list:hover .menu-item-2 {
     background-color: #222222;
     color: #FF0648;
     text-shadow: 0 0 2em #ff0000;
     transition: 0.1s;
 }
 
-.main-menu .list-2 ul li a:hover {
+.main-menu .list ul li a:hover {
     background-color: #111;
     height: 3em;
     color: #FF0648;
@@ -109,21 +102,14 @@ kao pri hoverovanju preko dropa*/
     transition: 0.1s;
 }
 
-.main-menu ul .list-3 .menu-item-3:hover {
-    background-color: #111;  
-    text-shadow: 0 0 2em #ff0000;
-    color: #FF0648;
-    transition: 0.1s;
-}
-
-.main-menu ul .list-3 a:hover, .list-3:hover .menu-item-3 {
+.main-menu ul .list a:hover, .list:hover .menu-item-3 {
     background-color: #222222;
     color: #FF0648;
     text-shadow: 0 0 2em #ff0000;
     transition: 0.1s;
 }
 
-.main-menu .list-3 ul li a:hover {
+.main-menu .list ul li a:hover {
     background-color: #111;
     height: 3em;
     color: #FF0648;
@@ -134,21 +120,14 @@ kao pri hoverovanju preko dropa*/
     transition: 0.1s;
 }
 
-.main-menu ul .list-4 .menu-item-4:hover {
-    background-color: #111;  
-    text-shadow: 0 0 2em #ff0000;
-    color: #FF0648;
-    transition: 0.1s;
-}
-
-.main-menu ul .list-4 a:hover, .list-4:hover .menu-item-4 {
+.main-menu ul .list a:hover, .list:hover .menu-item-4 {
     background-color: #222222;
     color: #FF0648;
     text-shadow: 0 0 2em #ff0000;
     transition: 0.1s;
 }
 
-.main-menu .list-4 ul li a:hover {
+.main-menu .list ul li a:hover {
     background-color: #111;
     height: 3em;
     color: #FF0648;
@@ -172,8 +151,8 @@ kao pri hoverovanju preko dropa*/
     overflow: hidden;
     position: absolute;
     background-color: #333333;
-    border-radius: 0px 0px 6px 6px;
-    box-shadow: 0px 16px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 0em 0em 0.5em 0.5em;
+    box-shadow: 0em 1em 1em 0em rgba(0,0,0,0.2);
 }
 
 .main-menu ul li .un-list1 li {
