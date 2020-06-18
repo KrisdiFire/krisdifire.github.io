@@ -1,58 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <link href="js/side-menu-js.js" rel="javascript">
+    <link href="js/mains.js" rel="javascript">
     <link href="css/layout-main.css" rel="stylesheet">
-    <link href="css/layout-main-tabl.css" rel="stylesheet">
+    <link href="css/layout-main-sml.css" rel="stylesheet">
     <link href="css/main-menu.css" rel="stylesheet">
     <link href="css/side-menu.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <head>
 
+    <script src="js/side-menu-js.js">
+    </script>
+
     <title>NDF Hub</title>
 
     <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-            <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-                <link rel="icon" href="favicon.png" type="image/png*">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.png" type="image/png*">
+    
 </head>
-
-<script src="js/side-menu-js.js">
-
-</script>
 
 <body>
 
+    <video autoplay muted loop id="background-video">
+        <source src="vid\nightraffic.webm" type="video/webm">
+    </video>
+
 <div id="whole-page">
 
+    <div id="side-nav" class="side-menu">
+        <a href="#null" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+        <nav> 
+            <ul>
+                <li class="dropdown"><a class="dropbtn" onclick="openDropdownMenu_1()" href="#projects">Projects</a>
+                    <ul class=dropdown-content id="re-list1">
+                        <li><a href="#design" onclick="closeSlideMenu()">Design</a></li>
+                        <li><a href="#music" onclick="closeSlideMenu()">Programming</a></li>
+                        <li><a href="#programming" onclick="closeSlideMenu()">Music</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a class="dropbtn" onclick="openDropdownMenu_2()" href="#news">Newbs</a>
+                    <ul class=dropdown-content id="re-list2">
+                        <li><a href="#2010" onclick="closeSlideMenu()">2010</a></li>
+                        <li><a href="#2011" onclick="closeSlideMenu()">2011</a></li>
+                        <li><a href="#2012" onclick="closeSlideMenu()">2012</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a class="dropbtn" onclick="openDropdownMenu_3()" href="#contact">Contact</a>
+                    <ul class=dropdown-content id="re-list3">
+                        <li><a href="https://www.facebook.com/kristian.firedi">Facebook</a></li>
+                        <li><a href="https://www.linkedin.com/in/kristian-firedi-441574178/">LinkedIn</a></li>
+                        <li><a href="https://secure.skype.com/portal/profile">Skype</a></li>
+                        <li><a href="https://www.instagram.com/naitsirk_firedi">Instagram</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a class="dropbtn" onclick="openDropdownMenu_4()" href="#about">About</a>
+                    <ul class=dropdown-content id="re-list4">
+                        <li>
+                            <a id="cetr" href="#2010" onclick="closeSlideMenu()">Me</a>
+                        </li>
+                    </ul>
+                    <ul><a href="#"> &hearts; &#x2764;</a></ul> 
+                </li>
+              </ul>
+        </nav>
+    </div>
+
+<div id="page">
+
 <div class="banner-wrapper">
+    
     <div id="banner-img">
+        <div id="prof_slika">
+        </div>
     </div>
 </div>
-
-    <video autoplay muted loop id="background-video">
-        <source src="vid\nightraffic.mp4" type="video/mp4">
-    </video>
 
 <nav class="main-menu" id="main-nav"> 
     <p><a class="home" href="index.html">HOME</a></p>
     <ul class="table-1">
-        <li class="list"><a class="menu-item-1" href="#projects">Projects</a>
+        <li class="list"><a class="menu-item" href="#projects">Projects</a>
             <ul class="un-list1">
                 <li><a href="#design">Design</a></li>
                 <li><a href="#music">Programming</a></li>
                 <li><a href="#programming">Music</a></li>
             </ul>
         </li>
-        <li class="list"><a class="menu-item-2" href="#news">News</a>
+        <li class="list"><a class="menu-item" href="#news">News</a>
             <ul class="un-list2">
                 <li><a href="#2010">2010</a></li>
                 <li><a href="#2011">2011</a></li>
                 <li><a href="#2012">2012</a></li>
             </ul>
         </li>
-        <li class="list"><a class="menu-item-3" href="#contact">Contact</a>
+        <li class="list"><a class="menu-item" href="#contact">Contact</a>
             <ul class="un-list3">
                 <li><a href="https://www.facebook.com/kristian.firedi">Facebook</a></li>
                 <li><a href="https://www.linkedin.com/in/kristian-firedi-441574178/">LinkedIn</a></li>
@@ -60,7 +103,7 @@
                 <li><a href="https://www.instagram.com/naitsirk_firedi">Instagram</a></li>
             </ul>
         </li>
-        <li class="list"><a class="menu-item-4" href="#about">About</a>
+        <li class="list"><a class="menu-item" href="#about">About</a>
             <ul class="un-list4">
                 <li>
                     <a id="cetr" href="#2010">Me</a>
@@ -83,82 +126,72 @@
 
 </nav>
 
-<div id="side-nav" class="side-menu">
-    <a href="#null" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-    <nav> 
-        <ul>
-            <li class="dropdown"><a class="dropbtn" onclick="myFunction1()" href="#projects">Projects</a>
-                <ul class=dropdown-content id="re-list1">
-                    <li><a href="#design" onclick="closeSlideMenu()">Design</a></li>
-                    <li><a href="#music" onclick="closeSlideMenu()">Programming</a></li>
-                    <li><a href="#programming" onclick="closeSlideMenu()">Music</a></li>
-                </ul>
-            </li>
-            <li class="dropdown"><a class="dropbtn" onclick="myFunction2()" href="#news">Newbs</a>
-                <ul class=dropdown-content id="re-list2">
-                    <li><a href="#2010" onclick="closeSlideMenu()">2010</a></li>
-                    <li><a href="#2011" onclick="closeSlideMenu()">2011</a></li>
-                    <li><a href="#2012" onclick="closeSlideMenu()">2012</a></li>
-                </ul>
-            </li>
-            <li class="dropdown"><a class="dropbtn" onclick="myFunction3()" href="#contact">Contact</a>
-                <ul class=dropdown-content id="re-list3">
-                    <li><a href="https://www.facebook.com/kristian.firedi">Facebook</a></li>
-                    <li><a href="https://www.linkedin.com/in/kristian-firedi-441574178/">LinkedIn</a></li>
-                    <li><a href="https://secure.skype.com/portal/profile">Skype</a></li>
-                    <li><a href="https://www.instagram.com/naitsirk_firedi">Instagram</a></li>
-                </ul>
-            </li>
-            <li class="dropdown"><a class="dropbtn" onclick="myFunction4()" href="#about">About</a>
-                <ul class=dropdown-content id="re-list4">
-                    <li>
-                        <a id="cetr" href="#2010" onclick="closeSlideMenu()">Me</a>
-                    </li>
-                </ul>
-                <ul><a href="#"> &hearts; &#x2764;</a></ul> 
-            </li>
-          </ul>
-    </nav>
-</div>
+<div class="content-wrapper" id="front-page">
+    <div class="willkommen">
 
-<div class="willkommen">
-
-    <h1>Welcome<br>
-        <hr class="header-line">
-        <span>NDF Hub</span>
-    </h1>
+        <h1>Welcome<br>
+            <hr class="header-line">
+            <span>NDF Hub</span>
+        </h1>
+        
+    </div>
     
-</div>
+    <div id="signature">by Kristian Firedi</div>
 
-<div id="signature">by Kristian Firedi</div>
-
-<div id="content-wrapper">
     <div class="row">
         <div class="column-3">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            <img src="img/me1full.png" alt="Ani" class="image_land">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Quis possimus dignissimos, delectus nam saepe modi vel
                 iure atque, amet cupiditate illum ipsa, dolore nemo
                 praesentium sed soluta magnam. Quae, minima!</p>
         </div>
 
         <div class="column-3">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quis possimus dignissimos, delectus nam saepe modi vel
-                    iure atque, amet cupiditate illum ipsa, dolore nemo
-                    praesentium sed soluta magnam. Quae, minima!</p>
+            <!--<img src="img/lindsay1.png" alt="Me01" class="image_land">-->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore 
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla 
+                    pariatur. Excepteur sint occaecat cupidatat non proident, 
+                    sunt in culpa qui officia deserunt mollit anim id est
+                    laborum.
+                    Sed ut perspiciatis unde omnis iste natus error sit 
+                    voluptatem accusantium doloremque laudantium, totam 
+                    rem aperiam, eaque ipsa quae ab illo inventore veritatis 
+                    et quasi architecto beatae vitae dicta sunt explicabo. 
+                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur
+                    aut odit aut fugit, sed quia consequuntur magni dolores
+                    eos qui ratione voluptatem sequi nesciunt. Neque porro
+                    quisquam est, qui dolorem ipsum quia dolor sit amet, 
+                    consectetur, adipisci velit, sed quia non numquam eius
+                    modi tempora incidunt ut labore et dolore magnam aliquam 
+                    quaerat voluptatem.</p>
+                    
+                    
         </div>
 
         <div class="column-3">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Quis possimus dignissimos, delectus nam saepe modi vel
                     iure atque, amet cupiditate illum ipsa, dolore nemo
-                    praesentium sed soluta magnam. Quae, minima!</p>
+                    praesentium sed soluta magnam. Quae, minima!
+                    Ut enim ad minima veniam, quis 
+                    nostrum exercitationem ullam corporis suscipit laboriosam,
+                    nisi ut aliquid ex ea commodi consequatur? Quis autem vel
+                    eum iure reprehenderit qui in ea voluptate velit esse 
+                    quam nihil molestiae consequatur, vel illum qui dolorem 
+                    eum fugiat quo voluptas nulla pariatur?
+                </p>
         </div>
     </div>
 
     <div class="row">
         <div class="column-1">
-            <h2>Column</h2>
+            <h2>Gallery</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Maecenas sit amet pretium urna. Vivamus venenatis velit
                   nec neque ultricies, eget elementum magna tristique.
@@ -169,7 +202,28 @@
     </div>
         <div class="row">
         <div class="column-75">
+            <img src="img/lindsay1.png" alt="Me01" class="image_land_fixed">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quis possimus dignissimos, delectus nam saepe modi vel
+                    iure atque, amet cupiditate illum ipsa, dolore nemo
+                    praesentium sed soluta magnam. Quae, minima!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quis possimus dignissimos, delectus nam saepe modi vel
+                    iure atque, amet cupiditate illum ipsa, dolore nemo
+                    praesentium sed soluta magnam. Quae, minima!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quis possimus dignissimos, delectus nam saepe modi vel
+                    iure atque, amet cupiditate illum ipsa, dolore nemo
+                    praesentium sed soluta magnam. Quae, minima!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quis possimus dignissimos, delectus nam saepe modi vel
+                    iure atque, amet cupiditate illum ipsa, dolore nemo
+                    praesentium sed soluta magnam. Quae, minima!Lorem ipsum
+                    dolor sit amet consectetur adipisicing elit.
+                    Quis possimus dignissimos, delectus nam saepe modi vel
+                    iure atque, amet cupiditate illum ipsa, dolore nemo
+                    praesentium sed soluta magnam. Quae, minima!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Quis possimus dignissimos, delectus nam saepe modi vel
                     iure atque, amet cupiditate illum ipsa, dolore nemo
                     praesentium sed soluta magnam. Quae, minima!</p>
@@ -179,6 +233,59 @@
                     Quis possimus dignissimos, delectus nam saepe modi vel
                     iure atque, amet cupiditate illum ipsa, dolore nemo
                     praesentium sed soluta magnam. Quae, minima!</p>
+        </div>
+    </div>
+</div>
+
+<div class="content-wrapper" id="content-about">
+    <div class="row">
+        <div class="column-3">
+            <img src="img/me1full.png" alt="Ani" class="image_land">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quis possimus dignissimos, delectus nam saepe modi vel
+                iure atque, amet cupiditate illum ipsa, dolore nemo
+                praesentium sed soluta magnam. Quae, minima!</p>
+        </div>
+
+        <div class="column-3">
+            <!--<img src="img/lindsay1.png" alt="Me01" class="image_land">-->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore 
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla 
+                    pariatur. Excepteur sint occaecat cupidatat non proident, 
+                    sunt in culpa qui officia deserunt mollit anim id est
+                    laborum.
+                    Sed ut perspiciatis unde omnis iste natus error sit 
+                    voluptatem accusantium doloremque laudantium, totam 
+                    rem aperiam, eaque ipsa quae ab illo inventore veritatis 
+                    et quasi architecto beatae vitae dicta sunt explicabo. 
+                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur
+                    aut odit aut fugit, sed quia consequuntur magni dolores
+                    eos qui ratione voluptatem sequi nesciunt. Neque porro
+                    quisquam est, qui dolorem ipsum quia dolor sit amet, 
+                    consectetur, adipisci velit, sed quia non numquam eius
+                    modi tempora incidunt ut labore et dolore magnam aliquam 
+                    quaerat voluptatem.</p>
+                    
+                    
+        </div>
+
+        <div class="column-3">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quis possimus dignissimos, delectus nam saepe modi vel
+                    iure atque, amet cupiditate illum ipsa, dolore nemo
+                    praesentium sed soluta magnam. Quae, minima!
+                    Ut enim ad minima veniam, quis 
+                    nostrum exercitationem ullam corporis suscipit laboriosam,
+                    nisi ut aliquid ex ea commodi consequatur? Quis autem vel
+                    eum iure reprehenderit qui in ea voluptate velit esse 
+                    quam nihil molestiae consequatur, vel illum qui dolorem 
+                    eum fugiat quo voluptas nulla pariatur?
+                </p>
         </div>
     </div>
 </div>
@@ -209,11 +316,13 @@
         <br>
             <br>
 
-    <p>© 2020 NDF Hub. All Rights Reserved. <br>
+    <p>© 2020 NDF Hub. All Rights Reserved.<br>
         <br>
           <span>This website designed and maintained by <span class="signature">Kristian Firedi</span></span></p>
         </div>
     </div>
+</div>
+
 </div>
 
 </body>
