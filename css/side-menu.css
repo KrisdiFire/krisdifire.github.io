@@ -2,6 +2,7 @@
     padding-top: 0.5em;
     padding-left: 0.5em;
     float: right;
+    z-index: 6;
 }
 
 svg g {
@@ -20,7 +21,7 @@ svg g:hover {
     width: 0%;
     position: fixed;
     color: azure;
-    z-index: 0;
+    z-index: 5;
     top: 0;
     right: 0;
     background: #4b4b4b80;
@@ -30,6 +31,19 @@ svg g:hover {
     -ms-overflow-style: none;  /* IE 10+*/
     scrollbar-width: none;  /* Firefox*/
     transition: 0.2s;
+}
+
+.side-menu::after {
+    background-image: url('../img/seamsq12.png');
+    background-position: center;
+    content: "";
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
 }
 
 .side-menu::-webkit-scrollbar { 
@@ -127,4 +141,13 @@ svg g:hover {
         scrollbar-width: none;  /* Firefox*/
         transition: 0.2s;
     }
+}
+
+.side-menu-norm {
+    background-color: #4b4b4b80;
+    width: 20em;
+}
+.side-menu-sml {
+background-color: black;
+width: 100%;
 }

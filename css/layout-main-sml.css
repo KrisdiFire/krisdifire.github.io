@@ -1,0 +1,109 @@
+@media only screen and (max-width: 900px) {
+    #footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #footer div {
+       width: 100%;
+       margin: 0em 0.5em 0em 0em;
+    }
+
+    #footer-menu {
+        width: 100%;
+        margin-left: -2em;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    #social-menu {
+        display: flex;
+        flex-grow: 0;
+        flex-direction: row;
+        list-style-type: none;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .main-menu ul {
+        display: none;
+      }
+
+    .image_land {
+        float: left;
+        padding: 1em;
+        width: 16em;
+        max-width: 100%;
+        height: auto;
+        max-height: fit-content;
+        overflow: hidden;
+        object-fit: contain;
+    }
+
+    #banner-img {
+        height: 13em;
+        justify-content: center;
+    }
+    
+    #prof_slika {
+        margin-right: 0em;
+    }
+
+    .content-wrapper {
+        margin-top: 1em;
+        margin-left: 0em;
+        margin-right: 0em;
+        height: auto;
+        color: #f2f2f2;
+        position: relative;
+        padding: 1em;
+    }
+    
+    .row {
+        display: flex;
+        flex-direction: column;
+        content: "";
+        clear: both;
+        margin-right: 1em;
+    }
+    .column-3 {
+        width: 100%;
+        margin-top: 1em;
+    }
+    .column-75 {
+        width: 100%;
+        margin-top: 1em;
+    }
+    .column-25 {
+        width: 100%;
+        margin-top: 1em;
+    }
+}
+
+@media only screen and (max-width: 480px) {    
+    .content-wrapper {
+        margin-top: 1em;
+        margin-left: 0em;
+        margin-right: 0em;
+        height: auto;
+        color: #f2f2f2;
+        position: relative;
+        padding: 1em;
+    }
+    
+    #prof_slika {
+     display: none;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: column;
+        content: "";
+        clear: both;
+        margin-right: 1em;
+    }
+}

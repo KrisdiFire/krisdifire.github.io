@@ -1,0 +1,123 @@
+.main-menu {
+    width: 100%;
+    height: 3em;
+    position: static;
+    top: 0%;
+    background-color: #333;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+/*NDF stil*/
+.main-menu .home {
+    padding: 0em 1em;
+    color: #FF0648;
+    float: left;
+    font-size: 2em;
+    font-weight: 800;
+    font-style: unset;
+    text-decoration: none;
+    font-family: sans-serif;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0); /* Puni text bojom - hrom */
+    -webkit-text-stroke-width: 2px; /* Debljina okvira */
+    -webkit-text-stroke-color: #FF0648; /* Boja okvira */
+    text-shadow: 0 0 2em #ff0000;
+    -moz-text-fill-color: rgba(255, 255, 255, 0); /* Puni text bojom - for mozilla.....>>>*/
+    -moz-text-stroke-width: 2px;
+    -moz-text-stroke-color: #FF0648;
+}
+
+/*boja menu dugmica u meniju*/
+.main-menu ul {
+    float: left;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333333;
+}
+
+.main-menu ul li {
+    float: left;
+    list-style: none;
+    position: relative;
+    width: 5.5em;
+}
+
+.main-menu ul li a {
+    display: block;
+    color: white;
+    font-size: 1em;
+    padding: 1em 1em;
+    text-decoration: none;
+    overflow: hidden;
+    height: 3em;
+}
+
+/*bez ovoga inicijalno haverom po glav. meniju bi on bio siv, ne crn,
+kao pri hoverovanju preko dropa*/
+.main-menu ul .list .menu-item:hover {
+    background-color: #111;  
+    text-shadow: 0 0 2em #ff0000;
+    color: #FF0648;
+    transition: 0.1s;
+}
+
+/*cini da kad hoverujes po listi, menu dugme bude zatamljeno.*/
+.main-menu ul .list a:hover, .list:hover .menu-item {
+    background-color: #222222;
+    color: #FF0648;
+    text-shadow: 0 0 2em #ff0000;
+    transition: 0.1s;
+}
+
+.main-menu .list ul li a:hover {
+    background-color: #111;
+    height: 3em;
+    color: #FF0648;
+    font-style: unset;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    text-shadow: 0 0 2em #ff0000;
+    transition: 0.1s;
+}
+
+/*ovo je samo za shading dropa*/
+.main-menu ul li:hover ul {
+    background-color: #222222;
+    display: block;
+    transition: 0.1s;
+}
+
+/*mislim da je oblik dropa*/
+.main-menu ul li ul {
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    background-color: #333333;
+    border-radius: 0em 0em 0.5em 0.5em;
+    box-shadow: 0em 1em 1em 0em rgba(0,0,0,0.2);
+}
+
+.main-menu ul li .un-list1 li {
+    width: 22em;
+    height: 3em;
+    overflow: hidden;
+}
+.main-menu ul li .un-list2 li {
+    width: 16.5em;
+    height: 3em;
+    overflow: hidden;
+}
+.main-menu ul li .un-list3 li {
+    width: 11em;
+    height: 3em;
+    overflow: hidden;
+}
+.main-menu ul li .un-list4 li {
+    width: 5.5em;
+    height: 3em;
+    overflow: hidden;
+}
