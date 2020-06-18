@@ -95,6 +95,14 @@
         padding: 1em;
     }
     
+    .image_land {
+    width: 100%;
+    }
+    
+    .image_land_fixed {
+    width: 100%;
+    }
+    
     #prof_slika {
      display: none;
     }
