@@ -14,7 +14,7 @@
 
 .main-menu p {
     float: left;
-    height: 1.5em;
+    height: 100%;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -22,8 +22,9 @@
 
 /*NDF stil*/
 .home {
+    text-align: center;
     box-sizing: border-box;
-    height: 1.5em;
+    height: 100%;
     position: relative;
     margin: 0em 1em;
     color: #FF0648;
