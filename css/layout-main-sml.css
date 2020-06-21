@@ -20,6 +20,10 @@
         justify-content: center;
         text-align: center;
     }
+
+    #footer-menu ul {
+        padding-inline-start: 0px;
+    }
     
     .social-menu {
         display: flex;
@@ -29,12 +33,22 @@
         width: 100%;
         justify-content: center;
     }
+
+    .social-menu ul {
+        padding-inline-start: 0px;
+    }
 }
 
 @media only screen and (max-width: 768px) {
     .main-menu .table-1 {
         display: none;
       }
+
+      .float-center {
+        position: static;
+        margin-bottom: -5em;
+        top: 20em;
+    }
 
     .image_land {
         float: left;
@@ -119,6 +133,27 @@
         flex-direction: column;
         content: "";
         clear: both;
-        margin-right: 1em;
+        margin-right: 0em;
+    }
+
+    .row div {
+        margin: 0;
+    }
+
+    .image_land_fixed {
+        margin: 1em;
+        float: left;
+        padding-right: 2em;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        max-height: fit-content;
+        overflow: hidden;
+        object-fit: contain;
+    }
+
+    #footer {
+        margin-right: 0px;
+        margin-left: 0px;
     }
 }
