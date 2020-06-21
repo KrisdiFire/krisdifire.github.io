@@ -29,8 +29,12 @@
 }
 
 @media only screen and (max-width: 768px) {
-    .main-menu ul {
+    .main-menu .table-1 li a{
         display: none;
+      }
+
+     .main-menu .table-1 .home {
+          display: block !important;
       }
 
     .image_land {
