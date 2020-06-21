@@ -23,6 +23,8 @@
 
 /*NDF stil*/
 .home {
+    box-sizing: border-box;
+    height: 1.5em;
     position: relative;
     float: left;
     padding: 0em 1em;
