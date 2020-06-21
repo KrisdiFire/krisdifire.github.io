@@ -20,9 +20,9 @@
 }
 
 /*NDF stil*/
-.main-menu .home {
-    margin: 0;
+.home {
     position: relative;
+    float: left;
     padding: 0em 1em;
     color: #FF0648;
     font-size: 2em;
