@@ -22,14 +22,12 @@
 
 /*NDF stil*/
 .home {
-    display: block !important;
-    padding: 0em 1em !important;
-    float: left;
-    width: 6em;
     box-sizing: border-box;
-    height: 1.5em !important;
+    height: 1.5em;
+    position: relative;
+    margin: 0em 1em;
     color: #FF0648;
-    font-size: 2em !important;
+    font-size: 2em;
     font-weight: 800;
     font-style: unset;
     text-decoration: none;
@@ -50,11 +48,6 @@
     margin: 0;
     padding: 0;
     background-color: #333333;
-}
-
-#first-list-item
-{
-    margin-left: 5em;
 }
 
 .main-menu ul li {
