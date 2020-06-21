@@ -14,7 +14,8 @@
 
 /*NDF stil*/
 .main-menu .home {
-    height: 3em;
+    margin-top: 50%;
+    margin-bottom: 50%;
     width: 4em;
     margin-top: auto;
     margin-bottom: auto;
