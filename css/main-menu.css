@@ -12,6 +12,13 @@
     z-index: 1;
 }
 
+.main-menu p {
+    float: left;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
 /*NDF stil*/
 .main-menu .home {
     margin: 0;
