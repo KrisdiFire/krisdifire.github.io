@@ -14,11 +14,7 @@
 
 /*NDF stil*/
 .main-menu .home {
-    margin-top: 50%;
-    margin-bottom: 50%;
-    width: 6em;
-    margin-top: auto;
-    margin-bottom: auto;
+    top: 50%;
     padding: 0em 1em;
     color: #FF0648;
     float: left;
