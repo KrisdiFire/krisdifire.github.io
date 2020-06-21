@@ -14,7 +14,7 @@
 
 /*NDF stil*/
 .main-menu .home {
-    top: 50%;
+    vertical-align: middle;
     padding: 0em 1em;
     color: #FF0648;
     float: left;
