@@ -1,6 +1,4 @@
 .main-menu {
-    flex-direction: row;
-    display: flex;
     margin-bottom: 4em;
     width: 100%;
     height: 3em;
@@ -15,7 +13,8 @@
 }
 
 .main-menu p {
-    justify-content: start;
+    float: left;
+    height: 1.5em;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -26,8 +25,7 @@
     box-sizing: border-box;
     height: 1.5em;
     position: relative;
-    float: left;
-    padding: 0em 1em;
+    margin: 0em 1em;
     color: #FF0648;
     font-size: 2em;
     font-weight: 800;
