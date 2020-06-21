@@ -19,7 +19,7 @@
 
 .main-menu p {
     float: left;
-    height: 1.5em;
+    height: auto;
     list-style-type: none;
 }
 
