@@ -46,8 +46,19 @@
 
       .float-center {
         position: static;
-        margin-bottom: -5em;
         top: 20em;
+    }
+
+    #willkommen {
+        left: 0%;
+    }
+
+    #willkommen h1 {
+        margin-left: 0%;
+    }
+
+    .front-page-col {
+        padding-top: 5em;
     }
 
     .image_land {
@@ -101,10 +112,6 @@
     .column-25 {
         width: 100%;
         margin-top: 1em;
-    }
-
-    #fp-par {
-        margin-top: 18em;
     }
 }
 
