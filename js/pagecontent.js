@@ -3,15 +3,15 @@ function openContent(contentname) {
     document.getElementById(contentname).classList.toggle("show-content");
   }
 
-  function openContentFront() {
+  function openContentFront(contentname) {
     closeContent();
-    document.getElementById("front-page").style.display = "block";
-    document.getElementById("front-page").classList.toggle("show-content");
+    document.getElementById("willkommen").classList.remove("dont-show");
+    document.getElementById(contentname).classList.toggle("show-content");
   }
   
   function closeContent() {
-    document.getElementById("front-page").style.display = "none";
-    document.getElementById("willkommen").style.display = "none";
+    document.getElementById("front-page").classList.add("dont-show");
+    document.getElementById("willkommen").classList.add("dont-show");
     var rl = document.querySelectorAll(".content-wrapper");
       [].forEach.call(rl, function(closes) {
         closes.classList.remove("show-content");});
