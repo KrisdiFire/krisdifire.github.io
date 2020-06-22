@@ -43,7 +43,7 @@
                 </li>
                 <li class="dropdown"><a class="dropbtn" onclick="openDropMenu('re-list2')" href="#newbs">Newbs</a>
                     <ul class=dropdown-content id="re-list2">
-                        <li><a href="#2010" onclick="closeSlideMenu()">Blank</a></li>
+                        <li><a href="#2010" onclick="closeSlideMenu(); openContentFront('front-page')">Blank</a></li>
                         <li><a href="#2011" onclick="closeSlideMenu()">Blank</a></li>
                         <li><a href="#2012" onclick="closeSlideMenu()">Blank</a></li>
                     </ul>
@@ -87,7 +87,7 @@
         </li>
         <li class="list"><a class="menu-item" href="#newbs">Newbs</a>
             <ul class="un-list2">
-                <li><a href="#2010">Blank</a></li>
+                <li><a href="#2010" onclick="openContentFront('front-page')">Blank</a></li>
                 <li><a href="#2011">Blank</a></li>
                 <li><a href="#2012">Blank</a></li>
             </ul>
@@ -104,6 +104,8 @@
         </li>
       </ul>
 
+      <!--<a data-toggle="offCanvas" aria-expanded="false" aria-controls="offCanvas"><span></span></a>
+        -->
       <span id="ham-menu">
           <a href="#music" onclick="openSlideMenu()">
             <svg class="hamburger" width="3em" height="3em">
@@ -118,22 +120,27 @@
 
 </nav>
 
-<div class="object-in-3d float-center" id="willkommen">
+<div class="content-wrapper show-content" id="front-page">
 
-    <h1>Welcome<br>
-        <hr class="header-line">
-        <span>NDF Hub</span>
-    </h1>
-    
-</div>
+    <div class="object-in-3d float-center" id="willkommen">
 
-<div class="" id="front-page">
+        <h1>Welcome<br>
+            <hr class="header-line">
+            <span>NDF Hub</span>
+        </h1>
+        
+    </div>
 
     <div class="row">
-        <div class="column-1">
-            <p id="fp-par">
-                <span class="large_text">Hello there!</span><br> This is a personal website developed and maintained by myself, which showcases some of
-                my work and passion projects ranging from graphic/web design, illustration and writing. Take the time to look around,
+        <div class="column-100 front-page-col">
+            <p>
+                <span class="large_text">Hello there!</span><br><br> This is a personal website developed and maintained by myself, which showcases some of
+                my work and passion projects ranging from graphic/web design, illustration and writing. <br><br> Take the time to look around,
+                and if you like what you see, do not hesitate to contact me. Cheers!
+            </p>
+            <p>
+                <span class="large_text">Hello there!</span><br><br> This is a personal website developed and maintained by myself, which showcases some of
+                my work and passion projects ranging from graphic/web design, illustration and writing. <br><br> Take the time to look around,
                 and if you like what you see, do not hesitate to contact me. Cheers!
             </p>
         </div>
@@ -142,7 +149,7 @@
 
 <div class="content-wrapper dont-show" id="content-about">
     <div class="row">
-        <div class="column-1">
+        <div class="column-100">
             <img src="img/me1full.png" alt="Ani" class="image_land_fixed">
             <p>
             My name is Kristian Firedi. I'm currently a Masters degree student
