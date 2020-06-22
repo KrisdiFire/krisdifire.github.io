@@ -1,3 +1,7 @@
+#ham-menu {
+    flex: 1 1 auto;
+}
+
 #ham-menu .hamburger {
     padding-top: 0.5em;
     padding-left: 0.5em;
