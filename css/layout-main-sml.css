@@ -50,11 +50,11 @@
     }
 
     #willkommen {
-        left: 0.5em;
+        left: 0%;
     }
 
     #willkommen h1 {
-        margin-left: 0%;
+        margin-left: 0.5em;
     }
 
     .front-page-col {
