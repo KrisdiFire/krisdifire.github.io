@@ -1,6 +1,7 @@
 function openSlideMenu(){
     document.getElementById('page').classList.toggle("sideopen");
     document.getElementById('ham-menu').style.display = 'none';
+    document.getElementById('close-side-menu-div').style.display = 'block';
               
   var mq = window.matchMedia ( "(max-width: 480px)");
     if (mq.matches) {
@@ -31,6 +32,7 @@ function openSlideMenu(){
 
   function closeSlideMenu(){
     document.getElementById('ham-menu').style.display = 'block';
+    document.getElementById('close-side-menu-div').style.display = 'none';
     document.getElementById('side-nav').classList.remove("side-menu-norm");
     document.getElementById('side-nav').classList.remove("side-menu-sml");
     document.getElementById('page').classList.remove("sideopen");
