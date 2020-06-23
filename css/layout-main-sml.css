@@ -11,11 +11,11 @@
 
     #footer div {
        width: 100%;
+       margin: 0em;
     }
 
     #footer-menu {
         width: 100%;
-        margin-left: -2em;
         display: flex;
         justify-content: center;
         text-align: center;
