@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
+    <link href="js/modal-images.js" rel="javascript">
     <link href="js/pagecontent.js" rel="javascript">
     <link href="js/mains.js" rel="javascript">
+    <link href="css/modal-images.css" rel="stylesheet">
     <link href="css/layout-main.css" rel="stylesheet">
     <link href="css/layout-main-sml.css" rel="stylesheet">
     <link href="css/main-menu.css" rel="stylesheet">
@@ -57,7 +59,7 @@
                     </ul>
                 </li>
                 <li class="dropdown"><a class="dropbtn" onclick="closeSlideMenu(); openContent('content-about')" href="#about">About</a>
-                    <ul><a href="#"> &hearts; &#x2764;</a></ul> 
+                    <ul><a onclick="closeSlideMenu();" href="#"> &hearts; UP! &#x2764;</a></ul> 
                 </li>
               </ul>
         </nav>
@@ -134,15 +136,40 @@
     </div>
 
     <div class="row">
-        <div class="column-100 front-page-col">
+       <!-- <div class="diagonal_back"></div>-->
+        <div class="column-75 front-page-col">
             <p>
-                <span class="large_text">Hello there!</span><br><br> This is a personal website developed and maintained by myself, which showcases some of
-                my work and passion projects ranging from graphic/web design, illustration and writing. <br> Take the time to look around,
+                <span class="large_text">Hello there!</span><br><br> This is a personal
+                 website developed and maintained by myself, which showcases some of
+                my work and passion projects ranging from graphic/web design, illustration
+                 and writing. <br> Take the time to look around,
+                and if you like what you see, do not hesitate to contact me. Cheers!
+            </p>
+        </div>
+    </div>
+    <span class="large_text right">Hello there!</span>
+    <div class="row">
+        <div class="column-25">
+            <p>
+                This is a personal
+                 website developed and maintained by myself, which showcases some of
+                my work and passion projects ranging from graphic/web design, illustration
+                 and writing. <br> Take the time to look around,
+                and if you like what you see, do not hesitate to contact me. Cheers!
+            </p>
+        </div>
+        <div class="column-75">
+            <p>
+                This is a personal
+                 website developed and maintained by myself, which showcases some of
+                my work and passion projects ranging from graphic/web design, illustration and
+                 writing. <br> Take the time to look around,
                 and if you like what you see, do not hesitate to contact me. Cheers!
             </p>
             <p>
-                <span class="large_text">Hello there!</span><br><br> This is a personal website developed and maintained by myself, which showcases some of
-                my work and passion projects ranging from graphic/web design, illustration and writing. <br> Take the time to look around,
+                This is a personal website developed and maintained by myself, which showcases some of
+                my work and passion projects ranging from graphic/web design, illustration and
+                 writing. <br> Take the time to look around,
                 and if you like what you see, do not hesitate to contact me. Cheers!
             </p>
         </div>
@@ -152,8 +179,8 @@
 <div class="content-wrapper dont-show" id="content-about">
     <div class="row">
         <div class="column-100">
-            <img src="img/me1full.png" alt="Ani" class="image_land_fixed">
-            <p>
+            
+            <p> <img src="img/me1full.png" alt="Ani" class="image_fixed">
             My name is Kristian Firedi. I'm currently a Masters degree student
             of Romanian language and Literature at the Faculty of Philosophy in Novi Sad.
             But, beside my love for linguistics and languages in general, I also
@@ -188,6 +215,39 @@
             <p>
                 “Ovde postaviti galeriju.”
             </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column-100">
+
+<!-- Trigger the Modal - Ovde ubaciti slike -->
+<img class="image_galery" src="img/me1full.png" alt="Illustration of myself">
+<img class="image_galery" src="img/banner_ceo1.webp" alt="blank" >
+<img class="image_galery" src="img/lindsay1.png" alt="Illustration of L Ellis">
+<img class="image_galery" src="img/ani01.png" alt="Illustration">
+<img class="image_galery" src="img/Reimagine1.png" alt="Photoshop experimentation">
+<img class="image_galery" src="img/IMG_20190828_215608.jpg" alt="Light painting">
+<img class="image_galery" src="img/barlogE1.png" alt="Bar logo design" >
+<img class="image_galery" src="img/8.png" alt="9Codex logo">
+<img class="image_galery" src="img/F1.png" alt="blank">
+<img class="image_galery" src="img/The Walkerton Jail-1.jpg" alt="Sara">
+<img class="image_galery" src="img/banner011.webp" alt="Stars haha">
+<img class="image_galery" src="img/matchstick lit.png" alt="A lit matchstick">
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- The Close Button -->
+  <span class="close">&times;</span>
+
+  <!-- Modal Content (The Image) -->
+  <img class="modal-content" id="img01">
+
+  <!-- Modal Caption (Image Text) -->
+  <div id="caption"></div>
+</div>
+
         </div>
     </div>
 </div>
@@ -229,6 +289,10 @@
 
 <script src="js/pagecontent.js">
 </script>
+
+<script src="js/modal-images.js">
+</script>
+
 
 </body>
 </html>
