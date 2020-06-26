@@ -5,7 +5,6 @@
     margin: auto;
     flex-direction: row;
     align-items: center;
-    
     margin-bottom: 4em;
     width: 100%;
     height: 3em;
@@ -25,16 +24,11 @@
 
 /*NDF stil*/
 .home {
-    box-sizing: border-box;
-    height: 1.5em;
-    position: relative;
     margin: 0em 1em;
     color: #FF0648;
     font-size: 2em;
     font-weight: 800;
-    font-style: unset;
     text-decoration: none;
-    font-family: sans-serif;
     -webkit-text-fill-color: rgba(255, 255, 255, 0); /* Puni text bojom - hrom */
     -webkit-text-stroke-width: 2px; /* Debljina okvira */
     -webkit-text-stroke-color: #FF0648; /* Boja okvira */
@@ -46,10 +40,7 @@
 
 /*boja menu dugmica u meniju*/
 .main-menu ul {
-    float: left;
-    list-style-type: none;
     padding: 0;
-    background-color: #333333;
 }
 
 .main-menu ul li {
@@ -62,7 +53,6 @@
 .main-menu ul li a {
     display: block;
     color: white;
-    font-size: 1em;
     padding: 1em 1em;
     text-decoration: none;
     overflow: hidden;
@@ -114,6 +104,7 @@ kao pri hoverovanju preko dropa*/
     box-shadow: 0em 1em 1em 0em rgba(0,0,0,0.2);
 }
 
+/* Sirina i visina dropdowna */
 .main-menu ul li .un-list1 li {
     width: 22em;
     height: 3em;
@@ -134,3 +125,96 @@ kao pri hoverovanju preko dropa*/
     height: 3em;
     overflow: hidden;
 }
+
+
+/*//////////////////////////////////////////////*/
+
+
+/*a[data-toggle="offCanvas"] {
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    display: none;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    cursor: pointer;
+    z-index: 100;
+}
+a[data-toggle="offCanvas"] span {
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+a[data-toggle="offCanvas"] span,
+a[data-toggle="offCanvas"] span:before,
+a[data-toggle="offCanvas"] span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 5px;
+    width: 29px;
+    background: #000;
+    box-shadow: 0 2px 5px #000;
+    position: absolute;
+    display: block;
+    content: "";
+}
+a[data-toggle="offCanvas"] span:before {
+    -ms-transform: translate(0px, -10px);
+    transform: translate(0px, -10px);
+    -webkit-transform: translate(0px, -10px);
+}
+a[data-toggle="offCanvas"] span:after {
+    -ms-transform: translate(0px, 10px);
+    transform: translate(0px, 10px);
+    -webkit-transform: translate(0px, 10px);
+}
+a[data-toggle="offCanvas"] span,
+a[data-toggle="offCanvas"] span:before,
+a[data-toggle="offCanvas"] span:after {
+    -webkit-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+}
+a[data-toggle="offCanvas"].activeOpen span {
+    background-color: transparent;
+}
+a[data-toggle="offCanvas"].activeOpen span:before,
+a[data-toggle="offCanvas"].activeOpen span:after {
+    -webkit-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+}
+a[data-toggle="offCanvas"].activeOpen span:before {
+    -ms-transform: translate(-0px, -0px) rotate(-45deg);
+    transform: translate(-0px, -0px) rotate(-45deg);
+    -webkit-transform: translate(-0px, -0px) rotate(-45deg);
+}
+a[data-toggle="offCanvas"].activeOpen span:after {
+    -ms-transform: translate(0px, -0px) rotate(45deg);
+    transform: translate(0px, -0px) rotate(45deg);
+    -webkit-transform: translate(0px, -0px) rotate(45deg);
+}
+.off-canvas{
+    background: #000;
+}
+.off-canvas ul:not(.contextual-links){
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.off-canvas ul:not(.contextual-links) li{
+    width: 100%;
+    padding: 0;
+}
+.off-canvas ul:not(.contextual-links) li a{
+    font-family: 'Miso-r';
+    font-size: 1.5rem;
+    padding: 10px;
+    text-align: center;
+    transition: all ease-in-out .2s;
+    color: #303030;
+}
+.off-canvas ul:not(.contextual-links) li a:hover{
+    color: #3e57a7;
+}*/
