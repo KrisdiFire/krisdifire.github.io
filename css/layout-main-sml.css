@@ -42,9 +42,9 @@
 @media only screen and (max-width: 768px) {
     .main-menu .table-1 {
         display: none;
-      }
+    }
 
-      .float-center {
+    .float-center {
         position: static;
         top: 20em;
     }
@@ -61,7 +61,7 @@
         padding-top: 5em;
     }
 
-    .image_land {
+    .image_nofix {
         float: left;
         padding: 1em;
         width: 16em;
@@ -82,16 +82,22 @@
     }
 
     .content-wrapper {
-        margin-left: 0em;
-        margin-right: 0em;
+        margin-left: 3em;
+        margin-right: 3em;
         position: relative;
     }
 
     #front-page {
         margin-top: 0em;
-        margin-left: 0em;
-        margin-right: 0em;
+        margin-left: 3em;
+        margin-right: 3em;
         position: relative;
+    }
+
+    .image_galery {
+        width: 14;
+        margin-top: 1rem;
+        margin-right: 1rem;
     }
     
     .row {
@@ -99,9 +105,14 @@
         flex-direction: column;
         content: "";
         clear: both;
-        margin-right: 1em;
     }
-    .column-3 {
+    
+    .column-50 {
+        margin-top: 1em;
+        width: 100%;
+    }
+
+    .column-30 {
         width: 100%;
         margin-top: 1em;
     }
@@ -128,7 +139,6 @@
         margin-left: 0em;
         margin-right: 0em;
         color: #f2f2f2;
-        padding: 1em;
     }
 
     #prof_slika {
@@ -143,11 +153,13 @@
         margin-right: 0em;
     }
 
-    .row div {
-        margin: 0;
+    .image_galery {
+        width: 14em;
+        margin-top: 1rem;
+        margin-right: 1rem;
     }
 
-    .image_land_fixed {
+    .image_fixed {
         margin: 1em;
         float: left;
         padding-right: 2em;
