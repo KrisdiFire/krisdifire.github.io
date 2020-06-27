@@ -262,6 +262,9 @@ h1,h2 {
 /*Slike u galeriji*/
 
 .image_galery {
+    opacity: 0.7;
+    filter: grayscale(30%);
+    border: ivory 2px solid;
     text-align: center;
     object-fit: cover;
     margin-top: 2rem;
@@ -275,7 +278,8 @@ h1,h2 {
 }
 
 .image_galery:hover {
-    opacity: 0.7;
+    opacity: 1;
+    filter: grayscale(0%);
 }
 
 #footer-wrapper {
