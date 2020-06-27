@@ -224,7 +224,6 @@ h1,h2 {
 
 .column-100 {
    /*background: #80808080;*/
-    justify-content: space-evenly;
     width: 100%;
 }
 
@@ -238,6 +237,10 @@ h1,h2 {
 
 .column-25 {
     width: 25%;
+}
+
+.galery_spacing {
+    justify-content: space-evenly;
 }
 
 .image_nofix {
