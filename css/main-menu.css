@@ -47,7 +47,7 @@
     float: left;
     list-style: none;
     position: relative;
-    width: 5.5em;
+    width: 6.5em;
 }
 
 .main-menu ul li a {
@@ -106,17 +106,17 @@ kao pri hoverovanju preko dropa*/
 
 /* Sirina i visina dropdowna */
 .main-menu ul li .un-list1 li {
-    width: 22em;
+    width: 26em;
     height: 3em;
     overflow: hidden;
 }
 .main-menu ul li .un-list2 li {
-    width: 16.5em;
+    width: 19.5em;
     height: 3em;
     overflow: hidden;
 }
 .main-menu ul li .un-list3 li {
-    width: 11em;
+    width: 13em;
     height: 3em;
     overflow: hidden;
 }
