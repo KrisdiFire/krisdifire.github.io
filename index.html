@@ -13,9 +13,6 @@
 
 <head>
 
-    <script src="js/mains.js">
-    </script>
-
     <title>NDF Hub</title>
 
     <meta charset="utf-8">
@@ -27,11 +24,9 @@
 
 <body>
 
-    <video autoplay muted loop id="background-video">
+    <video autoplay muted loop id="background-video" class="grayscale">
         <source src="vid\nightraffic.webm" type="video/webm">
     </video>
-
-<div id="whole-page">
 
     <div id="side-nav" class="side-menu">
         <a href="#null" class="btn-close" onclick="closeSlideMenu()">&times;</a>
@@ -39,7 +34,7 @@
             <ul>
                 <li class="dropdown"><a class="dropbtn" onclick="openDropMenu('re-list1')" href="#projects">What I Do</a>
                     <ul class=dropdown-content id="re-list1">
-                        <li><a href="design.html" onclick="closeSlideMenu(); openContent('content-design')">Design</a></li>
+                        <li><a href="#design" onclick="closeSlideMenu(); openContent('content-design')">Design</a></li>
                         <li><a href="#web" onclick="closeSlideMenu(); openContent('content-prog')">Web Dev</a></li>
                     </ul>
                 </li>
@@ -65,6 +60,8 @@
         </nav>
     </div>
 
+<div id="whole-page">
+
 <div id="page">
 
     <div onclick="closeSlideMenu()" id="close-side-menu-div"></div>
@@ -85,7 +82,7 @@
     <ul class="table-1">
         <li class="list"><a class="menu-item" href="#projects">What I Do</a>
             <ul class="un-list1">
-                <li><a href="design.html" onclick="openContent('content-design')">Design</a></li>
+                <li><a href="#design" onclick="openContent('content-design')">Design</a></li>
                 <li><a href="#web" onclick="openContent('content-prog')">Web Dev</a></li>
             </ul>
         </li>
@@ -180,20 +177,36 @@
     <div class="row">
         <div class="column-100">
             
-            <p> <img src="img/me1full.png" alt="Ani" class="image_fixed">
-            My name is Kristian Firedi. I'm currently a Masters degree student
-            of Romanian language and Literature at the Faculty of Philosophy in Novi Sad.
-            But, beside my love for linguistics and languages in general, I also
-            nurture my passion in the area of arts and graphic design. <br> <br>
-            I started out with photo manipulation at the age of 12, when my
-            parents installed Photoshop CS2, and later on during my gaming
-            days, with which I've spent many, many of my teen years, I started developing my
-            own custom levels for games such as WC3, Rise of Nations and,
-            most of all, Counter Strike 1.6. <br><br>
-            The freedom of expression and 
-            creativity these tools gave me are the reason why I continued to
-            to learn more about design, and the end to this road is no where 
-            to be seen on the horison. At least not anytime soon.
+            <p> <img src="img/me1full.png" alt="Ani" class="image_fixed_left">
+                My name is Kristian Firedi. I'm currently a Masters degree student
+                of Romanian language and Literature at the Faculty of Philosophy in Novi Sad.
+                But, beside my love for linguistics and languages in general, I also
+                nurture my passion in the area of arts and graphic design. <br> <br>
+                I started out with photo manipulation at the age of 12, when my
+                parents installed Photoshop CS2, and later on during my gaming
+                days, with which I've spent many, many of my teen years, I started developing my
+                own custom levels for games such as WC3, Rise of Nations and,
+                most of all, Counter Strike. <br><br>
+                <img src="img/me1full.png" alt="Ani" class="image_fixed_right">The freedom of expression and 
+                creativity these tools gave me are the reason why I continued to
+                to learn more about design, and the end to this road is no where 
+                to be seen on the horison. At least not anytime soon. 
+                <br><br> The freedom of expression and 
+                creativity these tools gave me are the reason why I continued to
+                to learn more about design, and the end to this road is no where 
+                to be seen on the horison. At least not anytime soon.
+                The freedom of expression and 
+                creativity these tools gave me are the reason why I continued to
+                to learn more about design, and the end to this road is no where 
+                to be seen on the horison. At least not anytime soon.
+                <br><br> The freedom of expression and 
+                creativity these tools gave me are the reason why I continued to
+                to learn more about design, and the end to this road is no where 
+                to be seen on the horison. At least not anytime soon.
+                The freedom of expression and 
+                creativity these tools gave me are the reason why I continued to
+                to learn more about design, and the end to this road is no where 
+                to be seen on the horison. At least not anytime soon.
             </p>
         </div>
     </div>
@@ -248,40 +261,44 @@
     </div>
 </div>
 
-<div id="footer-wrapper">
-    <hr>
-    <div id="footer">
 
-        <div id="footer-menu">
-            <ul>
-                <li><a href="#" onclick="openContent('content-design')">DESIGN</a></li>
-                <li><a href="#" onclick="openContent('content-prog')">WEB DEV</a></li>
-                <li><a href="#" onclick="openContent('content-about')">ABOUT</a></li>
-            </ul>
-        </div>
-
-        <div class="social-menu">
-            <ul>
-                <li><a href="https://www.facebook.com/kristian.firedi" class="fa fa-facebook"></a>&nbsp;</li>
-                <li><a href="https://www.linkedin.com/in/kristian-firedi-441574178/" class="fa fa-linkedin"></a>&nbsp;</li>
-                <li><a href="https://secure.skype.com/portal/profile" class="fa fa-skype"></a>&nbsp;</li>
-                <li><a href="https://www.instagram.com/naitsirk_firedi" class="fa fa-instagram"></a>&nbsp;</li>
-            </ul>
-        </div>
     </div>
-
-    <hr>
-        <br>
+    <div id="footer-wrapper">
+        <hr>
+        <div id="footer">
+    
+            <div id="footer-menu">
+                <ul>
+                    <li><a href="#" onclick="openContent('content-design')">DESIGN</a></li>
+                    <li><a href="#" onclick="openContent('content-prog')">WEB DEV</a></li>
+                    <li><a href="#" onclick="openContent('content-about')">ABOUT</a></li>
+                </ul>
+            </div>
+    
+            <div class="social-menu">
+                <ul>
+                    <li><a href="https://www.facebook.com/kristian.firedi" class="fa fa-facebook"></a>&nbsp;</li>
+                    <li><a href="https://www.linkedin.com/in/kristian-firedi-441574178/" class="fa fa-linkedin"></a>&nbsp;</li>
+                    <li><a href="https://secure.skype.com/portal/profile" class="fa fa-skype"></a>&nbsp;</li>
+                    <li><a href="https://www.instagram.com/naitsirk_firedi" class="fa fa-instagram"></a>&nbsp;</li>
+                </ul>
+            </div>
+        </div>
+    
+        <hr>
             <br>
-
-    <p>© 2020 NDF Hub. All Rights Reserved.<br>
-        <br>
-          <span>This website designed and maintained by <span class="signature">Kristian Firedi</span></span></p>
-        </div>
-    </div>
+                <br>
+    
+        <p>© 2020 NDF Hub. All Rights Reserved.<br>
+            <br>
+              <span>This website designed and maintained by <span class="signature">Kristian Firedi</span></span></p>
+            </div>
 </div>
 
 </div>
+
+<script src="js/mains.js">
+</script>
 
 <script src="js/pagecontent.js">
 </script>
