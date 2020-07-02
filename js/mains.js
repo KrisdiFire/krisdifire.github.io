@@ -38,3 +38,12 @@ function openSlideMenu(){
     document.getElementById('whole-page').classList.remove("sideopen");
     closeDrop();
   }
+
+
+var vid = document.getElementById("background-video");
+  
+  function setPlaySpeed() { 
+    vid.playbackRate = 0.7;
+  } 
+
+  setPlaySpeed();
