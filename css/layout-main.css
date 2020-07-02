@@ -308,7 +308,7 @@ h1,h2 {
     padding: 2em;
     background-color: rgba(51, 51, 51, 0.5);
     position: absolute;
-    height: 16rem;
+    height: auto;
     clear: both;
 }
 
