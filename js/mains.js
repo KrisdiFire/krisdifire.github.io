@@ -39,8 +39,7 @@ function openSlideMenu(){
     closeDrop();
   }
 
-
-var vid = document.getElementById("background-video");
+  var vid = document.getElementById("background-video");
   
   function setPlaySpeed() { 
     vid.playbackRate = 0.7;
