@@ -235,65 +235,103 @@
         <div class="column-100 galery_spacing">
 
 <!-- Trigger the Modal - Ovde ubaciti slike -->
-<img class="image_galery" src="img/BarLogo_5.png" alt="Logo for 5. Stanica">
-<img class="image_galery" src="img/WalkertonJail_K.png" alt="Walkerton Jail Logo" >
-<img class="image_galery" src="img/ECLRecords-Logo.png" alt="Logo for ECLR">
-<img class="image_galery" src="img/NovIvkeLogo-Gotovo.png" alt="Logo for Ortostim">
-<img class="image_galery" src="img/8.png" alt="9 Codex Logo Design">
-<img class="image_galery" src="img/me1full.png" alt="Self Portrait in Illustrator" >
-<img class="image_galery" src="img/HeadLEllis_Illustration.png" alt="Illustration of L Ellis">
+<img id="slika1" onclick="openModal();currentSlide(1)" class="image_galery" src="img/BarLogo_5.png" alt="Logo for 5. Stanica">
+<img id="slika2" onclick="openModal();currentSlide(2)" class="image_galery" src="img/WalkertonJail_K.png" alt="Walkerton Jail Logo" >
+<img id="slika3" onclick="openModal();currentSlide(3)" class="image_galery" src="img/ECLRecords-Logo.png" alt="Logo for ECLR">
+<img id="slika4" onclick="openModal();currentSlide(4)" class="image_galery" src="img/NovIvkeLogo-Gotovo.png" alt="Logo for Ortostim">
+<img id="slika5" onclick="openModal();currentSlide(5)" class="image_galery" src="img/8.png" alt="9 Codex Logo Design">
+<img id="slika6" onclick="openModal();currentSlide(6)" class="image_galery" src="img/me1full.png" alt="Self Portrait in Illustrator" >
+<img id="slika7" onclick="openModal();currentSlide(7)" class="image_galery" src="img/HeadLEllis_Illustration.png" alt="Illustration of L Ellis">
+
+
+<div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()"></span>
+  
+      <div class="mySlides">
+        <img class="modal-content" src="img/BarLogo_5.png" alt="Logo for 5. Stanica">
+      </div>
+  
+      <div class="mySlides">
+        <img class="modal-content" src="img/WalkertonJail_K.png" alt="Logo for 5. Stanica">
+      </div>
+  
+      <div class="mySlides">
+        <img class="modal-content" src="img/ECLRecords-Logo.png" alt="Logo for 5. Stanica">
+      </div>
+
+      <div class="mySlides">
+        <img class="modal-content" src="img/NovIvkeLogo-Gotovo.png" alt="Logo for 5. Stanica">
+      </div>
+
+      <div class="mySlides">
+        <img class="modal-content" src="img/8.png" alt="Logo for 5. Stanica">
+      </div>
+
+      <div class="mySlides">
+        <img class="modal-content" src="img/me1full.png" alt="Logo for 5. Stanica">
+      </div>
+
+      <div class="mySlides">
+        <img class="modal-content" src="img/HeadLEllis_Illustration.png" alt="Logo for 5. Stanica">
+      </div>
+      
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
 
 <!-- The Modal -->
-<div id="myModal" class="modal">
+<!--<div id="myModal" class="modal">-->
 
   <!-- The Close Button -->
-  <span class="close"></span>
+  <!--<span class="close"></span>-->
 
   <!-- Modal Content (The Image) -->
-  <img class="modal-content" id="img01">
+ <!--<div id="modal-image-container">
+    <a class="prev" onclick="prevImage()">&#10094;</a>
+    <img class="modal-content" id="img01">
+    <a class="next" onclick="nextImage()">&#10095;</a>
+</div> -->
 
   <!-- Modal Caption (Image Text) -->
-  <div id="caption"></div>
-</div>
+  <!--<div id="caption"></div>
+</div>-->
 
+            </div>
         </div>
     </div>
 </div>
-
-
-    </div>
-    <div id="footer-wrapper">
-        <hr>
-        <div id="footer">
-    
-            <div id="footer-menu">
-                <ul>
-                    <li><a href="#" onclick="openContent('content-design')">DESIGN</a></li>
-                    <li><a href="#" onclick="openContent('content-prog')">WEB DEV</a></li>
-                    <li><a href="#" onclick="openContent('content-about')">ABOUT</a></li>
-                </ul>
-            </div>
-    
-            <div class="social-menu">
-                <ul>
-                    <li><a href="https://www.facebook.com/kristian.firedi" class="fa fa-facebook"></a>&nbsp;</li>
-                    <li><a href="https://www.linkedin.com/in/kristian-firedi-441574178/" class="fa fa-linkedin"></a>&nbsp;</li>
-                    <li><a href="https://secure.skype.com/portal/profile" class="fa fa-skype"></a>&nbsp;</li>
-                    <li><a href="https://www.instagram.com/naitsirk_firedi" class="fa fa-instagram"></a>&nbsp;</li>
-                </ul>
-            </div>
-        </div>
-    
-        <hr>
-            <br>
-                <br>
-    
-        <p>© 2020 NDF Hub. All Rights Reserved.<br>
-            <br>
-              <span>This website designed and maintained by <span class="signature">Kristian Firedi</span></span></p>
-            </div>
 </div>
+
+<div id="footer-wrapper">
+    <hr>
+    <div id="footer">
+
+        <div id="footer-menu">
+            <ul>
+                <li><a href="#" onclick="openContent('content-design')">DESIGN</a></li>
+                <li><a href="#" onclick="openContent('content-prog')">WEB DEV</a></li>
+                <li><a href="#" onclick="openContent('content-about')">ABOUT</a></li>
+            </ul>
+        </div>
+
+        <div class="social-menu">
+            <ul>
+                <li><a href="https://www.facebook.com/kristian.firedi" class="fa fa-facebook"></a>&nbsp;</li>
+                <li><a href="https://www.linkedin.com/in/kristian-firedi-441574178/" class="fa fa-linkedin"></a>&nbsp;</li>
+                <li><a href="https://secure.skype.com/portal/profile" class="fa fa-skype"></a>&nbsp;</li>
+                <li><a href="https://www.instagram.com/naitsirk_firedi" class="fa fa-instagram"></a>&nbsp;</li>
+            </ul>
+        </div>
+    </div>
+
+    <hr>
+        <br>
+            <br>
+
+    <p>© 2020 NDF Hub. All Rights Reserved.<br>
+        <br>
+          <span>This website designed and maintained by <span class="signature">Kristian Firedi</span></span></p>
+        </div>
 
 </div>
 
