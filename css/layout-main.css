@@ -36,7 +36,8 @@ body {
 
 #whole-page {
     position: relative;
-  min-height: 100vh;
+    min-height: 100vh;
+    transition: ease 0.2s;
 }
 
 #page {
@@ -45,13 +46,14 @@ body {
     width: 100%;
     height: auto;
     padding-bottom: 20rem;
-    overflow: hidden;
 }
 
 .sideopen {
     transform: translate(-20em, 0);
     transition: all ease-in-out .2s;
 }
+
+/*Ovo je welcome sign i njegove klase za brzi slajd gore*/
 
 #willkommen {
     display: flex;
@@ -73,8 +75,10 @@ body {
     top: 20em; 
 }
 
-.front-page-col {
-    padding-top: 14em;
+/*Ovo je za prednju stranicu samo zbog wellcome znaka*/
+
+.front-page-row {
+    padding-top: 14em !important;
 }
 
 .header-line {
@@ -85,8 +89,8 @@ body {
     margin-right: auto;
 }
 
-h1,h2 {
-    color: rgb(247, 6, 70);
+h1 {
+    color: red;
     text-align: center;
     margin: 0.5em;
     font-size: 4em;
@@ -95,11 +99,18 @@ h1,h2 {
     font-family: sans-serif;
     -webkit-text-fill-color: rgba(0, 0, 0, 0); 
     -webkit-text-stroke-width: 2px; 
-    -webkit-text-stroke-color: rgb(247, 6, 70);
+    -webkit-text-stroke-color: red;
     text-shadow: 0 0 32px red;
     -moz-text-fill-color: rgba(255, 255, 255, 0); 
     -moz-text-stroke-width: 2px;
-    -moz-text-stroke-color: rgb(247, 6, 70);
+    -moz-text-stroke-color: red;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 3em;
+    padding: 0.5rem;
+    color: orange;
 }
 
 #signature {
@@ -116,11 +127,11 @@ h1,h2 {
 }
 
 .signature {
-    color: rgb(247, 6, 70);
+    color: orange;
+    font-family: 'Armata';
     font-size: 1em;
     font-style: italic;
-    font-family: sans-serif;
-    text-shadow: 0 0 32px red;
+    text-shadow: 0 0 32px orange;
 }
 
 .banner-wrapper {
@@ -138,7 +149,7 @@ h1,h2 {
 }
 
 #prof_slika {
-    background-image: url('../img/insta_me1.webp');
+    background-image: url('../img/MORTEEE-01-01.png');
     background-size: cover;
     border-radius: 50%;
     margin-right: 10%;
@@ -149,44 +160,8 @@ h1,h2 {
     border-left: 5px solid white;
     border-top: 5px solid white;
     border-bottom: 5px solid white;
+    text-shadow: 0 0 2em white;
 }
-
-/*#banner-img {
-    z-index: -20;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: url('../img/SeamlessSquares1-04White-01i.png');
-    background-repeat: repeat-x;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-#banner-img-glow {
-    filter: blur(8px);
-    -webkit-filter: blur(3px);
-    background-image: url('../img/SeamlessSquares1-04White-01i.png');
-    z-index: -21;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-repeat: repeat-x;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-#banner-img-shadow {
-    filter: blur(8px);
-    -webkit-filter: blur(8px);
-    background-image: url('../img/SeamlessSquares1-04Dark-02.png');
-    z-index: -22;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-repeat: repeat-x;
-    background-size: cover;
-    background-attachment: fixed;
-}*/
 
 .content-wrapper {
     width: 0%;
@@ -207,46 +182,55 @@ h1,h2 {
     content: "";
     clear: both;
     margin-top: 1em;
+    margin-bottom: 1em;
+    justify-content: space-between;
 }
 
-.row div {
-    display: flex;
-    flex-wrap: wrap;
-}
+/*.row div {
+   
+}*/
 
-.row div p {
+/*Sirine kolona unutar row-a*/
+
+.column {
     text-align: justify;
     font-weight: 500;
     line-height: 1.3em;
-    margin-left: auto;
-    margin-right: auto;
     padding: 0.5rem;
 }
 
-.column-30 {
-    width: 30%;
-}
-
-.column-100 {
-   /*background: #80808080;*/
-    width: 100%;
-}
-
-.column-50 {
-    width: 50%;
-}
-
-.column-75 {
-    width: 75%;
-}
-
-.column-25 {
+.c25 {
     width: 25%;
 }
 
-.galery_spacing {
-    justify-content: space-evenly;
+.c30 {
+    width: 30%;
 }
+
+.c40 {
+    width: 40%;
+}
+
+.c50 {
+    width: 50%;
+}
+
+.c60 {
+    width: 60%;
+}
+
+.c70 {
+    width: 70%;
+}
+
+.c75 {
+    width: 75%;
+}
+
+.c100 {
+    /*background: #80808080;*/
+     width: 100%;
+ }
 
 /*.image_nofix {
     float: left;
@@ -278,27 +262,14 @@ h1,h2 {
     object-fit: contain;
 }
 
-/*Slike u galeriji*/
-
-.image_galery {
-    opacity: 0.7;
-    filter: grayscale(30%);
-    border: ivory 2px solid;
-    text-align: center;
-    object-fit: cover;
-    margin-top: 2rem;
-    width: 14em;
-    height: 14em;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.image_galery:hover {
-    opacity: 1;
-    filter: grayscale(0%);
+.image_co {
+    float: right;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: fit-content;
+    overflow: hidden;
+    object-fit: contain;
 }
 
 #footer-wrapper {
@@ -310,6 +281,11 @@ h1,h2 {
     position: absolute;
     height: auto;
     clear: both;
+}
+
+#footer-wrapper > p, #footer-wrapper > p > span {
+    font-family: 'Armata';
+    font-weight: 600;
 }
 
 #footer {
@@ -331,6 +307,11 @@ h1,h2 {
 
 #footer div ul li a {
     text-decoration: none;
+}
+
+#footer-menu ul li a {
+    font-family: 'Armata';
+    font-weight: 600;
 }
 
 .social-menu {
@@ -358,8 +339,8 @@ h1,h2 {
     text-align: center;
     text-decoration: none;
     margin: 0.5em 0.2em;
-    background-color: #999999;
-    border-radius: 50%;
+    background-color: orange;
+    border-radius: 50%; 
 }
   
 .fa:hover {
@@ -394,7 +375,7 @@ h1,h2 {
 /*bold text*/
 
 .large_text {
-    font-size: 3em;
+    font-size: 2em;
     font-weight: 600;
 }
 
@@ -412,8 +393,20 @@ h1,h2 {
 
 /*da odgura neki segmenat na desnu str*/
 
-.right {
+.hx_right {
     float: right;
+    justify-content: right;
+    text-align: right;
+    margin-right: 1.5rem;
+}
+
+.hx_left {
+    text-align: left !important;
+    margin-left: 2rem;
+}
+
+.hx_center {
+    text-align: center !important;
 }
 
 .grayscale {
@@ -421,3 +414,36 @@ h1,h2 {
     -webkit-filter: grayscale(1); 
     filter: grayscale(100%); 
   }
+
+.list-about {
+    padding-inline-start: 20px;
+}
+
+.list-about > li {
+    font-size: 2em;
+    padding: 1rem;
+    width: 100%;
+    list-style: none;
+}
+
+.list-about > li:nth-child(2n + 1) {
+    background-color: rgba(51, 51, 51, 0.5);
+}
+
+.list-about > li::before {
+    content: "\2022";
+    color: orange;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+}
+
+.list-about > li:nth-child(2n + 1)::before {
+    content: "\2022";
+    color: gray;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+}
