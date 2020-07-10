@@ -16,7 +16,7 @@ svg g {
 
 svg g:hover {
     transition: 0.2s;
-    stroke: #FF0648;
+    stroke: #FFA500;
     display: none;
 }
 
@@ -71,8 +71,8 @@ svg g:hover {
 }
 
 .side-menu .btn-close:hover {
-    color: #FF0648;
-    text-shadow: 0 0 2em #ff0000;
+    color: #FFA500;
+    text-shadow: 0 0 2em #FFA500;
     background-color: #111;
 }
 
@@ -82,6 +82,8 @@ svg g:hover {
     padding-bottom: 1em;
     transition: 0.1s;
     text-decoration: none;
+    font-weight: 600;
+    font-family: 'Armata';
 }
 
 .side-menu nav ul {
@@ -91,8 +93,8 @@ svg g:hover {
 
 .side-menu a:hover {
     background-color: #111; 
-    color: #FF0648;
-    text-shadow: 0 0 2em #ff0000;
+    color: #FFA500;
+    text-shadow: 0 0 2em #FFA500;
 }
 
 .dropdown-content {
@@ -107,6 +109,7 @@ svg g:hover {
 
 .dropdown-content a {
     padding-left: 4em;
+    font-family: 'Armata';
 }
 
 .show {
@@ -126,7 +129,7 @@ svg g:hover {
     
     svg g:hover {
         transition: 0.2s;
-        stroke: #FF0648;
+        stroke: #FFA500;
         display: block;
     }
 }
