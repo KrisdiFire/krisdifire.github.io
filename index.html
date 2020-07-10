@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+    <link href='https://fonts.googleapis.com/css?family=Armata' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Poiret One' rel='stylesheet'>
     <link href="js/modal-images.js" rel="javascript">
     <link href="js/pagecontent.js" rel="javascript">
     <link href="js/mains.js" rel="javascript">
@@ -38,9 +40,9 @@
                         <li><a href="#web" onclick="closeSlideMenu(); openContent('content-prog')">Web Dev</a></li>
                     </ul>
                 </li>
-                <li class="dropdown"><a class="dropbtn" onclick="openDropMenu('re-list2')" href="#newbs">Newbs</a>
+                <li class="dropdown"><a class="dropbtn" onclick="openDropMenu('re-list2')" href="#newbs">Testing</a>
                     <ul class=dropdown-content id="re-list2">
-                        <li><a href="#2010" onclick="closeSlideMenu(); openContentFront('front-page')">Blank</a></li>
+                        <li><a href="#2010" onclick="closeSlideMenu(); openContentFront('front-page')">Front Page</a></li>
                         <li><a href="#2011" onclick="closeSlideMenu()">Blank</a></li>
                         <li><a href="#2012" onclick="closeSlideMenu()">Blank</a></li>
                     </ul>
@@ -78,7 +80,7 @@
 </div>
 
 <nav class="main-menu" id="main-nav"> 
-    <p><a class="home" href="index.html">HOME</a></p>
+    <p><a class="home" href="index.html">home</a></p>
     <ul class="table-1">
         <li class="list"><a class="menu-item" href="#projects">What I Do</a>
             <ul class="un-list1">
@@ -86,9 +88,9 @@
                 <li><a href="#web" onclick="openContent('content-prog')">Web Dev</a></li>
             </ul>
         </li>
-        <li class="list"><a class="menu-item" href="#newbs">Newbs</a>
+        <li class="list"><a class="menu-item" href="#newbs">Testing</a>
             <ul class="un-list2">
-                <li><a href="#2010" onclick="openContentFront('front-page')">Blank</a></li>
+                <li><a href="#2010" onclick="openContentFront('front-page')">Front Page</a></li>
                 <li><a href="#2011">Blank</a></li>
                 <li><a href="#2012">Blank</a></li>
             </ul>
@@ -132,11 +134,13 @@
         
     </div>
 
-    <div class="row">
+    
+    <div class="row front-page-row">
+        <h2>Hello there!</h2>
        <!-- <div class="diagonal_back"></div>-->
-        <div class="column-75 front-page-col">
+        <div class="column c75 ">
             <p>
-                <span class="large_text">Hello there!</span><br><br> This is a personal
+                 This is a personal
                  website developed and maintained by myself, which showcases some of
                 my work and passion projects ranging from graphic/web design, illustration
                  and writing. <br> Take the time to look around,
@@ -144,9 +148,9 @@
             </p>
         </div>
     </div>
-    <span class="large_text right">Hello there!</span>
+    <h2 class="hx_right">Hello there!</h2>
     <div class="row">
-        <div class="column-25">
+        <div class="column c30">
             <p>
                 This is a personal
                  website developed and maintained by myself, which showcases some of
@@ -155,7 +159,7 @@
                 and if you like what you see, do not hesitate to contact me. Cheers!
             </p>
         </div>
-        <div class="column-75">
+        <div class="column c70">
             <p>
                 This is a personal
                  website developed and maintained by myself, which showcases some of
@@ -174,9 +178,11 @@
 </div>
 
 <div class="content-wrapper dont-show" id="content-about">
+
+    <h2 class="hx_center">About Me</h2>
+
     <div class="row">
-        <div class="column-100">
-            
+        <div class="column c100">
             <p> <img src="img/me1full.png" alt="Ani" class="image_fixed_left">
                 My name is Kristian Firedi. I'm currently a Masters degree student
                 of Romanian language and Literature at the Faculty of Philosophy in Novi Sad.
@@ -184,30 +190,31 @@
                 nurture my passion in the area of arts and graphic design. <br> <br>
                 I started out with photo manipulation at the age of 12, when my
                 parents installed Photoshop CS2, and later on during my gaming
-                days, with which I've spent many, many of my teen years, I started developing my
-                own custom levels for games such as WC3, Rise of Nations and,
+                days, with which I've spent many, many of my teen years, where I started developing my
+                own custom levels for games such as War Craft, Rise of Nations and,
                 most of all, Counter Strike. <br><br>
-                <img src="img/me1full.png" alt="Ani" class="image_fixed_right">The freedom of expression and 
+                The freedom of expression and 
                 creativity these tools gave me are the reason why I continued to
                 to learn more about design, and the end to this road is no where 
                 to be seen on the horison. At least not anytime soon. 
-                <br><br> The freedom of expression and 
-                creativity these tools gave me are the reason why I continued to
-                to learn more about design, and the end to this road is no where 
-                to be seen on the horison. At least not anytime soon.
-                The freedom of expression and 
-                creativity these tools gave me are the reason why I continued to
-                to learn more about design, and the end to this road is no where 
-                to be seen on the horison. At least not anytime soon.
-                <br><br> The freedom of expression and 
-                creativity these tools gave me are the reason why I continued to
-                to learn more about design, and the end to this road is no where 
-                to be seen on the horison. At least not anytime soon.
-                The freedom of expression and 
-                creativity these tools gave me are the reason why I continued to
-                to learn more about design, and the end to this road is no where 
-                to be seen on the horison. At least not anytime soon.
             </p>
+        </div>
+    </div>
+
+    <h2 class="hx_left">My Skills</h2>
+
+    <div class="row">
+        <div class="column c60">
+           <ul class="list-about">
+               <li>Photoshop</li>
+               <li>Illustrator</li>
+               <li>Html, CSS & JS</li>
+               <li>MemoQ/SDL Trados</li>
+               <li>Project Management</li>
+           </ul>
+        </div>
+        <div class="column c30">
+            <img class="image_co" src="img/MORTEEE-01-01.png" alt="Logo for 5. Stanica">
         </div>
     </div>
 </div>
@@ -224,15 +231,13 @@
 
 <div class="content-wrapper dont-show" id="content-design">
     <div class="row">
-        <div class="column-100">
-            <p class="large_text">
-                GALLERY
-            </p>
+        <div class="column c100">
+            <h2 class="hx_center">GALLERY</h2>
     
         </div>
     </div>
-    <div class="row">
-        <div class="column-100 galery_spacing">
+    <div class="row galery_spacing_row">
+        <div class="column c100 galery_spacing">
 
 <!-- Trigger the Modal - Ovde ubaciti slike -->
 <img id="slika1" onclick="openModal();currentSlide(1)" class="image_galery" src="img/BarLogo_5.png" alt="Logo for 5. Stanica">
@@ -242,6 +247,9 @@
 <img id="slika5" onclick="openModal();currentSlide(5)" class="image_galery" src="img/8.png" alt="9 Codex Logo Design">
 <img id="slika6" onclick="openModal();currentSlide(6)" class="image_galery" src="img/me1full.png" alt="Self Portrait in Illustrator" >
 <img id="slika7" onclick="openModal();currentSlide(7)" class="image_galery" src="img/HeadLEllis_Illustration.png" alt="Illustration of L Ellis">
+<img id="slika8" onclick="openModal();currentSlide(8)" class="image_galery" src="img/Hurt_3-01.png" alt="John Hurt">
+<img id="slika9" onclick="openModal();currentSlide(9)" class="image_galery" src="img/ani01.png" alt="Anita" >
+<img id="slika10" onclick="openModal();currentSlide(10)" class="image_galery" src="img/MORTEEE-01-01.png" alt="Illustration Morte from Planescape">
 
 
 <div id="myModal" class="modal">
@@ -274,9 +282,21 @@
       <div class="mySlides">
         <img class="modal-content" src="img/HeadLEllis_Illustration.png" alt="Logo for 5. Stanica">
       </div>
+
+      <div class="mySlides">
+        <img class="modal-content" src="img/Hurt_3-01.png" alt="Logo for 5. Stanica">
+      </div>
+
+      <div class="mySlides">
+        <img class="modal-content" src="img/ani01.png" alt="Logo for 5. Stanica">
+      </div>
+
+      <div class="mySlides">
+        <img class="modal-content" src="img/MORTEEE-01-01.png" alt="Logo for 5. Stanica">
+      </div>
       
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      <a class="prev" onclick="plusSlides(-1)"></a>
+      <a class="next" onclick="plusSlides(1)"></a>
 
 
 <!-- The Modal -->
