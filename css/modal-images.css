@@ -37,6 +37,42 @@
     to {transform:scale(1)}
   }
 
+/*Slike u galeriji*/
+
+.image_galery {
+  opacity: 0.7;
+  filter: grayscale(30%);
+ /* border: ivory 2px solid;*/
+  text-align: center;
+  object-fit: cover;
+  width: 15em;
+  height: 15em;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 1rem;
+}
+
+.image_galery:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+.image_galery::after {
+  border: ivory 10px solid;
+  z-index: 20;
+  margin: -1rem;
+}
+
+.galery_spacing {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
 /* The Close Button */
 /* The Close Button */
 .close {
@@ -58,15 +94,11 @@
 .next {
 cursor: pointer;
 position: fixed;
-top: 50vh;
-width: auto;
-padding: 16px;
-margin-top: -50px;
+top: 0vh;
+width: 35%;
+height: 100%;
+padding: 1rem;
 color: white;
-font-weight: bold;
-font-size: 50px;
-transition: 0.6s ease;
-border-radius: 0 3px 3px 0;
 user-select: none;
 -webkit-user-select: none;
 z-index: 400;
@@ -74,8 +106,7 @@ z-index: 400;
 
 /* Position the "next button" to the right */
 .next {
-right: 1rem;
-border-radius: 3px 0 0 3px;
+right: 0rem;
 }
 
 #modal-image-container {
@@ -93,4 +124,24 @@ margin: 1rem;
 
 .cursor {
   cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+
+  #content-design {
+    margin-left: 1rem !important;
+    margin-right: 1rem !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+
+  .image_galery {
+    width: 20rem;
+    height: 20rem;
+  }
+  .modal-content {
+    max-width: 95vw;
+    max-height: 95vh;
+  }
 }
