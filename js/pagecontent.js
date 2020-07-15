@@ -1,12 +1,33 @@
 function openContent(contentname) {
     closeContent();
+    document.getElementById('banner-wrap').style.height = '10rem';
     document.getElementById(contentname).classList.toggle("show-content");
+    anot();
+  }
+
+  function anot(){
+
+    var o = document.getElementById('content-design');
+    var r = document.getElementById('anot-design');
+    var p = document.getElementById('content-about');
+    var t = document.getElementById('anot-about');
+    var q = document.getElementById('content-prog');
+    var y = document.getElementById('anot-web');
+
+    if (o.classList.contains('show-content')) {r.style.display = "block";}
+      else {r.style.display = "none";}
+    if (p.classList.contains('show-content')) {t.style.display = "block";}
+      else {t.style.display = "none";}
+    if (q.classList.contains('show-content')) {y.style.display = "block";}
+      else {y.style.display = "none";}
   }
 
   function openContentFront(contentname) {
     closeContent();
+    document.getElementById('banner-wrap').style.height = '50vh';
     document.getElementById("willkommen").classList.remove("dont-show");
     document.getElementById(contentname).classList.toggle("show-content");
+    anot();
   }
   
   function closeContent() {
@@ -20,28 +41,9 @@ function openContent(contentname) {
 
   function parallax() {
     var s = document.getElementById("willkommen");
-  var yPos = 0 - window.pageYOffset/22;  
-  s.style.top = 20 + yPos + "em"; }
+  var yPos = 0 - window.pageYOffset/12;  
+  s.style.top = 4 + yPos + "vh";}
 
 window.addEventListener("scroll", function(){
     parallax(); 
 });
-
-/*function parallax2() {
-  var s = document.getElementById("druga_slika");
-var yPos = 0 - window.pageYOffset/80;  
-s.style.top = 0 + yPos + "em"; }
-
-window.addEventListener("scroll", function(){
-  parallax2(); 
-});*/
-
-/*function parallax3() {
-  var s = document.getElementById("banner-img");
-var yPos = 0 - window.pageYOffset/-14;  
-s.style.top = 0 + yPos + "em"; }
-
-window.addEventListener("scroll", function(){
-  parallax3(); 
-});
-*/
