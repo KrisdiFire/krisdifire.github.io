@@ -68,14 +68,25 @@
 
     <div onclick="closeSlideMenu()" id="close-side-menu-div"></div>
 
-<div class="banner-wrapper">
-    <div id="prof_slika">
+<div class="banner-wrapper" id="banner-wrap">
+
+    <div class="object-in-3d float-center" id="willkommen">
+        <h1 id="banner-header">W e l c o m e<br>
+           <span> NDF Hub</span>
+        </h1>
     </div>
-    <div id="banner-img">        
+    
+        <div id="prof_slika">
     </div>
-    <div id="banner-img-glow">        
+
+    <div id="anot-design">   
+        DESIGN     
     </div>
-    <div id="banner-img-shadow">
+    <div id="anot-about">  
+        ABOUT      
+    </div>
+    <div id="anot-web">
+        WEBDEV
     </div>
 </div>
 
@@ -124,19 +135,8 @@
 </nav>
 
 <div class="content-wrapper show-content" id="front-page">
-
-    <div class="object-in-3d float-center" id="willkommen">
-
-        <h1>Welcome<br>
-            <hr class="header-line">
-            <span>NDF Hub</span>
-        </h1>
-        
-    </div>
-
-    
-    <div class="row front-page-row">
-        <h2>Hello there!</h2>
+    <h2 class="hx_left">Hello there!</h2>
+    <div class="row">
        <!-- <div class="diagonal_back"></div>-->
         <div class="column c75 ">
             <p>
@@ -204,7 +204,7 @@
     <h2 class="hx_left">My Skills</h2>
 
     <div class="row">
-        <div class="column c60">
+        <div class="column c70">
            <ul class="list-about">
                <li>Photoshop</li>
                <li>Illustrator</li>
@@ -240,16 +240,17 @@
         <div class="column c100 galery_spacing">
 
 <!-- Trigger the Modal - Ovde ubaciti slike -->
-<img id="slika1" onclick="openModal();currentSlide(1)" class="image_galery" src="img/BarLogo_5.png" alt="Logo for 5. Stanica">
-<img id="slika2" onclick="openModal();currentSlide(2)" class="image_galery" src="img/WalkertonJail_K.png" alt="Walkerton Jail Logo" >
-<img id="slika3" onclick="openModal();currentSlide(3)" class="image_galery" src="img/ECLRecords-Logo.png" alt="Logo for ECLR">
-<img id="slika4" onclick="openModal();currentSlide(4)" class="image_galery" src="img/NovIvkeLogo-Gotovo.png" alt="Logo for Ortostim">
-<img id="slika5" onclick="openModal();currentSlide(5)" class="image_galery" src="img/8.png" alt="9 Codex Logo Design">
-<img id="slika6" onclick="openModal();currentSlide(6)" class="image_galery" src="img/me1full.png" alt="Self Portrait in Illustrator" >
-<img id="slika7" onclick="openModal();currentSlide(7)" class="image_galery" src="img/HeadLEllis_Illustration.png" alt="Illustration of L Ellis">
-<img id="slika8" onclick="openModal();currentSlide(8)" class="image_galery" src="img/Hurt_3-01.png" alt="John Hurt">
-<img id="slika9" onclick="openModal();currentSlide(9)" class="image_galery" src="img/ani01.png" alt="Anita" >
-<img id="slika10" onclick="openModal();currentSlide(10)" class="image_galery" src="img/MORTEEE-01-01.png" alt="Illustration Morte from Planescape">
+<img id="slika1" onclick="openModal();currentSlide(1)" class="image_galery i-photo show-on-scroll" src="img/BarLogo_5.png" alt="Logo for 5. Stanica">
+<img id="slika2" onclick="openModal();currentSlide(2)" class="image_galery i-photo show-on-scroll" src="img/WalkertonJail_K.png" alt="Walkerton Jail Logo" >
+<img id="slika3" onclick="openModal();currentSlide(3)" class="image_galery i-photo show-on-scroll" src="img/ECLRecords-Logo.png" alt="Logo for ECLR">
+<img id="slika4" onclick="openModal();currentSlide(4)" class="image_galery i-photo show-on-scroll" src="img/NovIvkeLogo-Gotovo.png" alt="Logo for Ortostim">
+<img id="slika5" onclick="openModal();currentSlide(5)" class="image_galery i-photo show-on-scroll" src="img/8.png" alt="9 Codex Logo Design">
+<img id="slika6" onclick="openModal();currentSlide(6)" class="image_galery i-photo show-on-scroll" src="img/me1full.png" alt="Self Portrait in Illustrator" >
+<img id="slika7" onclick="openModal();currentSlide(7)" class="image_galery i-photo show-on-scroll" src="img/HeadLEllis_Illustration.png" alt="Illustration of L Ellis">
+<img id="slika8" onclick="openModal();currentSlide(8)" class="image_galery i-photo show-on-scroll" src="img/Hurt_3-01.png" alt="John Hurt">
+<img id="slika9" onclick="openModal();currentSlide(9)" class="image_galery i-photo show-on-scroll" src="img/ani01.png" alt="Anita" >
+<img id="slika10" onclick="openModal();currentSlide(10)" class="image_galery i-photo show-on-scroll" src="img/MORTEEE-01-01.png" alt="Illustration Morte from Planescape">
+<img id="slika11" onclick="openModal();currentSlide(11)" class="image_galery i-photo show-on-scroll" src="img/Sara_n.jpg" alt="Illustration Morte from Planescape">
 
 
 <div id="myModal" class="modal">
@@ -293,6 +294,10 @@
 
       <div class="mySlides">
         <img class="modal-content" src="img/MORTEEE-01-01.png" alt="Logo for 5. Stanica">
+      </div>
+
+      <div class="mySlides">
+        <img class="modal-content" src="img/Sara_n.jpg" alt="Logo for 5. Stanica">
       </div>
       
       <a class="prev" onclick="plusSlides(-1)"></a>
