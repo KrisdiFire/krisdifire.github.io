@@ -24,7 +24,7 @@ function openContent(contentname) {
 
   function openContentFront(contentname) {
     closeContent();
-    document.getElementById('banner-wrap').style.height = '50vh';
+    document.getElementById('banner-wrap').style.height = '40vh';
     document.getElementById("willkommen").classList.remove("dont-show");
     document.getElementById(contentname).classList.toggle("show-content");
     anot();
@@ -41,8 +41,8 @@ function openContent(contentname) {
 
   function parallax() {
     var s = document.getElementById("willkommen");
-  var yPos = 0 - window.pageYOffset/12;  
-  s.style.top = 4 + yPos + "vh";}
+  var yPos = 0 - window.pageYOffset/10;  
+  s.style.top = 3 + yPos + "vh";}
 
 window.addEventListener("scroll", function(){
     parallax(); 
