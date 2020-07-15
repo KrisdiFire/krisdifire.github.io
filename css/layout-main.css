@@ -370,7 +370,7 @@ h3 {
 
 /*placeholder za web dev str*/
 
-#worked {
+#web-dev-p {
     text-align: center;
     font-size: 4em;
     font-weight: bold;
@@ -379,8 +379,9 @@ h3 {
 /*bold text*/
 
 .large_text {
-    font-size: 2em;
+    font-size: 4rem;
     font-weight: 600;
+    line-height: 1.3em;
 }
 
 /*zasecen block*/
@@ -430,6 +431,7 @@ h3 {
     padding: 1rem;
     width: 100%;
     list-style: none;
+    line-height: 1.5rem;
 }
 
 .list-about > li:nth-child(2n + 1) {
