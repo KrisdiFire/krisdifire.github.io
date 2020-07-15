@@ -91,7 +91,7 @@ h3 {
     background-repeat: repeat;
     align-items: center;
     justify-content: flex-end;
-    height: 48vh;
+    height: 40vh;
     width: auto;
     position: relative;
     background-color: rgb(20, 20, 20);
@@ -100,7 +100,7 @@ h3 {
 
 #banner-header {
     word-spacing: -5rem;
-    font-size: 35vh;
+    font-size: 41vh;
     line-height: 0.8;
     color: rgb(75, 75, 75);
     width: auto;
@@ -125,7 +125,7 @@ h3 {
 
 .float-center { 
     position: absolute; 
-    top: 4vh; 
+    top: 3vh; 
 }
 
 #anot-design {
@@ -140,10 +140,11 @@ h3 {
 #anot-about {
     display: none;
     bottom: 0;
-    font-size: 15vh;
+    font-size: auto;
     font-weight: 800;
     color: rgb(75, 75, 75);
     width: auto;
+    height: auto;
 }
 
 #anot-web {
