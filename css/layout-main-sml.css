@@ -1,6 +1,9 @@
 @media only screen and (max-width: 900px) {
     #prof_slika {
-        margin-right: 5%;
+        display: none;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 10vh;
     }
     
     #footer {
@@ -37,34 +40,36 @@
     .social-menu ul {
         padding-inline-start: 0px;
     }
+
 }
 
 @media only screen and (max-width: 768px) {
-
     #page {
         padding-bottom: 22rem;
     }
-
 
     .main-menu .table-1 {
         display: none;
     }
 
-    .float-center {
-        position: static;
-        top: 20em;
-    }
-
     #willkommen {
-        left: 0%;
+        display: block;
+        width: 100%;
     }
 
-    #willkommen h1 {
-        margin-left: 0.5em;
+    #banner-header {
+        font-size: 35vh;
+        line-height: 0.8;
+        color: rgb(75, 75, 75);
+        width: auto;
     }
-
-    .front-page-row {
-        padding-top: 5em !important;
+    
+    #banner-header span {
+        font-size: 26vh;
+        font-weight: 800;
+        font-style: normal;
+        font-family: sans-serif;
+        width: auto;
     }
 
     .image_nofix {
@@ -77,14 +82,9 @@
         overflow: hidden;
         object-fit: contain;
     }
-
-    #banner-wrapper {
-        height: 13em;
-    }
     
     #prof_slika {
-        display: none;
-        margin-right: 0em;
+        margin-top: 5vh;
     }
 
     .content-wrapper {
@@ -117,6 +117,10 @@
         padding-bottom: 26rem;
     }
     
+    #willkommen {
+    display: none;
+    }
+    
     .content-wrapper {
         margin-left: 0em;
         margin-right: 0em;
@@ -129,10 +133,6 @@
         margin-left: 0em;
         margin-right: 0em;
         color: #f2f2f2;
-    }
-
-    #prof_slika {
-     display: none;
     }
 
     .row {
