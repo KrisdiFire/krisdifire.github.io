@@ -1,7 +1,7 @@
 * {
     margin: 0;
     box-sizing: border-box;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Lucida Sans Regular', 'Lucida Grande';
 }
 
 *::selection {
@@ -53,77 +53,26 @@ body {
     transition: all ease-in-out .2s;
 }
 
-/*Ovo je welcome sign i njegove klase za brzi slajd gore*/
-
-#willkommen {
-    display: flex;
-    justify-content: center;
-    transition: ease-in-out;
-    left: 50%;
-}
-
-#willkommen h1 {
-    margin-left: -100%;
-}
-
-.object-in-3d { 
-    z-index: -35;
-}
-
-.float-center { 
-    position: absolute; 
-    top: 20em; 
-}
-
-/*Ovo je za prednju stranicu samo zbog wellcome znaka*/
-
-.front-page-row {
-    padding-top: 14em !important;
-}
-
-.header-line {
-    border-color: rgb(255, 255, 255);
-    box-shadow: 0px 0px 25px 5px rgba(255, 255, 255, 0.5);
-    max-width: 5em;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 h1 {
-    color: red;
-    text-align: center;
-    margin: 0.5em;
-    font-size: 4em;
+    color: orange;
+    top: 0;
+    font-size: 6rem;
     font-weight: 800;
     font-style: normal;
     font-family: sans-serif;
-    -webkit-text-fill-color: rgba(0, 0, 0, 0); 
-    -webkit-text-stroke-width: 2px; 
-    -webkit-text-stroke-color: red;
-    text-shadow: 0 0 32px red;
-    -moz-text-fill-color: rgba(255, 255, 255, 0); 
-    -moz-text-stroke-width: 2px;
-    -moz-text-stroke-color: red;
 }
 
 h2 {
     font-weight: 600;
-    font-size: 3em;
+    font-size: 4em;
     padding: 0.5rem;
     color: orange;
 }
 
-#signature {
-    color: rgb(247, 6, 70);
-    text-align: center;
-    margin-top: -4em;
-    padding-left: 15%;
-    font-size: 1em;
-    font-weight: 400;
-    font-style: italic;
-    font-family: sans-serif;
-    text-shadow: 0 0 2em red;
-    margin-bottom: 4em;
+h3 {
+    font-weight: 600;
+    padding: 0.5rem;
+    color: orange;
 }
 
 .signature {
@@ -135,20 +84,79 @@ h2 {
 }
 
 .banner-wrapper {
-    background-size: cover;
-    background-image: url('../img/banner_ceo1.webp');
+    overflow: hidden;
+    background-image: url('../img/zabaner_front-01-01-01-01.svg');
+    background-position-x: right;
     display: flex;
+    background-repeat: repeat;
     align-items: center;
     justify-content: flex-end;
-    height: 15em;
+    height: 48vh;
     width: auto;
     position: relative;
     background-color: rgb(20, 20, 20);
     z-index: -30;
-   
+}
+
+#banner-header {
+    word-spacing: -5rem;
+    font-size: 35vh;
+    line-height: 0.8;
+    color: rgb(75, 75, 75);
+    width: auto;
+}
+
+#banner-header span {
+    word-spacing: 0rem;
+    font-size: 26vh;
+    font-weight: 800;
+    font-style: normal;
+    font-family: sans-serif;
+    width: auto;
+}
+
+/*Ovo je welcome sign i njegove klase za brzi slajd gore*/
+
+#willkommen {
+    transition: ease-in-out;
+    width: 100%;
+    left: 0;
+}
+
+.float-center { 
+    position: absolute; 
+    top: 4vh; 
+}
+
+#anot-design {
+    display: none;
+    bottom: 0;
+    font-size: 15vh;
+    font-weight: 800;
+    color: rgb(75, 75, 75);
+    width: auto;
+}
+
+#anot-about {
+    display: none;
+    bottom: 0;
+    font-size: 15vh;
+    font-weight: 800;
+    color: rgb(75, 75, 75);
+    width: auto;
+}
+
+#anot-web {
+    display: none;
+    bottom: 0;
+    font-size: 15vh;
+    font-weight: 800;
+    color: rgb(75, 75, 75);
+    width: auto;
 }
 
 #prof_slika {
+    display: none;
     background-image: url('../img/MORTEEE-01-01.png');
     background-size: cover;
     border-radius: 50%;
@@ -185,10 +193,6 @@ h2 {
     margin-bottom: 1em;
     justify-content: space-between;
 }
-
-/*.row div {
-   
-}*/
 
 /*Sirine kolona unutar row-a*/
 
@@ -401,8 +405,10 @@ h2 {
 }
 
 .hx_left {
+    float: left;
+    justify-content: left;
     text-align: left !important;
-    margin-left: 2rem;
+    margin-left: 1.5rem;
 }
 
 .hx_center {
@@ -437,13 +443,14 @@ h2 {
     display: inline-block; 
     width: 1em;
     margin-left: -1em;
+    font-size: 3rem;
 }
 
-.list-about > li:nth-child(2n + 1)::before {
-    content: "\2022";
-    color: gray;
-    font-weight: bold;
-    display: inline-block; 
-    width: 1em;
-    margin-left: -1em;
+.row-border {
+    background-color: #bdbdbd42;
+}
+
+#content-design {
+    margin-left: 4rem;
+    margin-right: 4rem;
 }
