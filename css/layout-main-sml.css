@@ -58,14 +58,15 @@
     }
 
     #banner-header {
-        font-size: 35vh;
+        font-size: 28vh;
+        word-spacing: -1rem;
         line-height: 0.8;
         color: rgb(75, 75, 75);
         width: auto;
     }
     
     #banner-header span {
-        font-size: 26vh;
+        font-size: 18vh;
         font-weight: 800;
         font-style: normal;
         font-family: sans-serif;
@@ -117,8 +118,21 @@
         padding-bottom: 26rem;
     }
     
-    #willkommen {
-    display: none;
+    #banner-header {
+        font-size: 28vh;
+        word-spacing: -2rem;
+        line-height: 0.8;
+        color: rgb(75, 75, 75);
+        width: auto;
+    }
+    
+    #banner-header span {
+        display: none;
+        font-size: 18vh;
+        font-weight: 800;
+        font-style: normal;
+        font-family: sans-serif;
+        width: auto;
     }
     
     .content-wrapper {
