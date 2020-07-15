@@ -140,11 +140,10 @@ h3 {
 #anot-about {
     display: none;
     bottom: 0;
-    font-size: auto;
+    font-size: 15vh;
     font-weight: 800;
     color: rgb(75, 75, 75);
     width: auto;
-    height: auto;
 }
 
 #anot-web {
