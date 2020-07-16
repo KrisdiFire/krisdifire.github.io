@@ -2,6 +2,8 @@
     flex: 1 1 auto;
 }
 
+/*izgled hamburgera i izgled pri hoveru*/
+
 #ham-menu .hamburger {
     padding-top: 0.5em;
     padding-left: 0.5em;
@@ -20,6 +22,8 @@ svg g:hover {
     display: none;
 }
 
+/*izgled side menija*/
+
 .side-menu {
     height: 100%;
     width: 0%;
@@ -37,8 +41,10 @@ svg g:hover {
     transition: 0.2s;
 }
 
+/*slika u pozadini side menija*/
+
 .side-menu::after {
-    background-image: url('../img/seamsq12.png');
+    background-image: url('../img/seamSquaresSMB.svg');
     background-position: center;
     content: "";
     opacity: 0.2;
@@ -50,11 +56,16 @@ svg g:hover {
     z-index: -1;   
 }
 
+/*skida scroll sa side menija*/
+
 .side-menu::-webkit-scrollbar { 
     display: none;  /* Safari and Chrome */
 }
 
+/*dugme X za zatvaranje side-m*/
+
 .btn-close {
+    font-family: Arial, Helvetica, sans-serif;
     border-radius: 50%;
     background-color: #6b6b6b80;
     padding-left: 0.26em;
@@ -76,6 +87,8 @@ svg g:hover {
     background-color: #111;
 }
 
+/*izgled liste i linkova unutar side-m*/
+
 .side-menu nav a {
     display: block;
     padding-top: 1em;
@@ -96,7 +109,7 @@ svg g:hover {
     color: #FFA500;
     text-shadow: 0 0 2em #FFA500;
 }
-
+/*izgled dropdowna u side-m*/
 .dropdown-content {
     overflow: hidden;
     text-align: left;
@@ -111,7 +124,7 @@ svg g:hover {
     padding-left: 4em;
     font-family: 'Armata';
 }
-
+/*klasa koja se nalepi preko JS-a da bi se prikazao side meni*/
 .show {
     display: block;
     transition: 0.2s;
@@ -149,7 +162,7 @@ svg g:hover {
         transition: 0.2s;
     }
 }
-
+/*izgled side m kad je na normalnom ekranu i izgled kad je na telefonu*/
 .side-menu-norm {
     background-color: #4b4b4b80;
     width: 20em;
@@ -158,7 +171,7 @@ svg g:hover {
     background-color: black;
     width: 100%;
 }
-
+ /*div koji ide preko cele stranice pri otvaranju side m, i sa klikom na njega se side m zatvara*/
 #close-side-menu-div {
     display: none;
    /* background-color: #81000056;*/
