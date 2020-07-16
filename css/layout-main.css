@@ -34,24 +34,32 @@ body {
     background-repeat: no-repeat;
 }
 
+/*stil za celu stranicu*/
+
 #whole-page {
     position: relative;
     min-height: 100vh;
     transition: ease 0.2s;
 }
 
+/*stil za stranicu bez side menija i footera*/
+
 #page {
-    transition: 0.2s;
+    transition: ease 0.2s;
     position: relative;
     width: 100%;
     height: auto;
     padding-bottom: 20rem;
 }
 
+/*Stil koji se primenjuje na celu stranicu pri otvaranju side menija*/
+
 .sideopen {
     transform: translate(-20em, 0);
     transition: all ease-in-out .2s;
 }
+
+/*stil headera do h3*/
 
 h1 {
     color: orange;
@@ -64,7 +72,7 @@ h1 {
 
 h2 {
     font-weight: 600;
-    font-size: 4em;
+    font-size: 4rem;
     padding: 0.5rem;
     color: orange;
 }
@@ -74,6 +82,8 @@ h3 {
     padding: 0.5rem;
     color: orange;
 }
+
+/*Stil za potpis ako se negde stavlja u stranicu (footer za sad)*/
 
 .signature {
     color: orange;
@@ -85,7 +95,7 @@ h3 {
 
 .banner-wrapper {
     overflow: hidden;
-    background-image: url('../img/zabaner_front-01-01-01-01.svg');
+    background-image: url('../img/zabaner_background.svg');
     background-position-x: right;
     display: flex;
     background-repeat: repeat;
@@ -98,23 +108,6 @@ h3 {
     z-index: -30;
 }
 
-#banner-header {
-    word-spacing: -5rem;
-    font-size: 41vh;
-    line-height: 0.8;
-    color: rgb(75, 75, 75);
-    width: auto;
-}
-
-#banner-header span {
-    word-spacing: 0rem;
-    font-size: 26vh;
-    font-weight: 800;
-    font-style: normal;
-    font-family: sans-serif;
-    width: auto;
-}
-
 /*Ovo je welcome sign i njegove klase za brzi slajd gore*/
 
 #willkommen {
@@ -123,10 +116,20 @@ h3 {
     left: 0;
 }
 
+#banner-header {
+    word-spacing: -5vw;
+    font-size: 20vw;
+    line-height: 0.8;
+    color: rgb(65, 65, 65);
+    width: auto;
+}
+
 .float-center { 
     position: absolute; 
     top: 3vh; 
 }
+
+/*Text koji se prikazuje u headeru na specificnim stranicama*/
 
 #anot-design {
     display: none;
@@ -155,9 +158,11 @@ h3 {
     width: auto;
 }
 
+/*Slika za logo ili profil u headeru, ne iskoristeno za sad*/
+
 #prof_slika {
     display: none;
-    background-image: url('../img/MORTEEE-01-01.png');
+    background-image: url('../img/MORTE_PST.png');
     background-size: cover;
     border-radius: 50%;
     margin-right: 10%;
@@ -171,6 +176,8 @@ h3 {
     text-shadow: 0 0 2em white;
 }
 
+/*Content wrapper je container za svaku pojedinacnu stranicu*/
+
 .content-wrapper {
     width: 0%;
     opacity: 0;
@@ -182,7 +189,7 @@ h3 {
     color: #f2f2f2;
 }
 
-/* Clear floats after the columns */
+/*Row sadrzi kolone i stoji u content wrapperu*/
 .row {
     display: flex;
     flex-direction: row;
@@ -194,7 +201,7 @@ h3 {
     justify-content: space-between;
 }
 
-/*Sirine kolona unutar row-a*/
+/*Sirine kolona unutar row-a, i njihove globalne vrednosti, u kojima stoji kontent*/
 
 .column {
     text-align: justify;
@@ -236,13 +243,8 @@ h3 {
      width: 100%;
  }
 
-/*.image_nofix {
-    float: left;
-    margin: 1em;
-    max-width: 100%;
-    overflow: hidden;
-    object-fit: contain;
-}*/
+ /*Slike sa fiksnom sirinom koje se stavljaju unutar columna ili column > p element, takodje fiksirane
+ na odredjenu stranu (left, right)*/
 
 .image_fixed_left {
     margin: 0em 1em 0em 0em;
@@ -266,6 +268,8 @@ h3 {
     object-fit: contain;
 }
 
+/*Slika koja je pune sirine i visine*/
+
 .image_co {
     float: right;
     width: 100%;
@@ -275,6 +279,120 @@ h3 {
     overflow: hidden;
     object-fit: contain;
 }
+
+/*Klasa za sakrivanje contenta*/
+
+.dont-show {
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+/*Klasa za otkrivanje contenta*/
+
+.show-content {
+    width: auto;
+    height: auto;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+
+/*placeholder za web dev str*/
+
+#web-dev-p {
+    text-align: center;
+    font-size: 4em;
+    font-weight: bold;
+}
+
+/*bold i veci text*/
+
+.large_text {
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 1.3em;
+}
+
+/*zasecen block koji je za background - WIP*/
+
+.diagonal_back {
+    position: absolute;
+    z-index: -1;
+    background-color: rgba(175, 175, 175, 0.5);
+    width: 200px;
+    height: 200px;
+    -webkit-clip-path: polygon(0 0, 0 200px, 200px 160px, 200px 0);
+    clip-path: polygon(0 0, 0 200px, 200px 160px, 200px 0);
+}
+
+/*klase za pozicioniranje nekog segmenat na desnu, centar ili levu str*/
+
+.hx_right {
+    float: right;
+    justify-content: right;
+    text-align: right;
+    margin-right: 0rem;
+}
+
+.hx_left {
+    float: left;
+    justify-content: left;
+    text-align: left !important;
+    margin-left: 0rem;
+}
+
+.hx_center {
+    text-align: center !important;
+}
+
+/*klasa za grayscale (iskoristeno na videu u pozadini)*/
+
+.grayscale {
+    filter: grayscale(1);
+    -webkit-filter: grayscale(1); 
+    filter: grayscale(100%); 
+  }
+
+/*Klase za listu u About stranici*/
+
+.list-about {
+    padding-inline-start: 20px;
+}
+
+.list-about > li {
+    font-size: 2em;
+    padding: 1rem;
+    width: 100%;
+    list-style: none;
+    line-height: 1.5rem;
+}
+
+.list-about > li:nth-child(2n + 1) {
+    background-color: rgba(51, 51, 51, 0.5);
+}
+
+.list-about > li::before {
+    content: "\2022";
+    color: orange;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+    font-size: 3rem;
+}
+
+/*.row-border {
+    background-color: #bdbdbd42;
+}*/
+
+/*za smanjenje margina da bi vise slika stalo u jedan red*/
+
+#content-design {
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+/*Sve vezano za footer*/
 
 #footer-wrapper {
     width: 100%;
@@ -349,110 +467,4 @@ h3 {
   
 .fa:hover {
       opacity: 0.7;
-}
-
-/*Klasa za sakrivanje contenta*/
-
-.dont-show {
-    opacity: 0;
-    height: 0;
-    width: 0;
-}
-
-/*Klasa za otkrivanje contenta*/
-
-.show-content {
-    width: auto;
-    height: auto;
-    opacity: 1;
-    transition: ease-in-out 0.5s;
-}
-
-/*placeholder za web dev str*/
-
-#web-dev-p {
-    text-align: center;
-    font-size: 4em;
-    font-weight: bold;
-}
-
-/*bold text*/
-
-.large_text {
-    font-size: 4rem;
-    font-weight: 600;
-    line-height: 1.3em;
-}
-
-/*zasecen block*/
-
-.diagonal_back {
-    position: absolute;
-    z-index: -1;
-    background-color: rgba(175, 175, 175, 0.5);
-    width: 200px;
-    height: 200px;
-    -webkit-clip-path: polygon(0 0, 0 200px, 200px 160px, 200px 0);
-    clip-path: polygon(0 0, 0 200px, 200px 160px, 200px 0);
-}
-
-/*da odgura neki segmenat na desnu str*/
-
-.hx_right {
-    float: right;
-    justify-content: right;
-    text-align: right;
-    margin-right: 1.5rem;
-}
-
-.hx_left {
-    float: left;
-    justify-content: left;
-    text-align: left !important;
-    margin-left: 1.5rem;
-}
-
-.hx_center {
-    text-align: center !important;
-}
-
-.grayscale {
-    filter: grayscale(1);
-    -webkit-filter: grayscale(1); 
-    filter: grayscale(100%); 
-  }
-
-.list-about {
-    padding-inline-start: 20px;
-}
-
-.list-about > li {
-    font-size: 2em;
-    padding: 1rem;
-    width: 100%;
-    list-style: none;
-    line-height: 1.5rem;
-}
-
-.list-about > li:nth-child(2n + 1) {
-    background-color: rgba(51, 51, 51, 0.5);
-}
-
-.list-about > li::before {
-    content: "\2022";
-    color: orange;
-    font-weight: bold;
-    display: inline-block; 
-    width: 1em;
-    margin-left: -1em;
-    font-size: 3rem;
-}
-
-.row-border {
-    background-color: #bdbdbd42;
-}
-
-#content-design {
-    margin-left: 4rem;
-    margin-right: 4rem;
 }
