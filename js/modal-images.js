@@ -35,6 +35,8 @@ modalBtns.addEventListener("click", function (event) {
   }
 });*/
 
+
+/*zatvara modal sa slikama jer se po ucitavanju automatski otvarao*/
 document.getElementById("myModal").style.display = "none";
 
 function openModal() {
@@ -73,12 +75,12 @@ function openModal() {
   
   
   
-/*Here the magic happens*/
+/*Here the magic happens - animacija slika u galeriji*/
 
   // Detect request animation frame
 var scroll = window.requestAnimationFrame ||
 // IE Fallback
-function(callback){ window.setTimeout(callback, 1000/60)};
+function(callback){ window.setTimeout(callback, 1000/60);};
 var elementsToShow = document.querySelectorAll('.show-on-scroll'); 
 
 function loop() {
@@ -105,12 +107,9 @@ el = el[0];
 }
 var rect = el.getBoundingClientRect();
 return (
-(rect.top <= 0
-&& rect.bottom >= 0)
-||
+(rect.top <= 0&& rect.bottom >= 0)||
 (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
-rect.top <= (window.innerHeight || document.documentElement.clientHeight))
-||
+rect.top <= (window.innerHeight || document.documentElement.clientHeight))||
 (rect.top >= 0 &&
 rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
 );
