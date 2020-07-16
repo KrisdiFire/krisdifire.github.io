@@ -43,7 +43,7 @@ function openContent(contentname) {
   function parallax() {
     var s = document.getElementById("willkommen");
   var yPos = 0 - window.pageYOffset/22;  
-  s.style.top = 3 + yPos + "vh";}
+  s.style.top = 7 + yPos + "vh";}
 
 window.addEventListener("scroll", function(){
     parallax(); 
