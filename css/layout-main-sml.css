@@ -64,6 +64,11 @@
     .column {
         width: 100%;
     }
+
+
+    #banner-header-span {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 480px) {   
@@ -71,16 +76,12 @@
         padding-bottom: 26rem;
     }
     
-    #banner-header {
-        font-size: 20vw;
-        word-spacing: -5vw;
-        line-height: 0.8;
-        color: rgb(75, 75, 75);
-        width: auto;
-    }
-    
     h2 {
         font-size: 2.5rem;
+    }
+
+    #banner-header {
+        font-size: 43vw;
     }
 
     .content-wrapper {
