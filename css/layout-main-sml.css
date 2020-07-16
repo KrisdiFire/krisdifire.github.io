@@ -1,11 +1,5 @@
 @media only screen and (max-width: 900px) {
-    #prof_slika {
-        display: none;
-        margin-right: auto;
-        margin-left: auto;
-        margin-top: 10vh;
-    }
-    
+    /*pretvara layout footera iz row u kolone*/
     #footer {
         display: flex;
         flex-direction: column;
@@ -44,70 +38,29 @@
 }
 
 @media only screen and (max-width: 768px) {
+  /*padding je tu da zadrzi footer dole*/
     #page {
         padding-bottom: 22rem;
     }
-
+  /*skriva main navigaciju na malim ekranima*/
     .main-menu .table-1 {
         display: none;
     }
-
-    #willkommen {
-        display: block;
-        width: 100%;
-    }
-
-    #banner-header {
-        font-size: 28vh;
-        word-spacing: -1rem;
-        line-height: 0.8;
-        color: rgb(75, 75, 75);
-        width: auto;
-    }
-    
-    #banner-header span {
-        font-size: 18vh;
-        font-weight: 800;
-        font-style: normal;
-        font-family: sans-serif;
-        width: auto;
-    }
-
-    .image_nofix {
-        float: left;
-        padding: 1em;
-        width: 16em;
-        max-width: 100%;
-        height: auto;
-        max-height: fit-content;
-        overflow: hidden;
-        object-fit: contain;
-    }
-    
-    #prof_slika {
-        margin-top: 5vh;
-    }
-
+/*smanjuje margine stranica*/
     .content-wrapper {
         margin-left: 3em;
         margin-right: 3em;
         position: relative;
     }
 
-    #front-page {
-        margin-top: 0em;
-        margin-left: 3em;
-        margin-right: 3em;
-        position: relative;
-    }
-    
+    /*prebacuje direkciju redova u kolone*/
     .row {
         display: flex;
         flex-direction: column;
         content: "";
         clear: both;
     }
-
+/*siri kolone na full width na malim ekranima*/
     .column {
         width: 100%;
     }
@@ -119,22 +72,17 @@
     }
     
     #banner-header {
-        font-size: 28vh;
-        word-spacing: -2rem;
+        font-size: 20vw;
+        word-spacing: -5vw;
         line-height: 0.8;
         color: rgb(75, 75, 75);
         width: auto;
     }
     
-    #banner-header span {
-        display: none;
-        font-size: 18vh;
-        font-weight: 800;
-        font-style: normal;
-        font-family: sans-serif;
-        width: auto;
+    h2 {
+        font-size: 2.5rem;
     }
-    
+
     .content-wrapper {
         margin-left: 0em;
         margin-right: 0em;
