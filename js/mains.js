@@ -1,3 +1,5 @@
+
+/*Funk za otv side menija */
 function openSlideMenu(){
     document.getElementById('whole-page').classList.toggle("sideopen");
     document.getElementById('ham-menu').style.display = 'none';
@@ -11,7 +13,7 @@ function openSlideMenu(){
       document.getElementById('side-nav').classList.toggle("side-menu-norm");
     }
   }
-
+/*Funk za otv dropa */
   function openDropMenu(listname)
   {
     var dropCont = document.getElementById(listname);  
@@ -23,13 +25,13 @@ function openSlideMenu(){
       dropCont.classList.toggle('show');
   }
 }
-
+/*Funk za zatv dropa */
   function closeDrop() {
     var cl = document.querySelectorAll(".dropdown-content");
       [].forEach.call(cl, function(closes) {
         closes.classList.remove("show");});
   }
-
+/*Funk za zatv side menija */
   function closeSlideMenu(){
     document.getElementById('ham-menu').style.display = 'block';
     document.getElementById('close-side-menu-div').style.display = 'none';
@@ -38,6 +40,8 @@ function openSlideMenu(){
     document.getElementById('whole-page').classList.remove("sideopen");
     closeDrop();
   }
+
+/*Funk i varijabla za sporije prikazivanje background videa */
 
   var vid = document.getElementById("background-video");
   
