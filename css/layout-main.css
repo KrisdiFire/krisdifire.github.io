@@ -95,8 +95,10 @@ h3 {
 
 .banner-wrapper {
     overflow: hidden;
-    background-image: url('../img/zabaner_background.svg');
-    background-position-x: right;
+    background-image: url('../img/banner_ceo1.webp');
+    background-size: cover;
+    filter: contrast(1.1);
+    /*background-position-x: right;*/
     display: flex;
     background-repeat: repeat;
     align-items: center;
@@ -112,30 +114,20 @@ h3 {
 
 #willkommen {
     transition: ease-in-out;
-    width: 100%;
-    left: 0;
+    right: 0;
 }
 
 #banner-header {
-    word-spacing: -5vw;
-    font-size: 35vh;
-    line-height: 0.8;
-    color: rgb(65, 65, 65);
-}
-
-#banner-header-span {
-    word-spacing: -5vw;
-    font-size: 35vh;
-    line-height: 0.8;
-    color: rgb(65, 65, 65);
+    font-size: 30vh;
     font-weight: 800;
-    font-style: normal;
-    font-family: sans-serif;
+    color: rgba(75, 75, 75, 0.200);
+    width: auto;
+    z-index: 10;
 }
 
 .float-center { 
     position: absolute; 
-    top: 7vh; 
+    top: 1vh; 
 }
 
 /*Text koji se prikazuje u headeru na specificnim stranicama*/
@@ -145,7 +137,7 @@ h3 {
     bottom: 0;
     font-size: 15vh;
     font-weight: 800;
-    color: rgb(75, 75, 75);
+    color: rgba(75, 75, 75, 0.200);
     width: auto;
 }
 
@@ -154,7 +146,7 @@ h3 {
     bottom: 0;
     font-size: 15vh;
     font-weight: 800;
-    color: rgb(75, 75, 75);
+    color: rgba(75, 75, 75, 0.200);
     width: auto;
 }
 
@@ -163,7 +155,7 @@ h3 {
     bottom: 0;
     font-size: 15vh;
     font-weight: 800;
-    color: rgb(75, 75, 75);
+    color: rgba(75, 75, 75, 0.200);
     width: auto;
 }
 
