@@ -68,12 +68,6 @@ function openModal() {
     }
     slides[slideIndex-1].style.display = "block";
   }
-
-  
-  
-  
-  
-  
   
 /*Here the magic happens - animacija slika u galeriji*/
 
