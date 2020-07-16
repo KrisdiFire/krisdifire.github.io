@@ -46,6 +46,27 @@
     .main-menu .table-1 {
         display: none;
     }
+
+    .banner-wrapper {
+        height: 10rem;
+    }
+
+    #banner-header {
+        font-size: 15vw;
+    }
+
+    #anot-design {
+        font-size: 13vh;
+    }
+    
+    #anot-about {
+        font-size: 13vh;
+    }
+    
+    #anot-web {
+        font-size: 13vh;
+    }
+
 /*smanjuje margine stranica*/
     .content-wrapper {
         margin-left: 3em;
@@ -80,10 +101,23 @@
         background-image: url('../img/zabaner_background.svg');
         background-size: unset;
         background-position-x: right;
+        height: 15rem;
     }
 
     #banner-header {
         font-size: 43vw;
+    }
+
+    #anot-design {
+        font-size: 15vh;
+    }
+    
+    #anot-about {
+        font-size: 15vh;
+    }
+    
+    #anot-web {
+        font-size: 15vh;
     }
 
     .content-wrapper {
