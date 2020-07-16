@@ -118,15 +118,24 @@ h3 {
 
 #banner-header {
     word-spacing: -5vw;
-    font-size: 20vw;
+    font-size: 35vh;
     line-height: 0.8;
     color: rgb(65, 65, 65);
-    width: auto;
+}
+
+#banner-header-span {
+    word-spacing: -5vw;
+    font-size: 35vh;
+    line-height: 0.8;
+    color: rgb(65, 65, 65);
+    font-weight: 800;
+    font-style: normal;
+    font-family: sans-serif;
 }
 
 .float-center { 
     position: absolute; 
-    top: 3vh; 
+    top: 7vh; 
 }
 
 /*Text koji se prikazuje u headeru na specificnim stranicama*/
