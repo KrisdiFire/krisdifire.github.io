@@ -64,11 +64,6 @@
     .column {
         width: 100%;
     }
-
-
-    #banner-header-span {
-        display: none;
-    }
 }
 
 @media only screen and (max-width: 480px) {   
@@ -78,6 +73,13 @@
     
     h2 {
         font-size: 2.5rem;
+    }
+
+    .banner-wrapper {
+        filter: contrast(1.2);
+        background-image: url('../img/zabaner_background.svg');
+        background-size: unset;
+        background-position-x: right;
     }
 
     #banner-header {
