@@ -72,7 +72,7 @@ h1 {
 
 h2 {
     font-weight: 600;
-    font-size: 4rem;
+    font-size: 3rem;
     padding: 0.5rem;
     color: orange;
 }
@@ -201,6 +201,16 @@ h3 {
     justify-content: space-between;
 }
 
+/*First paragraph when wanting to start with a large letter*/
+
+.prvi-parag {
+    padding-top: 0rem;
+}
+
+.prvo-slovo {
+    position: relative;
+}
+
 /*Sirine kolona unutar row-a, i njihove globalne vrednosti, u kojima stoji kontent*/
 
 .column {
@@ -294,21 +304,21 @@ h3 {
     width: auto;
     height: auto;
     opacity: 1;
-    transition: ease-in-out 0.5s;
+    transition: ease-in-out 1s;
 }
 
 /*placeholder za web dev str*/
 
 #web-dev-p {
     text-align: center;
-    font-size: 4em;
+    font-size: 2.5em;
     font-weight: bold;
 }
 
 /*bold i veci text*/
 
 .large_text {
-    font-size: 4rem;
+    font-size: 1.5rem;
     font-weight: 600;
     line-height: 1.3em;
 }
@@ -353,14 +363,14 @@ h3 {
     filter: grayscale(100%); 
   }
 
-/*Klase za listu u About stranici*/
+/*Klase za liste u About stranici*/
 
 .list-about {
-    padding-inline-start: 20px;
+    padding-inline-start: 0px;
 }
 
 .list-about > li {
-    font-size: 2em;
+    font-size: 1.3rem;
     padding: 1rem;
     width: 100%;
     list-style: none;
@@ -377,8 +387,40 @@ h3 {
     font-weight: bold;
     display: inline-block; 
     width: 1em;
-    margin-left: -1em;
-    font-size: 3rem;
+    font-size: 2rem;
+}
+
+.list-about-2 {
+    padding-inline-start: 0px;
+}
+
+.list-about-2 > li {
+    font-size: 1.3rem;
+    padding: 1rem;
+    width: 100%;
+    list-style: none;
+    line-height: 1.5rem;
+}
+
+.list-about-2 > li:nth-child(2n + 1) {
+    background-color: rgba(51, 51, 51, 0.5);
+}
+
+.list-about-3 {
+    padding-inline-start: 0px;
+    background-color: rgba(51, 51, 51, 0.5);
+}
+
+.list-about-3 > li {
+    font-size: 1.3rem;
+    padding: 1rem;
+    width: 100%;
+    list-style: none;
+    line-height: 1.5rem;
+}
+
+.highlight-txt {
+    color: orange;
 }
 
 /*.row-border {
