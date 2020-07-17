@@ -52,13 +52,6 @@ body {
     padding-bottom: 20rem;
 }
 
-/*Stil koji se primenjuje na celu stranicu pri otvaranju side menija*/
-
-.sideopen {
-    transform: translate(-20em, 0);
-    transition: all ease-in-out .2s;
-}
-
 /*stil headera do h3*/
 
 h1 {
@@ -93,23 +86,6 @@ h3 {
     text-shadow: 0 0 32px orange;
 }
 
-.banner-wrapper {
-    overflow: hidden;
-    background-image: url('../img/banner_ceo1.webp');
-    background-size: cover;
-    filter: contrast(1.1);
-    /*background-position-x: right;*/
-    display: flex;
-    background-repeat: repeat;
-    align-items: center;
-    justify-content: flex-end;
-    height: 40vh;
-    width: auto;
-    position: relative;
-    background-color: rgb(20, 20, 20);
-    z-index: -30;
-}
-
 /*Ovo je welcome sign i njegove klase za brzi slajd gore*/
 
 #willkommen {
@@ -117,17 +93,19 @@ h3 {
     right: 0;
 }
 
-#banner-header {
-    font-size: 30vh;
+#back-header {
+    font-size: 20vw;
+    top: 0;
     font-weight: 800;
-    color: rgba(75, 75, 75, 0.200);
+    color: rgba(75, 75, 75, 0.25);
     width: auto;
-    z-index: 10;
+    z-index: -29;
 }
 
 .float-center { 
     position: absolute; 
-    top: 1vh; 
+    top: 10rem; 
+    z-index: -1;
 }
 
 /*Text koji se prikazuje u headeru na specificnim stranicama*/
@@ -161,33 +139,15 @@ h3 {
 
 /*Slika za logo ili profil u headeru, ne iskoristeno za sad*/
 
-#prof_slika {
-    display: none;
-    background-image: url('../img/MORTE_PST.png');
-    background-size: cover;
-    border-radius: 50%;
-    margin-right: 10%;
-    height: 10em;
-    width: 10em;
-    z-index: 10;
-    border-right: 5px solid white;
-    border-left: 5px solid white;
-    border-top: 5px solid white;
-    border-bottom: 5px solid white;
-    text-shadow: 0 0 2em white;
-}
-
 /*Content wrapper je container za svaku pojedinacnu stranicu*/
 
-.content-wrapper {
-    width: 0%;
-    opacity: 0;
+.content-wrapper {    
     height: auto;
     min-height: 100%;
-    overflow: hidden;
     margin-left: 7em;
     margin-right: 7em;
     color: #f2f2f2;
+   
 }
 
 /*Row sadrzi kolone i stoji u content wrapperu*/
@@ -197,19 +157,10 @@ h3 {
     flex-wrap: wrap;
     content: "";
     clear: both;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     justify-content: space-between;
-}
-
-/*First paragraph when wanting to start with a large letter*/
-
-.prvi-parag {
-    padding-top: 0rem;
-}
-
-.prvo-slovo {
-    position: relative;
+    z-index: 1;
 }
 
 /*Sirine kolona unutar row-a, i njihove globalne vrednosti, u kojima stoji kontent*/
@@ -294,18 +245,15 @@ h3 {
 /*Klasa za sakrivanje contenta*/
 
 .dont-show {
-    opacity: 0;
-    height: 0;
-    width: 0;
+    opacity: 0 !important;
 }
 
 /*Klasa za otkrivanje contenta*/
 
 .show-content {
-    width: auto;
-    height: auto;
-    opacity: 1;
+    opacity: 1 !important;
     transition: ease-in-out 1s;
+    will-change: transform, opacity;
 }
 
 /*placeholder za web dev str*/
@@ -314,6 +262,7 @@ h3 {
     text-align: center;
     font-size: 2.5em;
     font-weight: bold;
+    line-height: 1.3em;
 }
 
 /*bold i veci text*/
@@ -339,6 +288,7 @@ h3 {
 /*klase za pozicioniranje nekog segmenat na desnu, centar ili levu str*/
 
 .hx_right {
+    display: flex;
     float: right;
     justify-content: right;
     text-align: right;
@@ -368,6 +318,7 @@ h3 {
 
 .list-about {
     padding-inline-start: 0px;
+    border: none;
 }
 
 .list-about > li {
@@ -376,6 +327,7 @@ h3 {
     width: 100%;
     list-style: none;
     line-height: 1.5rem;
+    
 }
 
 .list-about > li:nth-child(2n + 1) {
@@ -409,7 +361,6 @@ h3 {
 
 .list-about-3 {
     padding-inline-start: 0px;
-    background-color: rgba(51, 51, 51, 0.5);
 }
 
 .list-about-3 > li {
@@ -423,10 +374,6 @@ h3 {
 .highlight-txt {
     color: orange;
 }
-
-/*.row-border {
-    background-color: #bdbdbd42;
-}*/
 
 /*za smanjenje margina da bi vise slika stalo u jedan red*/
 
@@ -442,7 +389,7 @@ h3 {
     color: #f2f2f2;
     bottom: 0;
     padding: 2em;
-    background-color: rgba(51, 51, 51, 0.5);
+    background-color: rgba(51, 51, 51, 0);
     position: absolute;
     height: auto;
     clear: both;
@@ -510,4 +457,73 @@ h3 {
   
 .fa:hover {
       opacity: 0.7;
+}
+
+/*background cubes and text*/
+
+.div-background-left {
+    position: absolute;
+    border: none;
+    z-index: -30;
+    background-color: rgba(51, 51, 51, 0.25);
+    margin-left: 20%;
+    will-change: transform, opacity;
+}
+
+.div-background-right {
+    position: absolute;
+    border: none;
+    z-index: -30;
+    background-color: rgba(51, 51, 51, 0.25);
+    margin-right: 20%;
+    will-change: transform, opacity;
+}
+
+#web-b2 {
+    margin-top: 0rem;
+    width: 60%;
+    height: 5rem;
+    right: 0;
+    bottom: 0;
+}
+
+#front-b1 {
+   top: 0;
+    left: 0;
+    width: 40%;
+    height: 15rem;
+}
+
+#gal-b2 {
+    margin-top: -10rem;
+    left: 0rem;
+    height: 30rem;
+    font-size: 30vw;
+    font-weight: 800;
+    color: rgba(75, 75, 75, 0.25);
+    background-color: rgba(128, 128, 128, 0);
+    line-height: 1em;
+}
+
+#about-b1 {
+    top: -5rem;
+    width: auto;
+    right: 0rem;
+    height: 30rem;
+    font-size: 20vw;
+    font-weight: 800;
+    color: rgba(75, 75, 75, 0.25);
+    background-color: rgba(128, 128, 128, 0);
+    line-height: 1em;
+}
+#about-b2 {
+    margin-top: -30rem;
+    left: 0;
+    width: 45%;
+    height: 20rem;
+}
+
+.separator {
+    height: 10vw;
+    width: 100%;
 }
