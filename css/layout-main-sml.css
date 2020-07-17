@@ -47,14 +47,6 @@
         display: none;
     }
 
-    .banner-wrapper {
-        height: 10rem;
-    }
-
-    #banner-header {
-        font-size: 15vw;
-    }
-
     #anot-design {
         font-size: 13vh;
     }
@@ -71,7 +63,6 @@
     .content-wrapper {
         margin-left: 3em;
         margin-right: 3em;
-        position: relative;
     }
 
     /*prebacuje direkciju redova u kolone*/
@@ -85,6 +76,24 @@
     .column {
         width: 100%;
     }
+
+    #gal-b2 {
+        margin-top: -10rem;
+        left: 0rem;
+        height: 30rem;
+        font-size: 30vw;
+        font-weight: 800;
+        color: rgba(75, 75, 75, 0.5);
+        background-color: rgba(128, 128, 128, 0);
+        line-height: 1em;
+    }
+
+    #about-b1 {
+        top: -5rem;
+        right: 0rem;
+        width: auto;
+        height: 20rem;
+    }
 }
 
 @media only screen and (max-width: 480px) {   
@@ -94,18 +103,6 @@
     
     h2 {
         font-size: 2.5rem;
-    }
-
-    .banner-wrapper {
-        filter: contrast(1.2);
-        background-image: url('../img/zabaner_background.svg');
-        background-size: unset;
-        background-position-x: right;
-        height: 15rem;
-    }
-
-    #banner-header {
-        font-size: 43vw;
     }
 
     #anot-design {
@@ -121,14 +118,6 @@
     }
 
     .content-wrapper {
-        margin-left: 0em;
-        margin-right: 0em;
-        color: #f2f2f2;
-        position: relative;
-    }
-    
-    #front-page {
-        margin-top: 0em;
         margin-left: 0em;
         margin-right: 0em;
         color: #f2f2f2;
@@ -157,5 +146,53 @@
     #footer {
         margin-right: 0px;
         margin-left: 0px;
+    }
+    
+    #web-b2 {
+        margin-top: 0rem;
+        width: 60%;
+        height: 5rem;
+        right: 0;
+        bottom: 0;
+    }
+    
+    #front-b1 {
+       top: 0;
+        left: 0;
+        width: 40%;
+        height: 15rem;
+    }
+    
+    #gal-b2 {
+        margin-top: -10rem;
+        left: 0rem;
+        height: 30rem;
+        font-size: 30vw;
+        font-weight: 800;
+        color: rgba(75, 75, 75, 0.5);
+        background-color: rgba(128, 128, 128, 0);
+        line-height: 1em;
+    }
+    
+    #about-b1 {
+        top: -5rem;
+        right: 0rem;
+        width: auto;
+        height: 20rem;
+    }
+    #about-b2 {
+        margin-top: -30rem;
+        left: 0;
+        width: 45%;
+        height: 20rem;
+    }
+    
+    .separator {
+        height: 10vw;
+        width: 100%;
+    }
+
+    .float-center {
+        display: none;
     }
 }
