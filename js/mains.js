@@ -40,7 +40,7 @@ function openSlideMenu(){
     document.getElementById('whole-page').classList.remove("sideopen");
     closeDrop();
   }
-
+  
 /*Funk i varijabla za sporije prikazivanje background videa */
 
   var vid = document.getElementById("background-video");
