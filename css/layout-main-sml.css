@@ -28,11 +28,17 @@
         flex-direction: row;
         list-style-type: none;
         width: 100%;
+        flex-wrap: wrap;
         justify-content: center;
     }
 
     .social-menu ul {
         padding-inline-start: 0px;
+        margin-top: 1rem;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
     }
 
 }
