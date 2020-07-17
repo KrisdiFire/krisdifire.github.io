@@ -8,12 +8,11 @@
     margin-bottom: 4rem;
     width: 100%;
     height: 3em;
-    background-color: #333;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    background-color: rgba(51, 51, 51, 0);
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 20;
 }
 
 .main-menu p {
@@ -60,7 +59,7 @@
 /*bez ovoga inicijalno haverom po glav. meniju bi on bio siv, ne crn,
 kao pri hoverovanju preko dropa*/
 .main-menu ul .list .menu-item:hover {
-    background-color: #111;  
+    background-color: rgb(0, 0, 0);  
     text-shadow: 0 0 2em #FFA500;
     color: #FFA500;
     transition: 0.1s;
@@ -68,14 +67,14 @@ kao pri hoverovanju preko dropa*/
 
 /*cini da kad hoverujes po listi, menu dugme bude zatamljeno.*/
 .main-menu ul .list a:hover, .list:hover .menu-item {
-    background-color: #222222;
+    background-color: #22222200;
     color: #FFA500;
     text-shadow: 0 0 2em #FFA500;
     transition: 0.1s;
 }
 
 .main-menu .list ul li a:hover {
-    background-color: #111;
+    background-color: rgb(0, 0, 0);
     height: 3em;
     color: #FFA500;
     font-style: unset;
@@ -87,7 +86,7 @@ kao pri hoverovanju preko dropa*/
 
 /*ovo je samo za shading dropa*/
 .main-menu ul li:hover ul {
-    background-color: #222222;
+    background-color: #00000000;
     display: block;
     transition: 0.1s;
 }
@@ -97,9 +96,8 @@ kao pri hoverovanju preko dropa*/
     display: none;
     overflow: hidden;
     position: absolute;
-    background-color: #333333;
+    background-color: #000000;
     border-radius: 0em 0em 0.5em 0.5em;
-    box-shadow: 0em 1em 1em 0em rgba(0,0,0,0.2);
 }
 
 /* Sirina i visina dropdowna */
