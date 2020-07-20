@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <link href='https://fonts.googleapis.com/css?family=Armata' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Poiret One' rel='stylesheet'>
+    <link href="js/modal-images.js" rel="javascript">
+    <link href="js/pagecontent.js" rel="javascript">
+    <link href="js/mains.js" rel="javascript">
+    <link href="css/modal-images.css" rel="stylesheet">
+    <link href="css/layout-main.css" rel="stylesheet">
+    <link href="css/layout-main-sml.css" rel="stylesheet">
+    <link href="css/main-menu.css" rel="stylesheet">
+    <link href="css/side-menu.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<head>
+
+    <title>NDF Hub</title>
+
+    <meta name="description" content="A page's description, usually one or two sentences."/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.png" type="image/png*">
+    
+</head>
+
+<body>
+
+    <video autoplay muted loop id="background-video" class="grayscale">
+        <source src="vid\nightraffic.webm" type="video/webm">
+    </video>
+
+    <div id="side-nav" class="side-menu">
+        <a class="btn-close" onclick="closeSlideMenu()">&times;</a>
+        <nav> 
+            <ul>
+                <li class="dropdown"><a class="dropbtn" onclick="closeSlideMenu();filterContent('illu')" >Illustration</a>
+                </li>
+                <li class="dropdown"><a class="dropbtn" onclick="closeSlideMenu();filterContent('logo')" >Logo</a>
+                </li>
+                <li class="dropdown"><a class="dropbtn" onclick="closeSlideMenu();filterContent('fun')" >Fun</a> 
+                </li>
+                <li class="dropdown"><a class="dropbtn" onclick="closeSlideMenu();filterAll();" >All</a>
+                </li>
+              </ul>
+        </nav>
+    </div>
+
+<div id="whole-page">
+
+  <div id="up"><a onclick="upTop()">UP! <br> &#x2764;</a></div> 
+  <div onclick="closeSlideMenu()" id="close-side-menu-div"></div>    
+
+    <div id="transition-cover"></div>
+
+    <nav class="main-menu main-m-gal" id="main-nav"> 
+        <p><a class="home" href="index.html">home</a></p>
+        <ul class="table-1">
+            <li class="list"><a onclick="filterContent('illu')" class="menu-item" >Illustration</a>
+            </li>
+            <li class="list"><a onclick="filterContent('logo')" class="menu-item" >Logo</a>
+            </li>
+            </li>
+            <li class="list"><a onclick="filterContent('fun')" class="menu-item" >Fun</a>
+            </li>
+            <li class="list"><a onclick="filterAll()" class="menu-item" >All</a>
+            </li>
+          </ul>
+    
+          <!--<a data-toggle="offCanvas" aria-expanded="false" aria-controls="offCanvas"><span></span></a>
+            -->
+          <span id="ham-menu">
+              <a onclick="openSlideMenu()">
+                <svg class="hamburger" width="3em" height="3em">
+                    <g fill="none" stroke="white" stroke-width="2"> 
+                        <path d="M0,5 30,5"></path>
+                        <path d="M0,14 30,14"></path>
+                        <path d="M0,23 30,23"></path>
+                    </g>
+                </svg>
+            </a>
+          </span>
+    </nav>
+
+<div id="page">
+
+<div class="content-wrapper dont-show galery-content">
+<!-- Trigger the Modal - Ovde ubaciti slike -->
+    <div class="row">
+        <div class="column c100 galery_spacing">
+       
+<img id="slika1" onclick="openModal();currentSlide(1)" class="image_galery_sm i-photo show-on-scroll illu image" src="img/Hurt_Illustration.png" alt="John Hurt">
+<img id="slika2" onclick="openModal();currentSlide(2)" class="image_galery_sm i-photo show-on-scroll illu image" src="img/Me_Illustration_full.png" alt="Self Portrait in Illustrator" >
+<img id="slika3" onclick="openModal();currentSlide(3)" class="image_galery_sm i-photo show-on-scroll illu image" src="img/Sara_Illustration.jpg" alt="Illustration of Sara">
+<img id="slika4" onclick="openModal();currentSlide(4)" class="image_galery_sm i-photo show-on-scroll illu image" src="img/ani_illustration.png" alt="Anita" >        
+        
+        
+<img id="slika5" onclick="openModal();currentSlide(5)" class="image_galery_sm i-photo show-on-scroll logo image" src="img/Bar_Logo.png" alt="Logo for 5. Stanica">
+<img id="slika6" onclick="openModal();currentSlide(6)" class="image_galery_sm i-photo show-on-scroll logo image" src="img/ECLRecords-Logo.png" alt="Logo for ECLR">
+<img id="slika7" onclick="openModal();currentSlide(7)" class="image_galery_sm i-photo show-on-scroll logo image" src="img/NovIvkeLogo-Gotovo.png" alt="Logo for Ortostim">
+<img id="slika8" onclick="openModal();currentSlide(8)" class="image_galery_sm i-photo show-on-scroll logo image" src="img/9Codex_logo.png" alt="9 Codex Logo Design">
+<img id="slika9" onclick="openModal();currentSlide(9)" class="image_galery_sm i-photo show-on-scroll logo image" src="img/WalkertonJail_K.png" alt="Walkerton Jail Logo" >
+       
+        
+<img id="slika10" onclick="openModal();currentSlide(10)" class="image_galery_sm i-photo show-on-scroll fun image" src="img/HeadLEllis_Illustration.png" alt="Illustration of L Ellis">
+<img id="slika11" onclick="openModal();currentSlide(11)" class="image_galery_sm i-photo show-on-scroll fun image" src="img/MORTE_PST.png" alt="Illustration Morte from Planescape">
+<img id="slika12" onclick="openModal();currentSlide(12)" class="image_galery_sm i-photo show-on-scroll fun image" src="img/art_recreation-nonorig.png" alt="Recreation of line-art by jmoorzie">            
+        
+        </div>
+    </div>
+</div>
+
+<div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()"></span>
+
+      <div class="mySlides illu1">
+        <img class="modal-content " src="img/Hurt_Illustration.png" alt="John Hurt">
+        <div class="hx_center">John Hurt Illustration</div>  
+    </div>
+
+      <div class="mySlides illu1">
+        <img class="modal-content " src="img/Me_Illustration_full.png" alt="Self Portrait in Illustrator">
+        <div class="hx_center">Self Portrait in Illustrator</div>  
+    </div>
+
+      <div class="mySlides illu1">
+        <img class="modal-content " src="img/Sara_Illustration.jpg" alt="Illustration of Sara">
+        <div class="hx_center">Illustration of Sara</div>  
+    </div>
+
+      <div class="mySlides illu1">
+        <img class="modal-content " src="img/ani_illustration.png" alt="Anita">
+        <div class="hx_center">Anita Illustration</div>
+    </div>
+
+      <div class="mySlides logo1">
+        <img class="modal-content " src="img/Bar_Logo.png" alt="Logo for 5. Stanica">
+        <div class="hx_center">Logo for 5. Stanica</div>
+      </div>
+  
+      <div class="mySlides logo1">
+        <img class="modal-content " src="img/ECLRecords-Logo.png" alt="Logo for ECLR">
+        <div class="hx_center">Logo for ECLR</div>  
+    </div>
+
+      <div class="mySlides logo1">
+        <img class="modal-content " src="img/NovIvkeLogo-Gotovo.png" alt="Logo for Ortostim">
+        <div class="hx_center">Logo for Ortostim</div>  
+    </div>
+
+      <div class="mySlides logo1">
+        <img class="modal-content " src="img/9Codex_logo.png" alt="9 Codex Logo Design">
+        <div class="hx_center">9 Codex Logo Design</div>  
+    </div>
+
+      <div class="mySlides logo1">
+        <img class="modal-content " src="img/WalkertonJail_K.png" alt="Walkerton Jail Logo">
+        <div class="hx_center">Walkerton Jail Logo</div>  
+    </div>
+
+      <div class="mySlides fun1">
+        <img class="modal-content " src="img/HeadLEllis_Illustration.png" alt="Illustration of L Ellis">
+        <div class="hx_center">Illustration of L Ellis</div>  
+    </div>
+
+      <div class="mySlides fun1">
+        <img class="modal-content " src="img/MORTE_PST.png" alt="Illustration Morte from Planescape">
+        <div class="hx_center">Illustration Morte from Planescape</div>  
+    </div>  
+
+      <div class="mySlides fun1">
+        <img class="modal-content" src="img/art_recreation-nonorig.png" alt="Recreation of line-art by jmoorzie">
+        <div class="hx_center">Recreation of line-art by jmoorzie</div>  
+    </div>   
+
+      <a class="prev" onclick="plusSlides(-1)"></a>
+      <a class="next" onclick="plusSlides(1)"></a>
+
+</div>
+
+<div id="footer-wrapper">
+    <hr>
+    <div id="footer">
+
+        <div id="footer-menu">
+            <ul>
+                <li><a onclick="filterContent('illu')" href="#">Illustration</a></li>
+                <li><a onclick="filterContent('logo')" href="#">Logo</a></li>
+                <li><a onclick="filterContent('fun')" href="#">Fun</a></li>
+            </ul>
+        </div>
+
+        <div class="social-menu">
+            <ul>
+                <li><a href="mailto:kristianfiredi@gmail.com" class="fa fa-google"></a>&nbsp;</li>
+                <li><a href="https://www.facebook.com/kristian.firedi" class="fa fa-facebook"></a>&nbsp;</li>
+                <li><a href="https://www.linkedin.com/in/kristian-firedi-441574178/" class="fa fa-linkedin"></a>&nbsp;</li>
+                <li><a href="https://secure.skype.com/portal/profile" class="fa fa-skype"></a>&nbsp;</li>
+                <li><a href="https://www.instagram.com/naitsirk_firedi" class="fa fa-instagram"></a>&nbsp;</li>
+            </ul>
+        </div>
+    </div>
+
+    <hr>
+        <br>
+            <br>
+
+    <p>© 2020 NDF Hub. All Rights Reserved.<br>
+        <br>
+          <span>This website designed and maintained by <span class="signature">Kristian Firedi</span></span></p>
+        </div>
+
+</div>
+
+<script src="js/mains.js">
+</script>
+
+<script src="js/pagecontent.js">
+</script>
+
+<script src="js/modal-images.js">
+</script>
+
+
+</body>
+</html>
