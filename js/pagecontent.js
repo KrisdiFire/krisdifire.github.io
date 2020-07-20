@@ -1,13 +1,3 @@
-/*funkcija za parallax u headeru na front page*/
-  function parallax() {
-    var s = document.getElementById("willkommen");
-  var yPos = 0 - window.pageYOffset/22;  
-  s.style.top = 10 + yPos + "rem";}
-
-window.addEventListener("scroll", function(){
-    parallax(); 
-});
-
 /*Here the magic happens - animacija kontenta*/
 
   // Detect request animation frame
@@ -47,3 +37,46 @@ window.addEventListener("scroll", function(){
   rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
   );
   }
+
+
+//Dugme za odlazak na top
+mybutton = document.getElementById("up");
+
+// Pokazati dugme tek posle skrolanja ka dole
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+    mybutton.classList.add("up-opacity");
+  } else {
+    mybutton.classList.remove("up-opacity");
+  }
+}
+
+// Skroll nagore pri kliku na dugme
+function upTop() {
+  document.body.scrollTop = 0; // Za Safari
+  document.documentElement.scrollTop = 0; // Za Chrome, Firefox, IE and Opera
+}
+
+
+  /*funkcija za otvaranje kontenta*/
+//function openContent(contentname) {
+ // closeContent();
+ // document.querySelectorAll(contentname).classList.toggle("show-content");
+//}
+
+/*Specijalna funkcija za otvaranje prednje strane (koja se inicijalno prikazuje)*/
+//function openContentAll() {
+//  closeContent();
+//  document.querySelectorAll(".dont-show").classList.add(".show-content");
+//}
+
+/*funkcija koja zatvara sav kontent koji nije potreban*/
+//function closeContent() {
+  //var rl = document.querySelectorAll(".dont-show");
+    //[].forEach.call(rl, function(closes) {
+      //closes.classList.remove("show-content");});
+//}
+
+//openContentAll();
