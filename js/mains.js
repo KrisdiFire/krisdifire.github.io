@@ -46,7 +46,7 @@ function openSlideMenu(){
   var vid = document.getElementById("background-video");
   
   function setPlaySpeed() { 
-    vid.playbackRate = 0.7;
+    vid.playbackRate = 0.6;
   } 
 
   setPlaySpeed();
