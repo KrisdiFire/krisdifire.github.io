@@ -70,3 +70,61 @@ rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
 );
 }
 
+////////////////////////////////////////////
+//Funkcija za otvaranje odredjene kategorije
+
+function filterContent(contentname){
+    
+  closeRestFilter();
+
+var ol = document.getElementsByClassName(contentname);
+
+[].forEach.call(ol, function(opens) {
+  opens.classList.remove("dont-show-image");
+});
+
+[].forEach.call(ol, function(opens) {
+  opens.classList.add("show-image");
+});
+
+}
+
+
+
+//Funkcija koja otvara sve slike//
+function filterAll(){
+//prvo da zatvori sve
+  closeRestFilter();
+//gura main menu marginom sav content dole da se ne vidi animacija width i height-a
+  document.getElementById('main-nav').style.marginBottom = "100vh";
+  
+//uzima sve .image elemente
+  var il = document.querySelectorAll(".image");
+//za svaki element skida dont show image class
+    [].forEach.call(il, function(opens) {
+      opens.classList.remove("dont-show-image");});
+//normalna margina main menija
+      function marginNorm() {
+        document.getElementById('main-nav').style.marginBottom = "4rem";
+      }
+
+//funkcija koja dopusta da se sve slike prvo ucitaju pa tek onda vraca marginu u normalu
+function marginNormTime() {
+  setTimeout(marginNorm, 1000);
+}
+//executuje vracanje margine 
+marginNormTime();
+      
+}
+
+/*funkcija koja zatvara sve galerije koje nisu potrebne*/
+function closeRestFilter() {
+
+  var rl = document.querySelectorAll(".image");
+
+    [].forEach.call(rl, function(closes) {
+      closes.classList.add("dont-show-image");});
+      [].forEach.call(rl, function(opens) {
+        opens.classList.remove("show-image");});
+}
+
