@@ -3,6 +3,7 @@
 
     <link href='https://fonts.googleapis.com/css?family=Armata' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Poiret One' rel='stylesheet'>
+    <link href="js/parallax.js" rel="javascript">
     <link href="js/modal-images.js" rel="javascript">
     <link href="js/pagecontent.js" rel="javascript">
     <link href="js/mains.js" rel="javascript">
@@ -17,6 +18,7 @@
 
     <title>NDF Hub</title>
 
+    <meta name="description" content="A page's description, usually one or two sentences."/>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -57,13 +59,15 @@
                     </ul>
                 </li>
                 <li class="dropdown"><a class="dropbtn" onclick="closeSlideMenu();" href="#about">About</a>
-                    <ul><a onclick="closeSlideMenu();" href="#"> &hearts; UP! &#x2764;</a></ul> 
                 </li>
               </ul>
         </nav>
     </div>
 
 <div id="whole-page">
+
+    <div id="up"><a onclick="upTop()">UP! <br> &#x2764;</a></div> 
+    <div onclick="closeSlideMenu()" id="close-side-menu-div"></div> 
 
     <nav class="main-menu" id="main-nav"> 
         <p><a class="home" href="index.html">home</a></p>
@@ -111,8 +115,6 @@
 
 <div id="page">
 
-    <div onclick="closeSlideMenu()" id="close-side-menu-div"></div>    
-
     <div class="object-in-3d float-center" id="willkommen">
         <h1 id="back-header">
             NDF
@@ -128,18 +130,16 @@
     <div class="row">
        <!-- <div class="diagonal_back"></div>-->
         <div class="column c70 ">
-            <p class="large_text">
-                
-                 I'm Kris, and this is my personal
+            <div class="div-background-right" id="front-b1"></div><p class="large_text">
+                I'm Kris, and this is my personal
                  website which showcases some of
                 my work and passion projects ranging from graphic/web design and illustration.
                 <br>I am developing this website actively, so some of my work is still not
                 present here... yet.
-                <br><br><br><br><br> Take the time to look around,
+                <br><br><br> Take the time to look around,
                 and if you like what you see, do not hesitate to contact me. Cheers!
-                <div class="div-background-right" id="front-b1"></div>
+                
             </p>
-            <br><br><br><br><br>
         </div>
         
     </div>
@@ -151,41 +151,28 @@
     <a name="design" style="position:absolute; top:-130px;"></a>
 </p>
 
-<div class="content-wrapper dont-show galery-content">
-    <div class="row galery_spacing_row1">
-        <div class="column c100 galery_spacing">
+<div class="content-wrapper dont-show">
 
-<!-- Trigger the Modal - Ovde ubaciti slike -->
+    <div class="div-background-right" id="gal-b1"> Desi<br id="design-br">gn</div>
 
-<img id="slika1" onclick="openModal();currentSlide(1)" class="image_galery i-photo show-on-scroll" src="img/Hurt_Illustration.png" alt="John Hurt">
-<img id="slika2" onclick="openModal();currentSlide(2)" class="image_galery i-photo show-on-scroll" src="img/Me_Illustration_full.png" alt="Self Portrait in Illustrator" >
-<div class="div-background-right" id="gal-b2"> Desi gn</div>
-</div>
-
-</div>
-
-<div class="row">
-    <div class="column c100 galery_spacing">
-
-<img id="slika3" onclick="openModal();currentSlide(3)" class="image_galery i-photo show-on-scroll" src="img/Sara_Illustration.jpg" alt="Illustration of Sara">
-<img id="slika4" onclick="openModal();currentSlide(4)" class="image_galery i-photo show-on-scroll" src="img/ani_illustration.png" alt="Anita" >
-
-</div>
-</div>
-
-<div class="row">
-    <div class="column c100 galery_spacing">
-
-<img id="slika5" onclick="openModal();currentSlide(5)" class="image_galery i-photo show-on-scroll" src="img/Bar_Logo.png" alt="Logo for 5. Stanica">
-<img id="slika6" onclick="openModal();currentSlide(6)" class="image_galery i-photo show-on-scroll" src="img/ECLRecords-Logo.png" alt="Logo for ECLR">
-<img id="slika7" onclick="openModal();currentSlide(7)" class="image_galery i-photo show-on-scroll" src="img/NovIvkeLogo-Gotovo.png" alt="Logo for Ortostim">
-<img id="slika8" onclick="openModal();currentSlide(8)" class="image_galery i-photo show-on-scroll" src="img/9Codex_logo.png" alt="9 Codex Logo Design">
-<img id="slika9" onclick="openModal();currentSlide(9)" class="image_galery i-photo show-on-scroll" src="img/WalkertonJail_K.png" alt="Walkerton Jail Logo" >
-<img id="slika10" onclick="openModal();currentSlide(10)" class="image_galery i-photo show-on-scroll" src="img/HeadLEllis_Illustration.png" alt="Illustration of L Ellis">
-<img id="slika11" onclick="openModal();currentSlide(11)" class="image_galery i-photo show-on-scroll" src="img/MORTE_PST.png" alt="Illustration Morte from Planescape">
-<img id="slika12" onclick="openModal();currentSlide(12)" class="image_galery i-photo show-on-scroll" src="img/art_recreation-nonorig.png" alt="Recreation of line-art by jmoorzie">
-
-</div>
+    <div class="row">
+        <div class="column c100 ">
+            <img id="slika11i" class="hx_right-img image_galery i-photo show-on-scroll" src="img/Hurt_Illustration.png" alt="John Hurt">
+        </div>
+            
+    </div>
+        <div class="row row-img-front c60 hx_right">
+        <div class="div-background-left hx_right" id="gal-b2"></div>
+            <a href="gallery.html" id="gal-link" class=" large_text hx_right highlight-txt">Click me for the full gallery!</a>
+    </div>
+        
+    <div class="row  row-img-front">
+        <div class="column c50">
+            <img id="slika22i" class="margin-minus-3 image_galery i-photo show-on-scroll" src="img/Me_Illustration_full.png" alt="ME">
+        </div>
+        <div class="column c50">
+            <img id="slika33i" class="image_galery i-photo show-on-scroll" src="img/NovIvkeLogo-Gotovo.png" alt="Logo">
+        </div>
     </div>
 </div>
 
@@ -196,68 +183,20 @@
         <img class="modal-content" src="img/Hurt_Illustration.png" alt="John Hurt">
         <div class="hx_center">John Hurt Illustration</div>  
     </div>
-
-      <div class="mySlides">
-        <img class="modal-content" src="img/Me_Illustration_full.png" alt="Self Portrait in Illustrator">
-        <div class="hx_center">Self Portrait in Illustrator</div>  
-    </div>
-
-      <div class="mySlides">
-        <img class="modal-content" src="img/Sara_Illustration.jpg" alt="Illustration of Sara">
-        <div class="hx_center">Illustration of Sara</div>  
-    </div>
-
-      <div class="mySlides">
-        <img class="modal-content" src="img/ani_illustration.png" alt="Anita">
-        <div class="hx_center">Anita Illustration</div>
-    </div>
-
-      <div class="mySlides">
-        <img class="modal-content" src="img/Bar_Logo.png" alt="Logo for 5. Stanica">
-        <div class="hx_center">Logo for 5. Stanica</div>
-      </div>
   
       <div class="mySlides">
-        <img class="modal-content" src="img/ECLRecords-Logo.png" alt="Logo for ECLR">
+        <img class="modal-content" src="img/Me_Illustration_full.png" alt="ME">
         <div class="hx_center">Logo for ECLR</div>  
     </div>
 
-      <div class="mySlides">
+    <div class="mySlides">
         <img class="modal-content" src="img/NovIvkeLogo-Gotovo.png" alt="Logo for Ortostim">
         <div class="hx_center">Logo for Ortostim</div>  
     </div>
-
-      <div class="mySlides">
-        <img class="modal-content" src="img/9Codex_logo.png" alt="9 Codex Logo Design">
-        <div class="hx_center">9 Codex Logo Design</div>  
-    </div>
-
-      <div class="mySlides">
-        <img class="modal-content" src="img/WalkertonJail_K.png" alt="Walkerton Jail Logo">
-        <div class="hx_center">Walkerton Jail Logo</div>  
-    </div>
-
-      <div class="mySlides">
-        <img class="modal-content" src="img/HeadLEllis_Illustration.png" alt="Illustration of L Ellis">
-        <div class="hx_center">Illustration of L Ellis</div>  
-    </div>
-
-      <div class="mySlides">
-        <img class="modal-content" src="img/MORTE_PST.png" alt="Illustration Morte from Planescape">
-        <div class="hx_center">Illustration Morte from Planescape</div>  
-    </div>  
-
-      <div class="mySlides">
-        <img class="modal-content" src="img/art_recreation-nonorig.png" alt="Recreation of line-art by jmoorzie">
-        <div class="hx_center">Recreation of line-art by jmoorzie</div>  
-    </div>   
-
-      <a class="prev" onclick="plusSlides(-1)"></a>
-      <a class="next" onclick="plusSlides(1)"></a>
-
 </div>
 
 <div class="separator"></div>
+
 
 <p style="position:relative;">
     <a name="webdev" style="position:absolute; top:-100px;"></a>
@@ -293,7 +232,7 @@
 <div class="content-wrapper dont-show">
     <div class="row">
         <div class="column c100">
-            <p class="large_text"> 
+            <div class="div-background-left" id="about-b1">ABOUT</div><p class="large_text"> 
                 My full name is Kristian Firedi. I'm currently a Masters degree student
                 of Romanian language and Literature at the Faculty of Philosophy in Novi Sad.
                 But, beside my love for linguistics and languages in general, I also
@@ -309,7 +248,6 @@
                 to be seen on the horison. At least not anytime soon. 
                 
             </p>
-            <div class="div-background-left" id="about-b1">ABOUT</div>
         </div>
     </div>
     <div class="separator"></div>
@@ -317,15 +255,14 @@
         <div class="column c50">
             <br><h2 class="hx_left">Education</h2>
             <br><br><br><br>
-            <ul class="list-about-3">
+            <div class="div-background-right" id="about-b2"></div><ul class="list-about-3">
                 <li>Faculty of Philosophy in Novi Sad 2018 - / Masters degree in Romanian Language and Literature</li>
                 <li>Faculty of Philosophy in Novi Sad 2014 - 2018 / (BA) Philologist, Romanian Language and Literature</li>
                 <li>University "1st December 1918" Feb-July 2018 / Erasmus+ Student exchange program</li>
                 <li>West University in Timisoara Feb - June 2017 / Erasmus+ Student exchange program</li>
             </ul>
-            <div class="div-background-right" id="about-b2"></div>
          </div>         
-        <div class="column c50">
+        <div class="column c50 ">
            <br> <h2 class="hx_right">My Skills</h2>
         <br><br><br><br>
            <ul class="list-about">
@@ -337,6 +274,9 @@
            </ul>
         </div>
     </div>
+
+    <div class="separator"></div>
+
 <h2 class="hx_center">Work Experience</h2>
 </div>
 
@@ -389,6 +329,9 @@
         </div>
 
 </div>
+
+<script src="js/parallax.js">
+</script>
 
 <script src="js/mains.js">
 </script>
