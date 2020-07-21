@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
+  <link rel="icon" type="image/svg+xml" href="img/svg-kao-favicon-01.svg">
+    <link rel="alternate icon" href="favicon.ico">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
     <link href='https://fonts.googleapis.com/css?family=Armata' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Poiret One' rel='stylesheet'>
     <link href="js/modal-images.js" rel="javascript">
@@ -15,19 +19,17 @@
 
 <head>
 
-    <title>NDF Hub</title>
+    <title>NDF Hub - Galery</title>
 
-    <meta name="description" content="A page's description, usually one or two sentences."/>
+    <meta name="description" content="NDF Hub Galery"/>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.png" type="image/png*">
     
 </head>
 
 <body>
 
-    <video autoplay muted loop id="background-video" class="grayscale">
+    <video autoplay muted loop id="background-video" class="grayscale-blur">
         <source src="vid\nightraffic.webm" type="video/webm">
     </video>
 
@@ -85,7 +87,7 @@
 
 <div id="page">
 
-<div class="content-wrapper dont-show galery-content">
+<div class="content-wrapper dont-show galery-content" style="overflow: hidden;">
 <!-- Trigger the Modal - Ovde ubaciti slike -->
     <div class="row">
         <div class="column c100 galery_spacing">
@@ -177,39 +179,41 @@
       <a class="prev" onclick="plusSlides(-1)"></a>
       <a class="next" onclick="plusSlides(1)"></a>
 
+  </div>
+
 </div>
 
 <div id="footer-wrapper">
-    <hr>
-    <div id="footer">
+  <hr>
+  <div id="footer">
 
-        <div id="footer-menu">
-            <ul>
-                <li><a onclick="filterContent('illu')" href="#">Illustration</a></li>
-                <li><a onclick="filterContent('logo')" href="#">Logo</a></li>
-                <li><a onclick="filterContent('fun')" href="#">Fun</a></li>
-            </ul>
-        </div>
+      <div id="footer-menu">
+          <ul>
+              <li><a onclick="filterContent('illu')" href="#">Illustration</a></li>
+              <li><a onclick="filterContent('logo')" href="#">Logo</a></li>
+              <li><a onclick="filterContent('fun')" href="#">Fun</a></li>
+          </ul>
+      </div>
 
-        <div class="social-menu">
-            <ul>
-                <li><a href="mailto:kristianfiredi@gmail.com" class="fa fa-google"></a>&nbsp;</li>
-                <li><a href="https://www.facebook.com/kristian.firedi" class="fa fa-facebook"></a>&nbsp;</li>
-                <li><a href="https://www.linkedin.com/in/kristian-firedi-441574178/" class="fa fa-linkedin"></a>&nbsp;</li>
-                <li><a href="https://secure.skype.com/portal/profile" class="fa fa-skype"></a>&nbsp;</li>
-                <li><a href="https://www.instagram.com/naitsirk_firedi" class="fa fa-instagram"></a>&nbsp;</li>
-            </ul>
-        </div>
-    </div>
+      <div class="social-menu">
+          <ul>
+              <li><a href="mailto:kristianfiredi@gmail.com" class="fa fa-google"></a>&nbsp;</li>
+              <li><a href="https://www.facebook.com/kristian.firedi" class="fa fa-facebook"></a>&nbsp;</li>
+              <li><a href="https://www.linkedin.com/in/kristian-firedi-441574178/" class="fa fa-linkedin"></a>&nbsp;</li>
+              <li><a href="https://secure.skype.com/portal/profile" class="fa fa-skype"></a>&nbsp;</li>
+              <li><a href="https://www.instagram.com/naitsirk_firedi" class="fa fa-instagram"></a>&nbsp;</li>
+          </ul>
+      </div>
+  </div>
 
-    <hr>
-        <br>
-            <br>
+  <hr>
+      <br>
+          <br>
 
-    <p>© 2020 NDF Hub. All Rights Reserved.<br>
-        <br>
-          <span>This website designed and maintained by <span class="signature">Kristian Firedi</span></span></p>
-        </div>
+  <p>© 2020 NDF Hub. All Rights Reserved.<br>
+      <br>
+        <span>This website designed and maintained by <span class="signature">Kristian Firedi</span></span></p>
+      </div>
 
 </div>
 
