@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+    <link rel="icon" type="image/svg+xml" href="img/svg-kao-favicon-01.svg">
+    <link rel="alternate icon" href="favicon.ico">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
     <link href='https://fonts.googleapis.com/css?family=Armata' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Poiret One' rel='stylesheet'>
     <link href="js/parallax.js" rel="javascript">
@@ -16,19 +21,17 @@
 
 <head>
 
-    <title>NDF Hub</title>
+    <title>NDF Hub - Graphic Design & Web Development</title>
 
-    <meta name="description" content="A page's description, usually one or two sentences."/>
+    <meta name="description" content="Have no fear, Kris is here! I'm here to help you with your Graphic Design, Illustration & Web Development needs."/>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.png" type="image/png*">
     
 </head>
 
 <body>
 
-    <video autoplay muted loop id="background-video" class="grayscale">
+    <video autoplay muted loop id="background-video" class="grayscale-blur">
         <source src="vid\nightraffic.webm" type="video/webm">
     </video>
 
@@ -45,7 +48,7 @@
                 <li class="dropdown"><a class="dropbtn" onclick="openDropMenu('re-list2')" href="#testing">Testing</a>
                     <ul class=dropdown-content id="re-list2">
                         <li><a href="#front" onclick="closeSlideMenu();">Front Page</a></li>
-                        <li><a href="#2011" onclick="closeSlideMenu()">Blank</a></li>
+                        <li><a href="gallery.html" onclick="closeSlideMenu()">Galery</a></li>
                         <li><a href="#2012" onclick="closeSlideMenu()">Blank</a></li>
                     </ul>
                 </li>
@@ -81,7 +84,7 @@
             <li class="list"><a class="menu-item" href="#testing">Testing</a>
                 <ul class="un-list2">
                     <li><a href="#front">Front Page</a></li>
-                    <li><a href="#blank">Blank</a></li>
+                    <li><a href="gallery.html">Galery</a></li>
                     <li><a href="#blank">Blank</a></li>
                 </ul>
             </li>
@@ -113,19 +116,17 @@
           </span>
     </nav>
 
+<div class="overflow0">
+
 <div id="page">
 
-    <div class="object-in-3d float-center" id="willkommen">
-        <h1 id="back-header">
-            NDF
-        </h1>
-    </div>
+    
 
     <p style="position:relative;">
         <a name="front" style="position:absolute; top:-100px;"></a>
     </p>
 
-<div class="content-wrapper dont-show" >
+<div style="margin-top: 1rem;" class="content-wrapper dont-show top-of-p" >
     <h2 class="hx_left">Hello there!</h2>
     <div class="row">
        <!-- <div class="diagonal_back"></div>-->
@@ -141,11 +142,16 @@
                 
             </p>
         </div>
-        
+
+        <div class="float-center" id="willkommen">
+        </div>
+        <div class="float-center" id="willkommen2">
+        </div>
+        <div class="float-center" id="willkommen3">
+        </div>
+
     </div>
 </div>
-
-<div class="separator"></div>
 
 <p style="position:relative;">
     <a name="design" style="position:absolute; top:-130px;"></a>
@@ -155,43 +161,49 @@
 
     <div class="div-background-right" id="gal-b1"> Desi<br id="design-br">gn</div>
 
-    <div class="row">
-        <div class="column c100 ">
-            <img id="slika11i" class="hx_right-img image_galery i-photo show-on-scroll" src="img/Hurt_Illustration.png" alt="John Hurt">
+    <div class="row fr-img-row">
+        <div class=" column c33 fr-img-row">
+            <img onclick="openModal();currentSlide(1)" id="slika11i" class="image-main-page image_galery i-photo show-on-scroll" src="img/art_recreation-nonorig.png" alt="art">
+            <div id="p1p" class="hx_center large_text">Illustration</div>
         </div>
-            
-    </div>
-        <div class="row row-img-front c60 hx_right">
-        <div class="div-background-left hx_right" id="gal-b2"></div>
-            <a href="gallery.html" id="gal-link" class=" large_text hx_right highlight-txt">Click me for the full gallery!</a>
-    </div>
-        
-    <div class="row  row-img-front">
-        <div class="column c50">
-            <img id="slika22i" class="margin-minus-3 image_galery i-photo show-on-scroll" src="img/Me_Illustration_full.png" alt="ME">
+        <div class=" column c33 fr-img-row">
+            <img onclick="openModal();currentSlide(2)" id="slika22i" class="image-main-page image_galery i-photo show-on-scroll" src="img/Hurt_Illustration.png" alt="John Hurt">
+            <div id="p2p" class="hx_center large_text">Photo Editing</div>
         </div>
-        <div class="column c50">
-            <img id="slika33i" class="image_galery i-photo show-on-scroll" src="img/NovIvkeLogo-Gotovo.png" alt="Logo">
+        <div class=" column c33 fr-img-row">
+            <img onclick="openModal();currentSlide(3)" id="slika33i" class="image-main-page image_galery i-photo show-on-scroll" src="img/NovIvkeLogo-Gotovo.png" alt="Logo">
+            <div id="p3p" class="hx_center large_text">Logo Design</div>
         </div>
     </div>
+       
+    
 </div>
 
 <div id="myModal" class="modal">
     <span class="close cursor" onclick="closeModal()"></span>
   
       <div class="mySlides">
-        <img class="modal-content" src="img/Hurt_Illustration.png" alt="John Hurt">
-        <div class="hx_center">John Hurt Illustration</div>  
+        <img class="modal-content" src="img/art_recreation-nonorig.png" alt="Recreation of line-art by jmoorzie">
+        <div class="hx_center">Recreation of line-art by jmoorzie</div>  
     </div>
   
       <div class="mySlides">
-        <img class="modal-content" src="img/Me_Illustration_full.png" alt="ME">
-        <div class="hx_center">Logo for ECLR</div>  
+        <img class="modal-content" src="img/Hurt_Illustration.png" alt="John Hurt">
+        <div class="hx_center">John Hurt Illustration</div>  
     </div>
 
     <div class="mySlides">
         <img class="modal-content" src="img/NovIvkeLogo-Gotovo.png" alt="Logo for Ortostim">
         <div class="hx_center">Logo for Ortostim</div>  
+    </div>
+</div>
+
+<div style="margin-top: 4rem;" class="content-wrapper dont-show">
+    <div class="column c100">
+        <div class="float-center" id="willkommen4"></div>
+            <div id="will4txt" class="hx_center">
+                <a href="gallery.html"  class="large_text highlight-txt">View All!</a>    
+            </div>
     </div>
 </div>
 
@@ -261,8 +273,11 @@
                 <li>University "1st December 1918" Feb-July 2018 / Erasmus+ Student exchange program</li>
                 <li>West University in Timisoara Feb - June 2017 / Erasmus+ Student exchange program</li>
             </ul>
-         </div>         
-        <div class="column c50 ">
+         </div>
+
+         <div class="float-center" id="willkommen5"></div>
+
+        <div class="column c50 margin-top-15">
            <br> <h2 class="hx_right">My Skills</h2>
         <br><br><br><br>
            <ul class="list-about">
@@ -295,39 +310,42 @@
          </div>
         </div>
     </div>
+    <div class="separator"></div>
+</div>
 
-<div id="footer-wrapper">
-    <hr>
-    <div id="footer">
-
-        <div id="footer-menu">
-            <ul>
-                <li><a href="#design">DESIGN</a></li>
-                <li><a href="#webdev">WEB DEV</a></li>
-                <li><a href="#about">ABOUT</a></li>
-            </ul>
+    <div id="footer-wrapper">
+        <hr>
+        <div id="footer">
+    
+            <div id="footer-menu">
+                <ul>
+                    <li><a href="#design">DESIGN</a></li>
+                    <li><a href="#webdev">WEB DEV</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                </ul>
+            </div>
+    
+            <div class="social-menu">
+                <ul>
+                    <li><a href="mailto:kristianfiredi@gmail.com" class="fa fa-google"></a>&nbsp;</li>
+                    <li><a href="https://www.facebook.com/kristian.firedi" class="fa fa-facebook"></a>&nbsp;</li>
+                    <li><a href="https://www.linkedin.com/in/kristian-firedi-441574178/" class="fa fa-linkedin"></a>&nbsp;</li>
+                    <li><a href="https://secure.skype.com/portal/profile" class="fa fa-skype"></a>&nbsp;</li>
+                    <li><a href="https://www.instagram.com/naitsirk_firedi" class="fa fa-instagram"></a>&nbsp;</li>
+                </ul>
+            </div>
         </div>
-
-        <div class="social-menu">
-            <ul>
-                <li><a href="mailto:kristianfiredi@gmail.com" class="fa fa-google"></a>&nbsp;</li>
-                <li><a href="https://www.facebook.com/kristian.firedi" class="fa fa-facebook"></a>&nbsp;</li>
-                <li><a href="https://www.linkedin.com/in/kristian-firedi-441574178/" class="fa fa-linkedin"></a>&nbsp;</li>
-                <li><a href="https://secure.skype.com/portal/profile" class="fa fa-skype"></a>&nbsp;</li>
-                <li><a href="https://www.instagram.com/naitsirk_firedi" class="fa fa-instagram"></a>&nbsp;</li>
-            </ul>
-        </div>
-    </div>
-
-    <hr>
-        <br>
+    
+        <hr>
             <br>
+                <br>
+    
+        <p>© 2020 NDF Hub. All Rights Reserved.<br>
+            <br>
+              <span>This website designed and maintained by <span class="signature">Kristian Firedi</span></span></p>
+            </div>
 
-    <p>© 2020 NDF Hub. All Rights Reserved.<br>
-        <br>
-          <span>This website designed and maintained by <span class="signature">Kristian Firedi</span></span></p>
-        </div>
-
+    </div>
 </div>
 
 <script src="js/parallax.js">
