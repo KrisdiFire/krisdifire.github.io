@@ -1,3 +1,29 @@
+@media only screen and (min-width: 1200px) {
+    #page {
+    width: 1170px !important;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    #gal-b1 {
+        font-size: 10vw;
+    }
+
+    #about-b1{
+        font-size: 10vw;
+    }
+    #back-header {
+        font-size: 10vw;
+    }
+}
+
+/*@media (min-width: 992px) {
+#page {
+    width: 970px;
+    }
+}*/
+
+
 @media only screen and (max-width: 900px) {
     /*pretvara layout footera iz row u kolone*/
     #footer {
@@ -35,6 +61,12 @@
         justify-content: center;
     }
 
+    #design-br {
+        display: none;
+    }
+    #back-header {
+        margin-left: -5rem;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -42,6 +74,11 @@
     #page {
         padding-bottom: 22rem;
     }
+
+    #back-header {
+        display: none;
+    }
+
   /*skriva main navigaciju na malim ekranima*/
     .main-menu .table-1 {
         display: none;
@@ -69,6 +106,7 @@
 
     #gal-b1 {
         font-weight: 800;
+        font-size: 22vw;
         color: rgba(75, 75, 75, 0.5);
         background-color: rgba(128, 128, 128, 0);
         line-height: 1em;
@@ -76,6 +114,7 @@
 
     #about-b1 {
         top: -5rem;
+        font-size: 22vw;
         right: 0rem;
         width: auto;
         height: 20rem;
@@ -94,18 +133,51 @@
       }
 
 #slika11i {
-        width: 50%;
-        margin-right: 0%;
+        width: 30rem;
+        margin: 0;
+        margin-top: 4rem;
+       
     }
 #slika22i {
-        width: 50%;
-        margin-left: 0%;
+    width: 30rem;
+       margin: 0;
+      
     }
 #slika33i {
-          width: 50%;
-          margin-top: -12rem;
-          margin-right: 0%;
+    width: 30rem;
+          margin: 0;
+        
       }
+
+      .fr-img-row {
+        margin-top: 3rem;
+        padding: 0rem;
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    #p1p {
+        left:0;
+        right: 0;
+        opacity: 0;
+        transition: ease-in-out 0.3s;
+        bottom: 0;
+    }
+    #p2p {
+        left:0;
+        right:0;
+        opacity: 0;
+        transition: ease-in-out 0.3s;
+        bottom: 0;
+    }
+    #p3p {
+        left: 0;
+        right:0;
+        opacity: 0;
+        transition: ease-in-out 0.3s;
+        bottom: 0;
+    }
 }
 
 @media only screen and (max-width: 480px) {   
@@ -178,25 +250,13 @@
         width: 100%;
     }
 
-    .float-center {
+    #willkommen {
         display: none;
     }
 
     #design-br {
         display: none;
     }
-
-    .margin-minus-1 {
-        margin-top: 0rem;
-      }
-      
-      .margin-minus-2 {
-        margin-top: 0rem;
-      }
-      
-      .margin-minus-3 {
-        margin-top: 0rem;
-      }
 
       .hx_right-img {
         display: flex;
@@ -215,6 +275,7 @@
     #slika11i {
         width: 100%;
         margin-right: 0%;
+        margin-top: 4rem;
     }
     
       #slika22i {
@@ -224,13 +285,20 @@
       
       #slika33i {
        width: 100%;
-       margin-right: 0%;
-       margin-top: 2rem;
-       
+       margin-right: 0%;       
       }
 
       .column-flex {
         display: flex;
         justify-content: center;
+    }
+
+    .fr-img-row {
+        margin-top: 0rem;
+        padding: 0rem;
+    }
+
+    .margin-top-15 {
+        margin-top: 0rem;
     }
 }
