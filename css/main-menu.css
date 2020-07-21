@@ -67,7 +67,7 @@ kao pri hoverovanju preko dropa*/
 
 /*cini da kad hoverujes po listi, menu dugme bude zatamljeno.*/
 .main-menu ul .list a:hover, .list:hover .menu-item {
-    background-color: #22222200;
+    background-color: #000000;
     color: #FFA500;
     text-shadow: 0 0 2em #FFA500;
     transition: 0.1s;
@@ -86,7 +86,7 @@ kao pri hoverovanju preko dropa*/
 
 /*ovo je samo za shading dropa*/
 .main-menu ul li:hover ul {
-    background-color: #00000000;
+    background-color: #000000;
     display: block;
     transition: 0.1s;
 }
