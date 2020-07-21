@@ -184,6 +184,17 @@
         height: 10rem;
         margin-top: -3rem;
     }
+
+    .content-wrapper {
+        margin-bottom: 3rem;
+    }
+
+    .content-wrapper:after{
+        content:".";
+        display:block;
+        clear:left;
+        visibility:hidden;
+      }
 }
 
 @media only screen and (max-width: 480px) {   
@@ -215,11 +226,10 @@
     }
     
     #web-b2 {
-        margin-top: 0rem;
+        margin-top: -2rem;
         width: 60%;
         height: 5rem;
         right: 0;
-        bottom: 0;
     }
     
     #front-b1 {
@@ -363,4 +373,6 @@
     .dont-show {
         opacity: 1 !important;
     }
+
+    
 }
