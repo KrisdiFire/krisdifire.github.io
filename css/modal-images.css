@@ -46,7 +46,6 @@
   text-align: center;
   object-fit: cover;
   width: 30rem;
-  min-width: 15rem;
   height: auto;
   background-repeat: no-repeat;
   background-size: cover;
@@ -162,7 +161,7 @@ margin: 1rem;
 /*Here the magic happens - animacija vezana za JS putem scroll pozicije*/
 
 .i-photo {
-  box-shadow: 1em 1em 2em .25em rgba(0,0,0,.2);
+  box-shadow: 1em 1em 2em .25em rgba(0, 0, 0, 0);
   margin: 1em;
   opacity: 0;
   transform: translateY(4em) rotateZ(0deg);
@@ -185,7 +184,9 @@ margin: 1rem;
 .image_galery_sm:hover {
   opacity: 1;
   filter: grayscale(0%);
-  transition: ease-in 0.3s;
+  transform: translateY(-10%);
+  transition: opacity ease-in 0.3s, filter ease-in 0.3s,
+  transform ease-in-out 0.25s ;
 }
 
 @media only screen and (max-width: 900px) {
