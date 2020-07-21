@@ -1,9 +1,11 @@
-document.getElementById("myModal").style.display = "none";
+//Zatvara modal inace bi se otvarao na page load
 
+document.getElementById("myModal").style.display = "none";
+//otvara modal
 function openModal() {
     document.getElementById("myModal").style.display = "block";
   }
-  
+  //zatvara modal
   function closeModal() {
     document.getElementById("myModal").style.display = "none";
   }
@@ -86,10 +88,7 @@ var ol = document.getElementsByClassName(contentname);
 [].forEach.call(ol, function(opens) {
   opens.classList.add("show-image");
 });
-
 }
-
-
 
 //Funkcija koja otvara sve slike//
 function filterAll(){
@@ -97,7 +96,8 @@ function filterAll(){
   closeRestFilter();
 //gura main menu marginom sav content dole da se ne vidi animacija width i height-a
   document.getElementById('main-nav').style.marginBottom = "100vh";
-  
+  //dize gore (funkcija iz pagecontenta) da se ne vidi tranzicija dole
+  upTop();
 //uzima sve .image elemente
   var il = document.querySelectorAll(".image");
 //za svaki element skida dont show image class
@@ -107,14 +107,12 @@ function filterAll(){
       function marginNorm() {
         document.getElementById('main-nav').style.marginBottom = "4rem";
       }
-
 //funkcija koja dopusta da se sve slike prvo ucitaju pa tek onda vraca marginu u normalu
 function marginNormTime() {
-  setTimeout(marginNorm, 1000);
+  setTimeout(marginNorm, 250);
 }
 //executuje vracanje margine 
-marginNormTime();
-      
+marginNormTime(); 
 }
 
 /*funkcija koja zatvara sve galerije koje nisu potrebne*/
