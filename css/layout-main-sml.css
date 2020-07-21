@@ -149,12 +149,12 @@
         
       }
 
-      .fr-img-row {
+    .fr-img-row {
         margin-top: 3rem;
         padding: 0rem;
         display: flex;
-    flex-direction: column;
-    align-items: center;
+        flex-direction: column;
+        align-items: center;
     }
 
     #p1p {
@@ -177,6 +177,12 @@
         opacity: 0;
         transition: ease-in-out 0.3s;
         bottom: 0;
+    }
+
+    #willkommen5 {
+        width: 10rem;
+        height: 10rem;
+        margin-top: -3rem;
     }
 }
 
@@ -254,11 +260,31 @@
         display: none;
     }
 
+    
+    #willkommen2 {
+        display: none;
+    }
+
+    #willkommen3 {
+        left: 0;
+        margin-left: auto;
+        right: 0;
+        transform: rotate(0deg);
+    }
+
+    #will4txt {
+        margin-bottom: 3rem;
+    }
+
+    #willkommen5 {
+        display: none;
+    }
+
     #design-br {
         display: none;
     }
 
-      .hx_right-img {
+    .hx_right-img {
         display: flex;
         float: right;
         justify-content: center;
@@ -276,19 +302,25 @@
         width: 100%;
         margin-right: 0%;
         margin-top: 4rem;
+        filter: none;
+        margin-bottom: 2rem;
     }
     
-      #slika22i {
+    #slika22i {
           width: 100%;
           margin-left: 0%;
+          filter: none;
+          margin-bottom: 2rem;
       }
       
-      #slika33i {
+    #slika33i {
        width: 100%;
-       margin-right: 0%;       
+       margin-right: 0%; 
+       filter: none;     
+       margin-bottom: 2rem; 
       }
 
-      .column-flex {
+    .column-flex {
         display: flex;
         justify-content: center;
     }
@@ -300,5 +332,35 @@
 
     .margin-top-15 {
         margin-top: 0rem;
+    }
+
+    .image-main-page:hover {
+        filter: grayscale(0) contrast(100%);
+        transform: none;
+        transition: none;
+        z-index: 100;
+    }
+
+    #p1p {
+       display: none;
+    }
+
+    #p2p {
+        display: none;
+    }
+
+    #p3p {
+        display: none;
+    }
+
+    .grayscale-blur {
+        filter: grayscale(1) blur(0px);
+        -webkit-filter: grayscale(1) blur(0px);
+        filter: grayscale(100%) blur(0px);
+        -o-filter: grayscale(1) blur(0px);
+    }
+
+    .dont-show {
+        opacity: 1 !important;
     }
 }
