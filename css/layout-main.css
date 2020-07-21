@@ -524,11 +524,10 @@ h3 {
 }
 
 #web-b2 {
-    margin-top: 0rem;
+    margin-top: -2rem;
     width: 60%;
     height: 5rem;
     right: 0;
-    bottom: 0;
 }
 
 #front-b1 {
