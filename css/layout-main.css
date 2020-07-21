@@ -18,6 +18,7 @@ a {
 }
 /*za up dugme*/
 #up {
+    line-height: 2;
     position: fixed;
     height: 3rem;
     width: 3rem;
