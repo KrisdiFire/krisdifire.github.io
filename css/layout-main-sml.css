@@ -1,6 +1,6 @@
 @media only screen and (min-width: 1200px) {
     #page {
-    width: 1170px !important;
+    width: 1100px !important;
     margin-left: auto;
     margin-right: auto;
     }
@@ -12,19 +12,15 @@
     #about-b1{
         font-size: 10vw;
     }
-    #back-header {
-        font-size: 10vw;
-    }
 }
 
-/*@media (min-width: 992px) {
-#page {
-    width: 970px;
-    }
-}*/
-
-
 @media only screen and (max-width: 900px) {
+    #page {
+        width: auto !important;
+        margin-left: 5rem;
+        margin-right: 5rem;
+        }
+
     /*pretvara layout footera iz row u kolone*/
     #footer {
         display: flex;
@@ -64,19 +60,14 @@
     #design-br {
         display: none;
     }
-    #back-header {
-        margin-left: -5rem;
-    }
 }
 
 @media only screen and (max-width: 768px) {
   /*padding je tu da zadrzi footer dole*/
     #page {
         padding-bottom: 22rem;
-    }
-
-    #back-header {
-        display: none;
+        margin-left: 0rem;
+        margin-right: 0rem;
     }
 
   /*skriva main navigaciju na malim ekranima*/
@@ -120,63 +111,102 @@
         height: 20rem;
     }
 
+    .margin-top-15 {
+        margin-top: 0rem;
+    }
+
     .margin-minus-1 {
         margin-top: -3rem;
       }
       
-      .margin-minus-2 {
+    .margin-minus-2 {
         margin-top: -9rem;
       }
       
-      .margin-minus-3 {
+    .margin-minus-3 {
         margin-top: -10rem;
       }
 
-#slika11i {
-        width: 30rem;
-        margin: 0;
-        margin-top: 4rem;
-       
-    }
-#slika22i {
-    width: 30rem;
-       margin: 0;
-      
-    }
-#slika33i {
-    width: 30rem;
-          margin: 0;
-        
-      }
-
     .fr-img-row {
-        margin-top: 3rem;
+        margin-top: 0rem;
         padding: 0rem;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    #p1p {
-        left:0;
-        right: 0;
-        opacity: 0;
-        transition: ease-in-out 0.3s;
-        bottom: 0;
+    .fr-img-row .c33 {
+        flex-wrap: wrap;
+        justify-content: center;
     }
-    #p2p {
-        left:0;
-        right:0;
-        opacity: 0;
-        transition: ease-in-out 0.3s;
-        bottom: 0;
+
+    .fr-img-row .c33 img {
+        display: flex;
+        height: 15rem;
+        width: 15rem;  
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0rem;
+        filter: none;
     }
-    #p3p {
+
+    .fr-img-row .c33 div {
+        position: absolute;
+        opacity: 1;
         left: 0;
         right:0;
-        opacity: 0;
+        margin-top: 25%;
+        text-transform: uppercase;
         transition: ease-in-out 0.3s;
-        bottom: 0;
+        font-weight: 900;
+        font-size: 1.5rem;
+        color: azure;
+    }
+
+    #slika11i {
+        float: right;
+    }
+
+    #slika22i {
+        float: left;
+    }
+
+    #slika33i {
+        float: right;
+    }
+
+    #p1p {
+        margin-top: 0rem;
+        margin-right: 25%;
+        opacity: 1;
+        text-shadow: 2px 2px #000000;
+    }
+    #p2p {
+        margin-top: 0rem;
+        margin-left: 25%;
+        opacity: 1;
+        text-shadow: 2px 2px #000000;
+    }
+    #p3p {
+        margin-top: 0rem;
+        margin-right: 25%;
+        opacity: 1;
+        text-shadow: 2px 2px #000000;
+    }
+
+    #slika11i:hover~#p1p {
+        background-color: rgba(105, 105, 105, 0.5);
+        transition: ease-in-out 0.3s;
+    }
+    
+    #slika22i:hover~#p2p {
+        background-color: rgba(105, 105, 105, 0.5);
+        transition: ease-in-out 0.3s;
+    }
+    
+    #slika33i:hover~#p3p {
+        background-color: rgba(105, 105, 105, 0.5);
+        transition: ease-in-out 0.3s;
     }
 
     #willkommen5 {
@@ -245,7 +275,9 @@
         color: rgba(75, 75, 75, 0.5);
         background-color: rgba(128, 128, 128, 0);
         line-height: 1em;
-        margin-top: -3rem;
+        margin-top: 0rem;
+        position: relative;
+        height: auto;
     }
     
     #about-b1 {
@@ -294,42 +326,6 @@
         display: none;
     }
 
-    .hx_right-img {
-        display: flex;
-        float: right;
-        justify-content: center;
-        text-align: center !important;
-        margin-right: 0rem;
-    }
-    
-    .hx_left-img {
-        float: left;
-        justify-content: center;
-        text-align: center !important;
-        margin-left: 0rem;
-    }
-    #slika11i {
-        width: 100%;
-        margin-right: 0%;
-        margin-top: 4rem;
-        filter: none;
-        margin-bottom: 2rem;
-    }
-    
-    #slika22i {
-          width: 100%;
-          margin-left: 0%;
-          filter: none;
-          margin-bottom: 2rem;
-      }
-      
-    #slika33i {
-       width: 100%;
-       margin-right: 0%; 
-       filter: none;     
-       margin-bottom: 2rem; 
-      }
-
     .column-flex {
         display: flex;
         justify-content: center;
@@ -338,6 +334,25 @@
     .fr-img-row {
         margin-top: 0rem;
         padding: 0rem;
+    }
+
+    .c33 {
+        display: flex;
+    }
+
+    .fr-img-row .c33 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .fr-img-row .c33 img {
+        height: 15rem;
+        width: 15rem;  
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2rem;
+        filter: none;
     }
 
     .margin-top-15 {
@@ -351,16 +366,44 @@
         z-index: 100;
     }
 
+.c33 {
+    margin-top: 2rem;
+}
+
     #p1p {
-       display: none;
+        z-index: 10;
+        margin-top: 0rem;
+        margin-right: 0%;
+        font-size: 1.5rem;
     }
 
     #p2p {
-        display: none;
+        z-index: 10;
+        margin-top: 0rem;
+        margin-left: 0%;
+        font-size: 1.5rem;
     }
 
     #p3p {
-        display: none;
+        z-index: 10;
+        margin-top: 0rem;
+        margin-right: 0%;
+        font-size: 1.5rem;
+    }
+
+    #slika11i:hover~#p1p {
+        background-color: rgba(255, 255, 255, 0);
+        transition: ease-in-out 0.3s;
+    }
+    
+    #slika22i:hover~#p2p {
+        background-color: rgba(255, 255, 255, 0);
+        transition: ease-in-out 0.3s;
+    }
+    
+    #slika33i:hover~#p3p {
+        background-color: rgba(255, 255, 255, 0);
+        transition: ease-in-out 0.3s;
     }
 
     .grayscale-blur {
@@ -372,7 +415,5 @@
 
     .dont-show {
         opacity: 1 !important;
-    }
-
-    
+    }   
 }
