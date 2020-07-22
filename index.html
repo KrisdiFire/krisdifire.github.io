@@ -67,11 +67,12 @@
 
 <div id="whole-page">
 
-    <div id="up"><a onclick="upTop()">UP!</a></div> 
+    
     <div onclick="closeSlideMenu()" id="close-side-menu-div"></div> 
-
+    
+    <div id="up"><a onclick="upTop()">&#8679;</a></div> 
     <nav class="main-menu" id="main-nav"> 
-        <a href="index.html" id="logo01"></a>
+        <p><a class="home" href="index.html">home</a></p>
         <ul class="table-1">
             <li class="list"><a class="menu-item" href="#what-i-do">What I Do</a>
                 <ul class="un-list1">
@@ -114,16 +115,23 @@
           </span>
     </nav>
 
-<div class="overflow0" style="transition: ease-in 0.3s;"></div>
+<div class="overflow0" style="transition: ease-in 0.3s;">
 
 <div id="page">
+
+   <div class="row"> 
+       <div class=" column c100" href="index.html" >
+           <div id="logo01"></div>
+    </div>
+</div>
 
     <p style="position:relative;">
         <a name="front" style="position:absolute; top:-100px;"></a>
     </p>
 
-<div style="margin-top: 1rem;" class="content-wrapper dont-show top-of-p" >
-    <h2 class="hx_left">Hello there!</h2>
+<div class="content-wrapper dont-show top-of-p" >
+   
+    <h1 class="hx_left">Hello there!</h1>
     <div class="row">
        <!-- <div class="diagonal_back"></div>-->
         <div class="column c70 ">
@@ -139,11 +147,11 @@
             </p>
         </div>
 
-        <div class="float-center" id="willkommen">
+        <div class="background-cube" id="willkommen">
         </div>
-        <div class="float-center" id="willkommen2">
+        <div class="background-cube" id="willkommen2">
         </div>
-        <div class="float-center" id="willkommen3">
+        <div class="background-cube" id="willkommen3">
         </div>
 
     </div>
@@ -158,15 +166,15 @@
     <div class="div-background-right" id="gal-b1"> Desi<br id="design-br">gn</div>
 
     <div class="row fr-img-row">
-        <div class=" column c33 fr-img-row">
+        <div class=" column c33">
             <img onclick="openModal();currentSlide(1)" id="slika11i" class="image-main-page image_galery i-photo show-on-scroll" src="img/art_recreation-nonorig.png" alt="art">
             <div id="p1p" class="hx_center large_text">Illustration</div>
         </div>
-        <div class=" column c33 fr-img-row">
+        <div class=" column c33">
             <img onclick="openModal();currentSlide(2)" id="slika22i" class="image-main-page image_galery i-photo show-on-scroll" src="img/Hurt_Illustration.png" alt="John Hurt">
             <div id="p2p" class="hx_center large_text">Photo Editing</div>
         </div>
-        <div class=" column c33 fr-img-row">
+        <div class=" column c33">
             <img onclick="openModal();currentSlide(3)" id="slika33i" class="image-main-page image_galery i-photo show-on-scroll" src="img/NovIvkeLogo-Gotovo.png" alt="Logo">
             <div id="p3p" class="hx_center large_text">Logo Design</div>
         </div>
@@ -196,7 +204,7 @@
 
 <div style="margin-top: 4rem;" class="content-wrapper dont-show">
     <div class="column c100">
-        <div class="float-center" id="willkommen4"></div>
+        <div class="background-cube" id="willkommen4"></div>
             <div id="will4txt" class="hx_center">
                 <a href="gallery.html"  class="large_text highlight-txt">View All!</a>    
             </div>
@@ -271,7 +279,7 @@
             </ul>
          </div>
 
-         <div class="float-center" id="willkommen5"></div>
+         <div class="background-cube" id="willkommen5"></div>
 
         <div class="column c50 margin-top-15">
            <br> <h2 class="hx_right">My Skills</h2>
@@ -288,8 +296,9 @@
 
     <div class="separator"></div>
 
-<h2 class="hx_center">Work Experience</h2>
 </div>
+
+<h2 class="hx_center">Work Experience</h2>
 
 <div class="content-wrapper dont-show">
     <div class="row">
