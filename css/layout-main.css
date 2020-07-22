@@ -10,7 +10,7 @@
 *::-moz-selection {
     background: #ff7676;
 }
-
+/*za sve linkove*/
 a {
     color: azure;
     cursor: pointer;
@@ -18,7 +18,8 @@ a {
 }
 /*za up dugme*/
 #up {
-    line-height: 2;
+    font-size: 2rem;
+    line-height: 1;
     position: fixed;
     height: 3rem;
     width: 3rem;
@@ -93,13 +94,28 @@ body {
     padding-bottom: 20rem;
 }
 
+#logo01 {
+    /*background-color: dimgray;*/
+    /* background-color: maroon;*/
+    background-color: antiquewhite;
+    -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);;
+    height: 10rem;
+    width: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url("../img/logo_kris.svg");
+    background-size: contain;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
 /*stil headera do h3*/
 
 h1 {
     color: orange;
-    top: 0;
-    font-size: 6rem;
-    font-weight: 800;
+    font-size: 5rem;
+    font-weight: 700;
     font-style: normal;
     font-family: sans-serif;
 }
@@ -129,7 +145,7 @@ h3 {
 
 /*Ovo je za kvadrate u pozadini*/
 
-.float-center {
+.background-cube {
     position: absolute; 
     z-index: -29;
     background: url("../img/sing_square_rot-01-01.svg") no-repeat center;
@@ -141,7 +157,7 @@ h3 {
     height: 10rem;
     width: 10rem;
     right: 0;
-    margin-right: 5rem;
+    margin-right: 3rem;
     top: 10rem; 
     opacity: 0.3;
     transform: rotate(45deg);
@@ -150,19 +166,17 @@ h3 {
 #willkommen2 {
     height: 13rem;
     width: 13rem;
-    left: 40%;
+    left: 25%;
     right: auto;
     top: 25rem; 
-    position: absolute; 
     opacity: 0.5;
 }
 #willkommen3 {
     height: 7rem;
     width: 7rem;
-    left: -2rem;
+    left: -1.7rem;
     right: auto;
     top: -1.3rem; 
-    position: absolute; 
     opacity: 0.3;
     transform: rotate(45deg);
 }
@@ -172,7 +186,6 @@ h3 {
     width: 10rem;
     left: 0;
     right: 0;
-    position: absolute; 
     opacity: 0.5;
     margin-left: auto;
     margin-right: auto;
@@ -183,12 +196,11 @@ h3 {
     width: 15rem;
     left: 0;
     right: 0;
-    position: absolute; 
     opacity: 0.4;
     margin-left: 60%;
     margin-right: auto;
 }
-
+/*tekst u willcommen4 (link za galeriju)*/
 #will4txt {
     margin-left: auto;
     margin-right: auto;
@@ -203,16 +215,14 @@ h3 {
     transition: ease-in-out 0.3s;
 }
 
-/*Content wrapper je container za svaku pojedinacnu stranicu*/
+/*Content wrapper je container za segmentiranje sadrzaja*/
 
 .content-wrapper {    
     color: #f2f2f2;
-    
 }
 
 /*Row sadrzi kolone i stoji u content wrapperu*/
 .row {
-    
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -266,6 +276,20 @@ h3 {
 .c100 {
      width: 100%;
  }
+
+ /*empty space*/
+
+.separator {
+    height: 10vw;
+    width: 100%;
+}
+
+/*slike u fp galeriji*/
+
+.fr-img-row .c33 img {
+    height: 30rem;
+    width: 100%;  
+}
 
  /*Slike sa fiksnom sirinom koje se stavljaju unutar columna ili column > p element, takodje fiksirane
  na odredjenu stranu (left, right)*/
@@ -334,10 +358,9 @@ h3 {
     clip-path: polygon(0 0, 0 200px, 200px 160px, 200px 0);
 }
 
-/*klase za pozicioniranje nekog segmenat na desnu, centar ili levu str*/
+/*klase za pozicioniranje nekog segmenta na desnu, centar ili levu str*/
 
 .hx_right {
-    display: flex;
     float: right;
     justify-content: right;
     text-align: right !important;
@@ -584,29 +607,6 @@ h3 {
     height: 20rem;
 }
 
-/*empty space*/
-
-.separator {
-    height: 10vw;
-    width: 100%;
-}
-
-/*slike u fp galeriji*/
-  
-  #slika11i {
-    width: 100%;
-    height: 30rem;
-}
-
-  #slika22i {
-      width: 100%;
-      height: 30rem;
-  }
-  
-  #slika33i {
-      width: 100%;
-      height: 30rem;
-}
 /*link za galeriju*/
 #gal-link {
     right: 0;
@@ -641,19 +641,21 @@ h3 {
     margin-top: 9rem;
     padding: 0rem;
     justify-content: space-between;
-   
 }
 
-.fr-img-row:hover > #p1p {
+.column:hover > #p1p {
     opacity: 1;
+    text-shadow: 2px 2px #000000;
 }
 
-.fr-img-row:hover > #p2p {
+.column:hover > #p2p {
     opacity: 1;
+    text-shadow: 2px 2px #000000;
 }
 
-.fr-img-row:hover > #p3p {
+.column:hover > #p3p {
     opacity: 1;
+    text-shadow: 2px 2px #000000;
 }
 
 .fr-img-row p {
@@ -664,17 +666,20 @@ h3 {
 }
 
 #p1p {
+    margin-top: -2rem;
     left:0;
     opacity: 0;
     transition: ease-in-out 0.3s;
 }
 #p2p {
+    margin-top: -2rem;
     left:0;
     right:0;
     opacity: 0;
     transition: ease-in-out 0.3s;
 }
 #p3p {
+    margin-top: -2rem;
     right:0;
     opacity: 0;
     transition: ease-in-out 0.3s;
@@ -682,7 +687,9 @@ h3 {
 
 /*da pocetni kontent zauzima full view height*/
 .top-of-p {
-    height: 100vh;
+    min-height: 100vh;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 /*za spustanje my skills row-a*/
 .margin-top-15 {
