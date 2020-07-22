@@ -102,36 +102,25 @@ kao pri hoverovanju preko dropa*/
 
 /* Sirina i visina dropdowna */
 .main-menu ul li .un-list1 li {
-    width: 26em;
+    width: 27.5em;
     height: 3em;
     overflow: hidden;
 }
 .main-menu ul li .un-list2 li {
-    width: 19.5em;
+    width: 20.5em;
     height: 3em;
     overflow: hidden;
 }
 .main-menu ul li .un-list3 li {
-    width: 13em;
+    width: 13.5em;
     height: 3em;
     overflow: hidden;
 }
 .main-menu ul li .un-list4 li {
-    width: 5.5em;
+    width: 5em;
     height: 3em;
     overflow: hidden;
 }
-
-#logo01 {
-    height: 2.5rem;
-    width: 2.5rem;
-    background-image: url("../img/logo_kris.svg");
-    background-size: contain;
-    position: relative;
-    margin-left: 2rem;
-    margin-right: 2rem;
-}
-
 
 /*//////////////////////////////////////////////*/
 
