@@ -97,17 +97,24 @@ body {
 #logo01 {
     /*background-color: dimgray;*/
     /* background-color: maroon;*/
-    background-color: antiquewhite;
+    background-color: rgb(250, 235, 215);
     -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);;
-    height: 10rem;
-    width: 10rem;
+    height: 20rem;
+    width: 20rem;
     margin-left: auto;
     margin-right: auto;
     background-image: url("../img/logo_kris.svg");
     background-size: contain;
     position: relative;
-    margin-bottom: 2rem;
+}
+
+#logo-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -3rem;
+    height: 100vh;
 }
 
 /*stil headera do h3*/
@@ -168,7 +175,7 @@ h3 {
     width: 13rem;
     left: 25%;
     right: auto;
-    top: 25rem; 
+    top: 42rem; 
     opacity: 0.5;
 }
 #willkommen3 {
@@ -176,7 +183,7 @@ h3 {
     width: 7rem;
     left: -1.7rem;
     right: auto;
-    top: -1.3rem; 
+    top: -0.7rem; 
     opacity: 0.3;
     transform: rotate(45deg);
 }
@@ -563,11 +570,10 @@ h3 {
 }
 
 #gal-b1 {
-    margin-top: -5rem;
+    margin-top: -12rem;
     margin-right: 0% !important;
     width: auto;
     left: 0rem;
-    height: 30rem;
     font-size: 20vw;
     font-weight: 800;
     color: rgba(75, 75, 75, 0.5);
@@ -593,7 +599,6 @@ h3 {
     top: -5rem;
     width: auto;
     right: 0rem;
-    height: 30rem;
     font-size: 20vw;
     font-weight: 800;
     color: rgba(75, 75, 75, 0.5);
@@ -687,7 +692,7 @@ h3 {
 
 /*da pocetni kontent zauzima full view height*/
 .top-of-p {
-    min-height: 100vh;
+    min-height: 70vh;
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
