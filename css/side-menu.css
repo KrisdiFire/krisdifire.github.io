@@ -165,8 +165,9 @@ svg g:hover {
 }
 /*izgled side m kad je na normalnom ekranu i izgled kad je na telefonu*/
 .side-menu-norm {
-    background-color: #4b4b4b00;
+    background-color: rgba(250, 235, 215, 0.8);
     width: 22em;
+
 }
 .side-menu-sml {
     background-color: black;
