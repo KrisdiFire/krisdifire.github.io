@@ -9,7 +9,7 @@ function parallax() {
   s.style.top = 10 + yPos + "rem";
 
   var yPos2 = 0 - window.pageYOffset/22;  
-  o.style.top = 25 + yPos2 + "rem";
+  o.style.top = 42 + yPos2 + "rem";
 
   //var yPos3 = 0 - window.pageYOffset/22;  
   //b.style.top = 0 + yPos3 + "rem";
