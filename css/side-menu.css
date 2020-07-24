@@ -22,31 +22,53 @@ svg g:hover {
     display: none;
 }
 
-/*izgled side menija*/
-
-.side-menu {
-    height: 100%;
-    width: 0%;
-    position: fixed;
-    color: azure;
-    z-index: 5;
-    top: 0;
-    right: 0;
-    background-color: #000000;
-    text-align: center;
-    padding-top: 4em;
-    overflow-x: hidden;
-    -ms-overflow-style: none;  /* IE 10+*/
-    scrollbar-width: none;  /* Firefox*/
-    transition: 0.2s;
+#btn-close-div {
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 50%;
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 1.5rem !important;
+    text-decoration: none;
+    position: absolute;
+    right: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -3rem;
 }
 
-/*slika u pozadini side menija*/
+#btn-close-div:hover {
+    background-color: black;
+}
 
-.side-menu::after {
+#btn-close-div a {
+    font-size: 2rem;
+    padding: 0rem;
+}
+
+#btn-close-div a:hover {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/* Fixed sidenav, full height */
+.sidenav {
+    height: 100%;
+    width: 0rem;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+    transition: all ease-in-out .2s;
+    padding-top: 4rem;
+  }
+
+  /*pozadina side menija, sa slikom*/
+
+  .sidenav::after {
     background-image: url('../img/seamSquaresSMB.svg');
     background-position: center;
-    background-color: rgb(0, 0, 0);
     content: "";
     opacity: 0.3;
     top: 0;
@@ -55,84 +77,79 @@ svg g:hover {
     right: 0;
     position: absolute;
     z-index: -1;   
+    transition: all ease-in-out .2s;
 }
-
-/*skida scroll sa side menija*/
-
-.side-menu::-webkit-scrollbar { 
-    display: none;  /* Safari and Chrome */
-}
-
-/*dugme X za zatvaranje side-m*/
-
-.btn-close {
-    font-family: Arial, Helvetica, sans-serif;
-    border-radius: 50%;
-    background-color: #00000080;
-    padding-left: 0.26em;
-    padding-right: 0.26em;
-    margin-top: 1em;
+  
+  /* Style the sidenav links and the dropdown button */
+  .sidenav a, .dropbtn {
+    padding: 0.5rem;
+    line-height: 2rem;
     text-decoration: none;
-}
-
-.side-menu .btn-close {
-    position: absolute;
-    top: -0.5em;
-    font-size: 2em;
-    right: 0.5em;
-}
-
-.side-menu .btn-close:hover {
-    color: #FFA500;
-    text-shadow: 0 0 2em #FFA500;
-    background-color: rgb(0, 0, 0);
-}
-
-/*izgled liste i linkova unutar side-m*/
-
-.side-menu nav a {
-    display: block;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    transition: 0.1s;
-    text-decoration: none;
+    font-size: 1rem;
+    text-align: center;
+    font-family: 'Armata';
     font-weight: 600;
-    font-family: 'Armata';
-}
-
-.side-menu nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-.side-menu a:hover {
-    background-color: rgb(0, 0, 0); 
-    color: #FFA500;
-    text-shadow: 0 0 2em #FFA500;
-}
-/*izgled dropdowna u side-m*/
-.dropdown-content {
-    overflow: hidden;
-    text-align: left;
-    z-index: -2;
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s, opacity 0.5s linear;
-    height: 0px;
-}
-
-.dropdown-content a {
-    padding-left: 4em;
-    font-family: 'Armata';
-}
-/*klasa koja se nalepi preko JS-a da bi se prikazao side meni*/
-.show {
+    color: azure;
     display: block;
-    transition: 0.2s;
-    visibility: visible;
-    opacity: 1;
-    z-index: 2222222222222;
-    height: auto;
+    border: none;
+    background: none;
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  /* On mouse-over */
+  .sidenav a:hover, .dropbtn:hover {
+    color: orange;
+    background-color: black;
+  }
+
+/* Add an active class to the active dropdown button */
+.active {
+    color: orange;
+  }
+  
+  /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+  .dropdown-container {
+    display: none;
+    
+  }
+
+  .dropdown-container a {
+      text-align: left;
+      padding-left: 3rem;
+  }
+
+  .dropdown-container a:hover {
+   color: orange;
+  }
+
+/*izgled side m kad je na normalnom ekranu i izgled kad je na telefonu*/
+.side-menu-norm {
+    background-color: rgba(250, 235, 215, 0);
+    width: 22em;
+    transition: all ease-in-out .2s;
+}
+.side-menu-sml {
+    background-color: black;
+    width: 100%;
+    transition: all ease-in-out .2s;
+}
+
+/*Stil koji se primenjuje na celu stranicu pri otvaranju side menija*/
+
+.sideopen {
+    transform: translate(-22em, 0);
+    transition: all ease-in-out .2s;
+}
+
+ /*div koji ide preko cele stranice pri otvaranju side m, i sa klikom na njega se side m zatvara*/
+#close-side-menu-div {
+    display: none;
+    z-index: 100;
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
 @media only screen and (max-width: 768px) {
@@ -148,45 +165,10 @@ svg g:hover {
     }
 }
 
-@media only screen and (max-width: 480px) {
-    .side-menu {
-        position: fixed;
-        color: azure;
-        z-index: 2;
-        top: 0;
-        right: 0;
-        text-align: center;
-        padding-top: 4em;
-        overflow-x: hidden;
-        -ms-overflow-style: none;  /* IE 10+*/
-        scrollbar-width: none;  /* Firefox*/
-        transition: 0.2s;
-    }
-}
-/*izgled side m kad je na normalnom ekranu i izgled kad je na telefonu*/
-.side-menu-norm {
-    background-color: rgba(250, 235, 215, 0.8);
-    width: 22em;
-
-}
-.side-menu-sml {
-    background-color: black;
-    width: 100%;
-}
-
-/*Stil koji se primenjuje na celu stranicu pri otvaranju side menija*/
-
-.sideopen {
-    transform: translate(-22em, 0);
-    transition: all ease-in-out .2s;
-}
-
- /*div koji ide preko cele stranice pri otvaranju side m, i sa klikom na njega se side m zatvara*/
-#close-side-menu-div {
+.display-none {
     display: none;
-   /* background-color: #81000056;*/
-    z-index: 100;
-    position: absolute;
-    width: 100%;
-    height: 100%;
+}
+
+.display-some {
+    display: block;
 }
