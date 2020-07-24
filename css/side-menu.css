@@ -1,26 +1,9 @@
 #ham-menu {
     flex: 1 1 auto;
+    right: 0;
 }
 
 /*izgled hamburgera i izgled pri hoveru*/
-
-#ham-menu .hamburger {
-    padding-top: 0.5em;
-    padding-left: 0.5em;
-    float: right;
-    z-index: 6;
-}
-
-svg g {
-    stroke: azure;
-    display: none;
-}
-
-svg g:hover {
-    transition: 0.2s;
-    stroke: #FFA500;
-    display: none;
-}
 
 #btn-close-div {
     font-family: Arial, Helvetica, sans-serif;
@@ -153,14 +136,7 @@ svg g:hover {
 }
 
 @media only screen and (max-width: 768px) {
-    svg g {
-        stroke: azure;
-        display: block;
-    }
-    
-    svg g:hover {
-        transition: 0.2s;
-        stroke: #FFA500;
+    #ham-menu {
         display: block;
     }
 }
@@ -171,4 +147,95 @@ svg g:hover {
 
 .display-some {
     display: block;
+}
+
+
+/*oooooooooooooooooooooooooooooo*/
+
+a[data-toggle="offCanvas"] {
+    position: absolute;
+    
+    display: none;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    cursor: pointer;
+    z-index: 100;
+}
+a[data-toggle="offCanvas"] span {
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+a[data-toggle="offCanvas"] span,
+a[data-toggle="offCanvas"] span:before,
+a[data-toggle="offCanvas"] span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 3px;
+    width: 29px;
+    background: azure;
+    box-shadow: 0 1px 5px azure;
+    position: absolute;
+    display: block;
+    content: "";
+}
+a[data-toggle="offCanvas"] span:before {
+    -ms-transform: translate(0px, -10px);
+    transform: translate(0px, -10px);
+    -webkit-transform: translate(0px, -10px);
+}
+a[data-toggle="offCanvas"] span:after {
+    -ms-transform: translate(0px, 10px);
+    transform: translate(0px, 10px);
+    -webkit-transform: translate(0px, 10px);
+}
+a[data-toggle="offCanvas"] span,
+a[data-toggle="offCanvas"] span:before,
+a[data-toggle="offCanvas"] span:after {
+    -webkit-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+}
+a[data-toggle="offCanvas"].activeOpen span {
+    background-color: transparent;
+}
+a[data-toggle="offCanvas"].activeOpen span:before,
+a[data-toggle="offCanvas"].activeOpen span:after {
+    -webkit-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+}
+a[data-toggle="offCanvas"].activeOpen span:before {
+    -ms-transform: translate(-0px, -0px) rotate(-45deg);
+    transform: translate(-0px, -0px) rotate(-45deg);
+    -webkit-transform: translate(-0px, -0px) rotate(-45deg);
+}
+a[data-toggle="offCanvas"].activeOpen span:after {
+    -ms-transform: translate(0px, -0px) rotate(45deg);
+    transform: translate(0px, -0px) rotate(45deg);
+    -webkit-transform: translate(0px, -0px) rotate(45deg);
+}
+.off-canvas{
+    background: rgba(240, 255, 255, 0.5);
+}
+.off-canvas ul:not(.contextual-links){
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.off-canvas ul:not(.contextual-links) li{
+    width: 100%;
+    padding: 0;
+}
+.off-canvas ul:not(.contextual-links) li a{
+    font-family: 'Miso-r';
+    font-size: 1.5rem;
+    padding: 10px;
+    text-align: center;
+    transition: all ease-in-out .2s;
+    color: #303030;
+}
+.off-canvas ul:not(.contextual-links) li a:hover{
+    color: #3e57a7;
 }
