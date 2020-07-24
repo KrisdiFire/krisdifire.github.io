@@ -8,7 +8,6 @@
     <link href='https://fonts.googleapis.com/css?family=Poiret One' rel='stylesheet'>
     <link href="js/modal-images.js" rel="javascript">
     <link href="js/pagecontent.js" rel="javascript">
-    <link href="js/mains.js" rel="javascript">
     <link href="css/modal-images.css" rel="stylesheet">
     <link href="css/layout-main.css" rel="stylesheet">
     <link href="css/layout-main-sml.css" rel="stylesheet">
@@ -32,26 +31,21 @@
         <source src="vid\nightraffic.webm" type="video/webm">
     </video>
 
-    <div id="side-nav" class="side-menu">
-        <a class="btn-close" onclick="closeSlideMenu()">&times;</a>
-        <nav> 
-            <ul>
-                <li class="dropdown"><a class="dropbtn" onclick="closeSlideMenu();filterContent('illu')" >Illustration</a>
-                </li>
-                <li class="dropdown"><a class="dropbtn" onclick="closeSlideMenu();filterContent('logo')" >Logo</a>
-                </li>
-                <li class="dropdown"><a class="dropbtn" onclick="closeSlideMenu();filterContent('fun')" >Fun</a> 
-                </li>
-                <li class="dropdown"><a class="dropbtn" onclick="closeSlideMenu();filterAll();" >All</a>
-                </li>
-              </ul>
-        </nav>
-    </div>
+    <div class="sidenav" id="sidenav">
+
+      <div id="btn-close-div"><a class="close-side-menu">&times;</a></div>
+      
+      <a class="dropbtn close-side-menu" onclick="filterContent('illu')" >Illustration</a>
+      <a class="dropbtn close-side-menu" onclick="filterContent('logo')" >Logo</a>
+      <a class="dropbtn close-side-menu" onclick="filterContent('fun')" >Fun</a> 
+      <a class="dropbtn close-side-menu" onclick="filterAll();" >All</a>
+
+   </div>
 
 <div id="whole-page">
 
-  <div id="up"><a onclick="upTop()">&#8679;</a></div> 
-  <div onclick="closeSlideMenu()" id="close-side-menu-div"></div>    
+  <div id="up"><a>&#8679;</a></div> 
+  <div class="close-side-menu" id="close-side-menu-div"></div>    
 
     <div id="transition-cover"></div>
 
@@ -72,7 +66,7 @@
           <!--<a data-toggle="offCanvas" aria-expanded="false" aria-controls="offCanvas"><span></span></a>
             -->
           <span id="ham-menu">
-              <a onclick="openSlideMenu()">
+              <a>
                 <svg class="hamburger" width="3em" height="3em">
                     <g fill="none" stroke="white" stroke-width="2"> 
                         <path d="M0,5 30,5"></path>
@@ -215,9 +209,6 @@
       </div>
 
 </div>
-
-<script src="js/mains.js">
-</script>
 
 <script src="js/pagecontent.js">
 </script>
