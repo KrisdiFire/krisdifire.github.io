@@ -39,7 +39,7 @@
 
 /*Slike u galeriji*/
 
-.image_galery {
+.image_gallery {
   opacity: 0.7;
   filter: grayscale(30%);
  /* border: ivory 2px solid;*/
@@ -55,7 +55,7 @@
   padding: 1rem;
 }
 
-.image_galery_sm {
+.image_gallery_sm {
   opacity: 0.7;
   filter: grayscale(30%);
  /* border: ivory 2px solid;*/
@@ -71,26 +71,26 @@
   padding: 1rem;
 }
 
-.galery-content {
+.gallery-content {
   margin-left: 0 !important;
   margin-right: 0 !important;
   right: 0 !important;
   left: 0 !important;
 }
 
-.galery_spacing_row1 {
+.gallery_spacing_row1 {
   width: 50%;
   margin-left: 50%;
 }
 
-.galery_spacing_row2 {
+.gallery_spacing_row2 {
   width: 50%;
   margin-right: 50%;
 }
 
 /*klasa koja razdvaja slike unutar kontainera i cini da po popunjavanju reda, ostale slike predju u drugi*/
 
-.galery_spacing {
+.gallery_spacing {
   margin-top: 1rem;
   flex-wrap: wrap;
   display: flex;
@@ -175,13 +175,13 @@ margin: 1rem;
   transform: rotateZ(0deg);
 }
 
-.image_galery:hover {
+.image_gallery:hover {
   opacity: 1;
   filter: grayscale(0%);
   transition: ease-in 0.3s;
 }
 
-.image_galery_sm:hover {
+.image_gallery_sm:hover {
   opacity: 1;
   filter: grayscale(0%);
   transform: translateY(-10%);
@@ -214,7 +214,7 @@ margin: 1rem;
 
 @media only screen and (max-width: 480px) {
 
-  .image_galery {
+  .image_gallery {
     max-width: auto;
     max-height: auto;
   }
@@ -237,18 +237,18 @@ margin: 1rem;
     transform: rotateZ(0deg);
   }
 
-  .galery-content {
+  .gallery-content {
     margin-right: 0 !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
   
-  .galery_spacing_row-left {
+  .gallery_spacing_row-left {
     width: 100%;
     margin-left: 0%;
   }
   
-  .galery_spacing_row-right {
+  .gallery_spacing_row-right {
     width: 100%;
     margin-right: 0%;
   }
