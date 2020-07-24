@@ -238,6 +238,15 @@
         padding-bottom: 26rem;
     }
     
+    #logo01 {
+        height: 10rem;
+        width: 10rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
     h2 {
         font-size: 2.5rem;
     }
