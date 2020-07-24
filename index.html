@@ -9,7 +9,6 @@
     <link href="js/parallax.js" rel="javascript">
     <link href="js/modal-images.js" rel="javascript">
     <link href="js/pagecontent.js" rel="javascript">
-    <link href="js/mains.js" rel="javascript">
     <link href="css/modal-images.css" rel="stylesheet">
     <link href="css/layout-main.css" rel="stylesheet">
     <link href="css/layout-main-sml.css" rel="stylesheet">
@@ -33,44 +32,41 @@
         <source src="vid\nightraffic.webm" type="video/webm">
     </video>
 
-    <div id="side-nav" class="side-menu">
-        <a class="btn-close" onclick="closeSlideMenu()">&times;</a>
-        <nav> 
-            <ul>
-                <li class="dropdown"><a class="dropbtn" onclick="openDropMenu('re-list1')" href="#what-i-do">What I Do</a>
-                    <ul class=dropdown-content id="re-list1">
-                        <li><a href="#design" onclick="closeSlideMenu();">Design</a></li>
-                        <li><a href="#webdev" onclick="closeSlideMenu();">Web Dev</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown"><a class="dropbtn" onclick="openDropMenu('re-list2')" href="#testing">Testing</a>
-                    <ul class=dropdown-content id="re-list2">
-                        <li><a href="#front" onclick="closeSlideMenu();">Front Page</a></li>
-                        <li><a href="gallery.html" onclick="closeSlideMenu()">Galery</a></li>
-                        <li><a href="#2012" onclick="closeSlideMenu()">Blank</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown"><a class="dropbtn" onclick="openDropMenu('re-list3')" href="#contact">Contact</a>
-                    <ul class=dropdown-content id="re-list3">
-                        <li><a href="mailto:kristianfiredi@gmail.com">gmail</a></li>
-                        <li><a href="https://www.facebook.com/kristian.firedi">Facebook</a></li>
-                        <li><a href="https://www.linkedin.com/in/kristian-firedi-441574178/">LinkedIn</a></li>
-                        <li><a href="https://secure.skype.com/portal/profile">Skype</a></li>
-                        <li><a href="https://www.instagram.com/naitsirk_firedi">Instagram</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown"><a class="dropbtn" onclick="closeSlideMenu();" href="#about">About</a>
-                </li>
-              </ul>
-        </nav>
-    </div>
+
+    <div class="sidenav" id="sidenav">
+        <div id="btn-close-div"><a class="close-side-menu">&times;</a></div>
+        <button class="dropbtn">What I do
+       </button>
+       <div class="dropdown-container">
+        <a class="close-side-menu" href="#design">Design</a>
+        <a class="close-side-menu" href="#webdev">Web Dev</a>
+       </div>
+       <button class="dropbtn">Testing
+       </button>
+       <div class="dropdown-container">
+        <a class="close-side-menu" href="#front">Front Page</a>
+        <a class="close-side-menu" href="gallery.html">Galery</a>
+        <a class="close-side-menu" href="#blank">Blank</a>
+       </div>
+       <button class="dropbtn">Contact
+       </button>
+       <div class="dropdown-container">
+         <a href="mailto:kristianfiredi@gmail.com">gmail</a>
+         <a href="https://www.facebook.com/kristian.firedi">Facebook</a>
+         <a href="https://secure.skype.com/portal/profile">Skype</a>
+         <a href="https://www.instagram.com/naitsirk_firedi">Instagram</a>
+       </div>
+       <a class="close-side-menu" href="#about">About</a>
+     </div>
+
 
 <div id="whole-page">
 
     
-    <div onclick="closeSlideMenu()" id="close-side-menu-div"></div> 
+    <div class="close-side-menu" id="close-side-menu-div"></div> 
     
-    <div id="up"><a onclick="upTop()">&#8679;</a></div> 
+    <div id="up"><a>&#8679;</a></div> 
+
     <nav class="main-menu" id="main-nav"> 
         <p><a class="home" href="index.html">home</a></p>
         <ul class="table-1">
@@ -103,7 +99,7 @@
           <!--<a data-toggle="offCanvas" aria-expanded="false" aria-controls="offCanvas"><span></span></a>
             -->
           <span id="ham-menu">
-              <a onclick="openSlideMenu()">
+              <a>
                 <svg class="hamburger" width="3em" height="3em">
                     <g fill="none" stroke="white" stroke-width="2"> 
                         <path d="M0,5 30,5"></path>
@@ -182,9 +178,7 @@
             <img onclick="openModal();currentSlide(3)" id="slika33i" class="image-main-page image_galery i-photo show-on-scroll" src="img/NovIvkeLogo-Gotovo.webp" alt="Logo">
             <div id="p3p" class="hx_center large_text">Logo Design</div>
         </div>
-    </div>
-       
-    
+    </div>    
 </div>
 
 <div id="myModal" class="modal">
@@ -335,6 +329,7 @@
                 <ul>
                     <li><a href="#design">DESIGN</a></li>
                     <li><a href="#webdev">WEB DEV</a></li>
+                    <li><a href="gallery.html">GALERY</a></li>
                     <li><a href="#about">ABOUT</a></li>
                 </ul>
             </div>
@@ -363,9 +358,6 @@
 </div>
 
 <script src="js/parallax.js">
-</script>
-
-<script src="js/mains.js">
 </script>
 
 <script src="js/pagecontent.js">
