@@ -69,7 +69,7 @@ openSide.addEventListener("click", openSlideMenu);
 /*Funk za otv side menija */
 function openSlideMenu(){
     document.getElementById('whole-page').classList.toggle("sideopen");
-    document.getElementById('ham-menu').style.display = 'none';
+    document.getElementById('ham-menu').classList.add('dont-show');
     document.getElementById('close-side-menu-div').style.display = 'block';
 //assignujemo velicinu prozora od 480px varijabli "mq"
   var mq = window.matchMedia ( "(max-width: 480px)");
@@ -84,7 +84,16 @@ function openSlideMenu(){
   }
 /*Funk za zatv side menija */
   function closeSlideMenu(){
-    document.getElementById('ham-menu').style.display = 'block';
+
+    var mq = window.matchMedia ( "(max-width: 768px)");
+      if (mq.matches) {
+        document.getElementById('ham-menu').classList.remove('dont-show');
+      }
+
+      else {
+        document.getElementById('ham-menu').classList.add('dont-show');
+      }
+
     document.getElementById('close-side-menu-div').style.display = 'none';
     document.getElementById('sidenav').classList.remove("side-menu-norm");
     document.getElementById('sidenav').classList.remove("side-menu-sml");
