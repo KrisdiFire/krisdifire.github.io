@@ -476,6 +476,7 @@ h3 {
 #footer {
     display: flex;
     margin: 1em 2em 1em 2em;
+    align-items: center;
 }
 
 #footer ul {
