@@ -89,7 +89,10 @@ body {
 /*stil za stranicu bez side menija i footera*/
 
 #page {
-    width: 100%;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1100px;
     height: auto;
     padding-bottom: 20rem;
 }
@@ -693,7 +696,8 @@ h3 {
 
 /*da pocetni kontent zauzima full view height*/
 .top-of-p {
-    min-height: 70vh;
+    height: 100%;
+    min-height: 25rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
