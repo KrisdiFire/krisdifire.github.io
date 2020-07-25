@@ -714,13 +714,13 @@ h3 {
   
   .tooltip .tooltiptext {
     visibility: hidden;
-    background-color: black;
     color: #fff;
     border-radius: 10px;
     padding: 6px 6px;
     position: absolute;
     z-index: 1;
     margin-top: -2rem;
+    margin-left: -0.5rem;
   }
   
   .tooltip:hover .tooltiptext {
