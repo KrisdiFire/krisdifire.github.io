@@ -1,7 +1,8 @@
 * {
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Lucida Sans Regular', 'Lucida Grande';
+    font-family: Lucida Sans, Lucida Sans Unicode, Helvetica, Arial, sans-serif;
+
 }
 /*boja selektovanog texta*/
 *::selection {
@@ -356,6 +357,18 @@ h3 {
     line-height: 1.3em;
 }
 
+.larger_text {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.3em;
+}
+
+.largest_text {
+    font-size: 7rem;
+    font-weight: 600;
+    line-height: 1.3em;
+}
+
 /*zasecen block koji je za background - WIP*/
 
 .clip-background {
@@ -581,6 +594,7 @@ h3 {
     font-size: 20vw;
     font-weight: 800;
     color: rgba(75, 75, 75, 0.5);
+    
     background-color: rgba(128, 128, 128, 0);
     line-height: 1em;
 }
@@ -605,6 +619,7 @@ h3 {
     right: 0rem;
     font-size: 20vw;
     font-weight: 800;
+    
     color: rgba(75, 75, 75, 0.5);
     background-color: rgba(128, 128, 128, 0);
     line-height: 1em;
@@ -701,18 +716,20 @@ h3 {
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
+
 /*za spustanje my skills row-a*/
 .margin-top-15 {
     margin-top: 15rem;
 }
 
+/*Tooltip stil*/
 .tooltip {
     position: relative;
     display: inline-block;
     justify-content: center;
-  }
+}
   
-  .tooltip .tooltiptext {
+.tooltip .tooltiptext {
     visibility: hidden;
     color: #fff;
     border-radius: 10px;
@@ -721,8 +738,8 @@ h3 {
     z-index: 1;
     margin-top: -2rem;
     margin-left: -0.5rem;
-  }
+}
   
-  .tooltip:hover .tooltiptext {
+.tooltip:hover .tooltiptext {
     visibility: visible;
-  }
+}
