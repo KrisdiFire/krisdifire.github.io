@@ -125,3 +125,4 @@ function closeRestFilter() {
       [].forEach.call(rl, function(opens) {
         opens.classList.remove("show-image");});
 }
+
