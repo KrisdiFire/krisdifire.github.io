@@ -20,3 +20,4 @@ function parallax() {
   window.addEventListener("scroll", function(){
     parallax(); 
   });
+
