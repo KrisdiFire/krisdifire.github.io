@@ -14,7 +14,8 @@
     <link href="css/main-menu.css" rel="stylesheet">
     <link href="css/side-menu.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+
+    <link rel="stylesheet" href="css/simple-lightbox.css?v2.2.1" />
 
 <head>
 
@@ -71,96 +72,28 @@
 <div class="content-wrapper dont-show gallery-content" style="overflow: hidden;">
 <!-- Trigger the Modal - Ovde ubaciti slike -->
     <div class="row">
-        <div class="column c100 gallery_spacing">
+        <div class="column c100">
        
-<img id="slika1" onclick="openModal();currentSlide(1)" class="image_gallery_sm i-photo show-on-scroll illu image" src="img/Hurt_Illustration.webp" alt="John Hurt">
-<img id="slika2" onclick="openModal();currentSlide(2)" class="image_gallery_sm i-photo show-on-scroll illu image" src="img/Me_Illustration_full.webp" alt="Self Portrait in Illustrator" >
-<img id="slika3" onclick="openModal();currentSlide(3)" class="image_gallery_sm i-photo show-on-scroll illu image" src="img/Sara_Illustration.webp" alt="Illustration of Sara">
-<img id="slika4" onclick="openModal();currentSlide(4)" class="image_gallery_sm i-photo show-on-scroll illu image" src="img/ani_illustration.webp" alt="Anita" >        
-        
-        
-<img id="slika5" onclick="openModal();currentSlide(5)" class="image_gallery_sm i-photo show-on-scroll logo image" src="img/Bar_Logo.webp" alt="Logo for 5. Stanica">
-<img id="slika6" onclick="openModal();currentSlide(6)" class="image_gallery_sm i-photo show-on-scroll logo image" src="img/ECLRecords-Logo.webp" alt="Logo for ECLR">
-<img id="slika7" onclick="openModal();currentSlide(7)" class="image_gallery_sm i-photo show-on-scroll logo image" src="img/NovIvkeLogo-Gotovo.webp" alt="Logo for Ortostim">
-<img id="slika8" onclick="openModal();currentSlide(8)" class="image_gallery_sm i-photo show-on-scroll logo image" src="img/9Codex_logo.png" alt="9 Codex Logo Design">
-<img id="slika9" onclick="openModal();currentSlide(9)" class="image_gallery_sm i-photo show-on-scroll logo image" src="img/WalkertonJail_K.png" alt="Walkerton Jail Logo" >
-       
-        
-<img id="slika10" onclick="openModal();currentSlide(10)" class="image_gallery_sm i-photo show-on-scroll fun image" src="img/HeadLEllis_Illustration.png" alt="Illustration of L Ellis">
-<img id="slika11" onclick="openModal();currentSlide(11)" class="image_gallery_sm i-photo show-on-scroll fun image" src="img/MORTE_PST.png" alt="Illustration Morte from Planescape">
-<img id="slika12" onclick="openModal();currentSlide(12)" class="image_gallery_sm i-photo show-on-scroll fun image" src="img/art_recreation-nonorig.webp" alt="Recreation of line-art by jmoorzie">            
-        
+          <div class="gallery gallery_spacing">
+            <a href="img/Hurt_Illustration.png"><img class="image_gallery_sm i-photo show-on-scroll illu image" src="img/thumb/Hurt_Illustration.webp" alt="John Hurt" title="John Hurt" /></a>
+            <a href="img/Me_Illustration_full.png"><img class="image_gallery_sm i-photo show-on-scroll illu image" src="img/thumb/Me_Illustration_full.webp" alt="Self Portrait in Illustrator" title="Self Portrait in Illustrator"/></a>
+            <a href="img/Sara_Illustration.jpg"><img class="image_gallery_sm i-photo show-on-scroll illu image" src="img/thumb/Sara_Illustration.webp" alt="Illustration of Sara" title="Illustration of Sara"/></a>
+            <a href="img/ani_illustration.png"><img class="image_gallery_sm i-photo show-on-scroll illu image" src="img/thumb/ani_illustration.webp" alt="Anita" title="Anita"/></a>
+            
+            <a href="img/Bar_Logo.png"><img class="image_gallery_sm i-photo show-on-scroll logo image" src="img/thumb/Bar_Logo.webp" alt="Logo for 5. Stanica" title="Logo for 5. Stanica"/></a>
+            <a href="img/ECLRecords-Logo.png"><img class="image_gallery_sm i-photo show-on-scroll logo image" src="img/thumb/ECLRecords-Logo.webp" alt="Logo for ECLR" title="Logo for ECLR"/></a>
+            <a href="img/NovIvkeLogo-Gotovo.png"><img class="image_gallery_sm i-photo show-on-scroll logo image" src="img/thumb/NovIvkeLogo-Gotovo.webp" alt="Logo for Ortostim" title="Logo for Ortostim" /></a>
+            <a href="img/9Codex_logo.png"><img class="image_gallery_sm i-photo show-on-scroll logo image" src="img/9Codex_logo.png" alt="9 Codex Logo Design" title="9 Codex Logo Design"/></a>
+            <a href="img/WalkertonJail_K.png"><img class="image_gallery_sm i-photo show-on-scroll logo image" src="img/WalkertonJail_K.png" alt="Walkerton Jail Logo" title="Walkerton Jail Logo"/></a>
+            
+            <a href="img/HeadLEllis_Illustration.png"><img class="image_gallery_sm i-photo show-on-scroll fun image" src="img/HeadLEllis_Illustration.png" alt="Illustration of L Ellis" title="Illustration of L Ellis"/></a>
+            <a href="img/MORTE_PST.png"><img class="image_gallery_sm i-photo show-on-scroll fun image" src="img/MORTE_PST.png" alt="Illustration Morte from Planescape" title="Illustration Morte from Planescape"/></a>
+            <a href="img/art_recreation-nonorig.png"><img class="image_gallery_sm i-photo show-on-scroll fun image" src="img/thumb/art_recreation-nonorig.webp" alt="Recreation of line-art by jmoorzie" title="Recreation of line-art by jmoorzie"/></a>
+            <div class="clear"></div>
+          </div>
         </div>
     </div>
 </div>
-
-<div id="myModal" class="modal">
-    <span class="close cursor" onclick="closeModal()"><span class="elementToFadeInOut glyphicon glyphicon-zoom-out"></span></span>
-
-      <div class="mySlides illu1">
-        <img class="modal-content " src="img/Hurt_Illustration.png" alt="John Hurt">
-        <div class="hx_center">John Hurt Illustration</div>  
-    </div>
-
-      <div class="mySlides illu1">
-        <img class="modal-content " src="img/Me_Illustration_full.png" alt="Self Portrait in Illustrator">
-        <div class="hx_center">Self Portrait in Illustrator</div>  
-    </div>
-
-      <div class="mySlides illu1">
-        <img class="modal-content " src="img/Sara_Illustration.jpg" alt="Illustration of Sara">
-        <div class="hx_center">Illustration of Sara</div>  
-    </div>
-
-      <div class="mySlides illu1">
-        <img class="modal-content " src="img/ani_illustration.png" alt="Anita">
-        <div class="hx_center">Anita Illustration</div>
-    </div>
-
-      <div class="mySlides logo1">
-        <img class="modal-content " src="img/Bar_Logo.png" alt="Logo for 5. Stanica">
-        <div class="hx_center">Logo for 5. Stanica</div>
-      </div>
-  
-      <div class="mySlides logo1">
-        <img class="modal-content " src="img/ECLRecords-Logo.png" alt="Logo for ECLR">
-        <div class="hx_center">Logo for ECLR</div>  
-    </div>
-
-      <div class="mySlides logo1">
-        <img class="modal-content " src="img/NovIvkeLogo-Gotovo.png" alt="Logo for Ortostim">
-        <div class="hx_center">Logo for Ortostim</div>  
-    </div>
-
-      <div class="mySlides logo1">
-        <img class="modal-content " src="img/9Codex_logo.png" alt="9 Codex Logo Design">
-        <div class="hx_center">9 Codex Logo Design</div>  
-    </div>
-
-      <div class="mySlides logo1">
-        <img class="modal-content " src="img/WalkertonJail_K.png" alt="Walkerton Jail Logo">
-        <div class="hx_center">Walkerton Jail Logo</div>  
-    </div>
-
-      <div class="mySlides fun1">
-        <img class="modal-content " src="img/HeadLEllis_Illustration.png" alt="Illustration of L Ellis">
-        <div class="hx_center">Illustration of L Ellis</div>  
-    </div>
-
-      <div class="mySlides fun1">
-        <img class="modal-content " src="img/MORTE_PST.png" alt="Illustration Morte from Planescape">
-        <div class="hx_center">Illustration Morte from Planescape</div>  
-    </div>  
-
-      <div class="mySlides fun1">
-        <img class="modal-content" src="img/art_recreation-nonorig.png" alt="Recreation of line-art by jmoorzie">
-        <div class="hx_center">Recreation of line-art by jmoorzie</div>  
-    </div>   
-
-      <a class="prev" onclick="plusSlides(-1)"><span style="transform-origin: center center; transform: rotate(180deg);" class="elementToFadeInOut">&#10151;</span></a>
-      <a class="next" onclick="plusSlides(1)"><span class="elementToFadeInOut">&#10151;</span></a>
-
-  </div>
 
 </div>
 
@@ -192,9 +125,7 @@
       <br>
           <br>
 
-  <p>© 2020 NDF Hub. All Rights Reserved.<br>
-      <br>
-        <span>This website designed and maintained by <span class="signature">Kristian Firedi</span></span></p>
+          <p><span>This website designed and maintained by <span class="signature">Kristian Firedi</span></span></p>
       </div>
 
 </div>
@@ -203,6 +134,13 @@
 </script>
 
 <script src="js/modal-images.js">
+</script>
+
+<script src="js/simple-lightbox.js?v2.2.1"></script>
+<script>
+    (function() {
+        var $gallery = new SimpleLightbox('.gallery a', {});
+    })();
 </script>
 
 
