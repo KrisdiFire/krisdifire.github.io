@@ -1,4 +1,4 @@
-  /* The Modal (background) */
+  /* The Modal (background) - OLD DEPR*/
   .modal {
     scrollbar-width: none;  /* Firefox*/
     display: none; /* Hidden by default */
@@ -17,7 +17,7 @@
     display: none;  /* Safari and Chrome */
 }
 
-  /* Modal Content (Image) */
+  /* Modal Content (Image)  - OLD DEPR */
   .modal-content {
     margin: auto;
     display: block;
@@ -26,7 +26,7 @@
     max-width: 80vw;
   }
   
-  /* Add Animation - Zoom in the Modal */
+  /* Add Animation - Zoom in the Modal  - OLD DEPR */
   .modal-content, #caption {
     animation-name: zoom;
     animation-duration: 0.6s;
@@ -98,8 +98,8 @@
   align-items: baseline;
 }
 
-/* The Close Button */
-/* The Close Button */
+/* The Close Button  - OLD DEPR*/
+
 .close {
   position: absolute;
   transition: 0.3s;
@@ -123,7 +123,7 @@
   color: white;
 }
 
-/* Next & previous buttons */
+/* Next & previous buttons -  - OLD DEPR now inside simple-lightbox */
 .prev,
 .next {
 cursor: pointer;
@@ -142,7 +142,7 @@ align-items: center;
 text-decoration: none;
 }
 
-/* Position the "next button" to the right */
+/* Position the "next button" to the right - OLD DEPR now inside simple-lightbox */
 .next {
 right: 0rem;
 }
@@ -158,6 +158,8 @@ right: 0rem;
 #modal-image-container {
 margin: 1rem;
 }
+
+/* OLD DEPR */
 
 .mySlides {
   display: none;
@@ -289,7 +291,7 @@ margin: 1rem;
   text-align: center !important;
 }
 
-.elementToFadeInOut {
+.sl-next, .sl-prev {
   -webkit-animation: fadeinout 4s linear forwards;
   animation: fadeinout 4s linear forwards;
 }
