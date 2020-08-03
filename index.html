@@ -15,6 +15,8 @@
     <link href="css/side-menu.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <link rel="stylesheet" href="css/simple-lightbox.css?v2.2.1" />
+
 <head>
 
     <title>NDF Hub - Graphic Design & Web Development</title>
@@ -114,7 +116,7 @@
 
 <div class="content-wrapper dont-show top-of-p" >
    
-    <h1 class="hx_left">Hola!</h1>
+    <h1 class="hx_left">Hello!</h1>
     <div class="row">
        <!-- <div class="diagonal_back"></div>-->
         <div class="column c100" style="padding: 0rem;">
@@ -147,39 +149,20 @@
 
     <div class="div-background-right" id="gal-b1"> Desi<br id="design-br">gn</div>
 
-    <div class="row fr-img-row">
+    <div class=" gallery row fr-img-row">
         <div class=" column c33">
-            <img onclick="openModal();currentSlide(1)" id="slika11i" class="image-main-page image_gallery i-photo show-on-scroll" src="img/art_recreation-nonorig.webp" alt="art">
+            <a href="img/art_recreation-nonorig.png"><img id="slika11i" class="image-main-page image_gallery i-photo show-on-scroll" src="img/thumb/art_recreation-nonorig.webp" alt="Recreation of line-art by jmoorzie" title="Recreation of line-art by jmoorzie"/></a>
             <div id="p1p" class="hx_center large_text">Illustration</div>
         </div>
         <div class=" column c33">
-            <img onclick="openModal();currentSlide(2)" id="slika22i" class="image-main-page image_gallery i-photo show-on-scroll" src="img/Hurt_Illustration.webp" alt="John Hurt">
+            <a href="img/Hurt_Illustration.png"><img id="slika22i" class="image-main-page image_gallery i-photo show-on-scroll" src="img/thumb/Hurt_Illustration.webp" alt="John Hurt" title="John Hurt" /></a>
             <div id="p2p" class="hx_center large_text">Photo Editing</div>
         </div>
         <div class=" column c33">
-            <img onclick="openModal();currentSlide(3)" id="slika33i" class="image-main-page image_gallery i-photo show-on-scroll" src="img/NovIvkeLogo-Gotovo.webp" alt="Logo">
+            <a href="img/NovIvkeLogo-Gotovo.png"><img id="slika33i" class="image-main-page image_gallery i-photo show-on-scroll" src="img/thumb/NovIvkeLogo-Gotovo.webp" alt="Logo for Ortostim" title="Logo for Ortostim" /></a>
             <div id="p3p" class="hx_center large_text">Logo Design</div>
         </div>
     </div>    
-</div>
-
-<div id="myModal" class="modal">
-    <span class="close cursor" onclick="closeModal()"></span>
-  
-      <div class="mySlides">
-        <img class="modal-content" src="img/art_recreation-nonorig.png" alt="Recreation of line-art by jmoorzie">
-        <div class="hx_center">Recreation of line-art by jmoorzie</div>  
-    </div>
-  
-      <div class="mySlides">
-        <img class="modal-content" src="img/Hurt_Illustration.png" alt="John Hurt">
-        <div class="hx_center">John Hurt Illustration</div>  
-    </div>
-
-    <div class="mySlides">
-        <img class="modal-content" src="img/NovIvkeLogo-Gotovo.png" alt="Logo for Ortostim">
-        <div class="hx_center">Logo for Ortostim</div>  
-    </div>
 </div>
 
 <div style="margin-top: 4rem;" class="content-wrapper dont-show">
@@ -331,9 +314,7 @@
             <br>
                 <br>
     
-        <p>© 2020 NDF Hub. All Rights Reserved.<br>
-            <br>
-              <span>This website designed and maintained by <span class="signature">Kristian Firedi</span></span></p>
+        <p><span>This website designed and maintained by <span class="signature">Kristian Firedi</span></span></p>
             </div>
 
     </div>
@@ -346,6 +327,13 @@
 </script>
 
 <script src="js/modal-images.js">
+</script>
+
+<script src="js/simple-lightbox.js?v2.2.1"></script>
+<script>
+    (function() {
+        var $gallery = new SimpleLightbox('.gallery a', {});
+    })();
 </script>
 
 
