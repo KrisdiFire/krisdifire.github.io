@@ -209,3 +209,19 @@ function openScroll() {
 var hammenu = document.getElementById('ham-menu');
 
 hammenu.addEventListener("click", stopScroll);
+
+
+///// jos jedna za video u pozadini ///
+
+function stopVideoSmalScr() {
+  var mq = window.matchMedia ( "(max-width: 480px)");
+
+  if (mq.matches) {
+    vid.playbackRate = 0;
+  }
+  else {
+    vid.playbackRate = 0.6;
+  }
+}
+
+stopVideoSmalScr();
