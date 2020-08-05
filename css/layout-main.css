@@ -72,6 +72,13 @@ body {
         padding: 0;
 }
 
+.has-lightbox {
+    overflow: hidden;
+        position: relative;
+        margin: 0;
+        padding: 0;
+}
+
 #background-video {
     position: fixed;
     top: 50%;
