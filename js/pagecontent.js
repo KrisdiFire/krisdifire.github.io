@@ -57,6 +57,8 @@ for (var l = 0; l < closeBtns.length; l++) {
   closeBtns[l].addEventListener("click", closeSlideMenu);
   //zatvara i dropove
   closeBtns[l].addEventListener("click", closeDropdown);
+
+  closeBtns[l].addEventListener("click", openScroll);
 //kraj
 }
 
@@ -145,7 +147,7 @@ function openSlideMenu(){
 mybutton = document.getElementById("up");
 
 // Pokazati dugme tek posle skrolanja ka dole
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function() {scrollFunction();};
 
 function scrollFunction() {
   if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
@@ -176,3 +178,32 @@ function setPlaySpeed() {
 } 
 //pozivamo funkciju cim se ucita JS
 setPlaySpeed();
+
+
+
+////////novo da zaustavi skrol - radi, al treba skinuti stopscr pri zatvaranju//////
+
+
+var contin = document.getElementById('sidenav');
+var htm = document.getElementsByTagName('html')[0];
+var bod = document.getElementsByTagName('body')[0];
+
+function stopScroll() {
+    if (contin.classList.contains('side-menu-norm')) {
+      htm.classList.add("stopscroll");
+      bod.classList.add("stopscroll");
+    } 
+    if (contin.classList.contains('side-menu-sml')) {
+      htm.classList.add("stopscroll");
+      bod.classList.add("stopscroll");
+    } 
+}
+
+function openScroll() {
+      htm.classList.remove("stopscroll");
+      bod.classList.remove("stopscroll");
+}
+
+var hammenu = document.getElementById('ham-menu');
+
+hammenu.addEventListener("click", stopScroll);
