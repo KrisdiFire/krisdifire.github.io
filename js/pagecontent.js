@@ -181,7 +181,7 @@ setPlaySpeed();
 
 
 
-////////novo da zaustavi skrol - radi, al treba skinuti stopscr pri zatvaranju//////
+////////novo da zaustavi skrol -radi, i u lightboxu//////
 
 
 var contin = document.getElementById('sidenav');
@@ -196,12 +196,14 @@ function stopScroll() {
     if (contin.classList.contains('side-menu-sml')) {
       htm.classList.add("stopscroll");
       bod.classList.add("stopscroll");
+      document.getElementById('page').style.visibility = 'hidden';
     } 
 }
 
 function openScroll() {
       htm.classList.remove("stopscroll");
       bod.classList.remove("stopscroll");
+      document.getElementById('page').style.visibility = 'visible';
 }
 
 var hammenu = document.getElementById('ham-menu');
