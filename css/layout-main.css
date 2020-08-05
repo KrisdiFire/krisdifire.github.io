@@ -11,6 +11,11 @@
 *::-moz-selection {
     background: #ff7676;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+  
 /*za sve linkove*/
 a {
     color: azure;
@@ -58,6 +63,13 @@ a {
 
 body {
     background-color: black;
+}
+
+.stopscroll {
+    overflow: hidden;
+        position: relative;
+        margin: 0;
+        padding: 0;
 }
 
 #background-video {
