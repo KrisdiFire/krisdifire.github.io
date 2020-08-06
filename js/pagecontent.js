@@ -211,7 +211,7 @@ var hammenu = document.getElementById('ham-menu');
 hammenu.addEventListener("click", stopScroll);
 
 
-///// jos jedna za video u pozadini ///
+///// zaustavlja video na malim ekranima - iskljuceno za sad ///
 
 function stopVideoSmalScr() {
   var mq = window.matchMedia ( "(max-width: 480px)");
@@ -223,5 +223,3 @@ function stopVideoSmalScr() {
     vid.playbackRate = 0.6;
   }
 }
-
-stopVideoSmalScr();
