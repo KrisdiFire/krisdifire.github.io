@@ -1,0 +1,797 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Armata';
+}
+
+/*boja selektovanog texta*/
+*::selection {
+    background: cadetblue;
+}
+*::-moz-selection {
+    background: cadetblue;
+}
+
+/*self explanatory*/
+html {
+    scroll-behavior: smooth;
+}
+
+/*ScrollBar*/
+
+::-webkit-scrollbar {
+    width: 10px;
+} 
+
+::-webkit-scrollbar-thumb {
+    background-color: #ce6a6b;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 8px rgba(0,0,0,0.3);
+    background-color: mintcream;
+}
+
+/* Handle on hover */
+ ::-webkit-scrollbar-thumb:hover {
+    background: rgb(163, 64, 64); 
+}
+/*stil svih linkova na str*/
+a {
+    color: azure;
+}
+/*body html-a*/
+body {
+    background-color: black;
+    /*background-image: url("../img/rezerva/zabaner-01.png");*/
+}
+
+#background-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -35;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.grayscale-blur {
+    filter: grayscale(1);
+    -webkit-filter: grayscale(1); 
+    filter: grayscale(100%); 
+    -o-filter: grayscale(1);
+  }
+
+
+/*div za celu str*/
+#whole-page01 {
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+}
+
+/*za up dugme*/
+#up {
+    font-size: 2rem;
+    line-height: 1;
+    position: fixed;
+    height: 3rem;
+    width: 3rem;
+    margin: 2rem;
+    background-color: #ce6a6b;
+    color: azure;
+    bottom: 0;
+    right: 0;
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;    
+    cursor: pointer;
+}
+
+.up-opacity {
+    opacity: 0.5 !important;
+    transition: opacity ease-in 0.25s;
+}
+
+#up:hover {
+    opacity: 1 !important;
+    transition: opacity ease-in 0.25s;
+    border: 0.1rem solid white;
+    width: 3rem;
+    height: 3rem;
+    transform-origin: center center;
+}
+
+#up a {
+    list-style: none;
+    text-decoration: none;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 3rem;
+    padding: 0.5rem;
+}
+/*stil stranice koja sadrzi vise kontent wrappera*/
+#page01 {
+    margin: 0% 15% 0% 15%;
+    width: 70%;
+    min-height: 100%;
+    z-index: 1;
+    position: relative;
+    min-height: 100vh;
+}
+
+h1, h2, h3 {
+padding: 0.5rem;
+font-weight: 800;
+font-size: 3rem;
+}
+
+.center-hX {
+    text-align: center !important;
+    width: 100%;
+    margin: 0% auto 0% auto;
+}
+
+.right-hX {
+    text-align: end !important;
+    width: 100%;
+    margin-left: auto;
+}
+
+.left-hX {
+    text-align: left;
+    width: 100%;
+    margin-right: auto;
+}
+
+/*kontent wrapper koji sadrzi kolone kontenta*/
+.content-wrapper01 {
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    position: relative;
+    font-family: 'Armata';
+    flex-wrap: wrap;
+}
+
+.cont-height100 {
+    min-height: 100vh;
+}
+
+.cont-height50 {
+    min-height: 50vh;
+}
+
+.cont-cent {
+    justify-content: center;
+    align-items: center;
+}
+
+/*kontejner koji ide uz klasu colX i time dobija sirinu*/
+.content01 {
+    width: auto;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+/*stil p elemenata unutar svake kolone*/
+.content01 p {
+    padding: 0.5rem;
+    width: 100%;
+    text-align: justify;
+}
+/*sirina kolona*/
+.col01 {
+    width: 10%;
+}
+
+.col02 {
+    width: 20%;
+}
+
+.col03 {
+    width: 30%;
+}
+
+.col04 {
+    width: 40%;
+}
+
+.col05 {
+    width: 50%;
+}
+
+.col06 {
+    width: 60%;
+}
+
+.col07 {
+    width: 70%;
+}
+
+.col08 {
+    width: 80%;
+}
+
+.col09 {
+    width: 90%;
+}
+
+.col10 {
+    width: 100%;
+}
+
+.image-div {
+    object-fit: cover;
+    height: 350px;
+    background-image: none;
+}
+
+.image-div-small {
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+}
+
+.text-wrap-img-l {
+    float: left;
+    margin: 0rem 0.5rem 0rem 0rem;
+}
+
+/*poz absolut*/
+.pos-ab {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(245, 255, 250, 0.25);
+    padding: 0.5rem;
+}
+
+.pos-ab-btxt {
+    position: absolute;
+    z-index: -10;
+    opacity: 0.1;
+    color: azure;
+    font-size: 20vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.pos-ab-t-over {
+    margin-top: -4rem;
+}
+
+.larger-txt {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.largest-txt {
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.huge-txt {
+    font-size: 10rem;
+    font-weight: 900;
+}
+/*margina za about deo da padne ispod abouta*/
+.top-14vw {
+    margin-top: 14vw;
+}
+
+/*slike u fp galeriji*/
+
+.fr-img-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 14vw;
+}
+
+.fr-img-row .col03 img {
+    height: 25rem;
+    width: 100%;
+    padding: 0rem;
+}
+
+#pic01-txt {
+    margin-top: -2.1rem;
+    margin-bottom: 4rem;
+    font-weight: 900;
+}
+#pic02-txt {
+    margin-top: -2.1rem;
+    margin-bottom: 4rem;
+    font-weight: 900;
+}
+#pic03-txt {
+    margin-top: -2.1rem;
+    margin-bottom: 4rem;
+    font-weight: 900;
+}
+
+.background-cube {
+    position: absolute; 
+    z-index: -29;
+    background: url("../img/sing_square_rot-01-01.svg") no-repeat center;
+    background-image: url("../img/sing_square_rot-01-01.svg");
+    background-size: contain;
+}
+
+#prlx-01 {
+    height: 10rem;
+    width: 10rem;
+    right: 0;
+    margin-right: 0rem;
+    top: 35vh; 
+    opacity: 0.3;
+    transform: rotate(45deg);
+}
+
+#prlx-02 {
+    height: 13rem;
+    width: 13rem;
+    right: auto;
+    top: 68vh; 
+    opacity: 0.5;
+}
+
+#prlx-03 {
+    height: 13rem;
+    width: 13rem;
+    right: 6vw;
+    top: -23rem; 
+    opacity: 0.5;
+}
+
+#prlx-04 {
+    height: 10rem;
+    width: 10rem;
+    left: 10rem;
+    top: -17rem; 
+    opacity: 0.5;
+}
+
+#prlx-05 {
+    height: 8rem;
+    width: 8rem;
+    left: -3vw;
+    top: 8rem; 
+    opacity: 0.5;
+    transform: rotate(45deg);
+}
+
+#prlx-06 {
+    height: 10rem;
+    width: 10rem;
+    opacity: 0.5;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+}
+
+#prlx-06 + a {
+    margin-top: 3rem;
+    font-size: 3rem;
+    width: auto !important;
+    cursor: pointer;
+    text-decoration: none;
+    transition: ease-in 0.3s;
+}
+
+#prlx-06 + a:hover {
+    color: orange;
+}
+
+/*Margine kojim pozicioniras absolute elemente unutar pos: rel parent elem*/
+
+.mar-left {
+    margin-left: auto;
+    right: 0;
+}
+
+.mar-right {
+    left: 0;
+    margin-right: auto;
+}
+
+.mar-cent-ver {
+    top: 50%;  /* position the top  edge of the element at the middle of the parent */
+    transform: translateY(-50%); 
+                                         
+}
+
+.mar-cent-hor {
+    left: 50%;  /* position the left  edge of the element at the middle of the parent */
+    transform: translateX(-50%); 
+                                       
+}
+/*self explanatory*/
+.separator01 {
+    height: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.separator02 {
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.separator01 hr {
+    width: 100%;
+}
+
+.list-about {
+    color: azure;
+    padding-inline-start: 0px;
+    border: none;
+}
+
+.list-about > li {
+    font-size: 1rem;
+    padding: 1rem;
+    width: 100%;
+    list-style: none;
+    line-height: 1.5rem;
+    
+}
+
+.list-about > li:nth-child(2n + 1) {
+    background-color: rgba(51, 51, 51, 0.5);
+}
+
+.list-about > li::before {
+    content: "\2022";
+    color: #4a919e;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    font-size: 1.5rem;
+}
+
+.list-about2 {
+    color: azure;
+    padding-inline-start: 0px;
+    border: none;
+}
+
+.list-about2 > li {
+    font-size: 1rem;
+    padding: 1rem;
+    width: 100%;
+    list-style: none;
+    line-height: 1.5rem;
+    
+}
+
+.list-about2 > li:nth-child(2n + 1) {
+    background-color: rgba(51, 51, 51, 0.5);
+}
+
+.list-about2 > li::before {
+    content: "\2022";
+    color: #ce6a6b;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    font-size: 1.5rem;
+}
+
+.list-about-blank {
+    color: azure;
+    padding-inline-start: 0px;
+    border: none;
+}
+
+.list-about-blank > li {
+    font-size: 1rem;
+    padding: 1rem;
+    width: 100%;
+    list-style: none;
+    line-height: 1.5rem;
+    
+}
+
+.list-about-blank > li:nth-child(2n + 1) {
+    background-color: rgba(51, 51, 51, 0);
+}
+
+/*Stil za footer i njegove elemenete*/
+#footer-wrapper {
+    align-self: flex-end;
+    width: 100%;
+    color: #f2f2f2;
+    bottom: 0;
+    padding: 1em;
+    background-color: #ce6a6c00;
+    height: auto;
+    clear: both;
+    align-self: center;
+}
+
+#footer-wrapper > p, #footer-wrapper > p > span {
+    font-weight: 400;
+}
+
+#footer {
+    display: flex;
+    margin: 1em 2em 1em 2em;
+    align-items: center;
+}
+
+#footer ul {
+    list-style-type: none;
+}
+
+#footer div {
+    margin: 0em 0.5em 0em 0.5em;
+}
+
+#footer div ul li {
+    padding: 0.1em 0em 0.1em 0em;
+}
+
+#footer div ul li a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#footer-menu ul li a {
+    /*font-weight: 600;*/
+}
+
+.social-menu {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+.social-menu ul li {
+    display: inline-flex;
+}
+
+.social-menu ul li a {
+    text-align: center;
+    list-style-type: none;
+}
+
+/*Social media icons*/
+
+.fa {
+    font-size: 1em;
+    width: 2.5em;
+    height: 2.5em;
+    text-align: center;
+    text-decoration: none;
+    margin: 0.5em 0.2em;
+    background-color: #ce6a6b;
+    border-radius: 50%; 
+    display: flex !important; /*important je jer guglov stil ima drugaciji*/
+    justify-content: center;
+    align-items: center;
+}
+  
+.fa:hover {
+    opacity: 0.7;
+}
+
+/*Tooltip stil*/
+.tooltip {
+    position: relative;
+    display: inline-block;
+    justify-content: center;
+}
+  
+.tooltip .tooltiptext {
+    visibility: hidden;
+    color: #fff;
+    border-radius: 10px;
+    padding: 6px 6px;
+    position: absolute;
+    z-index: 1;
+    margin-top: -1.5rem;
+    margin-left: -0.5rem;
+}
+  
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.stopscroll {
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+@media only screen and (min-width: 1367px) {
+
+    #page01 {
+        max-width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+
+    .pos-ab-btxt {
+        font-size: 20rem;
+    }
+
+    #prlx-05 {
+       position: fixed;
+       left: 4rem;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+    /*skriva main navigaciju na malim ekranima, sem HOME-a*/
+    .main-menu .table-1 {
+        display: none;
+    }
+
+    #page01 {
+        width: 90%;
+        margin: 0% 5% 0% 5%;
+    }
+
+    .larger-txt {
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+    
+    .largest-txt {
+        font-size: 2rem;
+        font-weight: 900;
+    }
+    
+    .huge-txt {
+        font-size: 6rem;
+        font-weight: 900;
+    }
+
+    #prlx-01 {
+        display: none;
+    }
+
+    #prlx-04 {
+        top: -11rem;
+        left: 0rem;
+    }
+
+    .content-wrapper01 {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    
+    .content01 {
+        width: 100%;
+    }
+
+    /*pretvara layout footera iz row u kolone*/
+    #footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #footer div {
+       width: 100%;
+       margin: 0em;
+    }
+
+    #footer-menu {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #footer-menu ul {
+        padding-inline-start: 0px;
+    }
+    
+    .social-menu {
+        display: flex;
+        justify-content: center;
+    }
+
+    .social-menu ul {
+        padding-inline-start: 0px;
+        margin-top: 1rem;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #page01 {
+        margin: 0rem;
+        width: 100%;
+    }
+
+    .pos-ab-t-over {
+        margin-top: -3.5rem;
+    }
+
+    .larger-txt {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    
+    .largest-txt {
+        font-size: 2rem;
+        font-weight: 900;
+    }
+    
+    .huge-txt {
+        font-size: 3rem;
+        font-weight: 900;
+    }
+
+    .fr-img-row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 14vw;
+    }
+
+    #prlx-01 {
+        display: none;
+    }
+
+    #prlx-02 {
+        height: 13rem;
+        width: 13rem;
+        right: auto;
+        top: 68vh; 
+        opacity: 0.5;
+    }
+    
+    #prlx-03 {
+        display: none;
+    }
+    
+    #prlx-04 {
+        height: 10rem;
+        width: 10rem;
+        left: 0rem;
+        top: -13rem;
+        opacity: 0.5;
+        right: 0;
+        margin: auto;
+    }
+
+    #prlx-05 {
+        position: absolute;
+    }
+
+    #footer-wrapper {
+        width: 100%;
+    }
+}
+
+.back-box {
+    background-color: #bed3c33d;
+}
