@@ -5,23 +5,35 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link href='https://fonts.googleapis.com/css?family=Armata' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Poiret One' rel='stylesheet'>
-    <link href="js/parallax.js" rel="javascript">
-    <link href="js/modal-images.js" rel="javascript">
-    <link href="js/pagecontent.js" rel="javascript">
-    <link href="css/modal-images.css" rel="stylesheet">
-    <link href="css/layout-main.css" rel="stylesheet">
-    <link href="css/layout-main-sml.css" rel="stylesheet">
-    <link href="css/main-menu.css" rel="stylesheet">
-    <link href="css/side-menu.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link href="css/style.css" rel="stylesheet">
+
+    <link href="js/up-but.js" rel="javascript">
+
+    <link href="js/parallax.js" rel="javascript">
+
+    <link href="css/main-menu.css" rel="stylesheet">
+
+    <link href="js/video-speed.js" rel="javascript">
+
+    <link href="js/side-menu.js" rel="javascript">
+
+    <link href="js/fade-in-content.js" rel="javascript">
+
+    <link href="css/side-menu.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/simple-lightbox.css?v2.2.1" />
+
+    <link href="js/simple-lightbox.js" rel="javascript">
+
+    <link href="css/modal-images.css" rel="stylesheet">
 
 <head>
 
     <title>NDF Hub - Graphic Design & Web Development</title>
 
-    <meta name="description" content="Have no fear, Kris is here! I'm here to help you with your Graphic Design, Illustration & Web Development needs."/>
+    <meta name="description" content="Bare Bones Template for starting a new project."/>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
@@ -33,41 +45,34 @@
         <source src="vid\nightraffic.webm" type="video/webm">
     </video>
 
-
     <div class="sidenav" id="sidenav">
         <div id="btn-close-div"><a class="close-side-menu">&times;</a></div>
-        <button class="dropbtn">What I do
+        <button class="dropbtn">What I Do
        </button>
        <div class="dropdown-container">
         <a class="close-side-menu" href="#design">Design</a>
         <a class="close-side-menu" href="#webdev">Web Dev</a>
         <a class="close-side-menu" href="gallery.html">Gallery</a>
        </div>
-       <button class="dropbtn">Testing
-       </button>
-       <div class="dropdown-container">
-        <a class="close-side-menu" href="#front">Front Page</a>
-        <a class="close-side-menu" href="#blank">Blank</a>
-       </div>
        <button class="dropbtn">Contact
        </button>
        <div class="dropdown-container">
          <a href="mailto:kristianfiredi@gmail.com">gmail</a>
          <a href="https://www.facebook.com/kristian.firedi">Facebook</a>
+         <a href="https://www.linkedin.com/in/kristian-firedi-441574178/">LinkedIn</a>
          <a href="https://secure.skype.com/portal/profile">Skype</a>
          <a href="https://www.instagram.com/naitsirk_firedi">Instagram</a>
        </div>
        <a class="close-side-menu" href="#about">About</a>
      </div>
 
+<div id="whole-page01">
 
-<div id="whole-page">
-
-    
     <div class="close-side-menu" id="close-side-menu-div"></div> 
-    
+
     <div id="up"><a>&#8679;</a></div> 
 
+    <!--Ovde takodje moze da se stavi main menu-->
     <nav class="main-menu" id="main-nav"> 
         <p><a class="home" href="index.html">home</a></p>
         <ul class="table-1">
@@ -76,11 +81,6 @@
                     <li><a href="#design" >Design</a></li>
                     <li><a href="#webdev">Web Dev</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
-                </ul>
-            </li>
-            <li class="list"><a class="menu-item">Testing</a>
-                <ul class="un-list2">
-                    <li><a href="#blank">Blank</a></li>
                 </ul>
             </li>
             <li class="list"><a class="menu-item">Contact</a>
@@ -98,146 +98,133 @@
         <a class="display-none" id="ham-menu" data-toggle="offCanvas" aria-expanded="false" aria-controls="offCanvas"><span></span></a>
     
     </nav>
+    
+<div id="page01">
 
-<div class="overflow0" style="transition: ease-in 0.3s;">
-
-<div id="page">
-<div class="content-wrapper dont-show">
-   <div class="row"> 
-       <div class=" column c100" id="logo-col" href="index.html" >
-           <div id="logo01"></div>
+    <div class="background-cube" id="prlx-05">
     </div>
-</div>
-</div>
+
+    <div class="content-wrapper01 cont-cent cont-height100">
+
+        <div class="content01 col010">
+            <h1 class="left-hX largest-txt">Hello!</h1>
+            <p class="huge-txt">I'm <span style="background-color: #4a919e79;">Kris</span></p>
+            <p class="right-hX larger-txt">and welcome to my humble domain.</p>
+        </div>   
+
+        <div class="background-cube" id="prlx-01">
+        </div>
+
+        <div class="background-cube" id="prlx-02">
+        </div>
+
+    </div>
+
+    <div class="separator01"></div>
 
     <p style="position:relative;">
-        <a name="front" style="position:absolute; top:-100px;"></a>
+        <a name="design" style="position:absolute; top:-130px;"></a>
     </p>
 
-<div class="content-wrapper dont-show top-of-p" >
-   
-    <h1 class="hx_left">Hello!</h1>
-    <div class="row">
-       <!-- <div class="diagonal_back"></div>-->
-        <div class="column c100" style="padding: 0rem;">
-            <div class="div-background-right" id="front-b1"></div>
-            <p class="largest_text">
-                I'm Kris<span class="larger_text">,</span></p>
-               <p class="larger_text hx_right">and welcome to my humble domain.</p>
-              
-            
-        </div>
+    <div class="content-wrapper01 dont-show">
 
-        <div class="background-cube" id="willkommen">
-        </div>
-        <div class="background-cube" id="willkommen2">
-        </div>
-        <div class="background-cube" id="willkommen3">
-        </div>
+            <div class="pos-ab-btxt pos-ab-t-over mar-right" style="color: #ce6a6b; opacity: 0.5;">DESIGN</div>
+       
+            <div class="content01 col10 gallery fr-img-row">
 
-    </div>
-</div>
+                <div class="content01 col03">
+                    <a href="img/art_recreation-nonorig.png"><img id="pic01-fp" class="image-main-page image_gallery" src="img/thumb/art_recreation-nonorig.webp" alt="Recreation of line-art by jmoorzie" title="Recreation of line-art by jmoorzie"/></a>
+                    <div id="pic01-txt" class="center-hX large_txt">ILLUSTRATION</div>
+                </div>
+                <div class="content01 col03">
+                    <a href="img/Hurt_Illustration.png"><img id="pic02-fp" class="image-main-page image_gallery" src="img/thumb/Hurt_Illustration.webp" alt="John Hurt" title="John Hurt" /></a>
+                    <div id="pic02-txt" class="center-hX large_txt">PHOTO EDITING</div>
+                </div>
+                <div class="content01 col03">
+                    <a href="img/NovIvkeLogo-Gotovo.png"><img id="pic03-fp" class="image-main-page image_gallery" src="img/thumb/NovIvkeLogo-Gotovo.webp" alt="Logo for Ortostim" title="Logo for Ortostim" /></a>
+                    <div id="pic03-txt" class="center-hX large_txt">LOGO DESING</div>
+                </div>
 
-<div class="separator"></div>
-<div class="separator"></div>
+                <div class="clear"></div>
 
-<p style="position:relative;">
-    <a name="design" style="position:absolute; top:-130px;"></a>
-</p>
-
-<div class="content-wrapper dont-show">
-
-    <div class="div-background-right" id="gal-b1"> Desi<br id="design-br">gn</div>
-
-    <div class=" gallery row fr-img-row">
-        <div class=" column c33">
-            <a href="img/art_recreation-nonorig.png"><img id="slika11i" class="image-main-page image_gallery i-photo show-on-scroll" src="img/thumb/art_recreation-nonorig.webp" alt="Recreation of line-art by jmoorzie" title="Recreation of line-art by jmoorzie"/></a>
-            <div id="p1p" class="hx_center large_text">Illustration</div>
-        </div>
-        <div class=" column c33">
-            <a href="img/Hurt_Illustration.png"><img id="slika22i" class="image-main-page image_gallery i-photo show-on-scroll" src="img/thumb/Hurt_Illustration.webp" alt="John Hurt" title="John Hurt" /></a>
-            <div id="p2p" class="hx_center large_text">Photo Editing</div>
-        </div>
-        <div class=" column c33">
-            <a href="img/NovIvkeLogo-Gotovo.png"><img id="slika33i" class="image-main-page image_gallery i-photo show-on-scroll" src="img/thumb/NovIvkeLogo-Gotovo.webp" alt="Logo for Ortostim" title="Logo for Ortostim" /></a>
-            <div id="p3p" class="hx_center large_text">Logo Design</div>
-        </div>
-    </div>    
-</div>
-
-<div style="margin-top: 4rem;" class="content-wrapper dont-show">
-    <div class="column c100">
-        <div class="background-cube" id="willkommen4"></div>
-            <div id="will4txt" class="hx_center">
-                <a href="gallery.html"  class="large_text highlight-txt">View All!</a>    
             </div>
+            
+        <div class="content01 col10"> 
+            <div class="background-cube" id="prlx-06">
+            </div>
+            <a href="gallery.html" class="center-hX cont-cent">GALLERY
+            </a>
+
+            <div class="separator01"></div>
+            <div class="separator01"></div>
+
+        </div>
+
+       
+
     </div>
-</div>
 
-<div class="separator"></div>
-<div class="separator"></div>
+    <div class="separator02"></div>
+    <div class="separator01"></div>
+    <div class="separator02"></div>
 
+    <p style="position:relative;">
+        <a name="webdev" style="position:absolute; top:-300px;"></a>
+    </p>
 
-<p style="position:relative;">
-    <a name="webdev" style="position:absolute; top:-200px;"></a>
-</p>
+    <div class="content-wrapper01 dont-show">
 
-<div class="content-wrapper dont-show">
-
-    <div class="row">
-        <div class="column c100">
-            <p id="web-dev-p">
-                “Websites promote you 24/7: No employee will do that.
+        <div class="content01 col10">
+            <p class="largest-txt" style="text-align: center;">
+                “Websites promote you 24/7: No employee will do that."
                 <br>
             </p>
         </div>
-        <div class="column c100">
+
+        <div class="content01 col06 right-hX back-box">
             <br><br>
-            <p class="hx_right">You can find the code on&nbsp;<a href="https://github.com/KrisdiFire/krisdifire.github.io">GitHub</a>
-             </p>
-             <div class="div-background-left" id="web-b2"></div>
-        </div>
-     
-    </div>
-</div>
-
-<div class="separator"></div>
-<div class="separator"></div>
-
-<p style="position:relative;">
-    <a name="about" style="position:absolute; top:-100px;"></a>
-</p>
-
-<div class="content-wrapper dont-show">
-
-    <div class="div-background-left" id="about-b1">ABOUT</div>
-
-    <div class="row">
-        <div class="column c100">
-            <p class="large_text"> 
-                My full name is Kristian Firedi. I'm currently a Masters degree student
-                of Romanian language and Literature at the Faculty of Philosophy in Novi Sad.
-                But, beside my love for linguistics and languages in general, I also
-                nurture my passion in the area of arts and graphic/web design. <br> <br>
-                I started out with photo manipulation at the age of 12, when my
-                parents installed Photoshop CS2, and later on during my gaming
-                days, with which I've spent many, many of my teen years, I started developing my
-                own custom levels for games such as War Craft, Rise of Nations and,
-                most of all, Counter Strike. <br><br>
-                The freedom of expression and 
-                creativity these tools gave me are the reason why I continued to
-                to learn more about design, and the end to this road is no where 
-                to be seen on the horison. At least not anytime soon. 
-                
+            <p class="right-hX">You can find the code of this website on&nbsp;<a style="color: #ce6a6b;" href="https://github.com/KrisdiFire/krisdifire.github.io">GitHub</a>
             </p>
         </div>
+
     </div>
-    <div class="separator"></div>
-    <div class="row">
-        <div class="column c50">
+
+    <div class="separator02"></div>
+    <div class="separator01"></div>
+    <div class="separator02"></div>
+
+    <p style="position:relative;">
+        <a name="about" style="position:absolute; top:-100px;"></a>
+    </p>
+
+
+    <div class="content-wrapper01 dont-show cont-height50">
+
+        <div class="pos-ab-btxt pos-ab-t-over mar-left" style="color: #4a919e; opacity: 0.5;">ABOUT</div>
+
+        <div class="content01 col10 top-14vw">
+
+            <p>
+                My full name is Kristian Firedi. I'm currently a Masters degree student of Romanian language and Literature at the Faculty of Philosophy in Novi Sad. But, beside my love for linguistics and languages in general, I also nurture my passion in the area of arts and graphic/web design.
+            </p>
+            <p>
+                I started out with photo manipulation at the age of 12, when my parents installed Photoshop CS2, and later on during my gaming days, with which I've spent many, many of my teen years, I started developing my own custom levels for games such as War Craft, Rise of Nations and, most of all, Counter Strike.
+            </p>
+            <p>
+                The freedom of expression and creativity these tools gave me are the reason why I continued to to learn more about design, and the end to this road is no where to be seen on the horison. At least not anytime soon.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="separator02"></div>
+    <div class="separator02"></div>
+
+    <div class="content-wrapper01">
+        <div class="content01 col05" >
             <br><h2 class="hx_left">Education</h2>
-            <br><br><br><br>
-            <div class="div-background-right" id="about-b2"></div><ul class="list-about-3">
+            <br>
+            <ul class="list-about-blank">
                 <li>Faculty of Philosophy in Novi Sad 2018 - / Masters degree in Romanian Language and Literature</li>
                 <li>Faculty of Philosophy in Novi Sad 2014 - 2018 / (BA) Philologist, Romanian Language and Literature</li>
                 <li>University "1st December 1918" Feb-July 2018 / Erasmus+ Student exchange program</li>
@@ -245,11 +232,13 @@
             </ul>
          </div>
 
-         <div class="background-cube" id="willkommen5"></div>
+        <div class="content01 col05 top-14vw">
 
-        <div class="column c50 margin-top-15">
-           <br> <h2 class="hx_right">My Skills</h2>
-        <br><br><br><br>
+            <div class="background-cube" id="prlx-03">
+            </div>
+
+        <h2 class="right-hX" style="color: #4a919e;">My Skills</h2>
+        <br><br>
            <ul class="list-about">
                <li>Photoshop</li>
                <li>Illustrator</li>
@@ -260,17 +249,19 @@
         </div>
     </div>
 
-    <div class="separator"></div>
+    <div class="separator01"></div>
+    <div class="separator02"></div>
 
-</div>
+    
+    <div class="content-wrapper01">
+        <div class="content01 col10">
 
-<div class="content-wrapper dont-show">
+            <div class="background-cube" id="prlx-04">
+            </div>
+            
+            <h2 class="center-hX" style="color: #ce6a6b;">Work Experience</h2><br><br>
 
-    <h2 class="hx_center">Work Experience</h2>
-
-    <div class="row">
-        <div class="column c100">
-            <ul class="list-about">
+            <ul class="list-about2">
                 <li>Freelance Graphic Design and Web Development May 2017 - </li>
                 <li>Project Management <span class="highlight-txt" >TalkBridge</span> August 2019 - March 2020</li>
                 <li>Graphic Design <span class="highlight-txt">Embibe</span> November 2019 - February 2020</li>
@@ -280,52 +271,59 @@
                 <li>Graphic Design <span class="highlight-txt">Prometej</span> September - October 2017</li>
             </ul>
          </div>
-        </div>
     </div>
-    <div class="separator"></div>
+
+    <div class="separator01"></div><!--Ovde takodje moze da se stavi footer, uz paznju na to da nece biti prilepljen uz bott-->
+    <div class="separator01"></div>
+    
 </div>
 
-    <div id="footer-wrapper">
-        <hr>
-        <div id="footer">
-    
-            <div id="footer-menu">
-                <ul>
-                    <li><a href="#design">DESIGN</a></li>
+<div id="footer-wrapper">
+    <hr>
+    <div id="footer">
+
+        <div id="footer-menu">
+            <ul>
+                <li><a href="#design">DESIGN</a></li>
                     <li><a href="#webdev">WEB DEV</a></li>
                     <li><a href="gallery.html">GALLERY</a></li>
                     <li><a href="#about">ABOUT</a></li>
-                </ul>
-            </div>
-    
-            <div class="social-menu">
-                <ul>
-                    <li class="tooltip"><span class="tooltiptext">gmail</span><a href="mailto:kristianfiredi@gmail.com" class="fa fa-google"></a>&nbsp;</li>
+            </ul>
+        </div>
+
+        <div class="social-menu">
+            <ul>
+                <li class="tooltip"><span class="tooltiptext">gmail</span><a href="mailto:kristianfiredi@gmail.com" class="fa fa-google"></a>&nbsp;</li>
                     <li class="tooltip"><span class="tooltiptext">Facebook</span><a href="https://www.facebook.com/kristian.firedi" class="fa fa-facebook"></a>&nbsp;</li>
                     <li class="tooltip"><span class="tooltiptext">LinkedIn</span><a href="https://www.linkedin.com/in/kristian-firedi-441574178/" class="fa fa-linkedin"></a>&nbsp;</li>
                     <li class="tooltip"><span class="tooltiptext">Skype</span><a href="https://secure.skype.com/portal/profile" class="fa fa-skype"></a>&nbsp;</li>
                     <li class="tooltip"><span class="tooltiptext">Instagram</span><a href="https://www.instagram.com/naitsirk_firedi" class="fa fa-instagram"></a>&nbsp;</li>
-                </ul>
-            </div>
+            </ul>
         </div>
-    
-        <hr>
-            <br>
-                <br>
-    
-        <p><span>This website designed and maintained by <span class="signature">Kristian Firedi</span></span></p>
-            </div>
-
     </div>
+
+    <hr>
+        <br><br>
+            <p><span>This website designed and maintained by <span class="signature">Kristian Firedi</span></span></p>
+            <br>
 </div>
+
+
+</div>
+
+<script src="js/up-but.js">
+</script>
 
 <script src="js/parallax.js">
 </script>
 
-<script src="js/pagecontent.js">
+<script src="js/side-menu.js">
 </script>
 
-<script src="js/modal-images.js">
+<script src="js/video-speed.js">
+</script>
+
+<script src="js/fade-in-content.js">
 </script>
 
 <script src="js/simple-lightbox.js?v2.2.1"></script>
@@ -334,7 +332,6 @@
         var $gallery = new SimpleLightbox('.gallery a', {});
     })();
 </script>
-
 
 </body>
 </html>
