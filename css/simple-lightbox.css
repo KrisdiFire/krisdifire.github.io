@@ -75,7 +75,7 @@ body.hidden-scroll {
         cursor: pointer;
 position: fixed;
 top: 0vh;
-width: 35%;
+width: 20%;
 height: 100%;
 padding: 1rem;
 color: white;
@@ -90,7 +90,7 @@ text-decoration: none; }
         cursor: pointer;
 position: fixed;
 top: 0vh;
-width: 35%;
+width: 20%;
 height: 100%;
 padding: 1rem;
 color: white;
