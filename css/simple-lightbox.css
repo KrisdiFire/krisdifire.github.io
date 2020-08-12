@@ -8,7 +8,7 @@ body.hidden-scroll {
   overflow: hidden;
   position: relative;
   margin: 0;
-        padding: 0;; }
+        padding: 0; }
 
 .sl-overlay {
   position: fixed;
@@ -245,3 +245,8 @@ text-decoration: none; }
   100% {
     transform: scale(1.2);
     opacity: 0; } }
+
+
+.sl-wrapper .sl-image .sl-caption {
+  background-color: rgba(0, 0, 0, 0.24);
+}
