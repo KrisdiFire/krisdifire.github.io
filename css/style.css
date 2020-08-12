@@ -6,10 +6,10 @@
 
 /*boja selektovanog texta*/
 *::selection {
-    background: cadetblue;
+    background: #ce6a6b;
 }
 *::-moz-selection {
-    background: cadetblue;
+    background: #ce6a6b;
 }
 
 /*self explanatory*/
@@ -24,7 +24,7 @@ html {
 } 
 
 ::-webkit-scrollbar-thumb {
-    background-color: #ce6a6b;
+    background-color: orange;
 }
 
 ::-webkit-scrollbar-track {
@@ -35,7 +35,7 @@ html {
 
 /* Handle on hover */
  ::-webkit-scrollbar-thumb:hover {
-    background: rgb(163, 64, 64); 
+    background: rgb(204, 133, 0); 
 }
 /*stil svih linkova na str*/
 a {
@@ -85,7 +85,7 @@ body {
     height: 3rem;
     width: 3rem;
     margin: 2rem;
-    background-color: #ce6a6b;
+    background-color: #3abdd4;
     color: azure;
     bottom: 0;
     right: 0;
@@ -134,6 +134,11 @@ h1, h2, h3 {
 padding: 0.5rem;
 font-weight: 800;
 font-size: 3rem;
+color: orange;
+}
+
+.hello01 {
+    margin-left: -5rem;
 }
 
 .center-hX {
@@ -459,7 +464,7 @@ font-size: 3rem;
 
 .list-about > li::before {
     content: "\2022";
-    color: #4a919e;
+    color: #3abdd4;
     font-weight: bold;
     display: inline-block; 
     width: 1em;
@@ -487,7 +492,7 @@ font-size: 3rem;
 
 .list-about2 > li::before {
     content: "\2022";
-    color: #ce6a6b;
+    color: orange;
     font-weight: bold;
     display: inline-block; 
     width: 1em;
@@ -581,7 +586,7 @@ font-size: 3rem;
     text-align: center;
     text-decoration: none;
     margin: 0.5em 0.2em;
-    background-color: #ce6a6b;
+    background-color: #3abdd4;
     border-radius: 50%; 
     display: flex !important; /*important je jer guglov stil ima drugaciji*/
     justify-content: center;
@@ -589,7 +594,8 @@ font-size: 3rem;
 }
   
 .fa:hover {
-    opacity: 0.7;
+    opacity: 1;
+    background-color: orange;
 }
 
 /*Tooltip stil*/
@@ -668,6 +674,10 @@ font-size: 3rem;
     .huge-txt {
         font-size: 6rem;
         font-weight: 900;
+    }
+
+    .hello01 {
+        margin-left: 0rem;
     }
 
     #prlx-01 {
