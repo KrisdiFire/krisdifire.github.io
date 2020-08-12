@@ -6,15 +6,19 @@
 
     <link href='https://fonts.googleapis.com/css?family=Armata' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Poiret One' rel='stylesheet'>
+    
     <link href="js/modal-images.js" rel="javascript">
-    <link href="js/pagecontent.js" rel="javascript">
-    <link href="css/modal-images.css" rel="stylesheet">
-    <link href="css/layout-main.css" rel="stylesheet">
-    <link href="css/layout-main-sml.css" rel="stylesheet">
-    <link href="css/main-menu.css" rel="stylesheet">
-    <link href="css/side-menu.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <link href="css/modal-images.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+
+    <link href="css/main-menu.css" rel="stylesheet">
+
+    <link href="css/side-menu.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <link rel="stylesheet" href="css/simple-lightbox.css?v2.2.1" />
 
 <head>
@@ -44,7 +48,7 @@
 
    </div>
 
-<div id="whole-page">
+<div id="whole-page01">
 
   <div id="up"><a>&#8679;</a></div> 
   <div class="close-side-menu" id="close-side-menu-div"></div>    
@@ -67,12 +71,13 @@
             <a class="display-none" id="ham-menu" data-toggle="offCanvas" aria-expanded="false" aria-controls="offCanvas"><span></span></a>
     </nav>
 
-<div id="page">
+<div class="gal-page01-override">
 
-<div class="content-wrapper dont-show gallery-content" style="overflow: hidden;">
-<!-- Trigger the Modal - Ovde ubaciti slike -->
-    <div class="row">
-        <div class="column c100">
+    <div class="separator01" id="push-down-filter"></div>
+
+<div class="content-wrapper01 dont-show gallery-content" style="overflow: hidden;">
+
+        <div class="content01 col10">
        
           <div class="gallery gallery_spacing">
             <a href="img/Hurt_Illustration.png"><img class="image_gallery_sm i-photo show-on-scroll illu image" src="img/thumb/Hurt_Illustration.webp" alt="John Hurt" title="John Hurt" /></a>
@@ -92,7 +97,7 @@
             <a href="img/art_recreation-nonorig.png"><img class="image_gallery_sm i-photo show-on-scroll fun image" src="img/thumb/art_recreation-nonorig.webp" alt="Recreation of line-art by jmoorzie" title="Recreation of line-art by jmoorzie"/></a>
             
             <div class="clear"></div>
-          </div>
+          
         </div>
     </div>
 </div>
@@ -128,14 +133,24 @@
           <br>
 
           <p><span>This website designed and maintained by <span class="signature">Kristian Firedi</span></span></p>
-      </div>
+          <br>
+        </div>
 
 </div>
 
-<script src="js/pagecontent.js">
+<script src="js/up-but.js">
+</script>
+
+<script src="js/side-menu.js">
+</script>
+
+<script src="js/video-speed.js">
 </script>
 
 <script src="js/modal-images.js">
+</script>
+
+<script src="js/fade-in-content.js">
 </script>
 
 <script src="js/simple-lightbox.js?v2.2.1"></script>
