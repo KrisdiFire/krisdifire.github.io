@@ -29,7 +29,7 @@
     font-weight: 900;
     text-decoration: none;
     font-family: 'Armata';
-    text-shadow: 0 0 2em rgba(255, 166, 0, 0);
+    text-shadow: 0 0 2em #3abdd4;
 }
 
 .main-menu ul {
