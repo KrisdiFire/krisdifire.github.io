@@ -342,6 +342,28 @@ color: orange;
     font-weight: 900;
 }
 
+.content01 a:hover + #pic01-txt {
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 2em #ffffff;
+}
+
+.content01 a:hover + #pic02-txt {
+    text-shadow: 0 0 2em #ffffff;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+}
+
+.content01 a:hover + #pic03-txt {
+    text-shadow: 0 0 2em #ffffff;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+}
+
+.highlight-txt {
+    color: orange;
+}
+
 .background-cube {
     position: absolute; 
     z-index: -29;
