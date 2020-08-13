@@ -30,7 +30,7 @@ html {
 ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     box-shadow: inset 0 0 8px rgba(0,0,0,0.3);
-    background-color: mintcream;
+    background-color: rgba(20, 20, 20, 0.5);
 }
 
 /* Handle on hover */
@@ -84,8 +84,8 @@ body {
     position: fixed;
     height: 3rem;
     width: 3rem;
-    margin: 2rem;
-    background-color: #3abdd4;
+    margin: 1.5rem;
+  /*  background-color: #3abdd4;*/
     color: azure;
     bottom: 0;
     right: 0;
@@ -95,20 +95,29 @@ body {
     justify-content: center;
     opacity: 0;    
     cursor: pointer;
+    border: azure solid 0.1rem;
+    transition: all ease-in-out 0.25s;
 }
 
 .up-opacity {
     opacity: 0.5 !important;
-    transition: opacity ease-in 0.25s;
+    transition: opacity ease-in-out 0.25s;
 }
 
 #up:hover {
     opacity: 1 !important;
-    transition: opacity ease-in 0.25s;
     border: 0.1rem solid white;
+    background-color: #3abdd4;
     width: 3rem;
     height: 3rem;
     transform-origin: center center;
+    transform: rotate(45deg);
+    transition: all ease-in-out 0.25s;
+}
+
+#up:hover a {
+    transform: rotate(-45deg);
+    transition: transform ease-in-out 0.25s;
 }
 
 #up a {
@@ -119,6 +128,8 @@ body {
     width: 100%;
     height: 3rem;
     padding: 0.5rem;
+    transform: rotate(0deg);
+    transition: transform ease-in-out 0.25s;
 }
 /*stil stranice koja sadrzi vise kontent wrappera*/
 #page01 {
@@ -139,6 +150,11 @@ color: orange;
 
 .hello01 {
     margin-left: -5rem;
+}
+
+.signature {
+    color: #3abdd4;
+    font-weight: 800;
 }
 
 .center-hX {
@@ -586,11 +602,13 @@ color: orange;
     text-align: center;
     text-decoration: none;
     margin: 0.5em 0.2em;
-    background-color: #3abdd4;
+   /* background-color: #3abdd4;*/
     border-radius: 50%; 
     display: flex !important; /*important je jer guglov stil ima drugaciji*/
     justify-content: center;
     align-items: center;
+    border: azure 0.1rem solid;
+    transition: ease-in-out 0.2s;
 }
   
 .fa:hover {
