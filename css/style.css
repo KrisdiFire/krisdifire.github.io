@@ -62,6 +62,22 @@ body {
     background-repeat: no-repeat;
 }
 
+#background-img {
+    opacity: 0.3;
+    background-image: url("../img/wall.png");
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -35;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-repeat: repeat;
+}
+
 .grayscale-blur {
     filter: grayscale(1);
     -webkit-filter: grayscale(1); 
@@ -75,6 +91,7 @@ body {
     display: flex;
     flex-direction: column;
     transition: 0.3s;
+   /* background-color: rgb(49, 49, 49);*/
 }
 
 /*za up dugme*/
@@ -133,12 +150,11 @@ body {
 }
 /*stil stranice koja sadrzi vise kontent wrappera*/
 #page01 {
-    margin: 0% 15% 0% 15%;
-    width: 70%;
     min-height: 100%;
     z-index: 1;
     position: relative;
     min-height: 100vh;
+    overflow: hidden;
 }
 
 h1, h2, h3 {
@@ -149,7 +165,7 @@ color: orange;
 }
 
 .hello01 {
-    margin-left: -5rem;
+    margin-left: 0rem;
 }
 
 .signature {
@@ -177,14 +193,68 @@ color: orange;
 
 /*kontent wrapper koji sadrzi kolone kontenta*/
 .content-wrapper01 {
+    margin: 0% 15% 0% 15%;
+    width: 70%;
     color: #fff;
     display: flex;
     flex-direction: row;
-    width: 100%;
     height: auto;
     position: relative;
     font-family: 'Armata';
     flex-wrap: wrap;
+}
+
+.flex-op-dir-sm-scr {
+    flex-direction: row;
+}
+
+.mar-left-abit {
+    margin-left: 4rem;
+}
+
+.mar-right-abit {
+    margin-right: 4rem;
+}
+
+/*
+.content01::after {
+    background-color: rgb(20, 20, 20);
+    background-position: center;
+    content: "";
+    opacity: 1;
+    top: 7rem;
+    left: 0.5rem;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    position: absolute;
+    z-index: -34; 
+    margin-left: 0%;
+    margin-right: -50%;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+}*/
+
+.left-gray-bg ul {
+    position: relative;
+}
+
+.left-gray-bg ul::after {
+    background-color: rgba(51, 51, 51, 0.5);
+    background-position: center;
+    content: "";
+    opacity: 1;
+    top: 0rem;
+    left: 0rem;
+    bottom: 0rem;
+    right: 0rem;
+    position: absolute;
+    z-index: -24; 
+    margin-left: -100vw;
+    margin-right: 0%;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+}
+*/
+.cont-height200 {
+    min-height: 200vh;
 }
 
 .cont-height100 {
@@ -193,6 +263,12 @@ color: orange;
 
 .cont-height50 {
     min-height: 50vh;
+}
+
+.cont-width100 {
+    width: 100% !important;
+    margin: 0rem;
+    max-width: none !important;
 }
 
 .cont-cent {
@@ -211,7 +287,7 @@ color: orange;
 .content01 p {
     padding: 0.5rem;
     width: 100%;
-    text-align: justify;
+   /*text-align: justify;*/
 }
 /*sirina kolona*/
 .col01 {
@@ -302,11 +378,23 @@ color: orange;
     font-weight: 900;
 }
 
+.mega-txt {
+    font-size: 5rem;
+    font-weight: 700;
+}
+
 .huge-txt {
     font-size: 8rem;
     font-weight: 900;
 }
+/*za skills listu da bude uvek na bott*/
+.top-auto {
+    bottom: 0rem;
+    margin-top: auto;
+}
+
 /*margina za about deo da padne ispod abouta*/
+
 .top-14vw {
     margin-top: 14vw;
 }
@@ -330,38 +418,48 @@ color: orange;
     margin-top: -2.1rem;
     margin-bottom: 4rem;
     font-weight: 900;
+    opacity: 0;
+    transition: 0.3s;
 }
 #pic02-txt {
     margin-top: -2.1rem;
     margin-bottom: 4rem;
     font-weight: 900;
+    opacity: 0;
+    transition: 0.3s;
 }
 #pic03-txt {
     margin-top: -2.1rem;
     margin-bottom: 4rem;
     font-weight: 900;
+    opacity: 0;
+    transition: 0.3s;
 }
 
 .content01 a:hover + #pic01-txt {
     font-weight: 900;
     color: rgb(255, 255, 255);
     text-shadow: 0 0 2em #ffffff;
+    opacity: 1;
 }
 
 .content01 a:hover + #pic02-txt {
     text-shadow: 0 0 2em #ffffff;
     font-weight: 900;
     color: rgb(255, 255, 255);
+    opacity: 1;
 }
 
 .content01 a:hover + #pic03-txt {
     text-shadow: 0 0 2em #ffffff;
     font-weight: 900;
     color: rgb(255, 255, 255);
+    opacity: 1;
 }
 
 .highlight-txt {
-    color: orange;
+    text-shadow: 0 0 2em #ffffff;
+    font-weight: 900;
 }
 
 .background-cube {
@@ -393,8 +491,8 @@ color: orange;
 #prlx-03 {
     height: 13rem;
     width: 13rem;
-    right: 6vw;
-    top: -23rem; 
+    right: 4vw;
+    top: -50rem; 
     opacity: 0.5;
 }
 
@@ -404,6 +502,7 @@ color: orange;
     left: 10rem;
     top: -17rem; 
     opacity: 0.5;
+    z-index: 1;
 }
 
 #prlx-05 {
@@ -416,24 +515,35 @@ color: orange;
 }
 
 #prlx-06 {
-    height: 10rem;
-    width: 10rem;
-    opacity: 0.5;
-    align-self: center;
-    display: flex;
-    flex-direction: row;
-}
-
-#prlx-06 + a {
-    margin-top: 3rem;
-    font-size: 3rem;
+    margin-top: 0rem;
     width: auto !important;
     cursor: pointer;
     text-decoration: none;
     transition: ease-in 0.3s;
+    position: relative;
 }
 
-#prlx-06 + a:hover {
+#prlx-06::after {
+    opacity: 0.5;
+    background-position: center;
+    content: "";
+    width: 13rem;
+    height: 13rem;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    top: 50%;
+    bottom: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    margin-left: auto;
+    margin-right: auto;
+    z-index: -29;
+    background: url("../img/sing_square_rot-01-01.svg") no-repeat center;
+    background-image: url("../img/sing_square_rot-01-01.svg");
+    background-size: contain;
+}
+
+#prlx-06:hover {
     color: orange;
 }
 
@@ -451,8 +561,7 @@ color: orange;
 
 .mar-cent-ver {
     top: 50%;  /* position the top  edge of the element at the middle of the parent */
-    transform: translateY(-50%); 
-                                         
+    transform: translateY(-50%);                                   
 }
 
 .mar-cent-hor {
@@ -479,6 +588,10 @@ color: orange;
 
 .separator01 hr {
     width: 100%;
+}
+
+.separator-sm-scr {
+    display: none;
 }
 
 .list-about {
@@ -669,22 +782,39 @@ color: orange;
 
 @media only screen and (min-width: 1367px) {
 
-    #page01 {
-        max-width: 1100px;
-        margin-left: auto;
-        margin-right: auto;
+.content-wrapper01 {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
     }
+
+    .cont-width100 {
+        max-width: 2000px !important;
+    }
+
 }
 
 @media only screen and (min-width: 1366px) {
 
     .pos-ab-btxt {
-        font-size: 20rem;
+        font-size: 18rem;
     }
 
     #prlx-05 {
        position: fixed;
        left: 4rem;
+    }
+
+}
+
+
+@media only screen and (max-width: 900px) {
+
+    #prlx-03 {
+        position: relative;
+        right: 0rem !important;
+        margin-left: 150%;
+        margin-top: -40rem;
     }
 
 }
@@ -696,9 +826,13 @@ color: orange;
         display: none;
     }
 
-    #page01 {
+    #content-wrapper01 {
         width: 90%;
         margin: 0% 5% 0% 5%;
+    }
+
+    .flex-op-dir-sm-scr {
+        flex-direction: column-reverse;
     }
 
     .larger-txt {
@@ -709,6 +843,11 @@ color: orange;
     .largest-txt {
         font-size: 2rem;
         font-weight: 900;
+    }
+
+    .mega-txt {
+        font-size: 3.5rem;
+        font-weight: 700;
     }
     
     .huge-txt {
@@ -736,6 +875,10 @@ color: orange;
     
     .content01 {
         width: 100%;
+    }
+
+    .separator-sm-scr {
+        display: block;
     }
 
     /*pretvara layout footera iz row u kolone*/
@@ -776,13 +919,17 @@ color: orange;
 }
 
 @media only screen and (max-width: 480px) {
-    #page01 {
+    .content-wrapper01 {
         margin: 0rem;
         width: 100%;
     }
 
     .pos-ab-t-over {
         margin-top: -3.5rem;
+    }
+
+    .left-gray-bg ul::after {
+        margin-right: -100vw;
     }
 
     .larger-txt {
@@ -794,9 +941,14 @@ color: orange;
         font-size: 2rem;
         font-weight: 900;
     }
+
+    .mega-txt {
+        font-size: 2rem;
+        font-weight: 700;
+    }
     
     .huge-txt {
-        font-size: 3rem;
+        font-size: 4rem;
         font-weight: 900;
     }
 
@@ -844,5 +996,5 @@ color: orange;
 }
 
 .back-box {
-    background-color: #bed3c33d;
+    background-color: rgba(51, 51, 51, 0.5);
 }
