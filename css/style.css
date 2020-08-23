@@ -237,6 +237,10 @@ color: orange;
     position: relative;
 }
 
+.right-gray-bg {
+    position: relative;
+}
+
 .left-gray-bg ul::after {
     background-color: rgba(51, 51, 51, 0.5);
     background-position: center;
@@ -250,6 +254,22 @@ color: orange;
     z-index: -24; 
     margin-left: -100vw;
     margin-right: 0%;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.right-gray-bg::after {
+    background-color: rgba(51, 51, 51, 0.5);
+    background-position: center;
+    content: "";
+    opacity: 1;
+    top: 0rem;
+    left: 0rem;
+    bottom: 0rem;
+    right: 0rem;
+    position: absolute;
+    z-index: -24; 
+    margin-right: -100vw;
+    margin-left: 0%;
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
 }
 */
