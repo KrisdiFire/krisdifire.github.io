@@ -14,7 +14,7 @@ function parallax() {
   o.style.top = 68 + yPos2 + "vh";
 
   var yPos3 = 0 - window.pageYOffset/-110;  
-  b.style.top = -50 + yPos3 + "rem";
+  b.style.top = -20 + yPos3 + "rem";
 
 }
   //listener koji prati skroll na stranici i po tome vrsi funkciju parralax
