@@ -1,7 +1,7 @@
 * {
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Armata';
+    font-family: 'Roboto', sans-serif;
 }
 
 /*boja selektovanog texta*/
@@ -161,7 +161,9 @@ h1, h2, h3 {
 padding: 0.5rem;
 font-weight: 800;
 font-size: 3rem;
-color: orange;
+color: white;
+font-family: 'Alata', sans-serif;
+
 }
 
 .hello01 {
@@ -180,14 +182,12 @@ color: orange;
 }
 
 .right-hX {
-    text-align: end !important;
-    width: 100%;
+    text-align: right !important;
     margin-left: auto;
 }
 
 .left-hX {
     text-align: left;
-    width: 100%;
     margin-right: auto;
 }
 
@@ -213,7 +213,7 @@ color: orange;
 }
 
 .mar-right-abit {
-    margin-right: 4rem;
+    margin-right: 3rem;
 }
 
 /*
@@ -233,7 +233,7 @@ color: orange;
     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.5);
 }*/
 
-.left-gray-bg ul {
+.left-gray-bg {
     position: relative;
 }
 
@@ -241,7 +241,7 @@ color: orange;
     position: relative;
 }
 
-.left-gray-bg ul::after {
+.left-gray-bg::after {
     background-color: rgba(51, 51, 51, 0.5);
     background-position: center;
     content: "";
@@ -254,7 +254,7 @@ color: orange;
     z-index: -24; 
     margin-left: -100vw;
     margin-right: 0%;
-    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+    /*box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);*/
 }
 
 .right-gray-bg::after {
@@ -270,7 +270,7 @@ color: orange;
     z-index: -24; 
     margin-right: -100vw;
     margin-left: 0%;
-    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+    /*box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);*/
 }
 */
 .cont-height200 {
@@ -303,6 +303,7 @@ color: orange;
     display: flex;
     flex-direction: column;
 }
+
 /*stil p elemenata unutar svake kolone*/
 .content01 p {
     padding: 0.5rem;
@@ -350,10 +351,8 @@ color: orange;
     width: 100%;
 }
 
-.image-div {
-    object-fit: cover;
-    height: 350px;
-    background-image: none;
+.image-back {
+    z-index: -30;
 }
 
 .image-div-small {
@@ -380,12 +379,17 @@ color: orange;
     z-index: -10;
     opacity: 0.1;
     color: azure;
-    font-size: 20vw;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 12vw;
+    font-weight: 900;
+    font-family: 'Alata', sans-serif;
 }
 
 .pos-ab-t-over {
     margin-top: -4rem;
+}
+
+.justif-txt {
+    text-align: justify;
 }
 
 .larger-txt {
@@ -413,10 +417,19 @@ color: orange;
     margin-top: auto;
 }
 
+.bot-auto {
+    top: 0rem;
+    margin-bottom: auto;
+}
+
 /*margina za about deo da padne ispod abouta*/
 
 .top-14vw {
-    margin-top: 14vw;
+    margin-top: 12vw;
+}
+
+.top-15rem {
+    margin-top: 10rem;
 }
 
 /*slike u fp galeriji*/
@@ -425,7 +438,7 @@ color: orange;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 14vw;
+    flex-wrap: wrap;
 }
 
 .fr-img-row .col03 img {
@@ -512,30 +525,30 @@ color: orange;
     height: 13rem;
     width: 13rem;
     right: 4vw;
-    top: -50rem; 
+    top: -20rem; 
     opacity: 0.5;
 }
 
 #prlx-04 {
     height: 10rem;
     width: 10rem;
-    left: 10rem;
-    top: -17rem; 
+    left: 10%;
+    margin-top: 10rem; 
     opacity: 0.5;
-    z-index: 1;
+    z-index: -10;
 }
 
 #prlx-05 {
     height: 8rem;
     width: 8rem;
-    left: -3vw;
+    left: 0vw;
     top: 8rem; 
     opacity: 0.5;
     transform: rotate(45deg);
 }
 
 #prlx-06 {
-    margin-top: 0rem;
+    margin-top: 2rem;
     width: auto !important;
     cursor: pointer;
     text-decoration: none;
@@ -589,6 +602,7 @@ color: orange;
     transform: translateX(-50%); 
                                        
 }
+
 /*self explanatory*/
 .separator01 {
     height: 3rem;
@@ -599,11 +613,15 @@ color: orange;
 }
 
 .separator02 {
-    height: 20vh;
+    height: 6rem;;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.separator03 {
+    height: 10vh;
 }
 
 .separator01 hr {
@@ -612,6 +630,10 @@ color: orange;
 
 .separator-sm-scr {
     display: none;
+}
+
+.rotate-txt {
+    transform: rotate(90deg);
 }
 
 .list-about {
@@ -625,13 +647,12 @@ color: orange;
     padding: 1rem;
     width: 100%;
     list-style: none;
-    line-height: 1.5rem;
-    
+    line-height: 1rem;
 }
 
-.list-about > li:nth-child(2n + 1) {
+/*.list-about > li:nth-child(2n + 1) {
     background-color: rgba(51, 51, 51, 0.5);
-}
+}*/
 
 .list-about > li::before {
     content: "\2022";
@@ -803,7 +824,7 @@ color: orange;
 @media only screen and (min-width: 1367px) {
 
 .content-wrapper01 {
-    max-width: 1100px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     }
@@ -817,7 +838,8 @@ color: orange;
 @media only screen and (min-width: 1366px) {
 
     .pos-ab-btxt {
-        font-size: 18rem;
+        font-size: 12rem;
+        width: inherit;
     }
 
     #prlx-05 {
@@ -834,7 +856,7 @@ color: orange;
         position: relative;
         right: 0rem !important;
         margin-left: 150%;
-        margin-top: -40rem;
+        margin-top: -20rem;
     }
 
 }
@@ -852,7 +874,17 @@ color: orange;
     }
 
     .flex-op-dir-sm-scr {
-        flex-direction: column-reverse;
+        flex-direction: column-reverse !important;
+    }
+
+    .right-gray-bg::after {
+        margin-right: -100vw;
+    margin-left: -100vw;
+    }
+
+    .left-gray-bg::after {
+        margin-right: -100vw;
+        margin-left: -100vw;
     }
 
     .larger-txt {
@@ -884,8 +916,13 @@ color: orange;
     }
 
     #prlx-04 {
-        top: -10rem;
+        height: 10rem;
+        display: block;
+        width: 10rem;
         left: 0rem;
+        opacity: 0.5;
+        right: 0;
+        margin: auto;
     }
 
     .content-wrapper01 {
@@ -897,8 +934,39 @@ color: orange;
         width: 100%;
     }
 
+    .content01-img-cen {
+        width: 25rem !important;
+    }
+
     .separator-sm-scr {
         display: block;
+    }
+
+    .mar-left-abit {
+        margin-left: 0rem;
+    }
+    
+    .mar-right-abit {
+        margin-right: 0rem;
+    }
+
+    .pos-ab-t-over {
+        margin-top: -2rem;
+    }
+
+    .overrdie-to-cent {
+        text-align: center !important;
+        width: 100%;
+    }
+
+    .fr-img-row {
+        margin-top: 0vw;
+        width: 100%;
+        height: 100%;
+    }
+
+    .top-14vw {
+        margin-top: 0vw;
     }
 
     /*pretvara layout footera iz row u kolone*/
@@ -944,6 +1012,10 @@ color: orange;
         width: 100%;
     }
 
+    .pos-ab-btxt {
+        font-size: 5rem;
+    }
+
     .pos-ab-t-over {
         margin-top: -3.5rem;
     }
@@ -976,9 +1048,11 @@ color: orange;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin-top: 14vw;
+        margin-top: 0vw;
     }
-
+.content01-img-cen {
+    width: 100% !important;
+}
     #prlx-01 {
         display: none;
     }
@@ -994,16 +1068,6 @@ color: orange;
     #prlx-03 {
         display: none;
     }
-    
-    #prlx-04 {
-        height: 10rem;
-        width: 10rem;
-        left: 0rem;
-        top: -10rem;
-        opacity: 0.5;
-        right: 0;
-        margin: auto;
-    }
 
     #prlx-05 {
         position: absolute;
@@ -1017,4 +1081,8 @@ color: orange;
 
 .back-box {
     background-color: rgba(51, 51, 51, 0.5);
+}
+
+.white-text {
+    color: white;
 }
