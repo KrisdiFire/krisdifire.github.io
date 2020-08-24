@@ -450,6 +450,9 @@ font-family: 'Alata', sans-serif;
     width: 100%;
     padding: 0rem;
 }
+.fr-img-row .col03 img::after:hover {
+    border: 0.1rem rgb(255, 255, 255) solid;
+}
 
 #pic01-txt {
     margin-top: -2.1rem;
@@ -476,19 +479,16 @@ font-family: 'Alata', sans-serif;
 .content01 a:hover + #pic01-txt {
     font-weight: 900;
     color: rgb(255, 255, 255);
-    text-shadow: 0 0 2em #ffffff;
     opacity: 1;
 }
 
 .content01 a:hover + #pic02-txt {
-    text-shadow: 0 0 2em #ffffff;
     font-weight: 900;
     color: rgb(255, 255, 255);
     opacity: 1;
 }
 
 .content01 a:hover + #pic03-txt {
-    text-shadow: 0 0 2em #ffffff;
     font-weight: 900;
     color: rgb(255, 255, 255);
     opacity: 1;
@@ -1017,7 +1017,7 @@ font-family: 'Alata', sans-serif;
     }
 
     .pos-ab-btxt {
-        font-size: 5rem;
+        font-size: 4.5rem;
     }
 
     .pos-ab-t-over {
@@ -1057,6 +1057,11 @@ font-family: 'Alata', sans-serif;
 .content01-img-cen {
     width: 100% !important;
 }
+
+.cont-cent-ver {
+    align-items: center;
+    justify-content: center;
+}
     #prlx-01 {
         display: none;
     }
@@ -1076,6 +1081,7 @@ font-family: 'Alata', sans-serif;
     #prlx-05 {
         position: absolute;
         top: 2rem;
+        display: none;
     }
 
     #footer-wrapper {
