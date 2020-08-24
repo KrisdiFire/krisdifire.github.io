@@ -449,10 +449,11 @@ font-family: 'Alata', sans-serif;
     height: 25rem;
     width: 100%;
     padding: 0rem;
+    border: 0.1rem rgba(255, 255, 255, 0.753) solid;
+    border-radius: 1rem 1rem 1rem 1rem;
 }
-.fr-img-row .col03 img::after:hover {
-    border: 0.1rem rgb(255, 255, 255) solid;
-}
+.fr-img-row .col03 img:hover {
+border: 0.1rem rgb(255, 255, 255) solid;}
 
 #pic01-txt {
     margin-top: -2.1rem;
