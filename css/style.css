@@ -296,6 +296,10 @@ font-family: 'Alata', sans-serif;
     align-items: center;
 }
 
+.cont-cent-ver {
+    align-items: center;
+}
+
 /*kontejner koji ide uz klasu colX i time dobija sirinu*/
 .content01 {
     width: auto;
