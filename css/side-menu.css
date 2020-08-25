@@ -32,6 +32,7 @@
 
 #btn-close-div a {
     font-size: 2rem;
+    font-family: 'Roboto', sans-serif !important;
     padding: 0rem;
 }
 
@@ -51,7 +52,6 @@
     padding-top: 20px;
     transition: all ease-in-out .2s;
     padding-top: 4rem;
-    background-color: #3abdd4;
   }
 
   /*pozadina side menija, sa slikom*/
@@ -76,9 +76,9 @@
     padding: 0.5rem;
     line-height: 2rem;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.3rem;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Alata', sans-serif;
     font-weight: 600;
     color: white;
     display: block;
@@ -109,6 +109,7 @@
   .dropdown-container a {
       text-align: left;
       padding-left: 3rem;
+      font-family: 'Roboto', sans-serif !important;
   }
 
   .dropdown-container a:hover {
@@ -117,6 +118,7 @@
 
 /*izgled side m kad je na normalnom ekranu i izgled kad je na telefonu*/
 .side-menu-norm {
+    background-color: #3abdd4;
     width: 19em;
     transition: all ease-in-out .2s;
 }
