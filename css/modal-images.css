@@ -51,7 +51,8 @@
   background-position: center;
   cursor: pointer;
   transition: 0.3s;
-  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
 }
 
 .image_gallery_sm:hover {
@@ -174,3 +175,7 @@ will-change: height, opacity;
     margin-right: auto;
   }
 }
+
+
+
+
