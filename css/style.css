@@ -43,8 +43,7 @@ a {
 }
 /*body html-a*/
 body {
-    background-color: black;
-    /*background-image: url("../img/rezerva/zabaner-01.png");*/
+    background-color: rgb(29, 29, 29);
 }
 
 #background-video {
@@ -62,21 +61,21 @@ body {
     background-repeat: no-repeat;
 }
 
-#background-img {
+/*#background-img {
     opacity: 0.3;
     background-image: url("../img/wall.png");
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
+    height: 100%;
     min-width: 100%;
     min-height: 100%;
     width: auto;
-    height: auto;
     z-index: -35;
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
     background-repeat: repeat;
-}
+}*/
 
 .grayscale-blur {
     filter: grayscale(1);
@@ -91,7 +90,22 @@ body {
     display: flex;
     flex-direction: column;
     transition: 0.3s;
-   /* background-color: rgb(49, 49, 49);*/
+}
+
+.bg-line-cont {
+    position: fixed;
+    margin: 0% 5% 0% 5%;
+    width: 90%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    opacity: 0.5;
+    z-index: -40;
+}
+
+.lines{
+    border: 1px solid gray;
+    width: 25%;
 }
 
 /*za up dugme*/
@@ -102,7 +116,7 @@ body {
     height: 3rem;
     width: 3rem;
     margin: 1.5rem;
-  /*  background-color: #3abdd4;*/
+  /*background-color: #3abdd4;*/
     color: azure;
     bottom: 0;
     right: 0;
@@ -166,10 +180,6 @@ font-family: 'Alata', sans-serif;
 
 }
 
-.hello01 {
-    margin-left: 0rem;
-}
-
 .signature {
     color: #3abdd4;
     font-weight: 800;
@@ -216,23 +226,6 @@ font-family: 'Alata', sans-serif;
     margin-right: 3rem;
 }
 
-/*
-.content01::after {
-    background-color: rgb(20, 20, 20);
-    background-position: center;
-    content: "";
-    opacity: 1;
-    top: 7rem;
-    left: 0.5rem;
-    bottom: 0.5rem;
-    right: 0.5rem;
-    position: absolute;
-    z-index: -34; 
-    margin-left: 0%;
-    margin-right: -50%;
-    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.5);
-}*/
-
 .left-gray-bg {
     position: relative;
 }
@@ -242,11 +235,11 @@ font-family: 'Alata', sans-serif;
 }
 
 .left-gray-bg::after {
-    background-color: rgba(51, 51, 51, 0.5);
+    background-color: rgba(51, 51, 51, 1);
     background-position: center;
     content: "";
     opacity: 1;
-    top: 0rem;
+    top: -1rem;
     left: 0rem;
     bottom: 0rem;
     right: 0rem;
@@ -254,15 +247,15 @@ font-family: 'Alata', sans-serif;
     z-index: -24; 
     margin-left: -100vw;
     margin-right: 0%;
-    /*box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);*/
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
 }
 
 .right-gray-bg::after {
-    background-color: rgba(51, 51, 51, 0.5);
+    background-color: rgba(51, 51, 51, 1);
     background-position: center;
     content: "";
     opacity: 1;
-    top: 0rem;
+    top: -1rem;
     left: 0rem;
     bottom: 0rem;
     right: 0rem;
@@ -270,9 +263,9 @@ font-family: 'Alata', sans-serif;
     z-index: -24; 
     margin-right: -100vw;
     margin-left: 0%;
-    /*box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);*/
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
 }
-*/
+
 .cont-height200 {
     min-height: 200vh;
 }
@@ -355,28 +348,7 @@ font-family: 'Alata', sans-serif;
     width: 100%;
 }
 
-.image-back {
-    z-index: -30;
-}
-
-.image-div-small {
-    width: 100px;
-    height: 100px;
-    border: 2px solid black;
-}
-
-.text-wrap-img-l {
-    float: left;
-    margin: 0rem 0.5rem 0rem 0rem;
-}
-
 /*poz absolut*/
-.pos-ab {
-    position: absolute;
-    bottom: 0;
-    background-color: rgba(245, 255, 250, 0.25);
-    padding: 0.5rem;
-}
 
 .pos-ab-btxt {
     position: absolute;
@@ -385,11 +357,9 @@ font-family: 'Alata', sans-serif;
     color: azure;
     font-size: 12vw;
     font-weight: 900;
-    font-family: 'Alata', sans-serif;
-}
-
-.pos-ab-t-over {
     margin-top: -4rem;
+    font-family: 'Alata', sans-serif;
+    text-shadow: 0px 6px 10px rgb(20, 20, 20);
 }
 
 .justif-txt {
@@ -401,7 +371,7 @@ font-family: 'Alata', sans-serif;
     font-weight: 600;
 }
 
-.largest-txt {
+.huge-txt {
     font-size: 3rem;
     font-weight: 900;
 }
@@ -411,11 +381,11 @@ font-family: 'Alata', sans-serif;
     font-weight: 700;
 }
 
-.huge-txt {
+.largest-txt {
     font-size: 8rem;
     font-weight: 900;
 }
-/*za skills listu da bude uvek na bott*/
+/*za skills listu da bude uvek na bott ili top*/
 .top-auto {
     bottom: 0rem;
     margin-top: auto;
@@ -426,14 +396,10 @@ font-family: 'Alata', sans-serif;
     margin-bottom: auto;
 }
 
-/*margina za about deo da padne ispod abouta*/
+/*margina za content ispod pos-ab-btxt da se skalira lepo*/
 
 .top-14vw {
     margin-top: 12vw;
-}
-
-.top-15rem {
-    margin-top: 10rem;
 }
 
 /*slike u fp galeriji*/
@@ -451,7 +417,9 @@ font-family: 'Alata', sans-serif;
     padding: 0rem;
     border: 0.1rem rgba(255, 255, 255, 0.753) solid;
     border-radius: 1rem 1rem 1rem 1rem;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
 }
+
 .fr-img-row .col03 img:hover {
 border: 0.1rem rgb(255, 255, 255) solid;}
 
@@ -495,10 +463,14 @@ border: 0.1rem rgb(255, 255, 255) solid;}
     opacity: 1;
 }
 
+/*Za hajlajtovanje texta*/
+
 .highlight-txt {
-    text-shadow: 0 0 2em #ffffff;
+    text-shadow: 0 0 0.01em #ffffff;
     font-weight: 900;
 }
+
+/*za kvadrate u pozadini*/
 
 .background-cube {
     position: absolute; 
@@ -509,28 +481,73 @@ border: 0.1rem rgb(255, 255, 255) solid;}
 }
 
 #prlx-01 {
-    height: 10rem;
     width: 10rem;
     right: 0;
     margin-right: 0rem;
-    top: 35vh; 
+    top: 28vh; 
+    position: absolute;
+    font-size: 1.1rem;
+    z-index: -30;
+}
+
+#prlx-01 a {
+    text-decoration: none;
+    opacity: 0.65;
+}
+
+#prlx-01::after {
     opacity: 0.3;
+    background-position: center;
+    content: "";
+    height: 10rem;
+    width: 10rem;
+    margin-top: -4.5rem;
+    margin-left: -6.6rem;
+    position: absolute;
+    z-index: -29;
+    background: url("../img/sing_square_rot-01-01.svg") no-repeat center;
+    background-image: url("../img/sing_square_rot-01-01.svg");
+    background-size: contain;
     transform: rotate(45deg);
+    z-index: -5;
+}
+
+#prlx-01 a:hover {
+    color: orange;
+    opacity: 1;
 }
 
 #prlx-02 {
     height: 13rem;
-    width: 13rem;
+    /*width: 13rem;*/
     right: auto;
-    top: 68vh; 
+    top: 75vh; 
+    opacity: 0.8;
+    position: absolute;
+    font-size: 1.3rem;
+    z-index: -30;
+}
+
+#prlx-02::after {
     opacity: 0.5;
+    background-position: center;
+    content: "";
+    width: 13rem;
+    height: 13rem;
+    margin-top: -6.5rem;
+    margin-left: -11.4rem;
+    position: absolute;
+    z-index: -29;
+    background: url("../img/sing_square_rot-01-01.svg") no-repeat center;
+    background-image: url("../img/sing_square_rot-01-01.svg");
+    background-size: contain;
 }
 
 #prlx-03 {
     height: 13rem;
     width: 13rem;
     right: 4vw;
-    top: -20rem; 
+    top: -30rem; 
     opacity: 0.5;
 }
 
@@ -547,10 +564,20 @@ border: 0.1rem rgb(255, 255, 255) solid;}
     height: 8rem;
     width: 8rem;
     left: 0vw;
-    top: 8rem; 
+    top: 4.2rem; 
     opacity: 0.5;
     transform: rotate(45deg);
 }
+
+/*#prlx-05::before {
+    position: absolute;
+    content: "";
+    top: 6rem; 
+    height: 8rem;
+    width: 8rem;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+    transform: rotate(-45deg);
+}*/
 
 #prlx-06 {
     margin-top: 2rem;
@@ -559,6 +586,8 @@ border: 0.1rem rgb(255, 255, 255) solid;}
     text-decoration: none;
     transition: ease-in 0.3s;
     position: relative;
+    font-size: 1.2rem;
+    opacity: 0.8;
 }
 
 #prlx-06::after {
@@ -628,19 +657,20 @@ border: 0.1rem rgb(255, 255, 255) solid;}
 .separator03 {
     height: 10vh;
 }
-
-.separator01 hr {
-    width: 100%;
-}
-
+/*separator koji se ukljucuje na malim ekranima*/
 .separator-sm-scr {
     display: none;
 }
 
+/*ukljucujemo separator na vel ekr*/
+.separator-lar-scr {
+    display: block;
+}
+/*za rotaciju texta - neiskoristeno*/
 .rotate-txt {
     transform: rotate(90deg);
 }
-
+/*za liste*/
 .list-about {
     color: azure;
     padding-inline-start: 0px;
@@ -652,7 +682,7 @@ border: 0.1rem rgb(255, 255, 255) solid;}
     padding: 1rem;
     width: 100%;
     list-style: none;
-    line-height: 1rem;
+    line-height: 0.5rem;
 }
 
 /*.list-about > li:nth-child(2n + 1) {
@@ -684,7 +714,7 @@ border: 0.1rem rgb(255, 255, 255) solid;}
 }
 
 .list-about2 > li:nth-child(2n + 1) {
-    background-color: rgba(51, 51, 51, 0.5);
+    /*background-color: rgba(51, 51, 51, 0.5);*/
 }
 
 .list-about2 > li::before {
@@ -819,6 +849,7 @@ border: 0.1rem rgb(255, 255, 255) solid;}
     visibility: visible;
 }
 
+/*pri otvaranju side menija ili slika, zaustavlja scroll*/
 .stopscroll {
     overflow: hidden;
     position: relative;
@@ -834,14 +865,18 @@ border: 0.1rem rgb(255, 255, 255) solid;}
     margin-right: auto;
     }
 
-    .cont-width100 {
+.cont-width100 {
         max-width: 2000px !important;
+    }
+
+    .top-14vw {
+        margin-top: 14rem;
     }
 
 }
 
 @media only screen and (min-width: 1366px) {
-
+/*zaustavlja rast pos-ab texta na 12rem*/
     .pos-ab-btxt {
         font-size: 12rem;
         width: inherit;
@@ -877,27 +912,27 @@ border: 0.1rem rgb(255, 255, 255) solid;}
         width: 90%;
         margin: 0% 5% 0% 5%;
     }
-
+/*za flipovanje redosleda contenta na malim ekr*/
     .flex-op-dir-sm-scr {
         flex-direction: column-reverse !important;
     }
-
+/*gray background koji se izliva se siri na obe str*/
     .right-gray-bg::after {
         margin-right: -100vw;
-    margin-left: -100vw;
+        margin-left: -100vw;
     }
 
     .left-gray-bg::after {
         margin-right: -100vw;
         margin-left: -100vw;
     }
-
+/*smanjujemo tekst zbog manjih ekrana*/
     .larger-txt {
         font-size: 1.2rem;
         font-weight: 600;
     }
     
-    .largest-txt {
+    .huge-txt {
         font-size: 2rem;
         font-weight: 900;
     }
@@ -907,13 +942,9 @@ border: 0.1rem rgb(255, 255, 255) solid;}
         font-weight: 700;
     }
     
-    .huge-txt {
+    .largest-txt {
         font-size: 6rem;
         font-weight: 900;
-    }
-
-    .hello01 {
-        margin-left: 0rem;
     }
 
     #prlx-01 {
@@ -939,14 +970,24 @@ border: 0.1rem rgb(255, 255, 255) solid;}
         width: 100%;
     }
 
+    .cont-cent-ver {
+        align-items: center;
+        justify-content: center;
+    }
+/*fiksiramo sirinu slika na malim ekr*/
     .content01-img-cen {
         width: 25rem !important;
     }
-
+/*ukljucujemo separator*/
     .separator-sm-scr {
         display: block;
     }
 
+/*iskljucujemo separator*/
+    .separator-lar-scr {
+        display: none;
+    }
+/*iskljucujemo sitne margine na malim ekr*/
     .mar-left-abit {
         margin-left: 0rem;
     }
@@ -954,11 +995,11 @@ border: 0.1rem rgb(255, 255, 255) solid;}
     .mar-right-abit {
         margin-right: 0rem;
     }
-
-    .pos-ab-t-over {
+/*smanjujemo marginu velikog teksta*/
+    .pos-ab-btxt {
         margin-top: -2rem;
     }
-
+/*centriramo sav tekst koji je bio align left/right*/
     .overrdie-to-cent {
         text-align: center !important;
         width: 100%;
@@ -1012,6 +1053,15 @@ border: 0.1rem rgb(255, 255, 255) solid;}
 }
 
 @media only screen and (max-width: 480px) {
+
+    .lines {
+        width: 50%;
+    }
+
+    .not-on-sm {
+        display: none;
+    }
+
     .content-wrapper01 {
         margin: 0rem;
         width: 100%;
@@ -1019,14 +1069,7 @@ border: 0.1rem rgb(255, 255, 255) solid;}
 
     .pos-ab-btxt {
         font-size: 4.5rem;
-    }
-
-    .pos-ab-t-over {
         margin-top: -3.5rem;
-    }
-
-    .left-gray-bg ul::after {
-        margin-right: -100vw;
     }
 
     .larger-txt {
@@ -1034,7 +1077,7 @@ border: 0.1rem rgb(255, 255, 255) solid;}
         font-weight: 600;
     }
     
-    .largest-txt {
+    .huge-txt {
         font-size: 2rem;
         font-weight: 900;
     }
@@ -1044,7 +1087,7 @@ border: 0.1rem rgb(255, 255, 255) solid;}
         font-weight: 700;
     }
     
-    .huge-txt {
+    .largest-txt {
         font-size: 4rem;
         font-weight: 900;
     }
@@ -1055,24 +1098,19 @@ border: 0.1rem rgb(255, 255, 255) solid;}
         justify-content: center;
         margin-top: 0vw;
     }
-.content01-img-cen {
-    width: 100% !important;
-}
 
-.cont-cent-ver {
-    align-items: center;
-    justify-content: center;
-}
+    .content01-img-cen {
+        width: 100% !important;
+    }
+
     #prlx-01 {
         display: none;
     }
 
     #prlx-02 {
         height: 13rem;
-        width: 13rem;
         right: auto;
-        top: 68vh; 
-        opacity: 0.5;
+        top: 75vh; 
     }
     
     #prlx-03 {
@@ -1081,15 +1119,14 @@ border: 0.1rem rgb(255, 255, 255) solid;}
 
     #prlx-05 {
         position: absolute;
-        top: 2rem;
-        display: none;
+        top: 10rem;
     }
 
     #footer-wrapper {
         width: 100%;
     }
 }
-
+/*da background bude te boje i da text pravimo belim*/
 .back-box {
     background-color: rgba(51, 51, 51, 0.5);
 }
