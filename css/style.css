@@ -103,8 +103,15 @@ body {
     z-index: -40;
 }
 
+.lines:last-child {
+    border-right: 1px solid gray !important;
+}
+
 .lines{
     border: 1px solid gray;
+    border-bottom: none;
+    border-top: none;
+    border-right: none;
     width: 25%;
 }
 
