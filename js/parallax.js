@@ -8,13 +8,13 @@ function parallax() {
 //brzina kojom ide element ka vrhu str (yPos 0), veci offset=sporiji skroll gore
   var yPos = 0 - window.pageYOffset/-46;  
   //element drzimo na 10rem od yPos (koji je 0)
-  s.style.top = 35 + yPos + "vh";
+  s.style.top = 28 + yPos + "vh";
 //isto, ali za drugi element
   var yPos2 = 0 - window.pageYOffset/22;  
-  o.style.top = 68 + yPos2 + "vh";
+  o.style.top = 75 + yPos2 + "vh";
 
   var yPos3 = 0 - window.pageYOffset/-110;  
-  b.style.top = -20 + yPos3 + "rem";
+  b.style.top = -30 + yPos3 + "rem";
 
 }
   //listener koji prati skroll na stranici i po tome vrsi funkciju parralax
