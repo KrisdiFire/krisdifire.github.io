@@ -52,6 +52,9 @@
     padding-top: 20px;
     transition: all ease-in-out .2s;
     padding-top: 4rem;
+    box-shadow: -5px 0px 5px 0px black;
+    -moz-box-shadow: -5px 0px 5px 0px black;
+    -webkit-box-shadow: -5px 0px 5px 0px black;
   }
 
   /*pozadina side menija, sa slikom*/
@@ -78,7 +81,7 @@
     text-decoration: none;
     font-size: 1.3rem;
     text-align: center;
-    font-family: 'Alata', sans-serif;
+    font-family: '', sans-serif;
     font-weight: 600;
     color: white;
     display: block;
