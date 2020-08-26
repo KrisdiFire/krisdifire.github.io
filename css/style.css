@@ -104,11 +104,11 @@ body {
 }
 
 .lines:last-child {
-    border-right: 1px solid gray !important;
+    border-right: 1px solid rgb(80, 80, 80) !important;
 }
 
 .lines{
-    border: 1px solid gray;
+    border: 1px solid rgb(80, 80, 80);
     border-bottom: none;
     border-top: none;
     border-right: none;
