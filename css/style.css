@@ -246,7 +246,7 @@ font-family: 'Alata', sans-serif;
     background-position: center;
     content: "";
     opacity: 1;
-    top: -1rem;
+    top: 0rem;
     left: 0rem;
     bottom: 0rem;
     right: 0rem;
@@ -262,7 +262,7 @@ font-family: 'Alata', sans-serif;
     background-position: center;
     content: "";
     opacity: 1;
-    top: -1rem;
+    top: 0rem;
     left: 0rem;
     bottom: 0rem;
     right: 0rem;
@@ -271,6 +271,10 @@ font-family: 'Alata', sans-serif;
     margin-right: -100vw;
     margin-left: 0%;
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.intro-text {
+    line-height: 7rem;
 }
 
 .cont-height200 {
@@ -431,22 +435,25 @@ font-family: 'Alata', sans-serif;
 border: 0.1rem rgb(255, 255, 255) solid;}
 
 #pic01-txt {
+    text-align: center;
     margin-top: -2.1rem;
-    margin-bottom: 4rem;
+    /*margin-bottom: 4rem;*/
     font-weight: 900;
     opacity: 0;
     transition: 0.3s;
 }
 #pic02-txt {
+    text-align: center;
     margin-top: -2.1rem;
-    margin-bottom: 4rem;
+    /*margin-bottom: 4rem;*/
     font-weight: 900;
     opacity: 0;
     transition: 0.3s;
 }
 #pic03-txt {
+    text-align: center;
     margin-top: -2.1rem;
-    margin-bottom: 4rem;
+    /*margin-bottom: 4rem;*/
     font-weight: 900;
     opacity: 0;
     transition: 0.3s;
@@ -587,7 +594,10 @@ border: 0.1rem rgb(255, 255, 255) solid;}
 }*/
 
 #prlx-06 {
-    margin-top: 2rem;
+    
+        margin-left: -4.5rem;
+        margin-top: 9rem;
+    
     width: auto !important;
     cursor: pointer;
     text-decoration: none;
@@ -896,19 +906,33 @@ border: 0.1rem rgb(255, 255, 255) solid;}
 
 }
 
+@media only screen and (max-width: 1100px) {
+
+#prlx-02 {
+    margin-left: -1rem;
+}    
+
+#prlx-02::after {
+        display: none;
+    }
+}
 
 @media only screen and (max-width: 900px) {
 
     #prlx-03 {
         position: relative;
         right: 0rem !important;
-        margin-left: 150%;
+        margin-left: 50%;
         margin-top: -20rem;
     }
 
 }
 
 @media only screen and (max-width: 768px) {
+
+    .intro-text {
+        line-height: 5rem;
+    }
 
     /*skriva main navigaciju na malim ekranima, sem HOME-a*/
     .main-menu .table-1 {
@@ -958,14 +982,33 @@ border: 0.1rem rgb(255, 255, 255) solid;}
         display: none;
     }
 
+    #prlx-02 {
+        margin-left: 0rem;
+    }
+
+    #prlx-03 {
+        display: none;
+    }
+
     #prlx-04 {
+        display: none;
         height: 10rem;
-        display: block;
         width: 10rem;
+        top: 1rem;
         left: 0rem;
         opacity: 0.5;
         right: 0;
         margin: auto;
+    }
+
+    #prlx-05 {
+        top: 2rem;
+    }
+
+    #prlx-06 {
+        margin-left: auto;
+        margin-top: 3rem;
+        margin-bottom: 5rem;
     }
 
     .content-wrapper01 {
@@ -1018,6 +1061,22 @@ border: 0.1rem rgb(255, 255, 255) solid;}
         height: 100%;
     }
 
+    #pic01-txt {
+        font-size: 1.5rem;
+        margin-top: -2.1rem;
+        margin-bottom: 2rem;
+    }
+    #pic02-txt {
+        font-size: 1.5rem;
+        margin-top: -2.1rem;
+        margin-bottom: 2rem;
+    }
+    #pic03-txt {
+        font-size: 1.5rem;
+        margin-top: -2.1rem;
+        margin-bottom: 2rem;
+    }
+
     .top-14vw {
         margin-top: 0vw;
     }
@@ -1061,6 +1120,10 @@ border: 0.1rem rgb(255, 255, 255) solid;}
 
 @media only screen and (max-width: 480px) {
 
+    .intro-text {
+        line-height: 3rem;
+    }
+
     .lines {
         width: 50%;
     }
@@ -1075,8 +1138,8 @@ border: 0.1rem rgb(255, 255, 255) solid;}
     }
 
     .pos-ab-btxt {
-        font-size: 4.5rem;
-        margin-top: -3.5rem;
+        font-size: 4rem;
+        margin-top: -1.5rem;
     }
 
     .larger-txt {
@@ -1085,7 +1148,7 @@ border: 0.1rem rgb(255, 255, 255) solid;}
     }
     
     .huge-txt {
-        font-size: 2rem;
+        font-size: 1.8rem;
         font-weight: 900;
     }
 
@@ -1095,7 +1158,7 @@ border: 0.1rem rgb(255, 255, 255) solid;}
     }
     
     .largest-txt {
-        font-size: 4rem;
+        font-size: 3.7rem;
         font-weight: 900;
     }
 
@@ -1116,8 +1179,12 @@ border: 0.1rem rgb(255, 255, 255) solid;}
 
     #prlx-02 {
         height: 13rem;
-        right: auto;
+        right: 5%;
         top: 75vh; 
+    }
+
+    #prlx-02::after {
+        display: none;
     }
     
     #prlx-03 {
@@ -1126,7 +1193,7 @@ border: 0.1rem rgb(255, 255, 255) solid;}
 
     #prlx-05 {
         position: absolute;
-        top: 10rem;
+        top: 4rem;
     }
 
     #footer-wrapper {
