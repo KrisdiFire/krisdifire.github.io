@@ -316,6 +316,12 @@ font-family: 'Alata', sans-serif;
     min-height: 50vh;
 }
 
+.cont-width101 {
+    width: 100% !important;
+    margin: 0rem;
+    max-width: none;
+}
+
 .cont-width100 {
     width: 100% !important;
     margin: 0rem;
@@ -915,6 +921,10 @@ font-family: 'Alata', sans-serif;
 
     #main-nav {
         max-width: 1200px;
+    }
+
+    .cont-width101 {
+        max-width: 2000px;
     }
 
     .cont-width100 {
