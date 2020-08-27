@@ -319,7 +319,7 @@ font-family: 'Alata', sans-serif;
 .cont-width100 {
     width: 100% !important;
     margin: 0rem;
-    max-width: none !important;
+    max-width: none;
 }
 
 .cont-cent {
@@ -788,7 +788,6 @@ font-family: 'Alata', sans-serif;
 
 /*Stil za footer i njegove elemenete*/
 #footer-wrapper {
-    align-self: flex-end;
     width: 100%;
     color: #f2f2f2;
     bottom: 0;
@@ -900,18 +899,34 @@ font-family: 'Alata', sans-serif;
 
 @media only screen and (min-width: 1367px) {
 
-.content-wrapper01 {
+    .content-wrapper01 {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     }
 
-.cont-width100 {
-        max-width: 2000px !important;
-    }
-
     .top-14vw {
         margin-top: 14rem;
+    }
+
+    #main-nav {
+        max-width: 1200px;
+    }
+
+    .cont-width100 {
+        max-width: 1200px;
+    }
+
+    #footer {
+        max-width: 1200px;
+    }
+
+    .mar-left-abit {
+        margin-left: 0rem;
+    }
+
+    .mar-right-abit {
+        margin-right: 0rem;
     }
 
 }
@@ -926,6 +941,11 @@ font-family: 'Alata', sans-serif;
     #prlx-05 {
        position: fixed;
        left: 4rem;
+    }
+
+    #footer {
+        margin-left: auto;
+        margin-right: auto;
     }
 
 }
