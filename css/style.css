@@ -326,7 +326,7 @@ font-family: 'Alata', sans-serif;
     justify-content: center;
     align-items: center;
 }
-
+/* kod content-wrappera za Y osu, dok kod content01 na X osu*/
 .cont-cent-ver {
     align-items: center;
 }
@@ -346,6 +346,10 @@ font-family: 'Alata', sans-serif;
    /*text-align: justify;*/
 }
 /*sirina kolona*/
+.col00 {
+    width: 0%;
+}
+
 .col01 {
     width: 10%;
 }
@@ -592,7 +596,7 @@ font-family: 'Alata', sans-serif;
 #prlx-04 {
     height: 10rem;
     width: 10rem;
-    left: 10%;
+  /*  left: 10%;*/
     margin-top: 10rem; 
     opacity: 0.5;
     z-index: -10;
@@ -619,7 +623,7 @@ font-family: 'Alata', sans-serif;
 
 #prlx-06 {
     
-        margin-left: -4.5rem;
+        margin-left: -7.5rem;
         margin-top: 9rem;
     
     width: auto !important;
