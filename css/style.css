@@ -117,8 +117,8 @@ body {
 
 .bg-line-cont {
     position: fixed;
-    margin: 0% 5% 0% 5%;
-    width: 90%;
+    margin: 0% 15% 0% 15%;
+    width: 70%;
     height: 100vh;
     display: flex;
     flex-direction: row;
