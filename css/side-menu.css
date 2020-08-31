@@ -74,7 +74,6 @@
     transition: all ease-in-out .2s;
 }
   
-  /* Style the sidenav links and the dropdown button */
   .sidenav a {
     padding: 0.5rem;
     line-height: 2rem;
@@ -115,12 +114,11 @@
     background-color: black;
   }
 
-/* Add an active class to the active dropdown button */
 .active {
     color: azure;
   }
   
-  /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+  /*sakriven dok se ne klikne na button*/
   .dropdown-container {
     display: none;
     
@@ -146,6 +144,7 @@
     background-color: rgb(255, 95, 95);
     width: 100%;
     transition: all ease-in-out .2s;
+    position: fixed;
 }
 
 /*Stil koji se primenjuje na celu stranicu pri otvaranju side menija*/
@@ -193,8 +192,7 @@
     will-change: transform, opacity;
 }
 
-
-/*oooooooooooooooooooooooooooooo*/
+/*WIP*/
 
 a[data-toggle="offCanvas"] {
     position: absolute;
