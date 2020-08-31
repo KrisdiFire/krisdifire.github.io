@@ -21,7 +21,6 @@
     list-style-type: none;
 }
 
-/*Home dugme koje refreshuje celu stranicu*/
 .home {
     margin: 0em 1em;
     color: #3abdd4;
@@ -53,15 +52,12 @@
     cursor: pointer;
 }
 
-/*bez ovoga inicijalno haverom po glav. meniju bi on bio siv, ne crn,
-kao pri hoverovanju preko dropa*/
 .main-menu ul .list .menu-item:hover {
     background-color: orange;  
     color: azure;
     transition: ease-in-out 0.2s;
 }
 
-/*cini da kad hoverujes po listi, menu dugme bude zatamljeno.*/
 .main-menu ul .list a:hover, .list:hover .menu-item {
     background-color: orange;
     color: azure;
@@ -77,7 +73,6 @@ kao pri hoverovanju preko dropa*/
     transition: ease-in-out 0.2s;
 }
 
-/*ovo je samo za shading dropa*/
 .main-menu ul li:hover ul {
     background-color: rgba(51, 51, 51, 1);
     -webkit-box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.5);
@@ -87,7 +82,6 @@ kao pri hoverovanju preko dropa*/
     transition: ease-in-out 0.2s;
 }
 
-/*mislim da je oblik dropa*/
 .main-menu ul li ul {
     display: none;
     overflow: hidden;
@@ -95,7 +89,7 @@ kao pri hoverovanju preko dropa*/
     border-radius: 0em 0em 0em 0em;
 }
 
-/* Sirina i visina dropdowna */
+/* Sirina i visina dropdowna, da svaki bude drugaciji po zelji */
 .main-menu ul li .un-list1 li {
     width: 11rem;
     height: 3em;
