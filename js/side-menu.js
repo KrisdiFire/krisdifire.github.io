@@ -10,7 +10,7 @@ for (i = 0; i < dropdown.length; i++) {
     this.classList.toggle("active");
 //varijabla "tog" elementa (i aktivacija njegove dece (a linkova u drop cont))
     var dropdownContent = this.nextElementSibling;
-//ako je otvoren, tj ima display block, skida se to sa njega (drugim klikom na isti link se on zatvara)
+//ako je otvoren, tj ima display block, skida se to sa njega (drugim klikom na isti link on se zatvara)
     if (dropdownContent.style.display === "block") {
       dropdownContent.style.display = "none";
     } 
@@ -53,7 +53,7 @@ var l;
 //loop koji krece od prvog "l" i za svaki close-side-menu dodaje "l+1"
 for (var l = 0; l < closeBtns.length; l++) {
 /*za svaki element klase close-side-menu sa value "l+neki broj"(koji je dodat loop-om)
- dodaje event listener, da kada kliknes on poziva funkciju closeSlideM..*/
+ dodaje event listener, da kada se klikne na njega on poziva funkciju closeSlideM..*/
   closeBtns[l].addEventListener("click", closeSlideMenu);
   //zatvara i dropove
   closeBtns[l].addEventListener("click", closeDropdown);
