@@ -1,8 +1,7 @@
 /*Here the magic happens - animacija slika u galeriji*/
 
-  // Detect request animation frame
 var scroll = window.requestAnimationFrame ||
-// IE Fallback
+
 function(callback){ window.setTimeout(callback, 1000/60);};
 var elementsToShow = document.querySelectorAll('.show-on-scroll'); 
 
@@ -19,12 +18,10 @@ element.classList.remove('is-visible');
 scroll(loop);
 }
 
-// Call the loop for the first time
 loop();
 
-// Helper function from: http://stackoverflow.com/a/7557433/274826
 function isElementInViewport(el) {
-// special bonus for those using jQuery
+
 if (typeof jQuery === "function" && el instanceof jQuery) {
 el = el[0];
 }
@@ -37,9 +34,6 @@ rect.top <= (window.innerHeight || document.documentElement.clientHeight))||
 rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
 );
 }
-////////////////////////////////////////////
-
-
   
 ////////////////////////////////////////////
 //Funkcija za otvaranje odredjene kategorije
@@ -52,9 +46,6 @@ var ol = document.getElementsByClassName(contentname);
 
 [].forEach.call(ol, function(opens) {
   opens.classList.remove("dont-show-image");
-});
-
-[].forEach.call(ol, function(opens) {
   opens.classList.add("show-image");
 });
 }
@@ -91,8 +82,8 @@ function closeRestFilter() {
 
     [].forEach.call(rl, function(closes) {
       closes.classList.add("dont-show-image");});
-      [].forEach.call(rl, function(opens) {
-        opens.classList.remove("show-image");});
+    [].forEach.call(rl, function(opens) {
+      opens.classList.remove("show-image");});
 }
 
 filterAll();
