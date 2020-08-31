@@ -19,29 +19,6 @@ html {
 
 /*ScrollBar*/
 
-/*::-webkit-scrollbar {
-    width: 10px;
-    transition: ease-in-out 0.25s;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: orange;
-    transition: ease-in-out 0.25s;
-}
-
-::-webkit-scrollbar-track {
-   background-color: orange;
-   width: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    box-shadow: inset 0 0 8px rgba(0,0,0,0.3);
-    background-color: rgba(20, 20, 20, 0.5);
-}
-
-/* Handle on hover *//*
- ::-webkit-scrollbar-thumb:hover {
-    background: rgb(204, 133, 0); 
-}*/
-
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -59,6 +36,10 @@ html {
     width: 10px;
     background: white; 
 }
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(180, 180, 180); 
+ }
 
 /*stil svih linkova na str*/
 a {
@@ -117,13 +98,16 @@ body {
 
 .bg-line-cont {
     position: fixed;
-    margin: 0% 15% 0% 15%;
+    margin: 0% auto 0% auto;
+    left: 0;
+    right: 0;
     width: 70%;
     height: 100vh;
     display: flex;
     flex-direction: row;
     opacity: 0.5;
     z-index: -40;
+    max-width: 1200px;
 }
 
 .lines:last-child {
@@ -433,7 +417,7 @@ font-family: 'Alata', sans-serif;
     font-size: 7.6rem;
     font-weight: 900;
 }
-/*za skills listu da bude uvek na bott ili top*/
+/*za content da bude uvek na bott ili top*/
 .top-auto {
     bottom: 0rem;
     margin-top: auto;
@@ -663,6 +647,23 @@ font-family: 'Alata', sans-serif;
 
 #prlx-06:hover {
     color: orange;
+}
+
+#prlx-seg01 {
+    position: relative;
+    top: 1rem;
+}
+
+#prlx-seg02 {
+    position: relative;
+}
+
+#prlx-seg03 {
+    position: relative;
+}
+
+#prlx-seg04 {
+    position: relative;
 }
 
 /*Margine kojim pozicioniras absolute elemente unutar pos: rel parent elem*/
@@ -1129,7 +1130,6 @@ font-family: 'Alata', sans-serif;
 
     #pic01-txt {
         font-size: 1.5rem;
-
         opacity: 1;
         transform: rotate(90deg);
         margin-right: -25rem;
@@ -1139,7 +1139,6 @@ font-family: 'Alata', sans-serif;
     }
     #pic02-txt {
         font-size: 1.5rem;
-        
         opacity: 1;
         transform: rotate(-90deg);
         margin-left: -25rem;
@@ -1150,7 +1149,6 @@ font-family: 'Alata', sans-serif;
     #pic03-txt {
         font-size: 1.5rem;
         opacity: 1;
-
         transform: rotate(90deg);
         margin-right: -25rem;
         margin-top: -13rem;
@@ -1310,7 +1308,7 @@ font-family: 'Alata', sans-serif;
         width: 100%;
     }
 }
-/*da background bude te boje i da text pravimo belim*/
+
 .back-box {
     background-color: rgba(51, 51, 51, 0.5);
 }
