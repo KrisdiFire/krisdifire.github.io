@@ -1,4 +1,4 @@
-/*Here the magic happens - animacija kontenta*/
+/*Here the magic happens*/
 
   // Detect request animation frame
   var scroll = window.requestAnimationFrame ||
