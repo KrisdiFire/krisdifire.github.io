@@ -900,6 +900,11 @@ font-family: 'Alata', sans-serif;
     visibility: visible;
 }
 
+#footer2 {
+    display: flex;
+    align-items: center;
+}
+
 /*pri otvaranju side menija ili slika, zaustavlja scroll*/
 .stopscroll {
     overflow: hidden;
@@ -932,7 +937,7 @@ font-family: 'Alata', sans-serif;
         max-width: 1200px;
     }
 
-    #footer {
+    #footer, #footer2 {
         max-width: 1200px;
     }
 
@@ -958,11 +963,10 @@ font-family: 'Alata', sans-serif;
        left: 4rem;
     }
 
-    #footer {
+    #footer, #footer2 {
         margin-left: auto;
         margin-right: auto;
     }
-
 }
 
 @media only screen and (max-width: 1100px) {
