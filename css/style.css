@@ -454,6 +454,7 @@ font-family: 'Alata', sans-serif;
 
 #pic01-txt {
     text-align: center;
+    font-family: 'Roboto Mono', monospace;
     margin-top: -2.1rem;
     /*margin-bottom: 4rem;*/
     font-weight: 900;
@@ -462,6 +463,7 @@ font-family: 'Alata', sans-serif;
 }
 #pic02-txt {
     text-align: center;
+    font-family: 'Roboto Mono', monospace;
     margin-top: -2.1rem;
     /*margin-bottom: 4rem;*/
     font-weight: 900;
@@ -470,6 +472,7 @@ font-family: 'Alata', sans-serif;
 }
 #pic03-txt {
     text-align: center;
+    font-family: 'Roboto Mono', monospace;
     margin-top: -2.1rem;
     /*margin-bottom: 4rem;*/
     font-weight: 900;
@@ -813,6 +816,10 @@ font-family: 'Alata', sans-serif;
     font-weight: 400;
 }
 
+hr {
+    background-color: azure;
+}
+
 #footer {
     display: flex;
     margin: 1em 2em 1em 2em;
@@ -893,7 +900,7 @@ font-family: 'Alata', sans-serif;
     position: absolute;
     z-index: 1;
     margin-top: -1.5rem;
-    margin-left: -0.5rem;
+    /*margin-left: -0.5rem;*/
 }
   
 .tooltip:hover .tooltiptext {
