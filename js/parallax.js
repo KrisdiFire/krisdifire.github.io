@@ -11,21 +11,22 @@ function parallax() {
     var q = document.getElementById("prlx-seg04");
 
     //za screensize
-    var mq = window.matchMedia ( "(max-width: 780px)");
+    var mq = window.matchMedia ("(max-width: 780px)");
     
 //brzina kretanja elementa - veci offset=sporije pomeranje gore/dole
-  var yPos = 0 - window.pageYOffset/-46;  
+  var yPos = 0 - window.pageYOffset/-34;  
   //element drzimo na 10rem od yPos (koji je 0)
-  s.style.top = 28 + yPos + "vh";
+  s.style.top = 30 + yPos + "vh";
 //isto, ali za druge elemente
   var yPos2 = 0 - window.pageYOffset/22;  
   o.style.top = 75 + yPos2 + "vh";
 
   var yPos3 = 0 - window.pageYOffset/-110;  
-  b.style.top = -30 + yPos3 + "rem";
+  b.style.top = -35 + yPos3 + "rem";
 
-  var yPos4 = 0 - window.pageYOffset/-110;  
+  var yPos4 = 0 - window.pageYOffset/-90;  
   e.style.top = -10 + yPos4 + "rem";
+
 /* eksperimenti
   if (mq.matches) {
     var yPos5 = 0 - window.pageYOffset/0;  
