@@ -428,6 +428,10 @@ font-family: 'Alata', sans-serif;
     margin-bottom: auto;
 }
 
+.pos-rel {
+    position: relative;
+}
+
 /*margina za content ispod pos-ab-btxt da se skalira lepo*/
 
 .top-14vw {
@@ -517,9 +521,9 @@ font-family: 'Alata', sans-serif;
 
 #prlx-01 {
     width: 10rem;
-    right: 0;
+    right: -8.1rem;
     margin-right: 0rem;
-    top: 28vh; 
+    top: 30vh; 
     position: absolute;
     font-size: 1.1rem;
     z-index: -30;
@@ -581,8 +585,10 @@ font-family: 'Alata', sans-serif;
 #prlx-03 {
     height: 13rem;
     width: 13rem;
-    right: 4vw;
-    top: -30rem; 
+    right: 0;
+    left: 0;
+    margin: 0 auto 0 auto;
+    top: -35rem; 
     opacity: 0.5;
 }
 
@@ -598,8 +604,8 @@ font-family: 'Alata', sans-serif;
 #prlx-05 {
     height: 8rem;
     width: 8rem;
-    left: 0vw;
-    top: 4.2rem; 
+    left: 0rem;
+    top: 0rem; 
     opacity: 0.5;
     transform: rotate(45deg);
 }
@@ -966,8 +972,9 @@ hr {
     }
 
     #prlx-05 {
-       position: fixed;
-       left: 4rem;
+       
+       top: 4rem;
+       left: 5vw;
     }
 
     #footer, #footer2 {
@@ -982,9 +989,7 @@ hr {
     margin-left: -1rem;
 }    
 
-#prlx-02::after {
-        display: none;
-    }
+
 }
 
 @media only screen and (max-width: 900px) {
@@ -994,6 +999,10 @@ hr {
         right: 0rem !important;
         margin-left: 50%;
         margin-top: -20rem;
+    }
+
+    #prlx-02::after {
+        display: none;
     }
 
 }
