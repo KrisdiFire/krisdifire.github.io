@@ -12,11 +12,8 @@ function scrollFunction() {
   }
 }
 
-//za dugme koje baca usera na vrh str
-//uzimamo element ID-em i assignujemo ga varijabli upTop1
-var upTop1 = document.getElementById('up');
 //assignujemo event listener da pri kliku na taj element, on vrsi funk upTop
-upTop1.addEventListener("click", upTop);
+mybutton.addEventListener("click", upTop);
 
 // Funkcija za skroll nagore pri kliku na dugme
 function upTop() {
