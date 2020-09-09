@@ -15,7 +15,7 @@ function parallax() {
     
 //brzina kretanja elementa - veci offset=sporije pomeranje gore/dole
   var yPos = 0 - window.pageYOffset/-34;  
-  //element drzimo na 10rem od yPos (koji je 0)
+  //element drzimo na 30rem od yPos (koji je 0)
   s.style.top = 30 + yPos + "vh";
 //isto, ali za druge elemente
   var yPos2 = 0 - window.pageYOffset/22;  
