@@ -158,12 +158,12 @@
 
 /*izgled side m kad je na normalnom ekranu i izgled kad je na telefonu*/
 .side-menu-norm {
-    background-color: rgba(51, 51, 51, 1);
+    background-color: rgba(30, 30, 30, 1);
     width: 19em;
     transition: all ease-in-out .2s;
 }
 .side-menu-sml {
-    background-color: rgba(51, 51, 51, 1);
+    background-color: rgba(30, 30, 30, 1);
     width: 100%;
     transition: all ease-in-out .2s;
     position: fixed;
