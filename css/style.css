@@ -47,7 +47,7 @@ a {
 }
 /*body html-a*/
 body {
-    background-color: rgb(29, 29, 29);
+    background-color: rgb(20, 20, 20);
 }
 
 #background-video {
@@ -249,7 +249,7 @@ font-family: 'Alata', sans-serif;
 }
 
 .left-gray-bg::after {
-    background-color: rgba(51, 51, 51, 1);
+    background-color: rgba(30, 30, 30, 1);
     background-position: center;
     content: "";
     opacity: 1;
@@ -267,7 +267,7 @@ font-family: 'Alata', sans-serif;
 }
 
 .right-gray-bg::after {
-    background-color: rgba(51, 51, 51, 1);
+    background-color: rgba(30, 30, 30, 1);
     background-position: center;
     content: "";
     opacity: 1;
