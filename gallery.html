@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Armata' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link href="css/style.css" rel="stylesheet">
+
+    <link href="js/up-but.js" rel="javascript">
+
+    <link href="js/gallery-script.js" rel="javascript">
+
+    <link href="css/main-menu.css" rel="stylesheet">
+
+    <link href="js/side-menu.js" rel="javascript">
+
+    <link href="js/fade-in-content.js" rel="javascript">
+
+    <link href="css/side-menu.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/simple-lightbox.css?v2.2.1" />
+
+    <link href="js/simple-lightbox.js" rel="javascript">
+
+    <link href="css/gallery-images.css" rel="stylesheet">
+
+<head>
+
+    <title>Kristian Firedi Gallery</title>
+
+    <meta name="description" content="Kristian Firedi - Gallery"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+</head>
+
+<body><k>
+
+    <div class="bg-line-cont">
+        <div class="lines not-on-sm">
+        </div>
+        <div class="lines">
+        </div>
+        <div class="lines not-on-sm">
+        </div>
+        <div class="lines ">
+        </div>
+    </div>
+
+    <div class="sidenav" id="sidenav">
+        <div id="btn-close-div"><a class="close-side-menu">&times;</a></div>
+        <a class="close-side-menu" onclick="filterContent('illu')" >Illustration</a>
+        <a class="close-side-menu" onclick="filterContent('logo')" >Logo</a>
+        <a class="close-side-menu" onclick="filterContent('fun')" >Fun</a> 
+        <a class="close-side-menu" onclick="filterAll();">All</a>
+     </div>
+
+<div id="whole-page01">
+
+    <div class="close-side-menu" id="close-side-menu-div"></div> 
+
+    <div id="up"><a>&#8679;</a></div> 
+
+    <nav class="main-menu" id="main-nav"> 
+        <div class="main-menu-inner">
+        <p><a class="home01" href="index.html">home</a></p>
+        <ul class="table-1">
+            <li class="list"><a onclick="filterContent('illu')" class="menu-item" >Illustration</a>
+            </li>
+            <li class="list"><a onclick="filterContent('logo')" class="menu-item" >Logo</a>
+            </li>
+            </li>
+            <li class="list"><a onclick="filterContent('fun')" class="menu-item" >Fun</a>
+            </li>
+            <li class="list"><a onclick="filterAll()" class="menu-item" >All</a>
+            </li>
+          </ul>
+    
+        <a class="display-none" id="ham-menu" data-toggle="offCanvas" aria-expanded="false" aria-controls="offCanvas"><span></span></a>
+    
+    </div>
+    </nav>
+    
+<div id="page01">
+
+    <!--You may place the main menu here as well-->
+
+    <div class="separator01"><hr></div>
+    
+    <div class="separator01" id="push-down-filter"></div>
+
+    <div class="content-row01 cont-width101 cont-cent-ver dont-show">
+
+        <div class="content01 col10">
+        
+        <div id="gallery01" class="gallery gallery_spacing image">
+
+            <a href="img/Hurt_Illustration.png"><img class="image_gallery i-photo show-on-scroll illu image dont-show-image" src="img/thumb/Hurt_Illustration.webp" alt="John Hurt" title="John Hurt" /></a>
+            <a href="img/Me_Illustration_full.png"><img class="image_gallery i-photo show-on-scroll illu image dont-show-image" src="img/thumb/Me_Illustration_full.webp" alt="Self Portrait in Illustrator" title="Self Portrait in Illustrator"/></a>
+            <a href="img/Sara_Illustration.jpg"><img class="image_gallery i-photo show-on-scroll illu image dont-show-image" src="img/thumb/Sara_Illustration.webp" alt="Illustration of Sara" title="Illustration of Sara"/></a>
+            <a href="img/ani_illustration.png"><img class="image_gallery i-photo show-on-scroll illu image dont-show-image" src="img/thumb/ani_illustration.webp" alt="Anita" title="Anita"/></a>
+            <a href="img/lap-top-vec.png"><img class="image_gallery i-photo show-on-scroll illu image dont-show-image" src="img/thumb/lap-top-vec.webp" alt="Laptop vector" title="Simple laptop vector"/></a>
+            
+            <a href="img/Bar_Logo.png"><img class="image_gallery i-photo show-on-scroll logo image dont-show-image" src="img/thumb/Bar_Logo.webp" alt="Logo for 5. Stanica" title="Logo for 5. Stanica"/></a>
+            <a href="img/ECLRecords-Logo.png"><img class="image_gallery i-photo show-on-scroll logo image dont-show-image" src="img/thumb/ECLRecords-Logo.webp" alt="Logo for ECLR" title="Logo for ECLR"/></a>
+            <a href="img/NovIvkeLogo-Gotovo.png"><img class="image_gallery i-photo show-on-scroll logo image dont-show-image" src="img/thumb/NovIvkeLogo-Gotovo.webp" alt="Logo for Ortostim" title="Logo for Ortostim" /></a>
+            <a href="img/9Codex_logo.png"><img class="image_gallery i-photo show-on-scroll logo image dont-show-image" src="img/9Codex_logo.png" alt="9 Codex Logo Design" title="9 Codex Logo Design"/></a>
+            <a href="img/WalkertonJail_K.png"><img class="image_gallery i-photo show-on-scroll logo image dont-show-image" src="img/WalkertonJail_K.png" alt="Walkerton Jail Logo" title="Walkerton Jail Logo"/></a>
+            <a href="img/mirjana-MyC-W-01.png"><img class="image_gallery i-photo show-on-scroll logo image dont-show-image" src="img/thumb/mirjana-MyC-W-01.webp" alt="MyCrop" title="MyCrop"/></a>
+            
+            <a href="img/Reimagine.png"><img class="image_gallery i-photo show-on-scroll fun image dont-show-image" src="img/thumb/Reimagine-thumb.webp" alt="Grungy Belgrade at night reimagined" title="Grungy Belgrade at night reimagined"/></a>
+            <a href="img/HeadLEllis_Illustration.png"><img class="image_gallery i-photo show-on-scroll fun image dont-show-image" src="img/HeadLEllis_Illustration.png" alt="Illustration of L Ellis" title="Illustration of L Ellis"/></a>
+            <a href="img/MORTE_PST.png"><img class="image_gallery i-photo show-on-scroll fun image dont-show-image" src="img/MORTE_PST.png" alt="Illustration Morte from Planescape" title="Illustration Morte from Planescape"/></a>
+            <a href="img/art_recreation-nonorig.png"><img class="image_gallery i-photo show-on-scroll fun image dont-show-image" src="img/thumb/art_recreation-nonorig.webp" alt="Recreation of line-art by jmoorzie" title="Recreation of line-art by jmoorzie"/></a>
+
+            <div class="content01 col10">
+            <div></div>
+
+            <div class="clear"></div>
+
+          </div>
+
+          </div>
+
+    </div>
+
+    <!--You may place the footer here also-->
+
+</div>
+
+</div>
+
+<div id="footer-wrapper">
+    <hr>
+    <div id="footer01">
+
+        <div id="footer-menu">
+            <ul>
+                <li><a onclick="filterContent('illu')">Illustration</a></li>
+                <li><a onclick="filterContent('logo')">Logo</a></li>
+                <li><a onclick="filterContent('fun')">Fun</a></li>
+                <li><a onclick="filterAll()">All</a></li>
+            </ul>
+        </div>
+
+        <div class="social-menu">
+            <ul>
+                <li class="tooltip"><span class="tooltiptext">gmail</span><a href="mailto:kristianfiredi@gmail.com" class="fa fa-google"></a>&nbsp;</li>
+                <li class="tooltip"><span class="tooltiptext">Facebook</span><a href="https://www.facebook.com/kristian.firedi" class="fa fa-facebook"></a>&nbsp;</li>
+                <li class="tooltip"><span class="tooltiptext">LinkedIn</span><a href="https://www.linkedin.com/in/kristian-firedi-441574178/" class="fa fa-linkedin"></a>&nbsp;</li>
+                <li class="tooltip"><span class="tooltiptext">Skype</span><a href="https://secure.skype.com/portal/profile" class="fa fa-skype"></a>&nbsp;</li>
+                <li class="tooltip"><span class="tooltiptext">Instagram</span><a href="https://www.instagram.com/naitsirk_firedi" class="fa fa-instagram"></a>&nbsp;</li>
+            </ul>
+        </div>
+    </div>
+
+    <hr>
+
+        <div id="footer02"><p><span class="not-on-med">&nbsp;</span><span>Website designed and maintained by <span class="signature highlight-txt">Kristian Firedi</span>.</span></p></div>
+
+</div>
+
+</div>
+
+<script src="js/up-but.js">
+</script>
+
+<script src="js/side-menu.js">
+</script>
+
+<script src="js/gallery-script.js">
+</script>
+
+<script src="js/fade-in-content.js">
+</script>
+
+<script src="js/simple-lightbox.js?v2.2.1"></script>
+<script>
+    (function() {
+        var $gallery = new SimpleLightbox('.gallery a', {});
+    })();
+</script>
+
+</body>
+</html>
