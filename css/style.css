@@ -1092,18 +1092,16 @@ h1, h2, h3 {
         right: 0;
     }
     .img-bck-txt01 {
-        text-align: center !important;
-        width: 50% !important;
         transform: rotateZ(-90deg);
         transform-origin: 0 0;
-        margin-left: 5%;
+        left: 8%;
+        bottom: 2rem;
     }
     .img-bck-txt02 {
-        text-align: center !important;
-        width: 50% !important;
         transform: rotateZ(-90deg);
         transform-origin: 0 0;
-        margin-left: 80%;
+        left: 80%;
+        bottom: 2rem;
     }
 
 /*pretvara layout footera iz row u kolone*/
@@ -1220,11 +1218,14 @@ h1, h2, h3 {
         transform: rotate(0deg);
     }
     .img-bck-txt01 {
-        width: 100% !important;
+        bottom: 0;
+        left: 0.3rem;
+        top: 100%;
     }
     .img-bck-txt02 {
-        width: 100% !important;
-        right: unset;
+        bottom: 0;
+        left: 85%;
+        top: 100%;
     }
 
     .img-bck-outer-on-sm {
