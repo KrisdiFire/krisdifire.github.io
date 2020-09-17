@@ -572,6 +572,9 @@ h1, h2, h3 {
 .nopad {
     padding: 0rem !important;
 }
+.nomar {
+    margin: 0;
+}
 
 /*for floating images where text should wrap around them*/
 .text-wrap-img-l {
