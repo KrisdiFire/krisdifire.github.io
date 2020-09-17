@@ -113,7 +113,7 @@ h1, h2, h3 {
 }
 #prlx-02 {
     top: -10rem; 
-    opacity: 0.8;
+    opacity: 0.5;
     position: absolute;
     font-size: 1.3rem;
     z-index: -30;
@@ -178,7 +178,7 @@ h1, h2, h3 {
     max-width: 1200px;
 }
 .lines:last-child {
-    border-right: 1px solid rgb(80, 80, 80) !important;
+    border-right: 1px solid rgb(80, 80, 80);
 }
 .lines{
     border: 1px solid rgb(80, 80, 80);
@@ -312,6 +312,9 @@ h1, h2, h3 {
 }
 .cont-width101 {
     width: 100%;
+}
+.max-width-override {
+    max-width: unset !important;
 }
 /*to flip the order of elements once on a small screen*/
 .flex-op-dir-sm {
@@ -481,19 +484,20 @@ h1, h2, h3 {
 }
 
 /*image background*/
-.img-bck-div {
+.img-bck-inner-div {
     transition: all ease-in-out 0.3s;
 }
-.img-bck-div-mint {
+.img-bck-div-top-less {
     margin-top: -50%;
 }
-.img-bck-div-maxt {
+.img-bck-div-top-more {
     margin-top: 50%;
 }
 .img-bck {
     position: relative;
     /* width: 100%; */
-    height: 100%;
+    /* height: auto; */
+    max-height: 400px;
     max-width: 400px;
     object-fit: cover;
     transition: all ease-in-out 0.3s;
@@ -503,12 +507,12 @@ h1, h2, h3 {
     -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
 }
-.img-bck-div:hover, .img-bck-div:hover .img-bck {
+.img-bck-inner-div:hover, .img-bck-inner-div:hover .img-bck {
     opacity: 1;
     transition: all ease-in-out 0.3s;
     
 }
-.img-bck-div:hover .img-bck-txt01, .img-bck-div:hover .img-bck-txt02 {
+.img-bck-inner-div:hover .img-bck-txt01, .img-bck-inner-div:hover .img-bck-txt02 {
     opacity: 0;
     transition: all ease-in-out 0.6s;
 }
@@ -520,7 +524,7 @@ h1, h2, h3 {
     opacity: 0;
     transition: all ease-in-out 0.3s;
 }
-.img-bck-div:hover .img-bck-onhov {
+.img-bck-inner-div:hover .img-bck-onhov {
     opacity: 1;
     transition: all ease-in-out 0.3s;
 }
@@ -539,6 +543,10 @@ h1, h2, h3 {
 }
 .image-div-cover {
     object-fit: cover;
+    height: 100%;
+}
+.full-height {
+    height: 100%;
 }
 .image-div-cont {
     object-fit: contain;
@@ -890,6 +898,9 @@ h1, h2, h3 {
     align-items: center;
     margin: 2rem 2rem 1rem 2rem;
 }
+#footer02 p {
+    margin: 0em;
+}
 
 /*class that stops scrolling when the sidemenu is open*/
 .stopscroll {
@@ -907,8 +918,12 @@ h1, h2, h3 {
 
     .img-bck {
         max-width: 500px;
+        max-height: 500px;
     }
 
+    #footer02 p {
+        margin: 0em 0.5em 0em 2em;
+    }
 }
 
 @media only screen and (min-width: 1366px) {
@@ -1056,7 +1071,7 @@ h1, h2, h3 {
         justify-content: center;
     }
 /*scale the images for the new screen size*/
-    .img-bck-div-mint, .img-bck-div-maxt {
+    .img-bck-div-top-less, .img-bck-div-top-more {
         margin-top: 0;
     }
     .img-bck {
@@ -1068,27 +1083,27 @@ h1, h2, h3 {
         transition: all ease-in-out 0.3s;
     }
     /*move the image columns left or right on medium scr size*/
-    .img-bck-ms-mar-r {
+    .img-bck-right-med {
         margin-right: auto;
         left: 0;
     }
-    .img-bck-ms-mar-l {
+    .img-bck-left-med {
         margin-left: auto;
         right: 0;
     }
     .img-bck-txt01 {
-        width: 75% !important;
-        transform: rotateZ(90deg);
-        transform-origin: center;
-        bottom: 25% !important;        
+        text-align: center !important;
+        width: 50% !important;
+        transform: rotateZ(-90deg);
+        transform-origin: 0 0;
+        margin-left: 5%;
     }
     .img-bck-txt02 {
-        width: 75% !important;
+        text-align: center !important;
+        width: 50% !important;
         transform: rotateZ(-90deg);
-        transform-origin: center;
-        bottom: 60% !important;
-        top: unset;
-        right: 0;
+        transform-origin: 0 0;
+        margin-left: 80%;
     }
 
 /*pretvara layout footera iz row u kolone*/
@@ -1206,15 +1221,13 @@ h1, h2, h3 {
     }
     .img-bck-txt01 {
         width: 100% !important;
-        margin-left: -25%;
     }
     .img-bck-txt02 {
         width: 100% !important;
-        margin-left: 25%;
         right: unset;
     }
 
-    .img-bck-cont-on-sm {
+    .img-bck-outer-on-sm {
         width: 70%;
         align-self: center;
     }
@@ -1223,4 +1236,3 @@ h1, h2, h3 {
         width: 100%;
     }
 }
-
