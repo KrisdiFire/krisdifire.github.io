@@ -15,7 +15,7 @@
     flex-direction: row;
     align-items: center;
     width: 70%;
-    margin: auto 15%;
+    margin: auto auto;
     height: 3em;
     top: 0;
     z-index: 20;
