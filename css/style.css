@@ -1076,10 +1076,11 @@ h1, h2, h3 {
     }
     .img-bck {
         position: relative;
-        width: 75%;
+        width: 100%;
         object-fit: cover;
         max-width: none;
-        height: 20rem;
+        height: auto;
+        max-height: 500px;
         transition: all ease-in-out 0.3s;
     }
     /*move the image columns left or right on medium scr size*/
