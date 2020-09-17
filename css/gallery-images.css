@@ -1,7 +1,7 @@
 /*style of the small images in the gallery*/
 .image_gallery {
   opacity: 0.7;
-  filter: grayscale(100%);
+  filter: grayscale(50%);
   text-align: center;
   object-fit: cover;
   width: 18em;
@@ -13,7 +13,7 @@
   transition: 0.3s;
   padding: 0.5rem;
 
-  transition: opacity .25s ease-in-out, transform .25s ease-in-out;
+  transition: opacity .25s ease-in-out, transform .25s ease-in-out,;
   -moz-transition: opacity .25s ease-in-out, transform .25s ease-in-out;
   -webkit-transition: opacity .25s ease-in-out, transform .25s ease-in-out;
   will-change: opacity;
