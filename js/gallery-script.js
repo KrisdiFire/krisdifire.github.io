@@ -59,9 +59,7 @@ function closeRestFilter() {
 }
 
 
-
-
-
+//filteri
 
 function filterContent(contentname){
     
