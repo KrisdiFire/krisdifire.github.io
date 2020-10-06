@@ -520,6 +520,11 @@ h1, h2, h3 {
     opacity: 1;
     transition: all ease-in-out 0.6s;
 }
+.img-bck-txt-size {
+    font-size: 2.1rem;
+    font-weight: 700;
+    text-shadow: 2px 2px black;
+}
 .img-bck-onhov {
     opacity: 0;
     transition: all ease-in-out 0.3s;
@@ -637,6 +642,7 @@ h1, h2, h3 {
 .scal-txt-02 {
     font-size: 8vw;
 }
+
 
 /*used to make text white as name suggests*/
 .white-text {
@@ -1107,6 +1113,9 @@ h1, h2, h3 {
         left: 80%;
         bottom: 2rem;
     }
+    .img-bck-txt-size {
+        font-size: 2.1rem;
+    }
 
 /*pretvara layout footera iz row u kolone*/
     #footer01 {
@@ -1222,8 +1231,8 @@ h1, h2, h3 {
     .img-bck-ms-mar-l {
         margin-left: 0%;
     }
-    .img-bck-txt {
-        transform: rotate(0deg);
+    .img-bck-txt-size {
+        font-size: 1.2rem;
     }
     .img-bck-txt01 {
         bottom: 0;
