@@ -1,0 +1,1090 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*color of selected text*/
+*::selection {
+    background: cadetblue;
+}
+*::-moz-selection {
+    background: cadetblue;
+}
+
+/*ScrollBar*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: black;
+    -webkit-box-shadow: inset 0 0 10px black; 
+    box-shadow: inset 0 0 10px black; 
+    -moz-box-shadow: inset 0 0 10px black; 
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    width: 10px;
+    background: white; 
+    box-shadow: inset 0 0 2px black;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(120, 120, 120); 
+}
+
+ /*self explanatory*/
+html {
+    scroll-behavior: smooth;
+}
+
+/*body style*/
+body {
+    background-color: white;
+}
+
+/*style of all links on the page*/
+a {
+    color: azure;
+}
+hr {
+    background-color: white;
+}
+/*heading styles*/
+h1, h2, h3 {
+    padding: 0.5rem;
+    font-family: 'Alata', sans-serif;
+}
+
+/*background vertical lines container style as well as lines*/
+.bg-line-cont {
+    position: fixed;
+    margin: 0% auto 0% auto;
+    left: 0;
+    right: 0;
+    width: 70%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    opacity: 0.5;
+    z-index: -40;
+    max-width: 1200px;
+}
+.lines:last-child {
+    border-right: 1px solid rgb(80, 80, 80) !important;
+}
+.lines{
+    border: 1px solid rgb(80, 80, 80);
+    border-bottom: none;
+    border-top: none;
+    border-right: none;
+    width: 25%;
+}
+
+/*up button style*/
+#up {
+    font-size: 2rem;
+    line-height: 1;
+    position: fixed;
+    height: 3rem;
+    width: 3rem;
+    margin: 1rem 1.5rem 1rem 1rem;
+    background-color: black;
+    color: azure;
+    bottom: 0;
+    right: 0;
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;    
+    cursor: pointer;
+    border: azure solid 0.1rem;
+    transition: all ease-in-out 0.25s;
+}
+.up-opacity {
+    opacity: 0.5 !important;
+    transition: opacity ease-in-out 0.25s;
+}
+#up:hover {
+    opacity: 1 !important;
+    border: 0.1rem solid black;
+    background-color: white;
+    width: 3rem;
+    height: 3rem;
+    transform-origin: center center;
+    transform: rotate(45deg);
+    transition: all ease-in-out 0.25s;
+}
+#up:hover a {
+    color: black;
+    transform: rotate(-45deg);
+    transition: transform ease-in-out 0.25s;
+}
+#up a {
+    list-style: none;
+    text-decoration: none;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 3rem;
+    padding: 0.5rem;
+    transform: rotate(0deg);
+    transition: transform ease-in-out 0.25s;
+}
+
+/*whole page style*/
+#whole-page01 {
+    display: flex;
+    flex-direction: column;
+    transition: 0.4s;
+}
+
+/*style of the page container inside which you place content wrappers (rows)*/
+#page01 {
+    min-height: 100%;
+    z-index: 1;
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/*self explanatory*/
+.separator01 {
+    height: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*these are the horisontal lines, which can be removed, but I've placed them here just so that the editor can see better what he/she is doing*/
+.separator01 hr {
+    width: 100%;
+    /*display: none;*/ /*remove the comment marks from "display: none" in order to remove the lines*/
+}
+
+/*class which deactivates stuff on large screens, but displays them on small*/
+.not-on-lar {
+    display: none !important;
+}
+
+/*styles for the fade in effect*/
+.dont-show {
+    opacity: 0 !important;
+    transition: all ease-in-out 0.5s;
+}
+.show-content {
+    opacity: 1 !important;
+    transition: all ease-in-out 0.5s;
+    will-change: transform, opacity;
+}
+
+/*this container is a row which contains columns*/
+.content-row01 {
+    /*background-color: white;*/
+    margin: 0% auto 0% auto;
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: auto;
+    position: relative;
+    max-width: 1200px;
+}
+/*minimal height of the content wrapper (you don't need this often)*/
+.cont-height200 {
+    min-height: 200vh;
+}
+.cont-height100 {
+    min-height: 100vh;
+}
+.cont-height75 {
+    min-height: 75vh;
+}
+.cont-height50 {
+    min-height: 50vh;
+}
+.cont-width101 {
+    width: 100%;
+}
+.max-width-override {
+    max-width: unset !important;
+}
+
+/*to flip the order of elements once on a small screen*/
+.flex-op-dir-sm {
+    flex-direction: row;
+}
+
+/*style which effects all columns*/
+.content01 {
+    width: auto;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+/*style of all paragraphs inside columns*/
+.content01 p {
+    padding: 0.5rem;
+    width: 100%;
+    text-align: justify;
+}
+/*max width of columns*/
+.col01 {
+    width: 10%;
+    /*width 100px*/
+}
+.col02 {
+    width: 20%;
+    /*width 200px*/
+}
+.col025 {
+    width: 25%;
+    /*width 300px*/
+}
+.col03 {
+    width: 30%;
+    /*width 400px*/
+}
+.col04 {
+    width: 40%;
+    /*width 500px*/
+}
+.col05 {
+    width: 50%;
+    /*width 600px*/
+}
+.col06 {
+    width: 60%;
+    /*width 700px*/
+}
+.col07 {
+    width: 70%;
+    /*width 800px*/
+}
+.col075 {
+    width: 75%;
+    /*width 900px*/
+}
+.col08 {
+    width: 80%;
+    /*width 1000px*/
+}
+.col09 {
+    width: 90%;
+    /*width 1100px*/
+}
+.col10 {
+    width: 100%;
+    /*width 1200px*/
+}
+
+/*background which overflows*/
+.left-black-bg {
+    position: relative;
+}
+.right-black-bg {
+    position: relative;
+}
+.left-black-bg::after {
+    background-color: rgb(0, 0, 0);
+    background-position: center;
+    content: "";
+    opacity: 1;
+    top: 0rem;
+    left: 0rem;
+    bottom: 0rem;
+    right: 0rem;
+    position: absolute;
+    z-index: -24; 
+    margin-left: -100vw;
+    margin-right: 0%;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+}
+.right-black-bg::after {
+    background-color: rgb(0, 0, 0);
+    background-position: center;
+    content: "";
+    opacity: 1;
+    top: 0rem;
+    left: 0rem;
+    bottom: 0rem;
+    right: 0rem;
+    position: absolute;
+    z-index: -24; 
+    margin-right: -100vw;
+    margin-left: 0%;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+}
+.left-white-bg {
+    position: relative;
+}
+.right-white-bg {
+    position: relative;
+}
+.left-white-bg::after {
+    background-color: #fff;
+    background-position: center;
+    content: "";
+    opacity: 1;
+    top: 0rem;
+    left: 0rem;
+    bottom: 0rem;
+    right: 0rem;
+    position: absolute;
+    z-index: -24; 
+    margin-left: -100vw;
+    margin-right: 0%;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+}
+.right-white-bg::after {
+    background-color:#fff;
+    background-position: center;
+    content: "";
+    opacity: 1;
+    top: 0rem;
+    left: 0rem;
+    bottom: 0rem;
+    right: 0rem;
+    position: absolute;
+    z-index: -24; 
+    margin-right: -100vw;
+    margin-left: 0%;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+/*classes for adding backgrounds*/
+.black-bg {
+    background-color: black;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+    z-index: 5;
+}
+.white-bg {
+    background-color: white !important;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+    z-index: 5;
+}
+
+/*image background*/
+.img-bck-inner-div {
+    transition: all ease-in-out 0.3s;
+}
+.img-bck-div-top-less {
+    margin-top: -50%;
+}
+.img-bck-div-top-more {
+    margin-top: 50%;
+}
+.img-bck {
+    position: relative;
+    /* width: 100%; */
+    /* height: auto; */
+    max-height: 400px;
+    /*max-width: 400px;*/
+    object-fit: cover;
+    transition: all ease-in-out 0.3s;
+    opacity: 0.5;
+    filter: grayscale(100%);
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+}
+.img-bck-inner-div:hover, .img-bck-inner-div:hover .img-bck {
+    opacity: 1;
+    transition: all ease-in-out 0.3s;
+    
+}
+.img-bck-inner-div:hover .img-bck-txt01, .img-bck-inner-div:hover .img-bck-txt02 {
+    opacity: 0;
+    transition: all ease-in-out 0.6s;
+}
+.img-bck-txt01, .img-bck-txt02 {
+    opacity: 1;
+    transition: all ease-in-out 0.6s;
+}
+.img-bck-onhov {
+    opacity: 0;
+    transition: all ease-in-out 0.3s;
+}
+.img-bck-inner-div:hover .img-bck-onhov {
+    opacity: 1;
+    transition: all ease-in-out 0.3s;
+}
+.a-img-bck {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    z-index: 101;
+}
+/*image classes*/
+.image-div-fix {
+    object-fit: cover;
+    height: 350px;
+}
+.image-div-cover {
+    object-fit: cover;
+    height: 100%;
+}
+.full-height {
+    height: 100%;
+}
+.image-div-cont {
+    object-fit: contain;
+    max-width:100%;
+    max-height:100%;
+    transition: all 0.3s ease;
+}
+.image-div-small {
+    width: 100px;
+    height: 100px;
+}
+.image-div-small2 {
+    width: 200px;
+    height: 200px;
+}
+/*removes padding from columns containing images etc.*/
+.nopad-lr {
+    padding: 0.5rem 0rem 0.5rem 0rem !important;
+}
+.nopad-tb {
+    padding: 0rem 0.5rem !important;
+}
+.nopad {
+    padding: 0rem !important;
+}
+
+/*for floating images where text should wrap around them*/
+.text-wrap-img-l {
+    float: left;
+    margin: 0rem 0.5rem 0rem 0rem;
+}
+
+.text-wrap-img-r {
+    float: right;
+    margin: 0rem 0rem 0rem 0.5rem;
+}
+
+/*put this class onto the div containing text when wanting to put it over an image. The image and text should be also placed into the pos-rel container (like column)*/
+.text-in-img {
+    position: absolute;
+    background-color: black;
+    color: white;
+    width: 100%;
+    padding: 0.5rem;
+}
+
+/*makes stuff gray*/
+.grayscale {
+    filter: grayscale(1);
+    -webkit-filter: grayscale(1); 
+    filter: grayscale(100%); 
+    -o-filter: grayscale(1);
+}
+/*opacity for background img*/
+.opacity-05 {
+    opacity: 0.5;
+}
+
+/*text sizes*/
+.larger-txt {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.huge-txt {
+    font-size: 3rem;
+    font-weight: 900;
+}
+.mega-txt {
+    font-size: 5rem;
+    font-weight: 700;
+}
+.largest-txt {
+    font-size: 7.6rem;
+    font-weight: 900;
+}
+.intro-txt {
+    font-weight: 900;
+    line-height: 8rem;
+    text-align: unset !important;
+    font-family: 'Alata', sans-serif;
+}
+.intro-txt02 {
+    transform: rotateZ(-90deg) translate(-10px, 190px);
+    transform-origin: 0 0;
+    right: 0;
+    bottom: 0;
+}
+.scal-txt {
+    font-size: 12vw;
+}
+.scal-txt-02 {
+    font-size: 8vw;
+}
+
+/*used to make text white as name suggests*/
+.white-text {
+    color: white;
+}
+.highlight-txt {
+    text-shadow: 0px 0px 1px rgb(255, 255, 255);
+}
+/*classes to position headings and/or other text chunks*/
+.center-hX {
+    text-align: center !important;
+    width: 100%;
+    margin: 0% auto 0% auto;
+}
+.right-hX {
+    text-align: right !important;
+    margin-left: auto;
+}
+.left-hX {
+    text-align: left;
+    margin-right: auto;
+}
+/*makes text non-orderly*/
+.un-justify-txt {
+    text-align: unset !important;
+}
+
+/*makes content go to the top or bottom*/
+.top-auto {
+    bottom: 0rem;
+    margin-top: auto;
+}
+.bot-auto {
+    top: 0rem;
+    margin-bottom: auto;
+}
+.top-10rem-ls {
+    margin-top: 10rem;
+}
+.top-5rem-ls {
+    margin-top: 5rem;
+}
+.top-min-10rem-ls {
+    margin-top: -10rem;
+}
+.top-min-5rem-ls {
+    margin-top: -5rem;
+}
+.bottom-min-ls {
+    margin-bottom: -10rem;
+}
+/*brings elements forward*/
+.bring-front {
+    z-index: 10;
+}
+/*pushes elements behind*/
+.push-back {
+    z-index: -10;
+}
+/*relatively position an element (used mostly to keep absolute elements from flowing out of the container)*/
+.pos-rel {
+    position: relative;
+}
+/*pos absolut*/
+.pos-ab {
+    position: absolute;
+}
+/*used to position elements either to the right or to the left*/
+.mar-left {
+    margin-left: auto;
+    right: 0;
+}
+.mar-right {
+    left: 0;
+    margin-right: auto;
+}
+/*used almost exclusively for absolutely positioned elements*/
+.mar-cent-ver {
+    top: 50%;  /* position the top  edge of the element at the middle of the parent */
+    transform: translateY(-50%);                               
+}
+.mar-cent-hor {
+    left: 50%;  /* position the left  edge of the element at the middle of the parent */
+    transform: translateX(-50%);                              
+}
+.mar-cent {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+/*positioning of the content in a wrapper where display: flex; is enabled x/y*/
+.cont-cent {
+    justify-content: center;
+    align-items: center;
+}
+/*when placed on the content wrapper it positions the elements inside to the middle vertically, and horisontally when placed onto columns*/
+.cont-cent-ver {
+    align-items: center;
+}
+
+/*list styles*/
+.list-01 {
+    /*color: black;*/
+    padding-inline-start: 0px;
+    border: none;
+}
+.list-01 > li {
+    font-size: 1rem;
+    padding: 1rem;
+    width: auto;
+    list-style: none;
+    line-height: 1rem;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+}
+/*.list-01 > li:nth-child(2n + 1),.list-01 > li:nth-child(2n + 1)::before {
+    background-color: black;
+    color: white;*/
+   /* box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);*/
+/*}*/
+.list-01 > li::before {
+    content: "\2022";
+    color: white;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    font-size: 1.2rem;
+}
+.list-02 {
+    padding-inline-start: 0px;
+    border: none;
+}
+.list-02 > li {
+    font-size: 1rem;
+    padding: 1rem;
+    width: 100%;
+    list-style: none;
+    line-height: 1.5rem;
+}
+.list-02 > li::before {
+    content: "\2022";
+    color: black;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    font-size: 1.2rem;
+}
+.list-blank {
+    padding-inline-start: 0px;
+    border: none;
+}
+.list-blank > li {
+    font-size: 1rem;
+    padding: 1rem;
+    width: 100%;
+    list-style: none;
+    line-height: 1.5rem; 
+}
+.list-blank > li:nth-child(2n + 1) {
+    background-color: rgba(51, 51, 51, 0);
+}
+
+/*Style of the footer and its elements*/
+#footer-wrapper {
+    width: 100%;
+    color: #f2f2f2;
+    bottom: 0;
+    padding: 2em 1em 1em 1em;
+    background-color: #000000;
+    height: auto;
+    clear: both;
+    align-self: center;
+}
+#footer-wrapper > p, #footer-wrapper > p > span {
+    font-weight: 400;
+}
+#footer01 {
+    display: flex;
+    padding: 1em 0em 1em 2em;
+    align-items: center;
+}
+#footer01 ul {
+    list-style-type: none;
+}
+#footer01 div {
+    margin: 0em 0.5em 0em 0.5em;
+}
+#footer01 div ul li {
+    padding: 0.1em 0em 0.1em 0em;
+}
+#footer01 div ul li a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#footer-menu ul {
+    padding-inline-start: 0px;
+
+}
+.social-menu {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+.social-menu ul li {
+    display: inline-flex;
+}
+.social-menu ul li a {
+    text-align: center;
+    list-style-type: none;
+}
+/*Social media icons*/
+.fa {
+    font-size: 1em;
+    width: 2.5em;
+    height: 2.5em;
+    text-align: center;
+    text-decoration: none;
+    margin: 0.5em 0.2em;
+    border-radius: 50%; 
+    display: flex !important; /*important je jer guglov stil ima drugaciji*/
+    justify-content: center;
+    align-items: center;
+    border: azure 0.15rem solid;
+    transition: ease-in-out 0.2s;
+} 
+.fa:hover {
+    opacity: 1;
+    background-color: white;
+    color: black;
+}
+/*Tooltip stil*/
+.tooltip {
+    position: relative;
+    display: inline-block;
+    justify-content: center;
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    color: #fff;
+    border-radius: 10px;
+    padding: 6px 6px;
+    position: absolute;
+    z-index: 1;
+    margin-top: -1.5rem;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+#footer02 {
+    display: flex;
+    align-items: center;
+    margin: 2rem 2rem 1rem 2rem;
+}
+
+/*class that stops scrolling when the sidemenu is open*/
+.stopscroll {
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+@media only screen and (min-width: 1367px) {
+    
+    .cont-width101 {
+        max-width: 1200px;
+    }
+
+    .img-bck {
+      /*max-width: 500px;*/
+        max-height: 500px;
+    }
+
+    #footer02 p {
+        margin: 0em 0.5em 0em 2em;
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    /*stop the font size growth at 12rem*/
+        .scal-txt {
+            font-size: 12rem;
+        }
+        .scal-txt-02 {
+            font-size: 8rem;
+        }
+
+        #footer01, #footer02 {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 1200px;
+        }
+    }
+
+@media only screen and (max-width: 900px) {
+    
+}
+
+@media only screen and (max-width: 768px) {
+
+    .intro-txt02 {
+        transform: rotateZ(-90deg) translate(-10px, 110px);
+        transform-origin: 0 0;
+        bottom: 0;
+        margin-right: 0rem;
+    }
+
+/*displays stuff which wasnt displayed when viewed on smaller screens*/
+    .not-on-lar {
+        display: block !important;
+    }
+/*not on medium width devices*/
+    .not-on-med {
+        display: none;
+    }
+
+/*makes element not positioned absolutely on sm scr*/
+    .not-ab-sm {
+        position: relative;
+    }
+/*removes the centered position of absolute elements when on sm scr*/
+    .not-cent-sm {
+        top: unset;
+        transform: translateY(0%);
+        transform: translateX(0%);
+    }
+
+/*align text to the center on small screens (used for headings with x-hX classes)*/
+    .overrdie-to-cent {
+        text-align: center !important;
+        width: 100%;
+    }
+/*removes the top margins so as to not break anything*/
+    .top-10rem-ls {
+        margin-top: 0rem;
+    }
+    .top-5rem-ls {
+        margin-top: 0rem;
+    }
+    .top-min-10rem-ls {
+        margin-top: 0rem;
+    }
+    .top-min-5rem-ls {
+        margin-top: 0rem;
+    }
+    .bottom-min-ls {
+        margin-bottom: 0rem;
+    }
+
+/*adjusts the text sizes acording to the screen size*/
+    .larger-txt {
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+    .huge-txt {
+        font-size: 2rem;
+        font-weight: 900;
+    }
+    .mega-txt {
+        font-size: 3.5rem;
+        font-weight: 700;
+    }
+    .largest-txt {
+        font-size: 6rem;
+        font-weight: 900;
+    }
+    .intro-txt {
+        line-height: 6rem;
+        text-align: unset !important;
+    }
+    .scal-txt {
+        font-size: 8rem;
+    }
+    .scal-txt-02 {
+        font-size: 6rem;
+    }
+
+/*changes from row to column representation*/
+    .content-row01 {
+        flex-direction: column;
+        transition: all 400ms ease;
+    }
+/*flips the placement of columns on small screens*/
+    .flex-op-dir-sm {
+        flex-direction: column-reverse !important;
+    }
+/*makes the content extend to the edges of the screen on smaller devices*/
+    .content01 {
+        width: 100%;
+        transition: all 400ms ease;
+    }
+
+    .cont-cent-ver {
+        align-items: center;
+        justify-content: center;
+    }
+    /*scale the images for the new screen size*/
+    .img-bck-div-top-less, .img-bck-div-top-more {
+        margin-top: 0;
+    }
+    .img-bck {
+        position: relative;
+        width: 75%;
+        object-fit: cover;
+        max-width: none;
+        height: 20rem;
+        transition: all ease-in-out 0.3s;
+    }
+    /*move the image columns left or right on medium scr size*/
+    .img-bck-right-med {
+        margin-right: auto;
+        left: 0;
+    }
+    .img-bck-left-med {
+        margin-left: auto;
+        right: 0;
+    }
+    .img-bck-txt01 {
+        transform: rotateZ(-90deg);
+        transform-origin: 0 0;
+        margin-left: 8%;
+    }
+    .img-bck-txt02 {
+        transform: rotateZ(-90deg);
+        transform-origin: 0 0;
+        margin-left: 80%;
+    }
+
+    .image-div-small {
+        height: 50px;
+        width: 50px;
+    }
+
+/*pretvara layout footera iz row u kolone*/
+    #footer01 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1em 0em 1em 0em;
+    }
+    #footer01 div {
+       width: 100%;
+       margin: 0em;
+    }
+    #footer-menu {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    #footer-menu ul {
+        padding-inline-start: 0px;
+    }
+    .social-menu {
+        display: flex;
+        justify-content: center;
+    }
+    .social-menu ul {
+        padding-inline-start: 0px;
+        margin-top: 1rem;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+    }
+
+    #footer02 {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+/*removes elements on lower than 480px screens*/
+    .not-on-sm {
+        display: none;
+    }
+
+    .lines {
+        width: 50%;
+    }
+
+    #page01 {
+        margin: 0rem;
+        width: 100%;
+    }
+
+    .larger-txt {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    .huge-txt {
+        font-size: 1.8rem;
+        font-weight: 900;
+    }
+    .mega-txt {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    .largest-txt {
+        font-size: 3.7rem;
+        font-weight: 900;
+    }
+    .intro-txt {
+        line-height: 4rem;
+    }
+    .scal-txt {
+        font-size: 5rem;
+    }
+    .scal-txt-02 {
+        font-size: 3rem;
+    }
+
+    .content-row01 {
+        flex-direction: column;
+        margin: 0;
+        width: 100%;
+    }
+
+    .img-bck {
+        width: 100%;
+    }
+    .img-bck-ms-mar-r {
+        margin-right: 0%;
+    }
+    .img-bck-ms-mar-l {
+        margin-left: 0%;
+    }
+    .img-bck-txt {
+        transform: rotate(0deg);
+    }
+    .img-bck-txt01 {
+        width: 100% !important;
+    }
+    .img-bck-txt02 {
+        width: 100% !important;
+        right: unset;
+    }
+
+    .img-bck-outer-on-sm {
+        width: 70%;
+        align-self: center;
+    }
+
+    #footer-wrapper {
+        width: 100%;
+    }
+}
