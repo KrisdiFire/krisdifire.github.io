@@ -4,7 +4,9 @@
 }
 
 body {
-   background-color: rosybrown !important;
+   background-color: lightslategray !important;
+   background-size: 100px 100px;
+   background-image: linear-gradient(90deg, transparent 50%, rgba(255,255,255,.5) 50%);
 }
 
 .content-row01 {
@@ -19,18 +21,9 @@ body {
    width: 60vh;
    position: absolute;
    filter: grayscale(50%);
-   box-shadow: 5px 5px 20px black;
+   transition: opacity ease-in-out 0.25s;
 }
-.img-frame1::after
-{
-   box-shadow: inset 0px 0px 40px 0 black;
-   content: '';
-   display: block;
-   height: 100%;
-   position: absolute;
-   top: 0;
-   width: 100%;
-}
+
 .img-frame2 {
    margin-top: 95vh;
    margin-left: 0vh;
@@ -39,18 +32,9 @@ body {
    width: 60vh;
    position: absolute;
    filter: grayscale(50%);
-   box-shadow: 5px 5px 20px black;
+   transition: opacity ease-in-out 0.25s;
 }
-.img-frame2::after
-{
-   box-shadow: inset 0px 0px 40px 0 black;
-   content: '';
-   display: block;
-   height: 100%;
-   position: absolute;
-   top: 0;
-   width: 100%;
-}
+
 .img-frame3 {
    margin-right: -10vh;
    margin-top: -10vh;
@@ -59,71 +43,47 @@ body {
    width: 60vh;
    position: absolute;
    filter: grayscale(50%);
-   box-shadow: 5px 5px 20px black;
+   transition: opacity ease-in-out 0.25s;
 }
-.img-frame3::after
-{
-   box-shadow: inset 0px 0px 40px 0 black;
-   content: '';
-   display: block;
-   height: 100%;
-   position: absolute;
-   top: 0;
-   width: 100%;
-}
+
 .img-frame4 {
-   margin-top: 4rem;
-   margin-left: -10rem;
    align-self: center;
-   height: 40vh;
-   width: 40vh;
+   top: 15vw;
+   height: 125vw;
+   width: 125vw;
    position: absolute;
    filter: grayscale(50%);
-   box-shadow: 5px 5px 20px black;
+   transition: opacity ease-in-out 0.25s;
 }
 
 .img-frame1 img {
    height: 100%;
    width: 100%;
    position: relative;
-   box-shadow: 0 0 0 50px rgba(244,240,236,0.4) inset, 
-               0 0 0 11px#593007;
-   outline: 2px solid #333;
-   outline-offset: 0px;
-   object-fit: cover;
+   object-fit: contain;
+   transform: rotate(1deg);
 }
 
 .img-frame2 img {
    height: 100%;
    width: 100%;
    position: relative;
-   box-shadow: 0 0 0 50px rgba(244,240,236,0.4) inset, 
-               0 0 0 15px brown;
-   outline: 2px solid #333;
-   outline-offset: 0px;
-   object-fit: cover;
+   object-fit: contain;
 }
 
 .img-frame3 img {
    height: 100%;
    width: 100%;
    position: relative;
-   box-shadow: 0 0 0 50px rgba(244,240,236,0.4) inset,
-               0 0 0 11px #7b440b;
-   outline: 2px solid #333;
-   outline-offset: 0px;
-   object-fit: cover;
+   object-fit: contain;
+   transform: rotate(-1deg);
 }
 
 .img-frame4 img {
    height: 100%;
    width: 100%;
    position: relative;
-   box-shadow: 0 0 0 50px rgba(244,240,236,0.4) inset, 
-               0 0 0 15px brown;
-   outline: 2px solid #333;
-   outline-offset: 0px;
-   object-fit: cover;
+   object-fit: contain;
 }
 
 .clock {
@@ -145,11 +105,12 @@ body {
    justify-content:center;
    width: 100%;
    height: 100%;
-   border: 0.2rem solid rgb(255, 255, 255);
+   border: 0.4rem solid rgb(255, 253, 250);
    border-radius:50%;
    box-shadow: 5px 5px 20px black;
-   background-color: rgb(24, 24, 24);
+   background-color: rosybrown;
    z-index: 1;
+   box-shadow: 0px 0px 1px black;
 }
 
 .okvir::before {
@@ -163,9 +124,10 @@ body {
    width: 100%;
    z-index: 0;
    align-self: center;
-   background: radial-gradient(rgba(81, 81, 81, 1), rgba(33,33,33,1));
-   filter: blur(2px);
+ /*background: radial-gradient(rgba(81, 81, 81, 1), rgba(33,33,33,1));
+   filter: blur(2px); */
    border-radius: 50%;
+   box-shadow: inset 0px 0px 1px black;
 }
 
 .divi { 
@@ -180,7 +142,7 @@ body {
 }
 
 .divi span {
-   text-shadow: 0px 0px 6px#ffffff9c;
+   text-shadow: 0px 0px 3px black;
    color: white;
    top: 0.5rem;
 }
@@ -267,10 +229,10 @@ span {
    height: 2rem;
    width: 2rem;
    border-radius: 50%;
-   background-color:whitesmoke;
+   background-color:rgb(255, 253, 250);
    display: block;
    position: absolute;
-   box-shadow: 0px 0px 10px 1px;
+   box-shadow: 0px 0px 1px 1px;
    z-index: 15;
    top: 50%;
     -webkit-transform: translateY(-50%);
@@ -278,23 +240,41 @@ span {
     transform: translateY(-50%);
 }
 
+.circ::after {
+   content: "";
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   margin: auto;
+   height: 75%;
+   width: 75%;
+   z-index: 0;
+   align-self: center;
+   border-radius: 50%;
+   background-color: #bbc4cc;
+   box-shadow: 0px 0px 1px 1px;
+
+}
+
 #s {
    position:absolute;
    height: 100%;
-   width: 0.3rem;
+   width: 0.25rem;
    z-index: 10;  
 }
 
 #s::after {
-   height: 40%;
-   margin-top: 050%;
-   bottom: 50%;
+   height: 55%;
+   margin-top: 50%;
+   bottom: 35%;
    margin-bottom: 50%;
    content: "";
    position: absolute;
    width: 100%;
-   background-color:crimson;
-   box-shadow: 0px 0px 4px 1px;
+   background-color: #bbc4cc;
+   box-shadow: 0px 0px 1px ;
 }
 
 #m {
@@ -313,8 +293,8 @@ span {
    content: "";
    position: absolute;
    width: 100%;
-   background-color:whitesmoke;
-   box-shadow: 0px 0px 10px 1px;
+   background-color:rgb(255, 253, 250);
+   box-shadow: 0px 0px 2px ;
 }
 
 #h {
@@ -333,8 +313,8 @@ span {
    content: "";
    position: absolute;
    width: 100%;
-   background-color:whitesmoke;
-   box-shadow: 0px 0px 10px 1px;
+   background-color: rgb(255, 253, 250);
+   box-shadow: 0px 0px 2px ;
 }
 
 .KiA {
@@ -343,62 +323,57 @@ span {
    margin-top: auto;
    margin-bottom: 25%;
    font-size: 1.3rem;
-   color: black;
-   text-shadow: 0px 0px 3px rgb(22, 22, 22);
+   color: rgb(255, 255, 255);
+   text-shadow: 0px 0px 2px rgb(22, 22, 22);
 }
 
 @media only screen and (min-width: 1366px) {
 
    .cont-width101 {
-      max-width: 10000px;
+      max-width: none;
    }
 
-   .img-frame1 {
-      height: 60vh;
-      width: 60vh;
-   }
-   .img-frame2 {
-      height: 60vh;
-      width: 60vh;
-   }
-   .img-frame3 {
-      height: 80vh;
-      width: 60vh;
-   }
 }
 
-@media only screen and (max-width: 1024px) {
-   
+@media only screen and (max-width: 1024px) and (min-height: 1024px) {
+
    .img-frame1 {
-      display: none;
-      margin-left: -13rem;
-      height: 35rem;
-      width: 20rem;
-   }
+      opacity: 0;
+      transition: opacity ease-in-out 0.25s;
+}
+
    .img-frame2 {
-      display: none;
-      height: 35rem;
-      width: 20rem;
+      opacity: 0;
+      transition: opacity ease-in-out 0.25s;
    }
+
    .img-frame3 {
-      display: none;
-      height: 35rem;
-      width: 20rem;
-      margin-right: -19rem;
+      opacity: 0;
+      transition: opacity ease-in-out 0.25s;
    }
+
+   .img-frame4 {
+      display: block !important;
+      top: 5vw;
+   }
+   
 }
 
 @media only screen and (max-width: 768px) {
+
    .img-frame1 {
-      display: none;
-   }
+      opacity: 0;
+      transition: opacity ease-in-out 0.25s;
+}
+
    .img-frame2 {
-      display: none;
+      opacity: 0;
+      transition: opacity ease-in-out 0.25s;
    }
+
    .img-frame3 {
-      display: block;
-      margin-top: 65rem;
-      margin-right: -35rem;
+      opacity: 0;
+      transition: opacity ease-in-out 0.25s;
    }
 }
 
@@ -416,7 +391,7 @@ span {
    }
 
    #s {
-      width: 0.2rem;
+      width: 0.15rem;
    }
 
    #m {
@@ -438,21 +413,6 @@ span {
 
    * {
       font-size: 0.8rem !important;
-   }
-
-   .img-frame1 {
-      margin-top: 180vh;
-      margin-left: -40vh;
-      align-self: center;
-      height: 60vh;
-      width: 60vh;
-      position: absolute;
-      filter: grayscale(50%);
-      box-shadow: 5px 5px 20px black;
-   }
-
-   .img-frame2 {
-      display: none;
    }
 
 }
