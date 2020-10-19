@@ -1241,7 +1241,7 @@ h1, h2, h3 {
     }
     .img-bck-txt02 {
         bottom: 0;
-        left: 85%;
+    /*    left: 85%;*/
         top: 100%;
     }
 
