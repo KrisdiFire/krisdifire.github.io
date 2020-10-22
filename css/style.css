@@ -853,16 +853,20 @@ h1, h2, h3 {
 
 #footer-menu ul, #footer-menu ul li a {
     padding-inline-start: 0px;
+}
+
+#footer-menu ul li a {
     position: relative;
 }
 
 /*Strikethrough effect*/
-#footer-menu ul li a:before, #footer-menu ul li a:after {
+#footer-menu ul li a:before, 
+#footer-menu ul li a:after {
     content: '';
     position: absolute;
     width: 0%;
-    height: 2px;
-    top: 50%;
+    height: 0.1rem;
+    top: 49%;
     background: white;
   }
   #footer-menu ul li a:before {
@@ -871,12 +875,12 @@ h1, h2, h3 {
   #footer-menu ul li a:after {
     right: -2.5%;
     background: white;
-    transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+    transition: width 1.3s cubic-bezier(0.22, 0.61, 0.36, 1);
   }
   #footer-menu ul li a:hover:before {
     background: white;
     width: 105%;
-    transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+    transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
   }
   #footer-menu ul li a:hover:after {
     background: transparent;
