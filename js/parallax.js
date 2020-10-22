@@ -45,7 +45,7 @@ function parallax() {
   g.style.marginTop = 10 + yPos8 + "rem";
 
   var yPos9 = 0 - window.pageYOffset/-90;  
-  h.style.marginTop = -45 + yPos9 + "rem";
+  h.style.marginTop = -35 + yPos9 + "rem";
 
 /* eksperimenti
   if (mq.matches) {
