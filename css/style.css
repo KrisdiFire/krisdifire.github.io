@@ -851,10 +851,39 @@ h1, h2, h3 {
     cursor: pointer;
 }
 
-#footer-menu ul {
+#footer-menu ul, #footer-menu ul li a {
     padding-inline-start: 0px;
-
+    position: relative;
 }
+
+/*Strikethrough effect*/
+#footer-menu ul li a:before, #footer-menu ul li a:after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    top: 50%;
+    background: white;
+  }
+  #footer-menu ul li a:before {
+    left: -2.5%;
+  }
+  #footer-menu ul li a:after {
+    right: -2.5%;
+    background: white;
+    transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+  #footer-menu ul li a:hover:before {
+    background: white;
+    width: 105%;
+    transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+  #footer-menu ul li a:hover:after {
+    background: transparent;
+    width: 105%;
+    transition: 0s;
+  }
+
 .social-menu {
     display: flex;
     flex-grow: 1;
@@ -884,7 +913,8 @@ h1, h2, h3 {
 } 
 .fa:hover {
     opacity: 1;
-    background-color: orange;
+    color: black;
+    background-color: white;
 }
 /*Tooltip stil*/
 .tooltip {
@@ -893,16 +923,18 @@ h1, h2, h3 {
     justify-content: center;
 }
 .tooltip .tooltiptext {
-    visibility: hidden;
+    opacity: 0;
     color: #fff;
     border-radius: 10px;
     padding: 6px 6px;
     position: absolute;
     z-index: 1;
     margin-top: -1.5rem;
+    transition: all 0.1s;
 }
 .tooltip:hover .tooltiptext {
-    visibility: visible;
+    opacity: 1;
+    transition: all 0.1s;
 }
 #footer02 {
     display: flex;
