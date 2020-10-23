@@ -904,18 +904,18 @@ h1, h2, h3 {
     flex-grow: 1;
     justify-content: flex-end;
     opacity: 1;
-    transition: opacity ease-in-out 0.5s;
+    transition: opacity ease-in-out 0.25s;
 }
 .social-menu-side ul li {
     display: flex !important;
     margin-top: 0.75rem;
-    transition: opacity ease-in-out 0.5s;
+    
     cursor: default;
 }
 .social-menu-side ul li a {
     text-align: center;
     list-style-type: none;
-    transition: opacity ease-in-out 0.5s;
+    
 }
 .social-menu-side ul li a:hover {
     opacity: 1;
@@ -935,11 +935,11 @@ h1, h2, h3 {
 /*fade in-out effect with js*/
 .soc-opacity-1 {
     opacity: 1 !important;
-    transition: opacity ease-in-out 0.5s;
+    transition: opacity ease-in-out 0.25s;
 }
 .soc-opacity-0 {
     opacity: 0 !important;
-    transition: opacity ease-in-out 0.5s;
+    transition: opacity ease-in-out 0.25s;
 }
 
 /*social in footer*/
@@ -948,16 +948,16 @@ h1, h2, h3 {
     flex-grow: 1;
     justify-content: flex-end;
     opacity: 1;
-    transition: opacity ease-in-out 0.5s;
+    transition: opacity ease-in-out 0.25s;
 }
 .social-menu ul li {
     display: inline-flex;
-    transition: opacity ease-in-out 0.5s;
+    
 }
 .social-menu ul li a {
     text-align: center;
     list-style-type: none;
-    transition: opacity ease-in-out 0.5s;
+    
 }
 /*Social media icons*/
  .fa {
