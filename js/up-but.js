@@ -61,8 +61,11 @@ function closeSite() {
 
 function onResizeCloseOpen() {
 
-  let mm = window.matchMedia ( "(max-width: 768px)");
-  let mmo = window.matchMedia ( "(min-width: 740px)");
+  let mm = window.matchMedia ("(max-width: 768px)");
+  let mmo = window.matchMedia ("(min-width: 740px)");
+
+  let mms = window.matchMedia ("(max-width: 480px)");
+  let mmos = window.matchMedia ("(min-width: 460px)");
 
   if ((mm.matches) && (mmo.matches)) {
       freeze();
@@ -71,6 +74,14 @@ function onResizeCloseOpen() {
       setTimeout(disappear, 2500);
       setTimeout(unFreeze, 2500);
   }
+
+  if ((mms.matches) && (mmos.matches)) {
+    freeze();
+    closeSite();
+    setTimeout(openSite, 2500);
+    setTimeout(disappear, 2500);
+    setTimeout(unFreeze, 2500);
+}
 
 }
 
