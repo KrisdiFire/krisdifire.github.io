@@ -20,9 +20,7 @@ function upTop() {
   document.body.scrollTop = 0; // Za Safari
   document.documentElement.scrollTop = 0; // Za Chrome, Firefox, IE and Opera
 }
-
 //Function before the site opens
-
 var opel = document.getElementById("op-l");
 var oper = document.getElementById("op-r");
 
@@ -33,13 +31,12 @@ function openSite() {
   unFreeze();
 }
 //stop scroll
+var bodi = document.getElementsByTagName('body')[0];
 function freeze() {
-  var bodi = document.getElementsByTagName('body')[0];
   bodi.classList.add("stopscroll");
 }
 //add scroll
 function unFreeze() {
-  var bodi = document.getElementsByTagName('body')[0];
   bodi.classList.remove("stopscroll");
 }
 //loading window var
@@ -52,18 +49,15 @@ function disappear() {
 function appear() {
   loadWin.classList.remove("z-ind-back");
 }
-
 function closeSite() {
     opel.classList.remove("open-l");
     oper.classList.remove("open-r");
     appear();
 }
-
 function onResizeCloseOpen() {
 
   let mm = window.matchMedia ("(max-width: 768px)");
   let mmo = window.matchMedia ("(min-width: 740px)");
-
   let mms = window.matchMedia ("(max-width: 480px)");
   let mmos = window.matchMedia ("(min-width: 452px)");
 
@@ -81,12 +75,9 @@ function onResizeCloseOpen() {
     setTimeout(openSite, 2200);
     setTimeout(disappear, 2500);
     setTimeout(unFreeze, 2500);
+  }
 }
-
-}
-
 window.addEventListener('resize', onResizeCloseOpen);
-
 //run run run
 freeze();
 setTimeout(openSite, 1500);
