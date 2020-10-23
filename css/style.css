@@ -44,6 +44,16 @@ body {
     background-color: rgb(20, 20, 20);
 }
 
+.loading-scr {
+    position: fixed;
+    overflow: hidden;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
 .load-le {
     display: flex;
     position: absolute;
