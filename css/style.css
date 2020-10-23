@@ -2,6 +2,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    font-weight: 100;
 }
 
 /*color of selected text*/
@@ -54,6 +55,7 @@ hr {
 h1, h2, h3 {
     padding: 0.5rem;
     font-family: 'Alata', sans-serif;
+    font-weight: 600 !important;
 }
 /*background squares*/
 .prlx-mult {
@@ -616,19 +618,19 @@ h1, h2, h3 {
 /*text sizes*/
 .larger-txt {
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 600 !important;
 }
 .huge-txt {
     font-size: 3rem;
-    font-weight: 900;
+    font-weight: 900 !important;
 }
 .mega-txt {
     font-size: 5rem;
-    font-weight: 700;
+    font-weight: 700 !important;
 }
 .largest-txt {
     font-size: 7.6rem;
-    font-weight: 900;
+    font-weight: 900 !important;
 }
 .intro-txt {
     font-weight: 900;
@@ -642,6 +644,9 @@ h1, h2, h3 {
 .scal-txt-02 {
     font-size: 8vw;
 }
+.font-norm {
+    font-weight: 600 !important;
+}
 
 
 /*used to make text white as name suggests*/
@@ -649,6 +654,7 @@ h1, h2, h3 {
     color: white;
 }
 .highlight-txt {
+    font-weight: 400;
     text-shadow: 0px 0px 1px rgb(255, 255, 255);
 }
 .red-text {
@@ -860,8 +866,8 @@ h1, h2, h3 {
 }
 
 /*Strikethrough effect*/
-#footer-menu ul li a:before, 
-#footer-menu ul li a:after {
+.strike-through:before, 
+.strike-through:after {
     content: '';
     position: absolute;
     width: 0%;
@@ -869,39 +875,92 @@ h1, h2, h3 {
     top: 49%;
     background: white;
   }
-  #footer-menu ul li a:before {
+  .strike-through:before {
     left: -2.5%;
   }
-  #footer-menu ul li a:after {
+  .strike-through:after {
     right: -2.5%;
     background: white;
     transition: width 1.3s cubic-bezier(0.22, 0.61, 0.36, 1);
   }
-  #footer-menu ul li a:hover:before {
+  .strike-through:hover:before {
     background: white;
     width: 105%;
     transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
   }
-  #footer-menu ul li a:hover:after {
+  .strike-through:hover:after {
     background: transparent;
     width: 105%;
     transition: 0s;
   }
 
+/*social on the side*/
+.social-menu-side {
+    position: fixed;
+    right: 1.5rem;
+    top: 3rem;
+    z-index: 100;
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    opacity: 1;
+    transition: opacity ease-in-out 0.5s;
+}
+.social-menu-side ul li {
+    display: flex !important;
+    margin-top: 0.75rem;
+    transition: opacity ease-in-out 0.5s;
+    cursor: default;
+}
+.social-menu-side ul li a {
+    text-align: center;
+    list-style-type: none;
+    transition: opacity ease-in-out 0.5s;
+}
+.social-menu-side ul li a:hover {
+    opacity: 1;
+    color: black;
+    background-color: white;
+}
+
+/*.social-menu-side ul .tooltip .tooltiptext {
+    margin-top: 25%;
+    z-index: -10;
+}
+.social-menu-side ul .tooltip a:hover + .tooltiptext {
+    opacity: 1;
+    transition: all ease-in-out 0.2s;
+    transform: translateX(-4rem);
+}*/
+/*fade in-out effect with js*/
+.soc-opacity-1 {
+    opacity: 1 !important;
+    transition: opacity ease-in-out 0.5s;
+}
+.soc-opacity-0 {
+    opacity: 0 !important;
+    transition: opacity ease-in-out 0.5s;
+}
+
+/*social in footer*/
 .social-menu {
     display: flex;
     flex-grow: 1;
     justify-content: flex-end;
+    opacity: 1;
+    transition: opacity ease-in-out 0.5s;
 }
 .social-menu ul li {
     display: inline-flex;
+    transition: opacity ease-in-out 0.5s;
 }
 .social-menu ul li a {
     text-align: center;
     list-style-type: none;
+    transition: opacity ease-in-out 0.5s;
 }
 /*Social media icons*/
-.fa {
+ .fa {
     font-size: 1em;
     width: 2.5em;
     height: 2.5em;
@@ -912,10 +971,10 @@ h1, h2, h3 {
     display: flex !important; /*important je jer guglov stil ima drugaciji*/
     justify-content: center;
     align-items: center;
-    border: azure 0.15rem solid;
+    border: azure 0.1rem solid;
     transition: ease-in-out 0.2s;
 } 
-.fa:hover {
+.social-menu ul li .fa:hover {
     opacity: 1;
     color: black;
     background-color: white;
@@ -934,11 +993,13 @@ h1, h2, h3 {
     position: absolute;
     z-index: 1;
     margin-top: -1.5rem;
+    margin-right: 0.5rem;
     transition: all 0.1s;
+    cursor: default;
 }
-.tooltip:hover .tooltiptext {
+.social-menu ul .tooltip a:hover + .tooltiptext {
     opacity: 1;
-    transition: all 0.1s;
+    transition: opacity ease-in-out 0.2s;
 }
 #footer02 {
     display: flex;
@@ -1185,6 +1246,10 @@ h1, h2, h3 {
         justify-content: center;
     }
 
+    .social-menu-side {
+        display: none;
+    }
+
     #footer02 {
         justify-content: center;
     }
@@ -1289,4 +1354,6 @@ h1, h2, h3 {
     #footer-wrapper {
         width: 100%;
     }
+
+    
 }

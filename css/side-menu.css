@@ -150,7 +150,7 @@
   .dropdown-container a {
       text-align: left;
       padding-left: 5rem;
-      font-family: 'Roboto', sans-serif !important;
+      font-weight: 100;
   }
 
   .dropdown-container a:hover {
