@@ -20,3 +20,31 @@ function upTop() {
   document.body.scrollTop = 0; // Za Safari
   document.documentElement.scrollTop = 0; // Za Chrome, Firefox, IE and Opera
 }
+
+//Function before the site opens
+
+function openSite() {
+
+  let opel = document.getElementById("op-l");
+  let oper = document.getElementById("op-r");
+
+  opel.classList.add("open-l");
+  oper.classList.add("open-r");
+//function from the side menu
+  unFreeze();
+
+}
+
+function freeze() {
+  var bodi = document.getElementsByTagName('body')[0];
+  bodi.classList.add("stopscroll");
+}
+
+function unFreeze() {
+  var bodi = document.getElementsByTagName('body')[0];
+  bodi.classList.remove("stopscroll");
+}
+
+freeze();
+
+setTimeout(openSite, 1500);

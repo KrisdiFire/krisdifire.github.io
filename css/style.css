@@ -44,6 +44,55 @@ body {
     background-color: rgb(20, 20, 20);
 }
 
+.load-le {
+    display: flex;
+    position: absolute;
+    height: 100vh;
+    width: 50%;
+    background-color: rgb(10, 10, 10);
+    left: 0;
+    top: 0;
+    z-index: 10000;
+    overflow: hidden;
+}
+
+.hiw {
+    height: 10rem;
+    width: 10rem;
+}
+
+.half-r {
+    right: -5rem;
+}
+
+.half-l {
+    left: -5rem;
+}
+
+.load-ri {
+    display: flex;
+    position: absolute;
+    height: 100vh;
+    width: 50%;
+    background-color: rgb(10, 10, 10);
+    right: 0;
+    top: 0;
+    z-index: 10000;
+    overflow: hidden;
+}
+
+.open-l {
+    transform-origin: center;
+    left: -200%;
+    transition: all ease-in-out 1s;
+}
+
+.open-r {
+    transform-origin: center;
+    right: -200%;
+    transition: all ease-in-out 1s;
+}
+
 /*style of all links on the page*/
 a {
     color: azure;
@@ -933,8 +982,6 @@ h1, h2, h3 {
     transform: translateX(-75%);
     min-width: 4rem;
     text-align: left;
-    
-    
     transition: all ease-in-out 0.25s;
 }
 /*fade in-out effect with js*/
