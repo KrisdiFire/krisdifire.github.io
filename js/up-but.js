@@ -32,7 +32,6 @@ function openSite() {
   oper.classList.add("open-r");
 //function from the side menu
   unFreeze();
-
 }
 
 function freeze() {
@@ -45,6 +44,13 @@ function unFreeze() {
   bodi.classList.remove("stopscroll");
 }
 
+function disappear() {
+  let loadWin = document.getElementById("load-win");
+
+  loadWin.classList.add("z-ind-back");
+}
+
 freeze();
 
 setTimeout(openSite, 1500);
+setTimeout(disappear, 1750);

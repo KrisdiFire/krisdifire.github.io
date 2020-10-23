@@ -54,6 +54,10 @@ body {
     right: 0;
 }
 
+.z-ind-back {
+    z-index: -10000;
+}
+
 .load-le {
     display: flex;
     position: absolute;
