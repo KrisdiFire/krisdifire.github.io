@@ -73,6 +73,8 @@ body {
 .hiw {
     height: 10rem;
     width: 10rem;
+    filter: brightness(3);
+    opacity: 1 !important;
 }
 
 .half-r {

@@ -23,34 +23,59 @@ function upTop() {
 
 //Function before the site opens
 
+var opel = document.getElementById("op-l");
+var oper = document.getElementById("op-r");
+
 function openSite() {
-
-  let opel = document.getElementById("op-l");
-  let oper = document.getElementById("op-r");
-
   opel.classList.add("open-l");
   oper.classList.add("open-r");
 //function from the side menu
   unFreeze();
 }
-
+//stop scroll
 function freeze() {
   var bodi = document.getElementsByTagName('body')[0];
   bodi.classList.add("stopscroll");
 }
-
+//add scroll
 function unFreeze() {
   var bodi = document.getElementsByTagName('body')[0];
   bodi.classList.remove("stopscroll");
 }
-
+//loading window var
+var loadWin = document.getElementById("load-win");
+//push load win back
 function disappear() {
-  let loadWin = document.getElementById("load-win");
-
   loadWin.classList.add("z-ind-back");
 }
+//pull load win to front
+function appear() {
+  loadWin.classList.remove("z-ind-back");
+}
 
+function closeSite() {
+    opel.classList.remove("open-l");
+    oper.classList.remove("open-r");
+    appear();
+}
+
+function onResizeCloseOpen() {
+
+  let mm = window.matchMedia ( "(max-width: 768px)");
+
+  if (document.body.clientWidth <= 768) {
+      freeze();
+      closeSite();
+      setTimeout(openSite, 2500);
+      setTimeout(disappear, 2500);
+      setTimeout(unFreeze, 2500);
+  }
+
+}
+
+window.addEventListener('resize', onResizeCloseOpen);
+
+//run run run
 freeze();
-
 setTimeout(openSite, 1500);
-setTimeout(disappear, 1750);
+setTimeout(disappear, 2000);
