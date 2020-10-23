@@ -70,7 +70,7 @@ function onResizeCloseOpen() {
   if ((mm.matches) && (mmo.matches)) {
       freeze();
       closeSite();
-      setTimeout(openSite, 2500);
+      setTimeout(openSite, 2200);
       setTimeout(disappear, 2500);
       setTimeout(unFreeze, 2500);
   }
@@ -78,7 +78,7 @@ function onResizeCloseOpen() {
   if ((mms.matches) && (mmos.matches)) {
     freeze();
     closeSite();
-    setTimeout(openSite, 2500);
+    setTimeout(openSite, 2200);
     setTimeout(disappear, 2500);
     setTimeout(unFreeze, 2500);
 }
