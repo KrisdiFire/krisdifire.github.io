@@ -65,7 +65,7 @@ function onResizeCloseOpen() {
   let mmo = window.matchMedia ("(min-width: 740px)");
 
   let mms = window.matchMedia ("(max-width: 480px)");
-  let mmos = window.matchMedia ("(min-width: 460px)");
+  let mmos = window.matchMedia ("(min-width: 452px)");
 
   if ((mm.matches) && (mmo.matches)) {
       freeze();
