@@ -63,7 +63,7 @@ function onResizeCloseOpen() {
 
   let mm = window.matchMedia ( "(max-width: 768px)");
 
-  if (document.body.clientWidth <= 768) {
+  if (mm.matches) {
       freeze();
       closeSite();
       setTimeout(openSite, 2500);
