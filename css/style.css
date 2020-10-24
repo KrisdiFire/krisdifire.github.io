@@ -937,7 +937,7 @@ h1, h2, h3 {
     position: absolute;
     width: 0%;
     height: 0.1rem;
-    top: 49%;
+    top: 45%;
     background: white;
   }
   .strike-through:before {

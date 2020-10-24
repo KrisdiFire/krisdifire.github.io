@@ -68,7 +68,7 @@
 }
 
 /*Strikethrough effect*/
-  .main-menu-inner ul .list a:before, .main-menu-inner ul .list a:after {
+ /* .main-menu-inner ul .list a:before, .main-menu-inner ul .list a:after {
     content: '';
     position: absolute;
     width: 0%;
@@ -93,7 +93,7 @@
     background: transparent;
     width: 100%;
     transition: 0s;
-  }
+  }*/
 
 @media only screen and (max-width: 768px) {
 
