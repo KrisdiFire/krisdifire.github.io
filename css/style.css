@@ -91,12 +91,34 @@ body {
 .load-ri {
     display: flex;
     position: absolute;
-    height: 100vh;
+    height: 100%;
     width: 50%;
     background-color: rgb(10, 10, 10);
     right: 0;
     top: 0;
     z-index: 10000;
+    overflow: hidden;
+}
+
+.second-layer-r {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background-color: rgb(0, 0, 0);
+    right: 0;
+    top: 0;
+    z-index: 9000;
+    overflow: hidden;
+}
+
+.second-layer-l {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background-color: rgb(0, 0, 0);
+    left: 0;
+    top: 0;
+    z-index: 9000;
     overflow: hidden;
 }
 

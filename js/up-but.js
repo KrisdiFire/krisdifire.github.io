@@ -27,6 +27,9 @@ function upTop() {
 //Function before the site opens
 var opel = document.getElementById("op-l");
 var oper = document.getElementById("op-r");
+
+var opel1 = document.getElementById("s-l-l");
+var oper1 = document.getElementById("s-l-r");
 //variables for window sizes
   var mml = window.matchMedia ("(max-width: 10000px)");
   var mmm = window.matchMedia ("(max-width: 768px)");
@@ -44,8 +47,13 @@ var smallWin = 0;
 function openSite() {
   opel.classList.add("open-l");
   oper.classList.add("open-r");
+  setTimeout(openSiteSL, 100);
 //function from the side menu
   unFreeze();
+}
+function openSiteSL() {
+  opel1.classList.add("open-l");
+  oper1.classList.add("open-r");
 }
 //stop scroll
 var bodi = document.getElementsByTagName('body')[0];
@@ -69,16 +77,18 @@ function appear() {
 function closeSite() {
     opel.classList.remove("open-l");
     oper.classList.remove("open-r");
+
+    opel1.classList.remove("open-l");
+    oper1.classList.remove("open-r");
     appear();
 }
+//close and open the loading window
 function onResizeCloseOpen() {
-
   freeze();
   closeSite();
   setTimeout(openSite, 1500);
   setTimeout(disappear, 2000);
   setTimeout(unFreeze, 2000);
-
 }
 
 function screenChange() {
