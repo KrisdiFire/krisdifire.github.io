@@ -24,7 +24,7 @@ function upTop() {
 
 
 
-//Function before the site opens
+//Function before the site opens, and on screen change//
 var opel = document.getElementById("op-l");
 var oper = document.getElementById("op-r");
 
