@@ -20,9 +20,26 @@ function upTop() {
   document.body.scrollTop = 0; // Za Safari
   document.documentElement.scrollTop = 0; // Za Chrome, Firefox, IE and Opera
 }
+
+
+
+
 //Function before the site opens
 var opel = document.getElementById("op-l");
 var oper = document.getElementById("op-r");
+//variables for window sizes
+  var mml = window.matchMedia ("(max-width: 10000px)");
+  var mmm = window.matchMedia ("(max-width: 768px)");
+  var mms = window.matchMedia ("(max-width: 480px)");
+
+  var mml2 = window.matchMedia ("(min-width: 769px)");
+  var mmm2 = window.matchMedia ("(min-width: 481px)");
+  var mms2 = window.matchMedia ("(min-width: 200px)");
+//used to define current win size and stop the script from running until
+//another screensize change
+var largeWin = 0;
+var mediumWin = 0;
+var smallWin = 0;
 
 function openSite() {
   opel.classList.add("open-l");
@@ -56,29 +73,38 @@ function closeSite() {
 }
 function onResizeCloseOpen() {
 
-  let mm = window.matchMedia ("(max-width: 768px)");
-  let mmo = window.matchMedia ("(min-width: 740px)");
-  let mms = window.matchMedia ("(max-width: 480px)");
-  let mmos = window.matchMedia ("(min-width: 452px)");
+  freeze();
+  closeSite();
+  setTimeout(openSite, 1500);
+  setTimeout(disappear, 2000);
+  setTimeout(unFreeze, 2000);
 
-  if ((mm.matches) && (mmo.matches)) {
-      freeze();
-      closeSite();
-      setTimeout(openSite, 2200);
-      setTimeout(disappear, 2500);
-      setTimeout(unFreeze, 2500);
+}
+
+function screenChange() {
+
+  if ((mmm.matches) && (mmm2.matches) && (mediumWin == 0)) {
+      onResizeCloseOpen();
+      mediumWin = 1;
+      smallWin = 0;
+      largeWin = 0;
   }
 
-  if ((mms.matches) && (mmos.matches)) {
-    freeze();
-    closeSite();
-    setTimeout(openSite, 2200);
-    setTimeout(disappear, 2500);
-    setTimeout(unFreeze, 2500);
+  if ((mms.matches) && (mms2.matches) && (smallWin == 0)) {
+      onResizeCloseOpen();
+      smallWin = 1;
+      mediumWin = 0;
+      largeWin = 0;
+  }
+
+  if ((largeWin == 0) && (mml.matches) && (mml2.matches)) {
+      onResizeCloseOpen();
+      largeWin = 1;
+      mediumWin = 0;
+      smallWin = 0;
   }
 }
-window.addEventListener('resize', onResizeCloseOpen);
+
+window.addEventListener('resize', screenChange);
 //run run run
-freeze();
-setTimeout(openSite, 1500);
-setTimeout(disappear, 2000);
+onResizeCloseOpen();
