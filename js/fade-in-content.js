@@ -1,39 +1,25 @@
-/*Here the magic happens - animacija kontenta*/
-
+/*Here the magic happens - fade in content*/
+  var elementsToShow0 = document.querySelectorAll('.content-row01'); 
   // Detect request animation frame
   var scroll = window.requestAnimationFrame ||
   // IE Fallback
-    function(callback){ window.setTimeout(callback, 3000/60);};
-  var elementsToShow2 = document.querySelectorAll('.content-row01'); 
+  function(callback){ window.setTimeout(callback, 3000/60);};
   
-    function loop01() {
+  function loop01() {
   
-  Array.prototype.forEach.call(elementsToShow2, function(element){
-      if (isElementInViewport(element)) {
-        element.classList.add('show-content');
-    } else {
+  Array.prototype.forEach.call(elementsToShow0, function(element){
+      if (isInView(element)) {
+        element.classList.add('show-content');} 
+      else {
         element.classList.remove('show-content');
-    }
-  });
-  
-    scroll(loop01);
-  }
+      }});
+  scroll(loop01);}
   
   // Call the loop for the first time
-    loop01();
+  loop01();
   
   // Helper function from: http://stackoverflow.com/a/7557433/274826
-    function isElementInViewport(el) {
-  // special bonus for those using jQuery
-      if (typeof jQuery === "function" && el instanceof jQuery) {
-        el = el[0];
-      }
-  var rect = el.getBoundingClientRect();
-      return (
-        (rect.top <= 0&& rect.bottom >= 0)||
-        (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.top <= (window.innerHeight || document.documentElement.clientHeight))||
-        (rect.top >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
-      );
+  function isInView(el) {
+    let box = el.getBoundingClientRect();
+    return box.top < window.innerHeight && box.bottom >= 0;
   }

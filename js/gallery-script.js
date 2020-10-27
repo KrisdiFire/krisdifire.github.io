@@ -26,10 +26,7 @@ loop();
 
 // Helper function from: http://stackoverflow.com/a/7557433/274826
 function isElementInViewport(el) {
-// special bonus for those using jQuery
-    if (typeof jQuery === "function" && el instanceof jQuery) {
-        el = el[0];
-    }
+
 var rect = el.getBoundingClientRect();
     return (
       (rect.top <= 0&& rect.bottom >= 0)||
@@ -40,22 +37,25 @@ var rect = el.getBoundingClientRect();
     );
 }
 ////////////////////////////////////////////
-  
 ////////////////////////////////////////////
+
 //Funkcija za otvaranje odredjene kategorije
 
 var ise = document.getElementById("gallery01");
+var galimg = document.querySelectorAll(".gal-img");
 
 /*funkcija koja zatvara sve galerije koje nisu potrebne*/
 function closeRestFilter() {
 
-  var rl = document.querySelectorAll(".image");
-
+  var rl = document.querySelectorAll(".i-photo");
+  
     [].forEach.call(rl, function(closes) {
-      closes.classList.add("dont-show-image");});
+      closes.classList.add("dont-show-image");
+    });
 
     [].forEach.call(rl, function(opens) {
-      opens.classList.remove("show-image");});
+      opens.classList.remove("show-image");
+    });
 }
 
 
@@ -85,16 +85,19 @@ function filterAll(){
 
   ise.classList.add("dont-show-image");
 
+  ise.classList.remove("dont-show-image");
+
 //gura separatorovom marginom sav content dole da se ne vidi animacija width i height-a
   document.getElementById('push-down-filter').style.marginBottom = "100vh";
   //dize gore (funkcija iz pagecontenta) da se ne vidi tranzicija dole
   upTop();
 //uzima sve .image elemente
-  var il = document.querySelectorAll(".image");
+  var il = document.querySelectorAll(".i-photo");
+  //za svaki element skida dont show image class
+  [].forEach.call(il, function(opens) {
+    opens.classList.remove("dont-show-image");
+  });
       function marginNorm() {
-        //za svaki element skida dont show image class
-      [].forEach.call(il, function(opens) {
-          opens.classList.remove("dont-show-image");});
         //normalna margina separatora 
           document.getElementById('push-down-filter').style.marginBottom = "0rem";
       }
