@@ -55,6 +55,7 @@ body {
     left: 0;
     bottom: 0;
     right: 0;
+    display: none;
 }
 
 .z-ind-back {
@@ -150,9 +151,11 @@ h1, h2, h3 {
 /*background squares*/
 .prlx-mult {
     z-index: -30;
+    height: 10rem; 
+    width: 10rem; 
 }
 .prlx-mult::after {
-    opacity: 0.3;
+    opacity: 0.6;
     background-position: center;
     content: "";
     height: 10rem;
@@ -165,9 +168,11 @@ h1, h2, h3 {
 }
 .prlx-mult-med {
     z-index: -30;
+    height: 7.5rem; 
+    width: 7.5rem; 
 }
 .prlx-mult-med::after {
-    opacity: 0.3;
+    opacity: 0.4;
     background-position: center;
     content: "";
     height: 7.5rem;
@@ -180,6 +185,9 @@ h1, h2, h3 {
 }
 .prlx-mult-sm {
     z-index: -30;
+    height: 5rem; 
+    width: 5rem; 
+    filter: brightness(0.5);
 }
 .prlx-mult-sm::after {
     opacity: 0.3;
@@ -193,66 +201,64 @@ h1, h2, h3 {
     background-image: url("../img/back-squares.svg");
     background-size: contain;
 }
-#prlx-01 {
-    position: absolute;
-    top: -20rem;
-    margin-top: 6rem;
-    align-self: center;
-    transform: translate(-5rem, 0rem);
-}
-#prlx-02-cont {
-    margin-right: -8rem;
-}
-#prlx-02 {
-    top: -10rem; 
-    opacity: 0.5;
-    position: absolute;
-    font-size: 1.3rem;
+.prlx-mult-sm-ow {
     z-index: -30;
-    transform-origin: top left;
-    transform: rotate(90deg);
-    margin: -20% 50% -50% 82%;
+    height: 5rem; 
+    width: 5rem; 
+    filter: brightness(0.5);
 }
-#prlx-03 {
+.prlx-mult-sm-ow::after {
+    opacity: 0.8;
+    background-position: center;
+    content: "";
+    height: 5rem;
+    width: 5rem;
     position: absolute;
-    margin-top: 10rem;
-    align-self: center;
-    transform: translate(-2.5rem, 0rem);
+    z-index: -30;
+    background: url("../img/back-squares.svg") no-repeat center;
+    background-image: url("../img/back-squares.svg");
+    background-size: contain;
 }
-#prlx-04 {
-    position: absolute;
-    margin-top: -10rem;
-    align-self: center;
-    transform: translate(-3.7rem, 0rem);
+
+.l1-ow {
+    margin-right: 50%;
 }
-#prlx-05 {
-    position: absolute;
-    margin-top: 10rem;
-    align-self: center;
-    transform: translate(-2.5rem, 0rem);
+
+.l1 {
+    top: 65rem
 }
-#prlx-06 {
-    position: absolute;
-    margin-top: 0rem;
-    align-self: center;
-    transform: translate(-3.7rem, 0rem);
+
+.l2 {
+    top: -5rem;
 }
-#prlx-07 {
-    position: absolute;
-    margin-top: -30rem;
-    align-self: center;
-    transform: translate(-2.5rem, 0rem);
+
+.l20 {
+    top: -5rem;
+    left: -2.5rem;
 }
-#prlx-08 {
-    position: absolute;
-    margin-top: 10rem;
-    align-self: center;
-    transform: translate(-5rem, 0rem);
+
+.l3 {
+    top: 19rem;
 }
-#prlx-09 {
-    position: absolute;
-    margin-top: -35rem;
-    transform: translate(-3.7rem, 0rem);
+
+.l3i {
+    top: 5rem;
+}
+
+.l5 {
+    right: -2.5rem;
+}
+
+.l6 {
+    top: 20rem;
+}
+
+.l8 {
+    top: 25rem;
+}
+
+.l9 {
+    top: -95rem;
 }
 
 /*background vertical lines container style as well as lines*/
@@ -719,7 +725,7 @@ h1, h2, h3 {
     font-weight: 700 !important;
 }
 .largest-txt {
-    font-size: 10rem;
+    font-size: 9rem;
     font-weight: 900 !important;
 }
 .intro-txt {
@@ -1153,42 +1159,45 @@ h1, h2, h3 {
     }
 
 @media only screen and (max-width: 900px) {
-    
-    #prlx-02::after {
-            display: none;
-    }
 
 }
 
 @media only screen and (max-width: 768px) {
 
-    #prlx-01 {
-        margin-top: 10rem;
-        margin-left: 50%;
+    .l0 {
+        margin-left: 70%;
+        top: -1.5rem;
     }
-    #prlx-02-cont {
-        top: -14rem;
+
+    .l1 {
+        left: -3.7rem;
+        top: 80rem;
     }
-    #prlx-02 {
-        margin-left: 0rem;
-        margin-top: 10rem;
-    }
-    #prlx-03 {
-        position: absolute;
-        top: 5rem;
-        right: 0;
-        align-self: center;
-        transform: translate(-2.5rem, 0rem);
-        display: none;
-    }
-    #prlx-04 {
+
+    .l2 {
         left: unset;
     }
-    #prlx-05 {
-        display: none;
+
+    .l3 {
+        right: -2.5rem;
     }
-    #prlx-07 {
-        display: none;
+
+    .l4 {
+        top: -20rem;
+    }
+
+    .l6 {
+        top: 15rem;
+        margin-left: 50%;
+    }
+
+    .l8 {
+        top: 15rem;
+        margin-left: 50%;
+    }
+
+    .l9 {
+        top: -160rem;
     }
 
 /*displays stuff which wasnt displayed when viewed on smaller screens*/
@@ -1361,24 +1370,43 @@ h1, h2, h3 {
 
 @media only screen and (max-width: 480px) {
 
-    #prlx-01 {
-        margin-top: 8rem;
-        margin-left: 70%;
-    }
-    #prlx-02-cont {
-        top: 5rem;
-        
-    }
-    #prlx-02 {
-        height: 8rem;
-        margin-top: 10rem; 
-        transform: rotate(0deg);
-        margin-left: 25%;
-        font-size: 1rem !important;
-    }
+    
+/*nzm za sta je ovaj img div sml*/
     .image-div-small {
         height: 50px;
         width: 50px;
+    }
+
+    .l1 {
+        left: unset;
+        margin-right: 70%;
+    }
+
+    .l2 {
+        display: none;
+    }
+
+    .l3 {
+       top: -1.5rem;
+       right: unset;
+    }
+
+    .l5 {
+        right: none;
+    }
+
+    .l6 {
+        top: 15rem;
+        margin-left: 70%;
+        display: none;
+    }
+
+    .l8 {
+        display: none;
+    }
+
+    .l9 {
+        top: -130rem;
     }
 
 /*removes elements on lower than 480px screens*/

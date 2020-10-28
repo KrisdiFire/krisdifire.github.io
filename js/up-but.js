@@ -118,3 +118,4 @@ function screenChange() {
 window.addEventListener('resize', screenChange);
 //run run run
 onResizeCloseOpen();
+
