@@ -1166,6 +1166,7 @@ h1, h2, h3 {
     .l0 {
         margin-left: 70%;
         top: -1.5rem;
+        display: none;
     }
 
     .l1 {
@@ -1175,6 +1176,7 @@ h1, h2, h3 {
 
     .l2 {
         left: unset;
+        opacity: 0.4;
     }
 
     .l3 {
