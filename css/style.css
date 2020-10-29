@@ -1391,6 +1391,8 @@ h1, h2, h3 {
 
 @media only screen and (max-width: 480px) {
 
+    .prlx-mult-sm-ow {}
+
     
 /*nzm za sta je ovaj img div sml*/
     .image-div-small {
@@ -1404,7 +1406,7 @@ h1, h2, h3 {
     }
 
     .l2 {
-        display: none;
+        display: none !important;
     }
 
     .l3 {
