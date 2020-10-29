@@ -2,17 +2,16 @@
 let closePrlx = document.getElementsByClassName("prlx-close");
 let medPrlx = document.getElementsByClassName("prlx-mult-med");
 let farPrlx = document.getElementsByClassName("prlx-mult-sm");
-let farPrlxOW = document.getElementsByClassName("prlx-mult-sm-ow");
 let verTxt = document.getElementsByClassName("o5t")[0];
 let verTxt2 = document.getElementsByClassName("o6t")[0];
   
 function scrollElement() {
 
   let closeY = window.pageYOffset/+36;
-  let mediumY = window.pageYOffset/+76;
-  let farY = window.pageYOffset/+90;
-  let farYow = window.pageYOffset/-75;
-  let farYow2 = window.pageYOffset/-95;
+  let mediumY = window.pageYOffset/+66;
+  let farY = window.pageYOffset/+85;
+  let farYow = window.pageYOffset/-55;
+  let farYow2 = window.pageYOffset/-75;
 
   for (var i = 0; i < closePrlx.length; i++) {
     closePrlx[i].style.transform = "translateY" + "(" + closeY + "rem" + ")";
@@ -26,12 +25,8 @@ function scrollElement() {
     farPrlx[p].style.transform = "translateY" + "(" + farY + "rem" + ")";
   }
 
-  for (var u = 0; u < farPrlxOW.length; u++) {
-    farPrlxOW[u].style.transform = "translateY" + "(" + farYow + "rem" + ")";
-  }
-
-  verTxt.style.transform = "translateY" + "(" + farYow + "rem" + ")";
-  verTxt2.style.transform = "translateY" + "(" + farYow2 + "rem" + ")";
+  verTxt.style.transform = "translateY" + "(" + mediumY + "rem" + ")";
+  verTxt2.style.transform = "translateY" + "(" + farY + "rem" + ")";
 
 }
 

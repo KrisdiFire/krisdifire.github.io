@@ -86,9 +86,9 @@ function closeSite() {
 function onResizeCloseOpen() {
   freeze();
   closeSite();
-  setTimeout(openSite, 1500);
-  setTimeout(disappear, 2000);
-  setTimeout(unFreeze, 2000);
+  setTimeout(openSite, 1000);
+  setTimeout(disappear, 1500);
+  setTimeout(unFreeze, 1500);
 }
 
 function screenChange() {

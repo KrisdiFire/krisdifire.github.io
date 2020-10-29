@@ -1,7 +1,8 @@
 /*Here the magic happens - fade in content*/
-  var elementsToShow0 = document.querySelectorAll('.content-row01'); 
+  let elementsToShow0 = document.querySelectorAll('.content-row01');
+  let elementsToShow1 = document.querySelectorAll('.content01'); 
   // Detect request animation frame
-  var scroll = window.requestAnimationFrame ||
+  let scroll = window.requestAnimationFrame ||
   // IE Fallback
   function(callback){ window.setTimeout(callback, 3000/60);};
   
@@ -13,6 +14,12 @@
      // else {
       //  element.classList.remove('show-content');}
       });
+
+  Array.prototype.forEach.call(elementsToShow1, function(element2){
+      if ((isInView(element2)) && (element2.classList.contains("dont-show-side"))) {
+        element2.classList.add('show-content-side');}
+      });
+
   scroll(loop01);}
   
   // Call the loop for the first time

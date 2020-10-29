@@ -219,20 +219,20 @@ h1, h2, h3 {
     background-size: contain;
 }
 
-.l1-ow {
-    margin-right: 50%;
+.l10 {
+    top: -90rem;
 }
 
 .l1 {
-    top: 65rem
+    top: 20rem
 }
 
 .l2 {
-    top: -5rem;
+    top: 1rem;
 }
 
 .l20 {
-    top: -5rem;
+    top: -7rem;
     left: -2.5rem;
 }
 
@@ -241,23 +241,30 @@ h1, h2, h3 {
 }
 
 .l3i {
-    top: 5rem;
+    top: 0.7rem;
+    right: -2.5rem;
 }
 
 .l5 {
+    top: 10rem;
     right: -2.5rem;
 }
 
 .l6 {
-    top: 20rem;
+    top: 10rem;
+}
+
+.l7 {
+    top: -15rem;
 }
 
 .l8 {
-    top: 25rem;
+    left: -2.5rem;
+    top: 10rem;
 }
 
 .l9 {
-    top: -95rem;
+    top: -45rem;
 }
 
 /*background vertical lines container style as well as lines*/
@@ -374,11 +381,24 @@ h1, h2, h3 {
 .dont-show {
     opacity: 0 !important;
     transition: all ease-in-out 0.5s;
+    transform: translateY(4rem);
 }
 .show-content {
     opacity: 1 !important;
     transition: all ease-in-out 0.5s;
+    transition-delay: transform 0.25s;
     will-change: transform, opacity;
+    transform: translateY(0rem);
+}
+
+.dont-show-side {
+    transition: all ease-in-out 0.5s;
+    transform: translateX(-150%);
+}
+.show-content-side {
+    transition: all ease-in-out 0.5s;
+    transition-delay: 0.25s;
+    transform: translateX(0%);
 }
 
 /*this container is a row which contains columns*/
@@ -607,7 +627,7 @@ h1, h2, h3 {
 .img-bck-inner-div:hover, .img-bck-inner-div:hover .img-bck {
     opacity: 1;
     transition: all ease-in-out 0.3s;
-    
+    transform: translateY(-0.7rem);
 }
 .img-bck-inner-div:hover .img-bck-txt01, .img-bck-inner-div:hover .img-bck-txt02 {
     opacity: 0;
@@ -629,6 +649,7 @@ h1, h2, h3 {
 .img-bck-inner-div:hover .img-bck-onhov {
     opacity: 1;
     transition: all ease-in-out 0.3s;
+    transform: translateY(-0.3rem);
 }
 .a-img-bck {
     top: 0;
@@ -749,7 +770,7 @@ h1, h2, h3 {
 .vertical-text {
   writing-mode: vertical-rl;
   text-orientation: upright;
-  opacity: 0.2;
+  opacity: 0.8;
   z-index: -10;
   font-size: 1.2rem;
 }
@@ -1175,6 +1196,7 @@ h1, h2, h3 {
     }
 
     .l2 {
+        top: -4rem;
         left: unset;
         opacity: 0.4;
     }
@@ -1188,17 +1210,15 @@ h1, h2, h3 {
     }
 
     .l6 {
-        top: 15rem;
-        margin-left: 50%;
+        display: none;
     }
 
     .l8 {
-        top: 15rem;
-        margin-left: 50%;
+        display: none;
     }
 
     .l9 {
-        top: -160rem;
+        top: -80rem;
     }
 
 /*displays stuff which wasnt displayed when viewed on smaller screens*/
@@ -1407,7 +1427,7 @@ h1, h2, h3 {
     }
 
     .l9 {
-        top: -130rem;
+        top: -60rem;
     }
 
 /*removes elements on lower than 480px screens*/
