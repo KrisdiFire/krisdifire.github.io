@@ -63,7 +63,7 @@
     background-position: center;
     background-size: contain;
     content: "";
-    opacity: 0.15;
+    opacity: 0.2;
     top: 0;
     left: 0;
     bottom: 0;
@@ -159,14 +159,14 @@
 
 /*look of the side menu on different screens*/
 .side-menu-norm {
-    background-color: black;
+    background-color:  indianred;
     width: 19em;
-    transition: all ease-in-out 0.2s;
+    transition: width ease-in-out 0.2s;
 }
 .side-menu-sml {
-    background-color: black;
+    background-color:black;
     width: 100%;
-    transition: all ease-in-out 0.2s;
+    transition: width ease-in-out 0.2s;
     position: fixed;
 }
 
@@ -174,7 +174,7 @@
 
 .sideopen {
     transform: translate(-19em, 0);
-    transition: all ease-in-out 0.2s;
+    transition: width ease-in-out 0.2s;
 }
 
  /*div that appears over the whole page, closes side menu on click*/
