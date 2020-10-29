@@ -8,11 +8,11 @@
   function loop01() {
   
   Array.prototype.forEach.call(elementsToShow0, function(element){
-      if (isInView(element)) {
+      if ((isInView(element)) && (element.classList.contains("dont-show"))) {
         element.classList.add('show-content');} 
-      else {
-        element.classList.remove('show-content');
-      }});
+     // else {
+      //  element.classList.remove('show-content');}
+      });
   scroll(loop01);}
   
   // Call the loop for the first time

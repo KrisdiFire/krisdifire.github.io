@@ -987,7 +987,7 @@ h1, h2, h3 {
   .strike-through:after {
     right: -2.5%;
     background: white;
-    transition: width 1.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+    transition: width 1.3s cubic-bezier(0.22, 0.61, 0.36, 0.7);
   }
   .strike-through:hover:before {
     background: white;
