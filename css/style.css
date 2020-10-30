@@ -218,7 +218,20 @@ h1, h2, h3 {
     background-image: url("../img/back-squares.svg");
     background-size: contain;
 }
-
+/*both classes are for the paralax experiment, gallery and the text*/
+#prlx-gal {
+    transform: translateY(75%);
+    height: 10rem;
+    width: 10rem;
+}
+.gal-txt {
+    text-decoration: none; 
+    line-height: 0;
+    font-weight: 300 !important; 
+    transform: translate3d(2.7rem, 5rem, 0);
+    font-size: 1.6rem;
+}
+/*paralax cubes*/
 .l10 {
     top: -90rem;
 }
@@ -1059,7 +1072,7 @@ h1, h2, h3 {
 .social-menu-side ul .tooltip a:hover + .tooltiptext {
     opacity: 1;
     transition: all ease-in-out 0.2s;
-    transform: translateY(1.5rem);
+    transform: translateY(1rem);
     transition: all ease-in-out 0.25s;
 }
 /*fade in-out effect with js*/
@@ -1183,6 +1196,11 @@ h1, h2, h3 {
 }
 
 @media only screen and (max-width: 768px) {
+
+    .gal-txt {
+        transform: translate3d(3rem, 5rem, 0);
+        font-size: 1.4rem;
+    }
 
     .l0 {
         margin-left: 70%;
