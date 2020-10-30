@@ -38,8 +38,6 @@ window.addEventListener("scroll", scrollElement);
 
       var prlxId = document.getElementById('prlx-gal');
 
-
-   //   elem = cont.find('.parallax-image'),
    //   cont_top = cont.offset().top,
    //   cont_h = cont.height(),
    //   elem_h = Math.round(cont_h * 1.3),
@@ -47,7 +45,6 @@ window.addEventListener("scroll", scrollElement);
    //   diff = elem_h - cont_h,
    //   max = Math.max(cont_h, win_h),
    //   speed = diff / max;
-
    /*
 
 var diff = elem_h - cont_h,
@@ -55,8 +52,6 @@ max = Math.max(cont_h, win_h),
 speed = diff / max,
 cont_scrolled = win_top - cont_top - cont_h,
 value = Math.round(cont_scrolled * speed);
-
-para.css('top', value + 'px');
 
   */
       var win_h = window.innerHeight,
@@ -78,72 +73,3 @@ para.css('top', value + 'px');
     }
 
     window.addEventListener("scroll", singPrlx);
-
-  
-    
-    /*
-    (function($) {
-    
-      var win = $(window),
-        win_h = win.height();
-        parallaxers = $('.parallax-window'),
-        parallax_objs = [],
-        scroll_busy = false;
-    
-      function init_parallax() {
-        win_h = win.height();
-        parallax_objs = [];
-        parallaxers.each(function() {
-          var cont = $(this),
-            elem = cont.find('.parallax-image'),
-            cont_top = cont.offset().top,
-            cont_h = cont.height(),
-            elem_h = Math.round(cont_h * 1.3),
-            diff = elem_h - cont_h,
-            max = Math.max(cont_h, win_h),
-            speed = diff / max,
-            parallaxer = {
-              cont_top: cont_top,
-              cont_h: cont_h,
-              elem: elem,
-              speed: speed
-            };
-          parallax_objs.push(parallaxer);
-        });
-      }
-      
-      function on_scroll() {
-        if (!scroll_busy) {
-          scroll_busy = true;
-          window.requestAnimationFrame(init_scroll);
-        }
-      }
-    
-      function init_scroll() {
-        scroll_events()
-        scroll_busy = false;
-      }
-    
-      function scroll_events() {
-        var win_top = win.scrollTop(),
-          win_btm = win_top + win_h;
-    
-        $.each(parallax_objs, function(i, para) {
-          cont_btm = para.cont_top + para.cont_h;
-          if( cont_btm > win_top && para.cont_top <= win_btm ) {
-            var cont_scrolled = win_top - para.cont_top - para.cont_h,
-              value = Math.round(cont_scrolled * para.speed);
-            para.elem.css('top', value + 'px');
-          }
-        });
-      }
-    
-      $(document).ready(function() {
-        init_parallax();
-        win.resize(init_parallax);
-        scroll_events();
-        win.scroll(on_scroll);
-      });
-    
-    })(jQuery);
-    */
