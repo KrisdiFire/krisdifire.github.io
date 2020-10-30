@@ -1048,6 +1048,8 @@ h1, h2, h3 {
     opacity: 1;
     color: black;
     background-color: white;
+    transform: translateY(-0.5rem);
+    transition: all ease-in-out 0.2s;
 }
 
 .social-menu-side ul .tooltip .tooltiptext {
@@ -1057,9 +1059,7 @@ h1, h2, h3 {
 .social-menu-side ul .tooltip a:hover + .tooltiptext {
     opacity: 1;
     transition: all ease-in-out 0.2s;
-    transform: translateX(-75%);
-    min-width: 4rem;
-    text-align: left;
+    transform: translateY(1.5rem);
     transition: all ease-in-out 0.25s;
 }
 /*fade in-out effect with js*/
