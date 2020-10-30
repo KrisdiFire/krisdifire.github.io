@@ -3,6 +3,8 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
 /*color of selected text*/
@@ -220,9 +222,11 @@ h1, h2, h3 {
 }
 /*both classes are for the paralax experiment, gallery and the text*/
 #prlx-gal {
-    transform: translateY(100%);
+    position: absolute;
+    margin-top: 50%;
     height: 10rem;
     width: 10rem;
+    transition: all ease-in-out 0.1s;
 }
 .gal-txt {
     text-decoration: none; 
@@ -1196,6 +1200,9 @@ h1, h2, h3 {
 }
 
 @media only screen and (max-width: 768px) {
+
+    #prlx-gal {
+        margin-top: 25%;}
 
     .gal-txt {
         transform: translate3d(3rem, 5rem, 0);

@@ -14,19 +14,20 @@ function scrollElement() {
   let farYow2 = window.pageYOffset/-75;
 
   for (var i = 0; i < closePrlx.length; i++) {
-    closePrlx[i].style.transform = "translateY" + "(" + closeY + "rem" + ")";
+    closePrlx[i].style.transform = "translate3d" + "(" + "0," + closeY  + "rem" + ", 0" + ")";
   }
 
   for (var o = 0; o < medPrlx.length; o++) {
-    medPrlx[o].style.transform = "translateY" + "(" + mediumY + "rem" + ")";
+    medPrlx[o].style.transform = "translate3d" + "(" + "0," + mediumY  + "rem" + ", 0" + ")";
   }
 
   for (var p = 0; p < farPrlx.length; p++) {
-    farPrlx[p].style.transform = "translateY" + "(" + farY + "rem" + ")";
+    farPrlx[p].style.transform = "translate3d" + "(" + "0," + farY  + "rem" + ", 0" + ")";
   }
 
-  verTxt.style.transform = "translateY" + "(" + mediumY + "rem" + ")";
-  verTxt2.style.transform = "translateY" + "(" + farY + "rem" + ")";
+  verTxt.style.transform = "translate3d" + "(" + "0," + mediumY  + "rem" + ", 0" + ")";
+  verTxt2.style.transform = "translate3d" + "(" + "0," + farY  + "rem" + ", 0" + ")";
+  
 
 }
 
@@ -54,7 +55,29 @@ cont_scrolled = win_top - cont_top - cont_h,
 value = Math.round(cont_scrolled * speed);
 
   */
-      var win_h = window.innerHeight,
+      var body_h = document.body.scrollHeight,
+          win_off = window.pageYOffset,
+          elem_h = prlxId.offsetTop,
+          elemPar_h = prlxId.parentNode.clientHeight,
+          elemPar_off = prlxId.parentNode.offsetTop,
+
+          diff = elem_h - elemPar_h,
+          max = Math.max(elem_h, body_h),
+          speed = diff / max,
+          cont_scrolled = win_off - elemPar_off - elemPar_h,
+          value = Math.round(cont_scrolled * speed);
+
+          prlxId.style.transform = `translate3d(0,${value * 0.25}rem, 0)`;
+
+console.log(value);
+
+    }
+
+    window.addEventListener("scroll", singPrlx);
+
+
+    /*
+     var win_h = window.innerHeight,
           win_off = window.pageYOffset,
           elem_h = prlxId.offsetTop,
           elemPar_h = prlxId.parentNode.clientHeight,
@@ -65,11 +88,6 @@ value = Math.round(cont_scrolled * speed);
           speed = diff / max,
           cont_scrolled = win_off - elemPar_off - elemPar_h,
           value = Math.round(cont_scrolled * speed);
-      
-          prlxId.style.top = value/2.5 + "px";
 
-//console.log(value);
-
-    }
-
-    window.addEventListener("scroll", singPrlx);
+          prlxId.style.transform = "translate3d" + "(" + "0," + value + "px" + ", 0" + ")";
+    */
