@@ -71,9 +71,9 @@ para.css('top', value + 'px');
           cont_scrolled = win_off - elemPar_off - elemPar_h,
           value = Math.round(cont_scrolled * speed);
       
-          prlxId.style.top = value/3 + "px";
+          prlxId.style.top = value/2.5 + "px";
 
-console.log(value);
+//console.log(value);
 
     }
 
