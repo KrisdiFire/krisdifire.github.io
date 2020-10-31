@@ -45,7 +45,7 @@ html {
 body {
     background-color: rgb(20, 20, 20);
 }
-
+/*splash screen when loading the page or resizing*/
 .loading-scr {
     position: fixed;
     overflow: hidden;
@@ -60,6 +60,7 @@ body {
 }
 
 .z-ind-back {
+    transition-delay: 1.5s;
     z-index: -10000;
 }
 
@@ -202,6 +203,7 @@ h1, h2, h3 {
     background-image: url("../img/back-squares.svg");
     background-size: contain;
 }
+/*doesn't actually go the other way unlinke the closer-ow one*/
 .prlx-mult-sm-ow {
     z-index: -30;
     height: 5rem; 
@@ -231,21 +233,13 @@ h1, h2, h3 {
     top: 15%;
 }
 
-/*.prlx-closer {
-    position: absolute;
-    margin-top: 50%;
-    height: 10rem;
-    width: 10rem;
-    transition: all ease-in-out 0.1s;
-}*/
-
 .gal-txt {
     text-decoration: none; 
     line-height: 0;
     font-weight: 300 !important; 
     font-size: 1.6rem;
 }
-/*paralax cubes*/
+/*paralax squares classes*/
 .l10 {
     top: -90rem;
 }
@@ -424,7 +418,8 @@ h1, h2, h3 {
 }
 .show-content-side {
     transition: all ease-in-out 0.5s;
-    transition-delay: 0.25s;
+    transition-delay: transform 0.25s;
+    will-change: transform;
     transform: translateX(0%);
 }
 
