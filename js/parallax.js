@@ -83,16 +83,32 @@ function singPrlx() {
 
   function isScreenRight() {
 
-      if (document.documentElement.clientWidth >= 769) {
+    var width = window.innerWidth;
+
+      if (width >= 769) {
         window.addEventListener('scroll', singPrlx);
         window.addEventListener('scroll', singPrlxOw);
       }
 
-      else {
+      if (width < 769) {
+        window.removeEventListener('scroll', singPrlx);
+        window.removeEventListener('scroll', singPrlxOw);
+//reset elements positions // I need to find a better way, using classes perhaps?
+        var prlxClassClose = document.getElementsByClassName('prlx-closer');
+        var prlxClassCloseOw = document.getElementsByClassName('prlx-closer-ow');
+
+        for (var b = 0; b < prlxClassClose.length; b++) {
+          prlxClassClose[b].style.transform = `translate3d(0, 0px, 0)`;
+        }
+
+        for (var w = 0; w < prlxClassCloseOw.length; w++) {
+          prlxClassCloseOw[w].style.transform = `translate3d(0, 0px, 0)`;
+        }
 
       }
 
   }
 
-  isScreenRight();
-  window.addEventListener('resize', isScreenRight);
+
+isScreenRight();
+window.addEventListener('resize', isScreenRight);
