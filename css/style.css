@@ -1355,7 +1355,7 @@ h1, h2, h3 {
         width: 100%;
         object-fit: cover;
         max-width: none;
-        height: auto;
+        height: 70vw;
         max-height: 500px;
         transition: all ease-in-out 0.3s;
     }
