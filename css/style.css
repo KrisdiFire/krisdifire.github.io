@@ -221,18 +221,28 @@ h1, h2, h3 {
     background-size: contain;
 }
 /*both classes are for the paralax experiment, gallery and the text*/
-#prlx-gal {
+.prlx-closer {
+    transition: ease-in-out 0s !important;
+    top: 30%;
+}
+
+.prlx-closer-ow {
+    transition: ease-in-out 0s !important;
+    top: 15%;
+}
+
+/*.prlx-closer {
     position: absolute;
     margin-top: 50%;
     height: 10rem;
     width: 10rem;
     transition: all ease-in-out 0.1s;
-}
+}*/
+
 .gal-txt {
     text-decoration: none; 
     line-height: 0;
     font-weight: 300 !important; 
-    transform: translate3d(2.7rem, 5rem, 0);
     font-size: 1.6rem;
 }
 /*paralax cubes*/
@@ -622,10 +632,10 @@ h1, h2, h3 {
     transition: all ease-in-out 0.3s;
 }
 .img-bck-div-top-less {
-    margin-top: -50%;
+    margin-top: -20%;
 }
 .img-bck-div-top-more {
-    margin-top: 50%;
+    margin-top: 20%;
 }
 .img-bck {
     position: relative;
@@ -1201,11 +1211,12 @@ h1, h2, h3 {
 
 @media only screen and (max-width: 768px) {
 
-    #prlx-gal {
-        margin-top: 25%;}
+    .prlx-closer {
+        transition: all ease-in-out 0.3s !important;
+        margin-top: 0;
+    }
 
     .gal-txt {
-        transform: translate3d(3rem, 5rem, 0);
         font-size: 1.4rem;
     }
 

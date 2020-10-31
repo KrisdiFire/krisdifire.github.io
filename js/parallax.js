@@ -10,8 +10,6 @@ function scrollElement() {
   let closeY = window.pageYOffset/+36;
   let mediumY = window.pageYOffset/+66;
   let farY = window.pageYOffset/+85;
-  let farYow = window.pageYOffset/-55;
-  let farYow2 = window.pageYOffset/-75;
 
   for (var i = 0; i < closePrlx.length; i++) {
     closePrlx[i].style.transform = "translate3d" + "(" + "0," + closeY  + "rem" + ", 0" + ")";
@@ -35,31 +33,17 @@ window.addEventListener("scroll", scrollElement);
 
 /////////////////////////////////////////////////
 
-    function singPrlx() {
+function singPrlx() {
 
-      var prlxId = document.getElementById('prlx-gal');
+  var prlxClassClose = document.getElementsByClassName('prlx-closer');
+    
+    for (var b = 0; b < prlxClassClose.length; b++) {
 
-   //   cont_top = cont.offset().top,
-   //   cont_h = cont.height(),
-   //   elem_h = Math.round(cont_h * 1.3),
-
-   //   diff = elem_h - cont_h,
-   //   max = Math.max(cont_h, win_h),
-   //   speed = diff / max;
-   /*
-
-var diff = elem_h - cont_h,
-max = Math.max(cont_h, win_h),
-speed = diff / max,
-cont_scrolled = win_top - cont_top - cont_h,
-value = Math.round(cont_scrolled * speed);
-
-  */
       var body_h = document.body.scrollHeight,
           win_off = window.pageYOffset,
-          elem_h = prlxId.offsetTop,
-          elemPar_h = prlxId.parentNode.clientHeight,
-          elemPar_off = prlxId.parentNode.offsetTop,
+          elem_h = prlxClassClose[b].offsetTop,
+          elemPar_h = prlxClassClose[b].parentNode.clientHeight,
+          elemPar_off = prlxClassClose[b].parentNode.offsetTop,
 
           diff = elem_h - elemPar_h,
           max = Math.max(elem_h, body_h),
@@ -67,27 +51,48 @@ value = Math.round(cont_scrolled * speed);
           cont_scrolled = win_off - elemPar_off - elemPar_h,
           value = Math.round(cont_scrolled * speed);
 
-          prlxId.style.transform = `translate3d(0,${value * 0.25}rem, 0)`;
-
-console.log(value);
+          prlxClassClose[b].style.transform = `translate3d(0,${value * 2}px, 0)`;
 
     }
 
-    window.addEventListener("scroll", singPrlx);
+  }  
 
+  function singPrlxOw() {
 
-    /*
-     var win_h = window.innerHeight,
-          win_off = window.pageYOffset,
-          elem_h = prlxId.offsetTop,
-          elemPar_h = prlxId.parentNode.clientHeight,
-          elemPar_off = prlxId.parentNode.offsetTop,
+    var prlxClassClose = document.getElementsByClassName('prlx-closer-ow');
+      
+      for (var b = 0; b < prlxClassClose.length; b++) {
+  
+        var body_h = document.body.scrollHeight,
+            win_off = window.pageYOffset,
+            elem_h = prlxClassClose[b].offsetTop,
+            elemPar_h = prlxClassClose[b].parentNode.clientHeight,
+            elemPar_off = prlxClassClose[b].parentNode.offsetTop,
+  
+            diff = elem_h - elemPar_h,
+            max = Math.max(elem_h, body_h),
+            speed = diff / max,
+            cont_scrolled = win_off - elemPar_off - elemPar_h,
+            value = Math.round(cont_scrolled * speed);
+  
+            prlxClassClose[b].style.transform = `translate3d(0,${value * -1.5}px, 0)`;
+  
+      }
+  
+    }  
 
-          diff = elem_h - elemPar_h,
-          max = Math.max(elemPar_h, win_h),
-          speed = diff / max,
-          cont_scrolled = win_off - elemPar_off - elemPar_h,
-          value = Math.round(cont_scrolled * speed);
+  function isScreenRight() {
 
-          prlxId.style.transform = "translate3d" + "(" + "0," + value + "px" + ", 0" + ")";
-    */
+      if (document.documentElement.clientWidth >= 769) {
+        window.addEventListener('scroll', singPrlx);
+        window.addEventListener('scroll', singPrlxOw);
+      }
+
+      else {
+
+      }
+
+  }
+
+  isScreenRight();
+  window.addEventListener('resize', isScreenRight);
