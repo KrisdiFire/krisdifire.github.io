@@ -28,7 +28,6 @@
   transition: opacity .25s ease-in-out, transform .25s ease-in-out, filter 0.25s ease-in-out;
   -moz-transition: opacity .25s ease-in-out, transform .25s ease-in-out filter 0.25s ease-in-out;
   -webkit-transition: opacity .25s ease-in-out, transform .25s ease-in-out filter 0.25s ease-in-out;
-  will-change: opacity;
 }
 .image_gallery:hover {
   opacity: 1;
@@ -62,14 +61,12 @@
   transition: opacity .25s ease-in-out;
   -moz-transition: opacity .25s ease-in-out;
   -webkit-transition: opacity .25s ease-in-out;
-  will-change: height, opacity;
 }
 
 .show-image {
   transition: opacity .25s ease-in-out;
   -moz-transition: opacity .25s ease-in-out;
   -webkit-transition: opacity .25s ease-in-out;
-  will-change: height, opacity;
 }
 
 /*in combination with the lightbox, this is used to style the navigation*/
