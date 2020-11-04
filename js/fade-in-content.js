@@ -2,7 +2,7 @@
   let elementsToShow0 = document.querySelectorAll('.content-row01');
   let elementsToShow1 = document.querySelectorAll('.content01'); 
   // Detect request animation frame
-  let scroll = window.requestAnimationFrame ||
+  let scroll01 = window.requestAnimationFrame ||
   // IE Fallback
   function(callback){ window.setTimeout(callback, 3000/60);};
   
@@ -20,7 +20,7 @@
         element2.classList.add('show-content-side');}
       });
 
-  scroll(loop01);}
+  scroll01(loop01);}
   
   // Call the loop for the first time
   loop01();
