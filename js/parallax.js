@@ -112,3 +112,16 @@ function singPrlx() {
 
 isScreenRight();
 window.addEventListener('resize', isScreenRight);
+
+var prevScrollPos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+var mainMenu = document.getElementsByClassName('main-menu')[0];
+
+  if (prevScrollPos > currentScrollPos) {
+    mainMenu.style.top = "0";
+  } else {
+    mainMenu.style.top = "-3rem";
+  }
+  prevScrollPos = currentScrollPos;
+}
