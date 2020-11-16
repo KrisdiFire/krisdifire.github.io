@@ -224,7 +224,7 @@ h1, h2, h3 {
 }
 /*both classes are for the paralax experiment, gallery and the text*/
 .prlx-closer {
-    transition: ease-in-out 0s !important;
+    
     top: 30%;
 }
 
@@ -408,20 +408,20 @@ h1, h2, h3 {
 .show-content {
     opacity: 1 !important;
     transition: all ease-in-out 0.5s;
-    transition-delay: transform 0.25s;
+    transition-delay: transform 1.25s;
     will-change: transform, opacity;
     transform: translateY(0rem);
 }
 
 .dont-show-side {
-    transition: all ease-in-out 0.5s;
-    transform: translateX(-150%);
+    transition: left  1s ease-out;
+    -webkit-transtition: left 1s ease-out;
+    left: -250%;
 }
 .show-content-side {
-    transition: all ease-in-out 0.5s;
-    transition-delay: transform 0.25s;
-    will-change: transform;
-    transform: translateX(0%);
+    transition: left  1s ease-out;
+    -webkit-transtition: left 1s ease-out;
+    left: 0;
 }
 
 /*this container is a row which contains columns*/
@@ -625,7 +625,6 @@ h1, h2, h3 {
 
 /*image background*/
 .img-bck-inner-div {
-    transition: all ease-in-out 0.3s;
 }
 .img-bck-div-top-less {
     margin-top: -30%;

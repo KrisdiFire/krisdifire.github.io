@@ -15,9 +15,10 @@
       //  element.classList.remove('show-content');}
       });
 
-  Array.prototype.forEach.call(elementsToShow1, function(element2){
-      if ((isInView(element2)) && (element2.classList.contains("dont-show-side"))) {
-        element2.classList.add('show-content-side');}
+  Array.prototype.forEach.call(elementsToShow1, function(element){
+      if ((isInView(element)) && (element.classList.contains("dont-show-side"))) {
+        element.classList.add('show-content-side');
+       }
       });
 
   scroll01(loop01);}
