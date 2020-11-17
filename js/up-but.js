@@ -44,10 +44,16 @@ var largeWin = 0;
 var mediumWin = 0;
 var smallWin = 0;
 
+var hiwL = document.getElementsByClassName("hiw")[0];
+var hiwR = document.getElementsByClassName("hiw")[1];
+
 function openSite() {
   opel.classList.add("open-l");
   oper.classList.add("open-r");
-  setTimeout(openSiteSL, 100);
+
+  hiwL.classList.remove("rotated-image");
+  hiwR.classList.remove("rotated-image");
+  setTimeout(openSiteSL, 350);
 //function from the side menu
   unFreeze();
 }
@@ -80,6 +86,9 @@ function closeSite() {
 
     opel1.classList.remove("open-l");
     oper1.classList.remove("open-r");
+
+    hiwL.classList.add("rotated-image");
+    hiwR.classList.add("rotated-image");
     appear();
 }
 //close and open the loading window

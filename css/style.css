@@ -128,13 +128,13 @@ body {
 .open-l {
     transform-origin: center;
     left: -200%;
-    transition: all ease-in-out 1s;
+    transition: left 1s cubic-bezier(0.8,0.4,0.35,1);
 }
 
 .open-r {
     transform-origin: center;
     right: -200%;
-    transition: all ease-in-out 1s;
+    transition: right 1s cubic-bezier(0.8,0.4,0.35,1);
 }
 
 /*style of all links on the page*/
@@ -414,13 +414,15 @@ h1, h2, h3 {
 }
 
 .dont-show-side {
-    transition: left  1s ease-out;
-    -webkit-transtition: left 1s ease-out;
+
+    transition: left 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+   
     left: -250%;
 }
 .show-content-side {
-    transition: left  1s ease-out;
-    -webkit-transtition: left 1s ease-out;
+   
+    transition: left 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+    
     left: 0;
 }
 
@@ -1174,6 +1176,38 @@ h1, h2, h3 {
     position: relative;
     margin: 0;
     padding: 0;
+}
+
+@keyframes animate-rotate{
+    from {
+         -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+    }
+    to {
+         -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+    }
+}
+
+@-webkit-keyframes animate-rotate{
+    from {
+         -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+    }
+    to {
+         -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+    }
+}
+
+.rotated-image::after
+{
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-animation: animate-rotate 1.3s infinite;
+    animation: animate-rotate 1.3s infinite;
 }
 
 @media only screen and (min-width: 1367px) {
