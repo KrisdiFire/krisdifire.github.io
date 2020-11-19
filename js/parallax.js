@@ -57,6 +57,7 @@ function singPrlx() {
           cont_scrolled = win_off - elemParPar_off - elemPar_off,
 
           cont_scrolled0 = cont_scrolled + win_h/2 - elemPar_h/2, // umesto elemPar_h uzeti elemParPar ako nema vise redova
+          
           value = Math.round(cont_scrolled0 * speed/2);
 
           prlxClassClose[b].style.transform = `translate3d(0,${value * 1}px, 0)`;
@@ -89,6 +90,7 @@ function singPrlx() {
           cont_scrolled = win_off - elemParPar_off - elemPar_off,
 
           cont_scrolled0 = cont_scrolled + win_h/2 - elemPar_h/2, // umesto elemPar_h uzeti elemParPar ako nema vise redova
+          
           value = Math.round(cont_scrolled0 * speed);
 
           prlxClassClose[b].style.transform = `translate3d(0,${value * -1}px, 0)`;

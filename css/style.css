@@ -1099,7 +1099,7 @@ h1, h2, h3 {
     transition-delay: opacity 0.5s;
 }
 .soc-opacity-0 {
-    opacity: 0 !important;
+    
     transition: opacity ease-in-out 1s !important;
     -webkit-transition-delay: opacity 0.5s;
     transition-delay: opacity 0.5s;
