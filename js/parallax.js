@@ -35,23 +35,31 @@ window.addEventListener("scroll", scrollElement);
 
 function singPrlx() {
 
-  var prlxClassClose = document.getElementsByClassName('prlx-closer');
+  let prlxClassClose = document.getElementsByClassName('prlx-closer');
     
-    for (var b = 0; b < prlxClassClose.length; b++) {
+    for (let b = 0; b < prlxClassClose.length; b++) {
 
-      var body_h = document.body.scrollHeight,
-          win_off = window.pageYOffset,
-          elem_h = prlxClassClose[b].offsetTop,
+
+      let win_off = window.pageYOffset,
+          win_h = window.innerHeight,
+          elem_h = prlxClassClose[b].offsetHeight,
+          elem_off = prlxClassClose[b].offsetTop,
           elemPar_h = prlxClassClose[b].parentNode.clientHeight,
           elemPar_off = prlxClassClose[b].parentNode.offsetTop,
+        //elemPar_off_bot = (elemPar_off + elemPar_h) - elemPar_off,
+          elemParPar_h = prlxClassClose[b].parentNode.parentNode.offsetHeight,
+          elemParPar_off = prlxClassClose[b].parentNode.parentNode.offsetTop,
 
-          diff = elem_h - elemPar_h,
-          max = Math.max(elem_h, body_h),
+          diff = elem_off - elemPar_h,
+          max = Math.max(elem_h, win_h),
           speed = diff / max,
-          cont_scrolled = win_off - elemPar_off - elemPar_h,
-          value = Math.round(cont_scrolled * speed);
 
-          prlxClassClose[b].style.transform = `translate3d(0,${value * 2}px, 0)`;
+          cont_scrolled = win_off - elemParPar_off - elemPar_off,
+
+          cont_scrolled0 = cont_scrolled + win_h/2 - elemPar_h/2, // umesto elemPar_h uzeti elemParPar ako nema vise redova
+          value = Math.round(cont_scrolled0 * speed/2);
+
+          prlxClassClose[b].style.transform = `translate3d(0,${value * 1}px, 0)`;
 
     }
 
@@ -59,29 +67,37 @@ function singPrlx() {
 
   function singPrlxOw() {
 
-    var prlxClassClose = document.getElementsByClassName('prlx-closer-ow');
-      
-      for (var b = 0; b < prlxClassClose.length; b++) {
-  
-        var body_h = document.body.scrollHeight,
-            win_off = window.pageYOffset,
-            elem_h = prlxClassClose[b].offsetTop,
-            elemPar_h = prlxClassClose[b].parentNode.clientHeight,
-            elemPar_off = prlxClassClose[b].parentNode.offsetTop,
-  
-            diff = elem_h - elemPar_h,
-            max = Math.max(elem_h, body_h),
-            speed = diff / max,
-            cont_scrolled = win_off - elemPar_off - elemPar_h,
-            value = Math.round(cont_scrolled * speed);
-  
-            prlxClassClose[b].style.transform = `translate3d(0,${value * -1.5}px, 0)`;
-  
-      }
+    let prlxClassClose = document.getElementsByClassName('prlx-closer-ow');
+    
+    for (let b = 0; b < prlxClassClose.length; b++) {
+
+
+      let win_off = window.pageYOffset,
+          win_h = window.innerHeight,
+          elem_h = prlxClassClose[b].offsetHeight,
+          elem_off = prlxClassClose[b].offsetTop,
+          elemPar_h = prlxClassClose[b].parentNode.clientHeight,
+          elemPar_off = prlxClassClose[b].parentNode.offsetTop,
+        //elemPar_off_bot = (elemPar_off + elemPar_h) - elemPar_off,
+          elemParPar_h = prlxClassClose[b].parentNode.parentNode.offsetHeight,
+          elemParPar_off = prlxClassClose[b].parentNode.parentNode.offsetTop,
+
+          diff = elem_off - elemPar_h,
+          max = Math.max(elem_h, win_h),
+          speed = diff / max,
+
+          cont_scrolled = win_off - elemParPar_off - elemPar_off,
+
+          cont_scrolled0 = cont_scrolled + win_h/2 - elemPar_h/2, // umesto elemPar_h uzeti elemParPar ako nema vise redova
+          value = Math.round(cont_scrolled0 * speed);
+
+          prlxClassClose[b].style.transform = `translate3d(0,${value * -1}px, 0)`;
+
+    }
   
     }  
 
-  function isScreenRight() {
+  function isScreenCorrect() {
 
     var width = window.innerWidth;
 
@@ -110,5 +126,5 @@ function singPrlx() {
   }
 
 
-isScreenRight();
-window.addEventListener('resize', isScreenRight);
+isScreenCorrect();
+window.addEventListener('resize', isScreenCorrect);
