@@ -666,7 +666,7 @@ h1, h2, h3 {
 .img-bck-txt-size {
     font-size: 2.1rem;
     font-weight: 700;
-    text-shadow: 2px 2px black;
+  /*  text-shadow: 2px 2px black;*/
 }
 .img-bck-onhov {
     opacity: 0;
@@ -1067,7 +1067,6 @@ h1, h2, h3 {
 .social-menu-side ul li {
     display: flex !important;
     margin-top: 0.75rem;
-    
     cursor: default;
 }
 .social-menu-side ul li a {
@@ -1089,18 +1088,87 @@ h1, h2, h3 {
 }
 .social-menu-side ul .tooltip a:hover + .tooltiptext {
     opacity: 1;
-    transition: all ease-in-out 0.2s;
     transform: translateY(1.5rem);
-    transition: all ease-in-out 0.25s;
+    transition: transform ease-in-out 0.25s;
 }
 /*fade in-out effect with js*/
 .soc-opacity-1 {
     opacity: 1 !important;
-    transition: opacity ease-in-out 0.25s;
+    transition: opacity ease-in-out 0.5s;
+    -webkit-transition-delay: opacity 0.5s;
+    transition-delay: opacity 0.5s;
 }
 .soc-opacity-0 {
     opacity: 0 !important;
-    transition: opacity ease-in-out 0.25s;
+    transition: opacity ease-in-out 1s !important;
+    -webkit-transition-delay: opacity 0.5s;
+    transition-delay: opacity 0.5s;
+}
+
+/*kad se dodaje side soc menu*/
+
+.social-menu-side ul li:nth-child(1) {
+    transform: translateX(0rem);
+    transition: transform ease-in-out 0.25s;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+.social-menu-side ul li:nth-child(2) {
+    transform: translateX(0rem);
+    transition: transform ease-in-out 0.25s;
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+}
+.social-menu-side ul li:nth-child(3) {
+    transform: translateX(0rem);
+    transition: transform ease-in-out 0.25s;
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+.social-menu-side ul li:nth-child(4) {
+    transform: translateX(0rem);
+    transition: transform ease-in-out 0.25s;
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+.social-menu-side ul li:nth-child(5) {
+    transform: translateX(0rem);
+    transition: transform ease-in-out 0.25s;
+    -webkit-transition-delay: 0.4s;
+    transition-delay: 0.4s;
+}
+
+/*kad se dodaje opaciti*/
+
+.soc-opacity-0 ul li:nth-child(1) {
+    transform: translateX(6rem);
+    transition: transform ease-in-out 0.25s;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+.soc-opacity-0 ul li:nth-child(2) {
+    transform: translateX(6rem);
+    transition: transform ease-in-out 0.25s;
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+}
+.soc-opacity-0 ul li:nth-child(3) {
+    transform: translateX(6rem);
+    transition: transform ease-in-out 0.25s;
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+.soc-opacity-0 ul li:nth-child(4) {
+    transform: translateX(6rem);
+    transition: transform ease-in-out 0.25s;
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+.soc-opacity-0 ul li:nth-child(5) {
+    transform: translateX(6rem);
+    transition: transform ease-in-out 0.25s;
+    -webkit-transition-delay: 0.4s;
+    transition-delay: 0.4s;
 }
 
 /*social in footer*/

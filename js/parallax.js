@@ -22,7 +22,7 @@ function scrollElement() {
   for (var p = 0; p < farPrlx.length; p++) {
     farPrlx[p].style.transform = "translate3d" + "(" + "0," + farY  + "rem" + ", 0" + ")";
   }
-
+//za vertikalni text
   verTxt.style.transform = "translate3d" + "(" + "0," + mediumY  + "rem" + ", 0" + ")";
   verTxt2.style.transform = "translate3d" + "(" + "0," + farY  + "rem" + ", 0" + ")";
   
