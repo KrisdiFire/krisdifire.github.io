@@ -127,3 +127,21 @@ function screenChange() {
 window.addEventListener('resize', screenChange);
 //run run run
 screenChange();
+
+//main menu hide on scroll funk
+
+var prevScrollPos = window.pageYOffset;
+
+window.onscroll = function() {
+
+var currentScrollPos = window.pageYOffset;
+var mainMenu = document.getElementsByClassName('main-menu')[0];
+
+  if (prevScrollPos > currentScrollPos) {
+    mainMenu.style.top = "0";
+
+  } else {
+    mainMenu.style.top = "-3rem";
+  }
+  prevScrollPos = currentScrollPos;
+};
