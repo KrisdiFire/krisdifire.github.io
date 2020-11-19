@@ -28,7 +28,7 @@ function scrollSideM() {
 
 //kad je dole
 
-   if (document.body.scrollTop > 3000 || document.documentElement.scrollTop > 4000) {
+   if (document.body.scrollTop > 3000 || document.documentElement.scrollTop > 3500) {
 
     contactNav.classList.remove("social-menu-side");
     contactNav.classList.remove("soc-opacity-0");

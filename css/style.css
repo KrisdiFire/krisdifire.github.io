@@ -626,6 +626,7 @@ h1, h2, h3 {
 
 /*image background*/
 .img-bck-inner-div {
+    max-width: 400px;
 }
 .img-bck-div-top-less {
     margin-top: -30%;
@@ -643,7 +644,7 @@ h1, h2, h3 {
     max-height: 400px;
     max-width: 400px;
     object-fit: cover;
-    transition: all ease-in-out 0.3s;
+    transition: opacity ease-in-out 0.3s, filter ease-in-out 0.3s;
     opacity: 0.6;
     filter: grayscale(70%);
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
@@ -652,16 +653,15 @@ h1, h2, h3 {
 }
 .img-bck-inner-div:hover, .img-bck-inner-div:hover .img-bck {
     opacity: 1;
-    transition: all ease-in-out 0.3s;
-    transform: translateY(-0.7rem);
+    transition: opacity ease-in-out 0.3s;
 }
 .img-bck-inner-div:hover .img-bck-txt01, .img-bck-inner-div:hover .img-bck-txt02 {
     opacity: 0;
-    transition: all ease-in-out 0.6s;
+    transition: opacity ease-in-out 0.6s;
 }
 .img-bck-txt01, .img-bck-txt02 {
     opacity: 1;
-    transition: all ease-in-out 0.6s;
+    transition: opacity ease-in-out 0.6s;
 }
 .img-bck-txt-size {
     font-size: 2.1rem;
@@ -671,12 +671,10 @@ h1, h2, h3 {
 .img-bck-onhov {
     opacity: 0;
     transition: all ease-in-out 0.3s;
-    transform: translateY(-1rem);
 }
 .img-bck-inner-div:hover .img-bck-onhov {
     opacity: 1;
-    transition: all ease-in-out 0.3s;
-    transform: translateY(-0.6rem);
+    transition: opacity ease-in-out 0.3s;
 }
 .a-img-bck {
     top: 0;
@@ -1099,7 +1097,6 @@ h1, h2, h3 {
     transition-delay: opacity 0.5s;
 }
 .soc-opacity-0 {
-    
     transition: opacity ease-in-out 1s !important;
     -webkit-transition-delay: opacity 0.5s;
     transition-delay: opacity 0.5s;
@@ -1287,8 +1284,8 @@ h1, h2, h3 {
     }
 
     .img-bck {
-        max-width: 500px;
-        max-height: 500px;
+        max-width: 400px;
+        max-height: 400px;
     }
 
 }
@@ -1463,6 +1460,11 @@ h1, h2, h3 {
         max-height: 500px;
         transition: all ease-in-out 0.3s;
     }
+
+    .img-bck-inner-div {
+        max-width: unset;
+    }
+
     /*move the image columns left or right on medium scr size*/
     .img-bck-right-med {
         margin-right: auto;
