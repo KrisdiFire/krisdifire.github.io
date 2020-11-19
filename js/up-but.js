@@ -2,7 +2,7 @@
 mybutton = document.getElementById("up");
 
 // Show the button after scrolling 500px down from the top
-window.onscroll = function() {scrollFunction();};
+//window.onscroll = function() {scrollFunction();};
 
 function scrollFunction() {
   if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
@@ -144,4 +144,7 @@ var mainMenu = document.getElementsByClassName('main-menu')[0];
     mainMenu.style.top = "-3rem";
   }
   prevScrollPos = currentScrollPos;
+
+
+  scrollFunction();
 };
