@@ -1641,15 +1641,12 @@ h1, h2, h3 {
     /*    left: 85%;*/
         top: 100%;
     }
-
     .img-bck-outer-on-sm {
         width: 70%;
         align-self: center;
     }
-
+    
     #footer-wrapper {
         width: 100%;
     }
-
-    
 }
