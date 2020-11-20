@@ -1,4 +1,4 @@
-var contactNav = document.getElementById("soc-menu");
+/*var contactNav = document.getElementById("soc-menu");
 
 contactNav.classList.add("social-menu-side");
 contactNav.classList.add("soc-opacity");
@@ -43,4 +43,4 @@ function scrollSideM() {
     }
 }
 
-//console.log(scrollSideM);
+//console.log(scrollSideM);*/

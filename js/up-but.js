@@ -107,6 +107,8 @@ function screenChange() {
       mediumWin = 1;
       smallWin = 0;
       largeWin = 0;
+
+      window.removeEventListener('scroll', scrollSideM);
   }
 
   if ((mms.matches) && (mms2.matches) && (smallWin == 0)) {
@@ -114,6 +116,8 @@ function screenChange() {
       smallWin = 1;
       mediumWin = 0;
       largeWin = 0;
+
+      window.removeEventListener('scroll', scrollSideM);
   }
 
   if ((largeWin == 0) && (mml.matches) && (mml2.matches)) {
@@ -121,6 +125,8 @@ function screenChange() {
       largeWin = 1;
       mediumWin = 0;
       smallWin = 0;
+
+      window.addEventListener('scroll', scrollSideM);
   }
 }
 
@@ -148,3 +154,52 @@ var mainMenu = document.getElementsByClassName('main-menu')[0];
 
   scrollFunction();
 };
+
+//Fade In-Out and anim SideSocialMenu
+
+var contactNav = document.getElementById("soc-menu");
+
+contactNav.classList.add("social-menu-side");
+contactNav.classList.add("soc-opacity");
+
+scrollSideM();
+
+function scrollSideM() {
+
+  let lowPerc = 55,
+  highPerc = 80;
+
+  let bodyHeight = document.body.scrollHeight,
+  bodyScrolled = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop),
+  convertToPercent = Math.round(bodyScrolled / bodyHeight * 100);
+
+//kad je izmedju 
+
+  if (convertToPercent > lowPerc) {
+
+    contactNav.classList.add("soc-opacity-0");
+    contactNav.classList.add("social-menu");
+    
+    }
+
+//kad je gore desno
+
+   else {
+
+    contactNav.classList.add("social-menu-side");
+    contactNav.classList.remove("soc-opacity-0");
+    contactNav.classList.remove("social-menu");
+
+    }
+
+//kad je dole
+
+   if (convertToPercent > highPerc) {
+
+    contactNav.classList.remove("social-menu-side");
+    contactNav.classList.remove("soc-opacity-0");
+
+    }
+}
+
+//console.log(scrollSideM);
