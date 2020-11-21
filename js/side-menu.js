@@ -1,5 +1,5 @@
 //* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-var dropdown = document.getElementsByClassName("dropbtn");
+/*var dropdown = document.getElementsByClassName("dropbtn");
 var i;
 
 //loop
@@ -50,7 +50,7 @@ var closeBtns = document.getElementsByClassName("close-side-menu");
 var l;
 //loop loop through all the elements
 for (var l = 0; l < closeBtns.length; l++) {
-/*add event listeners to the elements for the following functions*/
+//add event listeners to the elements for the following functions
   closeBtns[l].addEventListener("click", closeSlideMenu);
   //closes the dropdowns
   closeBtns[l].addEventListener("click", closeDropdown);
@@ -66,7 +66,7 @@ openSide.addEventListener("click", stopScroll);
 
 ///////////////////////////////////////////////////////////
 
-/*function for opening the side menu */
+//function for opening the side menu//
 function openSlideMenu(){
     document.getElementById('whole-page01').classList.toggle('sideopen');
     document.getElementById('ham-menu').classList.add('dont-show');
@@ -82,7 +82,7 @@ function openSlideMenu(){
       document.getElementById('sidenav').classList.toggle("side-menu-norm");
     }
   }
-/*closing the sm */
+//closing the sm //
   function closeSlideMenu(){
 //if the window width is 768px or less, show the ham menu
     var mq = window.matchMedia ( "(max-width: 768px)");
@@ -120,3 +120,4 @@ function openScroll() {
       bod.classList.remove("stopscroll");
      // document.getElementById('page01').style.visibility = 'visible'; - uncomment this if doing the same to the above commented line
 }
+*/

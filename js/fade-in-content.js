@@ -1,5 +1,5 @@
 /*Here the magic happens - fade in content*/
-  let elementsToShow0 = document.querySelectorAll('.content-row01');
+/*  let elementsToShow0 = document.querySelectorAll('.content-row01');
   let elementsToShow1 = document.querySelectorAll('.content01'); 
   // Detect request animation frame
   let scroll01 = window.requestAnimationFrame ||
@@ -30,4 +30,4 @@
   function isInView(el) {
     let box = el.getBoundingClientRect();
     return box.top < window.innerHeight && box.bottom >= 0;
-  }
+  }*/

@@ -1,5 +1,5 @@
 //nova funkcija za pomeranje citavih klasa
-let closePrlx = document.getElementsByClassName("prlx-close");
+/*let closePrlx = document.getElementsByClassName("prlx-close");
 let medPrlx = document.getElementsByClassName("prlx-mult-med");
 let farPrlx = document.getElementsByClassName("prlx-mult-sm");
 let verTxt = document.getElementsByClassName("o5t")[0];
@@ -130,3 +130,4 @@ function singPrlx() {
 
 isScreenCorrect();
 window.addEventListener('resize', isScreenCorrect);
+*/
