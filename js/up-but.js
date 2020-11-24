@@ -132,58 +132,70 @@ var mainMenu = document.getElementsByClassName('main-menu')[0];
 
 ////////////////////////////////////////
 
-//FUNKCIJA ZA FADE-IN-OUT SideSocialMenu//
+//FUNKCIJA ZA FADE-IN-OUT SideSocialMenu I racunica koliko je str odskrolovano od 0 - 100%//
 
 ////////////////////////////////////////////////
 
 var contactNav = document.getElementById("soc-menu");
+
+let bodyHeight = Math.max(document.body.scrollHeight, document.body.offsetHeight) - window.innerHeight,
+    viewportPerc = 0,
+    totalBodyScrolledPerc = 0,
+    bodyScrolled = 0;
+
+let scrolly = document.getElementById("scrolly"),
+    scrolledAm = document.getElementById("scrolled-am"),
+    scrollHand = document.getElementById("scroll-hand");
 
 function scrollSideM() {
 
   let lowPerc = 55,
   highPerc = 80;
 
-  let bodyHeight = Math.max(document.body.scrollHeight, document.body.offsetHeight),
-  bodyScrolled = Math.round(Math.max(window.pageYOffset + window.innerHeight/* plus innerH je zato sto gleda procenat skrollan od vrha, pa nikad ne dodje do 100%*/, document.documentElement.scrollTop  + window.innerHeight, document.body.scrollTop  + window.innerHeight)),
-  convertToPercent = Math.round((bodyScrolled / bodyHeight * 100));
+bodyHeight = Math.max(document.body.scrollHeight, document.body.offsetHeight) - window.innerHeight;
+//koliko se odskrolovalo pocevsi od vrha - nikad ne dodje do 100% jer mu fali window inner height
+bodyScrolled = (Math.max(document.documentElement.scrollTop, document.body.scrollTop, document.body.offsetTop));
+//koliko je totalno stranice odskrolovano u procentima (Math.round-uj ovo da bude od 1 - 100 celi br)
+totalBodyScrolledPerc = (bodyScrolled / bodyHeight * 100);
 
-//kad je izmedju 
-
-  if (convertToPercent > lowPerc) {
-
+//kad je izmedju social side
+  if (totalBodyScrolledPerc > lowPerc) {
     contactNav.classList.add("soc-opacity-0");
     contactNav.classList.add("social-menu");
-    
     }
-
 //kad je gore desno
-
    else {
-
     contactNav.classList.add("social-menu-side");
     contactNav.classList.remove("soc-opacity-0");
     contactNav.classList.remove("social-menu");
-
     }
-
 //kad je dole
-
-   if (convertToPercent > highPerc) {
-
+   if (totalBodyScrolledPerc > highPerc) {
     contactNav.classList.remove("social-menu-side");
     contactNav.classList.remove("soc-opacity-0");
-
     }
+
+    //scroll ammount za progressBar tj scrollbar - ako ovo postavim van ove funk, ne update-uje se kako treba, naci zasto//
+scrolledAm.style.height = totalBodyScrolledPerc + "vh";
 }
+
+//klik to part of page
+
+scrolly.addEventListener("click", (e) => {
+
+  let newPageScroll = e.clientY / scrolly.offsetHeight * bodyHeight;
+
+  window.scrollTo({
+  top: newPageScroll});
+});
+
+////////////ZA HOLD DOWN SCROLL TP//////////////////
 
 ////////////////////////////////////////
 
 //FUNKCIJA ZA PARALAX//
 
 ////////////////////////////////////////////////
-
-if (typeof yourFunctionName == 'function') { 
-  yourFunctionName(); }
 
 let closePrlx = document.getElementsByClassName("prlx-close");
 let medPrlx = document.getElementsByClassName("prlx-mult-med");
@@ -442,6 +454,7 @@ function isScreenCorrect() {
       window.removeEventListener('scroll', singPrlx);
       window.removeEventListener('scroll', singPrlxOw);
 //this removes the event listener for side social menu, rest is in the function SCR CHANGE
+      scrolledAm.style.height = 0 + "vh";
       window.removeEventListener('scroll', scrollSideM);
 
 //reset elements positions PRLX//
@@ -490,8 +503,6 @@ function screenChange() {
       smallWin = 0;
 
       window.addEventListener('scroll', scrollSideM);
-
-      scrollSideM();
   }
 }
 

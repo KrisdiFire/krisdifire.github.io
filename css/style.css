@@ -17,10 +17,11 @@
 
 /*ScrollBar*/
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 0px;
 }
 /* Track */
 ::-webkit-scrollbar-track {
+    opacity: 0;
     background-color: black;
     -webkit-box-shadow: inset 0 0 10px black; 
     box-shadow: inset 0 0 10px black; 
@@ -34,6 +35,36 @@
 }
 ::-webkit-scrollbar-thumb:hover {
     background: rgb(120, 120, 120); 
+}
+
+#scrolly {
+    position: fixed;
+    overflow: hidden; 
+    height: 100%; 
+    width: 10px; 
+    background-color: transparent;
+    right: 0px;
+    z-index: 50;
+}
+
+#scrolled-am {
+    position: relative;
+    width: 10px; 
+    background: white; 
+    box-shadow: inset 0 0 2px black;
+    right: 0;
+    top: 0; 
+    transition: height 0s ease;
+}
+
+#scroll-hand {
+    position: absolute;
+    height: 2rem;
+    width: 10px;
+    bottom: 0;
+    background-color:transparent;
+    cursor: grab;
+    margin-bottom: -1rem;
 }
 
  /*self explanatory*/
@@ -372,7 +403,6 @@ h1, h2, h3 {
 
 /*style of the page container inside which you place content wrappers (rows)*/
 #page01 {
-    min-height: 100%;
     z-index: 1;
     position: relative;
     min-height: 100vh;
