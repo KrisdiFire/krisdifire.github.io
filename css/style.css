@@ -81,7 +81,7 @@
 
  /*self explanatory*/
 html {
-   /* scroll-behavior: smooth; */
+    scroll-behavior: smooth; 
 }
 
 /*body style*/
