@@ -185,6 +185,7 @@ scrolledAm.style.height = totalBodyScrolledPerc + "vh";
       position;
     //  pageWOS = document.getElementById('whole-page01');
 
+//scroll to a part of page
   scrolly.addEventListener("mousedown", function(e){
     if( e.type == "mousedown" ) { attachment = true; 
       position = e.clientY / scrolly.offsetHeight * bodyHeight; 
@@ -192,7 +193,7 @@ scrolledAm.style.height = totalBodyScrolledPerc + "vh";
       top: position});
       document.documentElement.style.scrollBehavior = "initial";}
     });
-
+//enable scrolling on mousepress + mousemove
     scrolly.addEventListener("mousemove", function(e){
       if( e.type == "mousemove" && attachment == true ){
         position = e.clientY / scrolly.offsetHeight * bodyHeight;
@@ -200,20 +201,21 @@ scrolledAm.style.height = totalBodyScrolledPerc + "vh";
         top: position});
         document.documentElement.style.scrollBehavior = "initial";}
     });
-
+//might be unnecessary, but does similar to the one below
     scrolly.addEventListener("mouseup", function(e){
       if( e.type == "mouseup" ) { 
         attachment = false; 
         document.documentElement.style.scrollBehavior = "smooth";
     }});
-
+//when not pressing mouse button disable scrolling
     window.addEventListener("mouseup", function(e){
       if( e.type == "mouseup" ) { 
         attachment = false; 
+        scrolly.classList.remove('hoveredScrolly');
         document.documentElement.style.scrollBehavior = "smooth";
         document.documentElement.classList.remove("blockSelect");}
     });
-
+//enables scrolling through the page even when not moving over scrolly
     window.addEventListener("mousemove", function(e){
       if( e.type == "mousemove" && attachment == true ) { 
         position = e.clientY / scrolly.offsetHeight * bodyHeight;
@@ -221,6 +223,11 @@ scrolledAm.style.height = totalBodyScrolledPerc + "vh";
         document.documentElement.classList.add("blockSelect");
         window.scrollTo({
         top: position});}
+    });
+//for scrolly to stay as hovered
+    window.addEventListener('mousedown', function(e) {
+      if(e.type == 'mousedown' && attachment == true) {
+        scrolly.classList.add('hoveredScrolly');}
     });
 
 
