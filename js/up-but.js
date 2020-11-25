@@ -545,3 +545,5 @@ function openScroll() {
       bod.classList.remove("stopscroll");
      // document.getElementById('page01').style.visibility = 'visible'; - uncomment this if doing the same to the above commented line
 }
+
+var foo = 'Script loaded successfully'; 
