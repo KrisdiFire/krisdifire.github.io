@@ -491,6 +491,8 @@ function screenChange() {
       largeWin = 0;
 //side social menu to show in footer
       contactNav.classList.add("social-menu");
+      contactNav.classList.remove("social-menu-side");
+      contactNav.classList.remove("soc-opacity-0");
   }
 
   if ((mms.matches) && (mms2.matches) && (smallWin == 0)) {
@@ -500,6 +502,8 @@ function screenChange() {
       largeWin = 0;
 
       contactNav.classList.add("social-menu");
+      contactNav.classList.remove("social-menu-side");
+      contactNav.classList.remove("soc-opacity-0");
   }
 
   if ((largeWin == 0) && (mml.matches) && (mml2.matches)) {
