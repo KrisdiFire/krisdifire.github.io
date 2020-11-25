@@ -411,6 +411,19 @@ function openSlideMenu(){
 //////////////////////////////////////////////////
 let elementsToShow0 = document.querySelectorAll('.content-row01');
 let elementsToShow1 = document.querySelectorAll('.content01'); 
+//funkcija kojom dodajem stil klasama dont-show i -side, da
+//ukoliko je JS dissabled, sadrzaj str bude renderovan umesto opacity = 0;
+function ifJSDisabled() {
+Array.prototype.forEach.call(elementsToShow0, function(element){
+    if (element.classList.contains("dont-show")) {
+      element.style.opacity = "0";}
+});
+Array.prototype.forEach.call(elementsToShow1, function(element){
+  if (element.classList.contains("dont-show-side")) {
+      element.style.left = "-250%";}
+});
+}
+ifJSDisabled();
 // Detect request animation frame
 let scroll01 = window.requestAnimationFrame ||
 // IE Fallback
@@ -545,5 +558,3 @@ function openScroll() {
       bod.classList.remove("stopscroll");
      // document.getElementById('page01').style.visibility = 'visible'; - uncomment this if doing the same to the above commented line
 }
-
-var foo = 'Script loaded successfully'; 

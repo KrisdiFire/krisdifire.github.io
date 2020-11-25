@@ -795,12 +795,12 @@ h1, h2, h3 {
 
 /*styles for the fade in effect*/
 .dont-show {
-    opacity: 0;
+    /*opacity: 0;*/
     transition: all ease-in-out 0.5s;
     transform: translateY(4rem);
 }
 .show-content {
-    opacity: 1;
+    opacity: 1 !important;
     will-change: transform, opacity;
     transform: translateY(0rem);
     transition: all ease-in-out 0.5s;
@@ -809,11 +809,11 @@ h1, h2, h3 {
 
 .dont-show-side {
     transition: left 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
-    left: -250%;
+   /* left: -250%; */
 }
 .show-content-side {
     transition: left 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
-    left: 0;
+    left: 0 !important;
 }
 
 /*this container is a row which contains columns*/
