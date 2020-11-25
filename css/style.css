@@ -262,20 +262,12 @@ h1, h2, h3 {
     background-size: contain;
 }
 /*both classes are for the paralax experiment, gallery and the text*/
-.prlx-closer {
-   
-}
-
-.prlx-closer-ow {
-    transition: ease-in-out 0s !important;
-    top: 15%;
-}
 
 .gal-txt {
     text-decoration: none; 
     line-height: 0.7rem;
     height: 1rem;
-    font-weight: 300 !important; 
+    font-weight: 300; 
     font-size: 1.5rem;
 }
 /*paralax squares classes*/
@@ -377,7 +369,7 @@ h1, h2, h3 {
 .up-opacity {
     opacity: 0.5 !important;
     visibility: visible !important;
-    transition: all ease-in-out 0.25s !important;
+    transition-delay: 0s !important;
 }
 #up:hover {
     opacity: 1 !important;
@@ -655,7 +647,7 @@ h1, h2, h3 {
     z-index: 5;
 }
 .white-bg {
-    background-color: white !important;
+    background-color: white;
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
@@ -1136,12 +1128,6 @@ h1, h2, h3 {
     transition: all ease-in-out 0.25s;
 }
 /*fade in-out effect with js*/
-.soc-opacity-1 {
-    opacity: 1 !important;
-    transition: opacity ease-in-out 0.5s;
-    -webkit-transition-delay: opacity 0.5s;
-    transition-delay: opacity 0.5s;
-}
 .soc-opacity-0 {
     transition: opacity ease-in-out 1s !important;
     -webkit-transition-delay: opacity 0.5s;
@@ -1358,36 +1344,18 @@ h1, h2, h3 {
 
 @media only screen and (max-width: 768px) {
 
-    /*ScrollBar*/
+/*ScrollBar*/
 ::-webkit-scrollbar {
     width: 10px;
 }
 /* Track */
 ::-webkit-scrollbar-track {
     opacity: 1;
-    background-color: black;
-    -webkit-box-shadow: inset 0 0 10px black; 
-    box-shadow: inset 0 0 10px black; 
-    -moz-box-shadow: inset 0 0 10px black; 
-}
-/* Handle */
-::-webkit-scrollbar-thumb {
-    width: 10px;
-    background: white; 
-    box-shadow: inset 0 0 2px black;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: rgb(120, 120, 120); 
 }
 
 #scrolly {
     display: none;
 }
-
-    .prlx-closer {
-        transition: all ease-in-out 0.3s !important;
-        margin-top: 0;
-    }
 
     .gal-txt {
         font-size: 1.4rem;
