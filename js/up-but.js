@@ -183,6 +183,7 @@ scrolledAm.style.height = totalBodyScrolledPerc + "vh";
   let attachment = false, 
       lastPosition, 
       position;
+    //  pageWOS = document.getElementById('whole-page01');
 
   scrolly.addEventListener("mousedown", function(e){
     if( e.type == "mousedown" ) { attachment = true; 
@@ -209,7 +210,17 @@ scrolledAm.style.height = totalBodyScrolledPerc + "vh";
     window.addEventListener("mouseup", function(e){
       if( e.type == "mouseup" ) { 
         attachment = false; 
-        document.documentElement.style.scrollBehavior = "smooth";}
+        document.documentElement.style.scrollBehavior = "smooth";
+        document.documentElement.classList.remove("blockSelect");}
+    });
+
+    window.addEventListener("mousemove", function(e){
+      if( e.type == "mousemove" && attachment == true ) { 
+        position = e.clientY / scrolly.offsetHeight * bodyHeight;
+        document.documentElement.style.scrollBehavior = "initial";
+        document.documentElement.classList.add("blockSelect");
+        window.scrollTo({
+        top: position});}
     });
 
 
