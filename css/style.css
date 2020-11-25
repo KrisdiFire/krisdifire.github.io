@@ -38,20 +38,20 @@
 }
 
 #scrolly {
-    transform: translateX(5px);
+    transform: translateX(10px);
     position: fixed;
     height: 100%; 
     width: 15px; 
     background-color: rgb(10, 10, 10);
     right: 0px;
     z-index: 25;
-    transition: transform ease 0.25s;
-    transition-delay: 0.75s;
+    transition: transform ease-out 0.25s;
+    transition-delay: 1.5s;
 }
 
 #scrolly:hover {
     transform: translateX(0px);
-    transition: transform ease 0.25s;
+    transition: transform ease-in 0.25s;
     transition-delay: 0.5s;
 }
 
@@ -76,7 +76,7 @@
 
  /*self explanatory*/
 html {
-    scroll-behavior: smooth;
+   /* scroll-behavior: smooth; */
 }
 
 /*body style*/

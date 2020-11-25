@@ -4,7 +4,6 @@
 
 ////////////////////////////////////////////////
 
-//Button for going to the top of the page
 mybutton = document.getElementById("up");
 
 function scrollFunction() {
@@ -27,7 +26,7 @@ function upTop() {
 ////////////////////////////////////////
 
 //Function before the site opens, and on screen change//
-
+//not used atm
 ////////////////////////////////////////////////
 
 var opel = document.getElementById("op-l");
@@ -179,17 +178,40 @@ totalBodyScrolledPerc = (bodyScrolled / bodyHeight * 100);
 scrolledAm.style.height = totalBodyScrolledPerc + "vh";
 }
 
-//klik to part of page
-
-scrolly.addEventListener("click", (e) => {
-
-  let newPageScroll = e.clientY / scrolly.offsetHeight * bodyHeight;
-
-  window.scrollTo({
-  top: newPageScroll});
-});
-
 ////////////ZA HOLD DOWN SCROLL TP//////////////////
+
+  let attachment = false, 
+      lastPosition, 
+      position;
+
+  scrolly.addEventListener("mousedown", function(e){
+    if( e.type == "mousedown" ) { attachment = true; 
+      position = e.clientY / scrolly.offsetHeight * bodyHeight; 
+      window.scrollTo({
+      top: position});
+      document.documentElement.style.scrollBehavior = "initial";}
+    });
+
+    scrolly.addEventListener("mousemove", function(e){
+      if( e.type == "mousemove" && attachment == true ){
+        position = e.clientY / scrolly.offsetHeight * bodyHeight;
+        window.scrollTo({
+        top: position});
+        document.documentElement.style.scrollBehavior = "initial";}
+    });
+
+    scrolly.addEventListener("mouseup", function(e){
+      if( e.type == "mouseup" ) { 
+        attachment = false; 
+        document.documentElement.style.scrollBehavior = "smooth";
+    }});
+
+    window.addEventListener("mouseup", function(e){
+      if( e.type == "mouseup" ) { 
+        attachment = false; 
+        document.documentElement.style.scrollBehavior = "smooth";}
+    });
+
 
 ////////////////////////////////////////
 
@@ -240,7 +262,6 @@ function singPrlx() {
           elem_off = prlxClassClose[b].offsetTop,
           elemPar_h = prlxClassClose[b].parentNode.clientHeight,
           elemPar_off = prlxClassClose[b].parentNode.offsetTop,
-        //elemPar_off_bot = (elemPar_off + elemPar_h) - elemPar_off,
         //elemParPar_h = prlxClassClose[b].parentNode.parentNode.offsetHeight,
           elemParPar_off = prlxClassClose[b].parentNode.parentNode.offsetTop,
 
@@ -249,8 +270,7 @@ function singPrlx() {
           speed = diff / max,
 
           cont_scrolled = win_off - elemParPar_off - elemPar_off,
-
-          cont_scrolled0 = cont_scrolled + win_h/2 - elemPar_h/2, // umesto elemPar_h uzeti elemParPar ako nema vise redova
+          cont_scrolled0 = cont_scrolled + win_h/2 - elemPar_h/2,
           
           value = Math.round(cont_scrolled0 * speed/2);
 
@@ -258,36 +278,6 @@ function singPrlx() {
 
     }
 
-  }  
-
-  function singPrlxOw() {
-
-    let prlxClassClose = document.getElementsByClassName('prlx-closer-ow');
-    
-    for (let b = 0; b < prlxClassClose.length; b++) {
-
-      let win_off = window.pageYOffset,
-          win_h = window.innerHeight,
-          elem_h = prlxClassClose[b].offsetHeight,
-          elem_off = prlxClassClose[b].offsetTop,
-          elemPar_h = prlxClassClose[b].parentNode.clientHeight,
-          elemPar_off = prlxClassClose[b].parentNode.offsetTop,
-          elemParPar_off = prlxClassClose[b].parentNode.parentNode.offsetTop,
-
-          diff = elem_off - elemPar_h,
-          max = Math.max(elem_h, win_h),
-          speed = diff / max,
-
-          cont_scrolled = win_off - elemParPar_off - elemPar_off,
-
-          cont_scrolled0 = cont_scrolled + win_h/2 - elemPar_h/2, // umesto elemPar_h uzeti elemParPar ako nema vise redova
-          
-          value = Math.round(cont_scrolled0 * speed);
-
-          prlxClassClose[b].style.transform = `translate3d(0,${value * -1}px, 0)`;
-
-    }
-  
   }
 
 ////////////////////////////////////////
@@ -447,7 +437,6 @@ function isScreenCorrect() {
 
     if (width >= 769) {
       window.addEventListener('scroll', singPrlx);
-      window.addEventListener('scroll', singPrlxOw);
     }
 
     if (width < 769) {
