@@ -459,7 +459,6 @@ function isScreenCorrect() {
 
     if (width < 769) {
       window.removeEventListener('scroll', singPrlx);
-      window.removeEventListener('scroll', singPrlxOw);
 //this removes the event listener for side social menu, rest is in the function SCR CHANGE
       scrolledAm.style.height = 0 + "vh";
       window.removeEventListener('scroll', scrollSideM);
