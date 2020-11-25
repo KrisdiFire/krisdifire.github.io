@@ -367,14 +367,17 @@ h1, h2, h3 {
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0;    
+    opacity: 0; 
+    visibility: hidden;   
     cursor: pointer;
     border: azure solid 0.1rem;
     transition: all ease-in-out 0.25s;
+    transition-delay: 0.25s;
 }
 .up-opacity {
     opacity: 0.5 !important;
-    transition: opacity ease-in-out 0.25s;
+    visibility: visible !important;
+    transition: all ease-in-out 0.25s !important;
 }
 #up:hover {
     opacity: 1 !important;
