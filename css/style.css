@@ -38,18 +38,26 @@
 }
 
 #scrolly {
+    transform: translateX(5px);
     position: fixed;
-    overflow: hidden; 
     height: 100%; 
-    width: 10px; 
-    background-color: transparent;
+    width: 15px; 
+    background-color: rgb(10, 10, 10);
     right: 0px;
     z-index: 50;
+    transition: transform ease 0.25s;
+    transition-delay: 0.75s;
+}
+
+#scrolly:hover {
+    transform: translateX(0px);
+    transition: transform ease 0.25s;
+    transition-delay: 0.5s;
 }
 
 #scrolled-am {
     position: relative;
-    width: 10px; 
+    width: auto; 
     background: white; 
     box-shadow: inset 0 0 2px black;
     right: 0;
@@ -60,7 +68,7 @@
 #scroll-hand {
     position: absolute;
     height: 2rem;
-    width: 10px;
+    width: 15px;
     bottom: 0;
     background-color:transparent;
     margin-bottom: -1rem;
