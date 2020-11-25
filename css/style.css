@@ -51,12 +51,13 @@
 
 #scrolly:hover {
     transform: translateX(0px);
-    transition: transform ease-in 0.25s;
+    transition: transform ease-out 0.25s;
     transition-delay: 0.5s;
 }
 .hoveredScrolly {
     transform: translateX(0px) !important;
-    transition: transform ease-in 0.25s !important;
+    transition: transform ease-out 0.25s !important;
+    transition-delay: 0.25s !important;
 }
 
 #scrolled-am {
