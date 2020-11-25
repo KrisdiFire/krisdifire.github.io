@@ -79,6 +79,363 @@
     margin-bottom: -1rem;
 }
 
+/*classes for removing content*/
+
+.display-none {
+    display: none;
+}
+
+/*class for showing content*/
+
+.display-some {
+    display: block;
+}
+
+
+/*Main menu stil*/
+.main-menu {
+    width: 100%;
+    height: 3em;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    transition: all ease-in-out 0.25s;
+}
+
+.main-menu-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    width: 70%;
+    margin: auto auto;
+    height: 3em;
+    top: 0;
+    z-index: 20;
+    max-width: 1200px;
+}
+
+.main-menu-inner p {
+    float: left;
+    height: auto;
+    list-style-type: none;
+}
+
+/*Home button*/
+.home01 {
+    margin: 0em 1em 0em 1rem;
+    color: #3abdd4;
+    font-size: 1.1em;
+    font-weight: 800;
+    text-decoration: none;
+    font-family: 'Roboto';
+}
+/*inner wrapper of the main menu*/
+.main-menu-inner ul {
+    padding: 0;
+}
+
+.main-menu-inner ul li {
+    float: left;
+    list-style: none;
+    position: relative;
+}
+
+.main-menu-inner ul li a {
+    display: block;
+    color: white;
+    margin: 1em 1em;
+    text-decoration: none;
+    height: auto;
+    font-weight: 100;
+    cursor: pointer;
+    position: relative;
+}
+/*makes the menu item white on hover*/
+.main-menu-inner ul .list .menu-item:hover {
+    background-color: none;  
+    color: white;
+    transition: 0.2s;
+}
+
+/*SIDE MENU PORTION*/
+
+#ham-menu {
+    flex: 1 1 auto;
+    right: 0;
+    transition: all ease-in-out .2s;
+}
+
+#btn-close-div {
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 50%;
+    height: 2.2rem;
+    width: 2.2rem;
+    font-size: 1.5rem !important;
+    text-decoration: none;
+    position: absolute;
+    right: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -3rem;
+}
+
+#btn-close-div:hover {
+    background-color: white;
+}
+
+#btn-close-div a {
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif !important;
+    padding: 0rem;
+}
+
+#btn-close-div a:hover {
+    background-color: rgba(0, 0, 0, 0);
+    color: black;
+}
+
+/* Fixed sidenav, full height */
+.sidenav {
+    height: 100%;
+    width: 0rem;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+    transition: all ease-in-out 0.2s;
+    padding-top: 4rem;
+    box-shadow: -5px 0px 5px 0px black;
+    -moz-box-shadow: -5px 0px 5px 0px black;
+    -webkit-box-shadow: -5px 0px 5px 0px black;
+  }
+
+  /*side menu background look*/
+
+  .sidenav::after {
+    background-image: url('../img/seamSquaresSMB.svg');
+    background-position: center;
+    background-size: contain;
+    content: "";
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    filter: brightness(2);
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+}
+  
+  .sidenav a {
+    padding: 0.5rem;
+    line-height: 2rem;
+    text-decoration: none;
+    font-size: 1.1rem;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: white;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .dropbtn, .sidenav > a {
+    padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+    line-height: 2rem;
+    text-decoration: none;
+    font-size: 1.3rem;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: white;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+  }
+
+  /* On mouse-over */
+  .sidenav a:hover, .dropbtn:hover {
+    color: black;
+    background-color: white;
+  }
+
+.active {
+    color: azure;
+  }
+  
+  /*hidden until you click on the button to open it*/
+  .dropdown-container {
+      display: none;
+  }
+
+  .dropdown-container hr {
+    opacity: 0.85;
+    height: 0.1rem; 
+  }
+
+  .visible01 {
+      height: auto;
+      opacity: 1;
+  }
+
+  .non-visible {
+      height: 0px;
+      opacity: 0;
+  }
+
+  .left-mar-line {
+    margin-left: 35%;
+    display: block;
+  }
+
+  .right-mar-line {
+    margin-right: 35%;
+    display: block;
+  }
+
+  .dropdown-container a {
+      text-align: left;
+      padding-left: 5rem;
+      font-weight: 100;
+  }
+
+  .dropdown-container a:hover {
+   color: black;
+  }
+
+/*look of the side menu on different screens*/
+.side-menu-norm {
+    background-color:  indianred;
+    width: 19em;
+    transition: width ease-in-out 0.2s;
+}
+.side-menu-sml {
+    background-color:black;
+    width: 100%;
+    transition: width ease-in-out 0.2s;
+    position: fixed;
+}
+
+/*Push the page sideways for the side menu*/
+
+.sideopen {
+    transform: translate(-19em, 0);
+    transition: width ease-in-out 0.2s;
+}
+
+ /*div that appears over the whole page, closes side menu on click*/
+#close-side-menu-div {
+    display: none;
+    z-index: 100;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/*WIP*/
+
+a[data-toggle="offCanvas"] {
+    position: absolute;
+    display: none;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    cursor: pointer;
+    z-index: 100;
+}
+a[data-toggle="offCanvas"] span {
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+a[data-toggle="offCanvas"] span,
+a[data-toggle="offCanvas"] span:before,
+a[data-toggle="offCanvas"] span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 3px;
+    width: 29px;
+    background: azure;
+    box-shadow: 0 1px 5px azure;
+    position: absolute;
+    display: block;
+    content: "";
+}
+a[data-toggle="offCanvas"] span:before {
+    -ms-transform: translate(0px, -10px);
+    transform: translate(0px, -10px);
+    -webkit-transform: translate(0px, -10px);
+}
+a[data-toggle="offCanvas"] span:after {
+    -ms-transform: translate(0px, 10px);
+    transform: translate(0px, 10px);
+    -webkit-transform: translate(0px, 10px);
+}
+a[data-toggle="offCanvas"] span,
+a[data-toggle="offCanvas"] span:before,
+a[data-toggle="offCanvas"] span:after {
+    -webkit-transition: all ease-in-out .2s;
+    transition: all ease-in-out .2s;
+    -moz-transition: all ease-in-out .2s;
+}
+a[data-toggle="offCanvas"].activeOpen span {
+    background-color: transparent;
+}
+a[data-toggle="offCanvas"].activeOpen span:before,
+a[data-toggle="offCanvas"].activeOpen span:after {
+    -webkit-transition: all ease-in-out .2s;
+    transition: all ease-in-out .2s;
+    -moz-transition: all ease-in-out .2s;
+}
+a[data-toggle="offCanvas"].activeOpen span:before {
+    -ms-transform: translate(-0px, -0px) rotate(-45deg);
+    transform: translate(-0px, -0px) rotate(-45deg);
+    -webkit-transform: translate(-0px, -0px) rotate(-45deg);
+}
+a[data-toggle="offCanvas"].activeOpen span:after {
+    -ms-transform: translate(0px, -0px) rotate(45deg);
+    transform: translate(0px, -0px) rotate(45deg);
+    -webkit-transform: translate(0px, -0px) rotate(45deg);
+}
+.off-canvas{
+    background: rgba(240, 255, 255, 0.5);
+}
+.off-canvas ul:not(.contextual-links){
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.off-canvas ul:not(.contextual-links) li{
+    width: 100%;
+    padding: 0;
+}
+.off-canvas ul:not(.contextual-links) li a{
+    font-family: 'Miso-r';
+    font-size: 1.5rem;
+    padding: 10px;
+    text-align: center;
+    transition: all ease-in-out .2s;
+    color: #303030;
+}
+.off-canvas ul:not(.contextual-links) li a:hover{
+    color: #3e57a7;
+}
+/*END of SIDEMENU*/
+
  /*self explanatory*/
 html {
     scroll-behavior: smooth; 
@@ -1321,6 +1678,108 @@ h1, h2, h3 {
     -webkit-animation: animate-rotate 1.3s infinite;
     animation: animate-rotate 1.3s infinite;
 }
+/*GALLERY SCRIPT*/
+.i-photo {
+    opacity: 0;
+    transform: translateY(4em) rotateZ(0deg);
+    transition: transform 0.5s .15s cubic-bezier(0,1,.3,1);
+    will-change: transform, opacity;
+  }
+  
+  .i-photo.is-visible {
+    opacity: 0.7;
+    transform: rotateZ(0deg);
+    transition: transform ease-in-out 0.25s, opacity ease-in-out 0.25s;
+  }
+  
+  /*style of the small images in the gallery*/
+  .image_gallery {
+    opacity: 0.7;
+    filter: grayscale(70%);
+    text-align: center;
+    object-fit: cover;
+    width: 18em;
+    height: 18em;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 0.5rem;
+    transition: opacity .25s ease-in-out, transform .25s ease-in-out, filter 0.25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out, transform .25s ease-in-out filter 0.25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out, transform .25s ease-in-out filter 0.25s ease-in-out;
+  }
+  .image_gallery:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+    transform: translateY(-10%);
+    transition: opacity ease-in 0.3s, filter ease-in 0.3s,
+    transform ease-in-out 0.25s ;
+  }
+  
+  /*class of the div in which the gallery is placed in order to keep the images centered*/
+  .gallery_spacing {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+  
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+    will-change: height, opacity;
+  }
+  
+  .dont-show-image {
+    position: absolute;
+    margin-top: -500rem;
+    overflow: hidden; 
+    height: 0;
+    padding: 0;
+    width: 0;
+    opacity: 0;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+  }
+  
+  .show-image {
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+  }
+  
+  /*in combination with the lightbox, this is used to style the navigation*/
+  .sl-next, .sl-prev {
+    -webkit-animation: fadeinout 4s linear forwards;
+    animation: fadeinout 4s linear forwards;
+  }
+  .sl-next:hover, .sl-prev:hover {
+      -webkit-animation: fadeinout 4s linear forwards;
+      animation: fadeinout 4s linear forwards;
+    }
+  
+  .width-90 {
+    width: 90%;
+  }
+  
+  @media only screen and (max-width: 900px) {
+  .width-90 {
+    width: 100%;
+  }
+  }
+  
+  @-webkit-keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+  }
+  
+  @keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+  }
+  
 
 @media only screen and (min-width: 1367px) {
     
@@ -1366,7 +1825,30 @@ h1, h2, h3 {
     opacity: 1;
 }
 
+#ham-menu {
+    display: block;
+}
+
 #scrolly {
+    display: none;
+}
+
+.main-menu {
+    margin: 0% 0%;
+    width: 100%;
+}
+
+.main-menu-inner {
+    margin: 0%;
+}
+
+/*moves the home button to the left even more on sm scr*/
+.home01 {
+    margin-left: 0.5em;
+}
+
+/*hides the menu items as the side menu hamburger becomes visible*/
+.main-menu .table-1 {
     display: none;
 }
 
@@ -1586,8 +2068,20 @@ h1, h2, h3 {
 
 @media only screen and (max-width: 480px) {
 
+    .dropbtn, .sidenav > a {
+        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+        text-align: center;
+      }
+
+      .dropdown-container a {
+        text-align: left;
+        padding-left: 3rem;
+    }
+
+    .sidenav::after {
+        background-size: 30%;
+    }
     
-/*nzm za sta je ovaj img div sml*/
     .image-div-small {
         height: 50px;
         width: 50px;
