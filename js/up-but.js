@@ -479,7 +479,7 @@ window.addEventListener('resize', isScreenCorrect);
 function screenChange() {
 
   if ((mmm.matches) && (mmm2.matches) && (mediumWin == 0)) {
-      onResizeCloseOpen();
+    //  onResizeCloseOpen();
       mediumWin = 1;
       smallWin = 0;
       largeWin = 0;
@@ -488,7 +488,7 @@ function screenChange() {
   }
 
   if ((mms.matches) && (mms2.matches) && (smallWin == 0)) {
-      onResizeCloseOpen();
+    //  onResizeCloseOpen();
       smallWin = 1;
       mediumWin = 0;
       largeWin = 0;
@@ -497,7 +497,7 @@ function screenChange() {
   }
 
   if ((largeWin == 0) && (mml.matches) && (mml2.matches)) {
-      onResizeCloseOpen();
+    //  onResizeCloseOpen();
       largeWin = 1;
       mediumWin = 0;
       smallWin = 0;

@@ -95,6 +95,7 @@ body {
     left: 0;
     bottom: 0;
     right: 0;
+    display: none;
 }
 
 .z-ind-back {
@@ -450,15 +451,11 @@ h1, h2, h3 {
 }
 
 .dont-show-side {
-
     transition: left 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
-   
     left: -250%;
 }
 .show-content-side {
-   
     transition: left 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
-    
     left: 0;
 }
 
@@ -474,6 +471,7 @@ h1, h2, h3 {
     height: auto;
     position: relative;
     max-width: 1200px;
+    transition: all 500ms ease-in-out;
 }
 /*minimal height of the content wrapper (you don't need this often)*/
 .cont-height200 {
@@ -512,6 +510,7 @@ h1, h2, h3 {
     padding: 0.5rem;
     width: 100%;
     text-align: justify;
+    transition: all ease 0.4s;
 }
 /*max width of columns*/
 .col01 {
@@ -737,7 +736,7 @@ h1, h2, h3 {
     object-fit: contain;
     max-width:100%;
     max-height:100%;
-    transition: all 0.3s ease;
+   
 }
 .image-div-small {
     width: 100px;
@@ -797,18 +796,22 @@ h1, h2, h3 {
 .larger-txt {
     font-size: 1.5rem;
     font-weight: 600 !important;
+    transition: font-size ease 0.35s;
 }
 .huge-txt {
     font-size: 3rem;
     font-weight: 900 !important;
+    transition: font-size ease 0.35s;
 }
 .mega-txt {
     font-size: 5rem;
     font-weight: 700 !important;
+    transition: font-size ease 0.35s;
 }
 .largest-txt {
     font-size: 9rem;
     font-weight: 900 !important;
+    transition: font-size ease 0.35s;
 }
 .intro-txt {
     font-weight: 900;
@@ -816,15 +819,19 @@ h1, h2, h3 {
     text-align: unset !important;
     font-family: 'Alata', sans-serif;
     line-height: 9rem;
+    transition: font-size ease 0.35s;
 }
 .scal-txt {
     font-size: 12vw;
+    transition: font-size ease 0.35s;
 }
 .scal-txt-02 {
     font-size: 8vw;
+    transition: font-size ease 0.35s;
 }
 .font-norm {
     font-weight: 600 !important;
+    transition: font-size ease 0.35s;
 }
 
 
