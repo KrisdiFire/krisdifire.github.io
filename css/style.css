@@ -438,16 +438,16 @@ h1, h2, h3 {
 
 /*styles for the fade in effect*/
 .dont-show {
-    opacity: 0 !important;
+    opacity: 0;
     transition: all ease-in-out 0.5s;
     transform: translateY(4rem);
 }
 .show-content {
-    opacity: 1 !important;
-    transition: all ease-in-out 0.5s;
-    transition-delay: transform 1.25s;
+    opacity: 1;
     will-change: transform, opacity;
     transform: translateY(0rem);
+    transition: all ease-in-out 0.5s;
+    transition-delay: 0.25s;
 }
 
 .dont-show-side {
@@ -471,7 +471,6 @@ h1, h2, h3 {
     height: auto;
     position: relative;
     max-width: 1200px;
-    transition: all 500ms ease-in-out;
 }
 /*minimal height of the content wrapper (you don't need this often)*/
 .cont-height200 {
