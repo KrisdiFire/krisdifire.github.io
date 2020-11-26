@@ -1055,6 +1055,9 @@ h1, h2, h3 {
     opacity: 1;
     transition: opacity ease-in-out 0.6s;
 }
+.img-bck-lowerT {
+ /*   transform: translateY(100%);*/
+}
 .img-bck-txt-size {
     font-size: 2.1rem;
     font-weight: 700;
@@ -1092,7 +1095,6 @@ h1, h2, h3 {
     object-fit: contain;
     max-width:100%;
     max-height:100%;
-   
 }
 .image-div-small {
     width: 100px;
@@ -1344,6 +1346,7 @@ h1, h2, h3 {
 .list-02 {
     padding-inline-start: 0px;
     border: none;
+    overflow: hidden;
 }
 .list-02 > li {
     font-size: 1rem;
@@ -1351,8 +1354,32 @@ h1, h2, h3 {
     width: 100%;
     list-style: none;
     line-height: 1.5rem;
+    overflow: hidden;
 }
-.list-02 > li::before {
+.pullDown {display: inline-block;
+transform: translateY(0%);}
+
+.show-list-item li:nth-child(1) > .pullDown {
+    transform: translateY(0%) !important;
+    transition: ease-in-out 0.50s;
+    transition-delay: 0.25s;
+}
+.show-list-item li:nth-child(2) > .pullDown {
+    transform: translateY(0%) !important;
+    transition: ease-in-out 0.50s;
+    transition-delay: 0.5s;
+}
+.show-list-item li:nth-child(3) > .pullDown {
+    transform: translateY(0%) !important;
+    transition: ease-in-out 0.50s;
+    transition-delay: 0.75s;
+}
+.show-list-item li:nth-child(4) > .pullDown {
+    transform: translateY(0%) !important;
+    transition: ease-in-out 0.50s;
+    transition-delay: 1s;
+}
+.list-02 > li > div::before {
     content: "\2022";
     color: orange;
     font-weight: bold;
@@ -1394,6 +1421,7 @@ h1, h2, h3 {
     width: 80%;
     margin: auto;
     align-items: center;
+    overflow: hidden;
 }
 #footer01 ul {
     list-style-type: none;

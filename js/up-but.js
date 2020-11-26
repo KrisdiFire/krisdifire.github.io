@@ -411,6 +411,8 @@ function openSlideMenu(){
 //////////////////////////////////////////////////
 let elementsToShow0 = document.querySelectorAll('.content-row01');
 let elementsToShow1 = document.querySelectorAll('.content01'); 
+let elementsToShow2 = document.querySelectorAll('.list-02'); 
+let elementsToShow3 = document.querySelectorAll('.pullDown'); 
 //funkcija kojom dodajem stil klasama dont-show i -side, da
 //ukoliko je JS dissabled, sadrzaj str bude renderovan umesto opacity = 0;
 function ifJSDisabled() {
@@ -421,6 +423,10 @@ Array.prototype.forEach.call(elementsToShow0, function(element){
 Array.prototype.forEach.call(elementsToShow1, function(element){
   if (element.classList.contains("dont-show-side")) {
       element.style.left = "-250%";}
+});
+Array.prototype.forEach.call(elementsToShow3, function(element){
+  if (element.classList.contains("pullDown")) {
+      element.style.transform = "translateY(150%)";}
 });
 }
 ifJSDisabled();
@@ -442,7 +448,12 @@ Array.prototype.forEach.call(elementsToShow1, function(element){
     if ((isInView(element)) && (element.classList.contains("dont-show-side"))) {
       element.classList.add('show-content-side');
      }
+
+Array.prototype.forEach.call(elementsToShow2, function(element){
+    if ((isInView(element))) {
+      element.parentNode.classList.add('show-list-item');} 
     });
+  });
 
 scroll01(loop01);}
 
