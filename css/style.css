@@ -38,10 +38,10 @@
 }
 
 #scrolly {
-    transform: translateX(10px);
+    transform: translateX(5px);
     position: fixed;
     height: 100%; 
-    width: 15px; 
+    width: 10px; 
     background-color: rgb(10, 10, 10);
     right: 0px;
     z-index: 25;
@@ -52,7 +52,7 @@
 #scrolly:hover {
     transform: translateX(0px);
     transition: transform ease-out 0.25s;
-    transition-delay: 0.5s;
+    transition-delay: 0.35s;
 }
 .hoveredScrolly {
     transform: translateX(0px) !important;
