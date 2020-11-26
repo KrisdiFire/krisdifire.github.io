@@ -812,7 +812,7 @@ h1, h2, h3 {
    /* left: -250%; */
 }
 .show-content-side {
-    transition: left 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+    transition: left 1.25s cubic-bezier(0.22, 0.61, 0.36, 1) !important;
     left: 0 !important;
 }
 
@@ -1378,6 +1378,21 @@ transform: translate3d(0, 0%, 0);}
     transform: translate3d(0, 0%, 0) !important;
     transition: ease-in-out 0.50s;
     transition-delay: 1s;
+}
+.show-list-item li:nth-child(5) > .pullDown {
+    transform: translate3d(0, 0%, 0) !important;
+    transition: ease-in-out 0.50s;
+    transition-delay: 1.25s;
+}
+.show-list-item li:nth-child(6) > .pullDown {
+    transform: translate3d(0, 0%, 0) !important;
+    transition: ease-in-out 0.50s;
+    transition-delay: 1.5s;
+}
+.show-list-item li:nth-child(7) > .pullDown {
+    transform: translate3d(0, 0%, 0) !important;
+    transition: ease-in-out 0.50s;
+    transition-delay: 1.75s;
 }
 .list-02 > li > div::before {
     content: "\2022";
