@@ -1397,9 +1397,7 @@ transform: translateY(0%);}
     width: 100%;
     list-style: none;
     line-height: 1.5rem; 
-}
-.list-blank > li:nth-child(2n + 1) {
-    background-color: rgba(51, 51, 51, 0);
+    overflow: hidden;
 }
 
 /*Style of the footer and its elements*/
