@@ -435,6 +435,7 @@ Array.prototype.forEach.call(elementsToShow3, function(element){
 Array.prototype.forEach.call(elementsToShow4, function(element){
   if (element.classList.contains("pullDown")) {
       element.style.transform = "translateY(150%)";}
+});
 Array.prototype.forEach.call(elementsToShow5, function(element){
         if (element.classList.contains("js-remove")) {
             element.style.display = "none";}
