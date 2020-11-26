@@ -247,7 +247,7 @@ function scrollElement() {
 
   let closeY = window.pageYOffset/+36;
   let mediumY = window.pageYOffset/+66;
-  let farY = window.pageYOffset/+85;
+  let farY = window.pageYOffset/+99;
 
   for (var i = 0; i < closePrlx.length; i++) {
     closePrlx[i].style.transform = "translate3d" + "(" + "0," + closeY  + "rem" + ", 0" + ")";
