@@ -416,6 +416,7 @@ let elementsToShow1 = document.querySelectorAll('.content01');
 let elementsToShow2 = document.querySelectorAll('.list-02'); 
 let elementsToShow3 = document.querySelectorAll('.pullDown'); 
 let elementsToShow4 = document.querySelectorAll('.list-blank'); 
+let elementsToShow5 = document.querySelectorAll('.separator01'); 
 //funkcija kojom dodajem stil klasama dont-show i -side, da
 //ukoliko je JS dissabled, sadrzaj str bude renderovan umesto opacity = 0;
 function ifJSDisabled() {
@@ -434,6 +435,9 @@ Array.prototype.forEach.call(elementsToShow3, function(element){
 Array.prototype.forEach.call(elementsToShow4, function(element){
   if (element.classList.contains("pullDown")) {
       element.style.transform = "translateY(150%)";}
+Array.prototype.forEach.call(elementsToShow5, function(element){
+        if (element.classList.contains("js-remove")) {
+            element.style.display = "none";}
 });
 }
 ifJSDisabled();
