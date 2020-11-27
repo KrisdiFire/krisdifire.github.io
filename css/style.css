@@ -621,16 +621,16 @@ h1, h2, h3 {
 /*doesn't actually go the other way unlinke the closer-ow one*/
 .prlx-mult-sm-ow {
     z-index: -30;
-    height: 5rem; 
-    width: 5rem; 
-    filter: brightness(0.5);
+    height: 10rem; 
+    width: 10rem; 
+    filter: brightness(1);
 }
 .prlx-mult-sm-ow::after {
     opacity: 0.8;
     background-position: center;
     content: "";
-    height: 5rem;
-    width: 5rem;
+    height: 10rem;
+    width: 10rem;
     position: absolute;
     z-index: -30;
     background: url("../img/back-squares.svg") no-repeat center;
