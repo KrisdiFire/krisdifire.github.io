@@ -23,6 +23,11 @@ function upTop() {
   document.documentElement.scrollTop = 0; // Za Chrome, Firefox, IE i Operu
 }
 
+//////////////////////////////////////
+//Disable scrollbars on large
+
+//////////////////////////////////////
+
 ////////////////////////////////////////
 
 //Function before the site opens, and on screen change//
@@ -300,117 +305,6 @@ function singPrlx() {
 
   }
 
-////////////////////////////////////////
-
-//SIDE MENU PART// My First Script - should rewrite
-
-////////////////////////////////////////////////
-
-//* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-var dropdown = document.getElementsByClassName("dropbtn");
-var i;
-
-//loop
-for (i = 0; i < dropdown.length; i++) {
-  //add an event listener for the following function
-  dropdown[i].addEventListener("click", function() {
-//activate the class active
-    this.classList.toggle("active");
-//variable using the active classes next sibling
-    var dropdownContent = this.nextElementSibling;
-//if the container has display block, then put display none onto it
-    if (dropdownContent.style.display === "block") {
-      dropdownContent.style.display = "none";
-    } 
-//if it doesnt, close all other dropdowns and display this element
-    else {
-      closeDropdown();
-      dropdownContent.style.display = "block";
-    }
-  });
-}
-
-//closes all dropdowns
-function closeDropdown() {
-//take all elements with class dropbtn
-  var dropActive = document.querySelectorAll('.dropbtn'),
-  //assign variables for the loop
-  o = 0,
-  p = dropActive.length;
-//loop through all the elements and remove the active class from them
-  for (o; o < p; o++) {
-    dropActive[o].classList.remove("active"); 
-  }
-//close dropdowns
-  var myClasses = document.querySelectorAll('.dropdown-container'),
-    i = 0,
-    l = myClasses.length;
-//do not display dropdown containers
-for (i; i < l; i++) {
-    myClasses[i].style.display = 'none';
-  }
-}
-
-////close side menu////
-//take all the elements in this class
-var closeBtns = document.getElementsByClassName("close-side-menu");
-//assign a var for the loop
-var l;
-//loop loop through all the elements
-for (var l = 0; l < closeBtns.length; l++) {
-/*add event listeners to the elements for the following functions*/
-  closeBtns[l].addEventListener("click", closeSlideMenu);
-  //closes the dropdowns
-  closeBtns[l].addEventListener("click", closeDropdown);
-//enable scroll
-  closeBtns[l].addEventListener("click", openScroll);
-//end
-}
-
-var openSide = document.getElementById('ham-menu');
-//using event listener, make clicking on the ham menu do the following func
-openSide.addEventListener("click", openSlideMenu);
-openSide.addEventListener("click", stopScroll);
-
-/*function for opening the side menu */
-function openSlideMenu(){
-    document.getElementById('whole-page01').classList.toggle('sideopen');
-    document.getElementById('ham-menu').classList.add('dont-show-ham');
-    document.getElementById('close-side-menu-div').style.height = '100vh';
-//assign the 480px media query to the variable "mq"
-  var mq = window.matchMedia ( "(max-width: 480px)");
-  //if the window matches 480px, use side menu sml class, or use side menu norm if not
-    if (mq.matches) {
-      document.getElementById('sidenav').classList.toggle("side-menu-sml");
-      document.getElementById('sidenav').style.width = "100%";
-      document.getElementById('sidenav').style.backgroundColor = "black";
-    }
-    
-    else {
-      document.getElementById('sidenav').classList.toggle("side-menu-norm");
-      document.getElementById('sidenav').style.width = "19rem";
-      document.getElementById('sidenav').style.backgroundColor = "indianred";
-
-    }
-  }
-/*closing the sm */
-  function closeSlideMenu(){
-//if the window width is 768px or less, show the ham menu
-    var mq = window.matchMedia ( "(max-width: 768px)");
-      if (mq.matches) {
-        document.getElementById('ham-menu').classList.remove('dont-show-ham');
-      }
-
-      else {
-        document.getElementById('ham-menu').classList.add('dont-show-ham');
-      }
-//closing the side menu
-    document.getElementById('close-side-menu-div').style.height = '0%';
-    document.getElementById('sidenav').classList.remove("side-menu-norm");
-    document.getElementById('sidenav').classList.remove("side-menu-sml");
-    document.getElementById('whole-page01').classList.remove("sideopen");
-}
-
 //////////////////////////////////////////
 
 //HERE the magic happens - fade in content//
@@ -500,6 +394,8 @@ function isScreenCorrect() {
 
     if (width >= 769) {
       window.addEventListener('scroll', singPrlx);
+      bodi.classList.add("noSbar");
+      document.documentElement.classList.add("noSbar");
     }
 
     if (width < 769) {
@@ -507,6 +403,7 @@ function isScreenCorrect() {
 //this removes the event listener for side social menu, rest is in the function SCR CHANGE
       scrolledAm.style.height = 0 + "vh";
       window.removeEventListener('scroll', scrollSideM);
+      document.documentElement.classList.remove("noSbar");
 
 //reset elements positions PRLX//
 
@@ -572,15 +469,14 @@ screenChange();
 
 ////////////////////////////////////////////////
 
-var contin = document.getElementById('sidenav');
 var htm = document.getElementsByTagName('html')[0];
 var bod = document.getElementsByTagName('body')[0];
 
 function stopScroll() {
-    if (contin.classList.contains('side-menu-norm')) {
+    if (sideNav.classList.contains('side-menu-norm')) {
       bod.classList.add("stopscroll");
     } 
-    if (contin.classList.contains('side-menu-sml')) {
+    if (sideNav.classList.contains('side-menu-sml')) {
       bod.classList.add("stopscroll");
       //document.getElementById('page01').style.visibility = 'hidden'; - this is to lighten up the load
     } 
@@ -589,4 +485,120 @@ function stopScroll() {
 function openScroll() {
       bod.classList.remove("stopscroll");
      // document.getElementById('page01').style.visibility = 'visible'; - uncomment this if doing the same to the above commented line
+}
+
+////////////////////////////////////////
+
+//SIDE MENU PART// - should rewrite
+
+////////////////////////////////////////////////
+
+//* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropbtn");
+var i;
+
+//loop
+for (i = 0; i < dropdown.length; i++) {
+  //add an event listener for the following function
+  dropdown[i].addEventListener("click", function() {
+//activate the class active
+    this.classList.toggle("active");
+//variable using the active classes next sibling
+    var dropdownContent = this.nextElementSibling;
+//if the container has display block, then put display none onto it
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } 
+//if it doesnt, close all other dropdowns and display this element
+    else {
+      closeDropdown();
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+
+//closes all dropdowns
+function closeDropdown() {
+//take all elements with class dropbtn
+  var dropActive = document.querySelectorAll('.dropbtn'),
+  //assign variables for the loop
+  o = 0,
+  p = dropActive.length;
+//loop through all the elements and remove the active class from them
+  for (o; o < p; o++) {
+    dropActive[o].classList.remove("active"); 
+  }
+//close dropdowns
+  var myClasses = document.querySelectorAll('.dropdown-container'),
+    i = 0,
+    l = myClasses.length;
+//do not display dropdown containers
+for (i; i < l; i++) {
+    myClasses[i].style.display = 'none';
+  }
+}
+
+var sideNav = document.getElementById('sidenav');
+var wholePage = document.getElementById('whole-page01');
+var openSideHam = document.getElementById('ham-menu');
+var closeSideDiv = document.getElementById('close-side-menu-div');
+//using event listener, make clicking on the ham menu do the following func
+openSideHam.addEventListener("click", openSlideMenu);
+openSideHam.addEventListener("click", stopScroll);
+//assign the 480px media query to the variable "mq"
+var mq = window.matchMedia ( "(max-width: 480px)");
+
+/*function for opening the side menu */
+function openSlideMenu(){
+    wholePage.classList.toggle('sideopen');
+    openSideHam.classList.add('dont-show-ham');
+    closeSideDiv.style.height = '100vh';
+
+////close side menu////
+//take all the elements in this class
+var closeBtns = document.getElementsByClassName("close-side-menu");
+//loop loop through all the elements
+for (var l = 0; l < closeBtns.length; l++) {
+/*add event listeners to the elements for the following functions*/
+  closeBtns[l].addEventListener("click", closeSlideMenu);
+  //closes the dropdowns
+  closeBtns[l].addEventListener("click", closeDropdown);
+//enable scroll
+  closeBtns[l].addEventListener("click", function() {
+    setTimeout(function () {
+      bod.classList.remove("stopscroll");}, 500);
+    });
+//end
+}
+
+//if the window matches 480px, use side menu sml class, or use side menu norm if not
+    if (mq.matches) {
+      sideNav.classList.toggle("side-menu-sml");
+      sideNav.style.width = "100%";
+      sideNav.style.backgroundColor = "black";
+      closeSideDiv.style.opacity = '0';
+    }
+    
+    else {
+      sideNav.classList.toggle("side-menu-norm");
+      sideNav.style.width = "19rem";
+      sideNav.style.backgroundColor = "indianred";
+      closeSideDiv.style.opacity = '1';
+    }
+  }
+/*closing the sm */
+  function closeSlideMenu(){
+
+      if (openSideHam.classList.contains('dont-show-ham')) {
+        openSideHam.classList.remove('dont-show-ham');
+      }
+
+      else {
+        openSideHam.classList.add('dont-show-ham');
+      }
+//closing the side menu
+    closeSideDiv.style.height = '0%';
+    sideNav.classList.remove("side-menu-norm");
+    sideNav.classList.remove("side-menu-sml");
+    wholePage.classList.remove("sideopen");
 }

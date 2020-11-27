@@ -16,11 +16,16 @@
 }
 
 /*ScrollBar*/
-::-webkit-scrollbar {
+.noSbar::-webkit-scrollbar {
     width: 0px;
 }
+.noSbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
 /* Track */
-::-webkit-scrollbar-track {
+.noSbar::-webkit-scrollbar-track {
     opacity: 0;
     background-color: black;
     -webkit-box-shadow: inset 0 0 10px black; 
@@ -28,12 +33,12 @@
     -moz-box-shadow: inset 0 0 10px black; 
 }
 /* Handle */
-::-webkit-scrollbar-thumb {
+.noSbar::-webkit-scrollbar-thumb {
     width: 10px;
     background: white; 
     box-shadow: inset 0 0 2px black;
 }
-::-webkit-scrollbar-thumb:hover {
+.noSbar::-webkit-scrollbar-thumb:hover {
     background: rgb(120, 120, 120); 
 }
 
@@ -1060,8 +1065,7 @@ h1, h2, h3 {
     -moz-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
 }
 .img-bck-inner-div:hover, .img-bck-inner-div:hover .img-bck {
-    opacity: 1;
-    transition: opacity ease-in-out 0.3s;
+    
 }
 .img-bck-inner-div:hover .img-bck-txt01, .img-bck-inner-div:hover .img-bck-txt02 {
     opacity: 0;
@@ -1735,107 +1739,7 @@ transform: translate3d(0, 0%, 0);}
     -webkit-animation: animate-rotate 1.3s infinite;
     animation: animate-rotate 1.3s infinite;
 }
-/*GALLERY SCRIPT*/
-.i-photo {
-    opacity: 0;
-    transform: translateY(4em) rotateZ(0deg);
-    transition: transform 0.5s .15s cubic-bezier(0,1,.3,1);
-    will-change: transform, opacity;
-  }
-  
-  .i-photo.is-visible {
-    opacity: 0.7;
-    transform: rotateZ(0deg);
-    transition: transform ease-in-out 0.25s, opacity ease-in-out 0.25s;
-  }
-  
-  /*style of the small images in the gallery*/
-  .image_gallery {
-    opacity: 0.7;
-    filter: grayscale(70%);
-    text-align: center;
-    object-fit: cover;
-    width: 18em;
-    height: 18em;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    cursor: pointer;
-    transition: 0.3s;
-    padding: 0.5rem;
-    transition: opacity .25s ease-in-out, transform .25s ease-in-out, filter 0.25s ease-in-out;
-    -moz-transition: opacity .25s ease-in-out, transform .25s ease-in-out filter 0.25s ease-in-out;
-    -webkit-transition: opacity .25s ease-in-out, transform .25s ease-in-out filter 0.25s ease-in-out;
-  }
-  .image_gallery:hover {
-    opacity: 1;
-    filter: grayscale(0%);
-    transform: translateY(-10%);
-    transition: opacity ease-in 0.3s, filter ease-in 0.3s,
-    transform ease-in-out 0.25s ;
-  }
-  
-  /*class of the div in which the gallery is placed in order to keep the images centered*/
-  .gallery_spacing {
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-  
-    transition: opacity .25s ease-in-out;
-    -moz-transition: opacity .25s ease-in-out;
-    -webkit-transition: opacity .25s ease-in-out;
-    will-change: height, opacity;
-  }
-  
-  .dont-show-image {
-    position: absolute;
-    margin-top: -500rem;
-    overflow: hidden; 
-    height: 0;
-    padding: 0;
-    width: 0;
-    opacity: 0;
-    transition: opacity .25s ease-in-out;
-    -moz-transition: opacity .25s ease-in-out;
-    -webkit-transition: opacity .25s ease-in-out;
-  }
-  
-  .show-image {
-    transition: opacity .25s ease-in-out;
-    -moz-transition: opacity .25s ease-in-out;
-    -webkit-transition: opacity .25s ease-in-out;
-  }
-  
-  /*in combination with the lightbox, this is used to style the navigation*/
-  .sl-next, .sl-prev {
-    -webkit-animation: fadeinout 4s linear forwards;
-    animation: fadeinout 4s linear forwards;
-  }
-  .sl-next:hover, .sl-prev:hover {
-      -webkit-animation: fadeinout 4s linear forwards;
-      animation: fadeinout 4s linear forwards;
-    }
-  
-  .width-90 {
-    width: 90%;
-  }
-  
-  @media only screen and (max-width: 900px) {
-  .width-90 {
-    width: 100%;
-  }
-  }
-  
-  @-webkit-keyframes fadeinout {
-  0%,100% { opacity: 0; }
-  50% { opacity: 1; }
-  }
-  
-  @keyframes fadeinout {
-  0%,100% { opacity: 0; }
-  50% { opacity: 1; }
-  }
+
   
 
 @media only screen and (min-width: 1367px) {
@@ -1874,12 +1778,16 @@ transform: translate3d(0, 0%, 0);}
 @media only screen and (max-width: 768px) {
 
 /*ScrollBar*/
-::-webkit-scrollbar {
+.noSbar::-webkit-scrollbar {
     width: 10px;
 }
 /* Track */
-::-webkit-scrollbar-track {
+.noSbar::-webkit-scrollbar-track {
     opacity: 1;
+}
+.noSbar {
+    scrollbar-width: 10px;
+    -ms-overflow-style: initial;
 }
 
 #ham-menu {
