@@ -405,6 +405,7 @@ function isScreenCorrect() {
       scrolledAm.style.height = 0 + "vh";
       window.removeEventListener('scroll', scrollSideM);
       document.documentElement.classList.remove("noSbar");
+      //scrolly.style.display = "none";
 
 //reset elements positions PRLX//
 
