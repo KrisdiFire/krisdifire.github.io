@@ -247,9 +247,9 @@ let verTxt2 = document.getElementsByClassName("o6t")[0];
   
 function scrollElement() {
 
-  let closeY = window.pageYOffset/+36;
-  let mediumY = window.pageYOffset/+66;
-  let farY = window.pageYOffset/+99;
+  let closeY = window.pageYOffset/34;
+  let mediumY = window.pageYOffset/66;
+  let farY = window.pageYOffset/99;
 
   for (var i = 0; i < closePrlx.length; i++) {
     closePrlx[i].style.transform = "translate3d" + "(" + "0," + closeY  + "rem" + ", 0" + ")";
@@ -302,7 +302,7 @@ function singPrlx() {
 
 ////////////////////////////////////////
 
-//SIDE MENU PART//
+//SIDE MENU PART// My First Script sortof
 
 ////////////////////////////////////////////////
 
@@ -375,17 +375,22 @@ openSide.addEventListener("click", stopScroll);
 /*function for opening the side menu */
 function openSlideMenu(){
     document.getElementById('whole-page01').classList.toggle('sideopen');
-    document.getElementById('ham-menu').classList.add('dont-show');
-    document.getElementById('close-side-menu-div').style.display = 'block';
+    document.getElementById('ham-menu').classList.add('dont-show-ham');
+    document.getElementById('close-side-menu-div').style.height = '100vh';
 //assign the 480px media query to the variable "mq"
   var mq = window.matchMedia ( "(max-width: 480px)");
   //if the window matches 480px, use side menu sml class, or use side menu norm if not
     if (mq.matches) {
       document.getElementById('sidenav').classList.toggle("side-menu-sml");
+      document.getElementById('sidenav').style.width = "100%";
+      document.getElementById('sidenav').style.backgroundColor = "black";
     }
     
     else {
       document.getElementById('sidenav').classList.toggle("side-menu-norm");
+      document.getElementById('sidenav').style.width = "19rem";
+      document.getElementById('sidenav').style.backgroundColor = "indianred";
+
     }
   }
 /*closing the sm */
@@ -393,14 +398,14 @@ function openSlideMenu(){
 //if the window width is 768px or less, show the ham menu
     var mq = window.matchMedia ( "(max-width: 768px)");
       if (mq.matches) {
-        document.getElementById('ham-menu').classList.remove('dont-show');
+        document.getElementById('ham-menu').classList.remove('dont-show-ham');
       }
 
       else {
-        document.getElementById('ham-menu').classList.add('dont-show');
+        document.getElementById('ham-menu').classList.add('dont-show-ham');
       }
 //closing the side menu
-    document.getElementById('close-side-menu-div').style.display = 'none';
+    document.getElementById('close-side-menu-div').style.height = '0%';
     document.getElementById('sidenav').classList.remove("side-menu-norm");
     document.getElementById('sidenav').classList.remove("side-menu-sml");
     document.getElementById('whole-page01').classList.remove("sideopen");

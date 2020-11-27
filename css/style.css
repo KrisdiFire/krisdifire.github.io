@@ -202,7 +202,8 @@
 /* Fixed sidenav, full height */
 .sidenav {
     height: 100%;
-    width: 0rem;
+   
+    background-color:  indianred;
     position: fixed;
     z-index: 999;
     top: 0;
@@ -214,6 +215,8 @@
     box-shadow: -5px 0px 5px 0px black;
     -moz-box-shadow: -5px 0px 5px 0px black;
     -webkit-box-shadow: -5px 0px 5px 0px black;
+    transform: translate3d(150%, 0, 0);
+    transition: transform 0.5s ease-in-out;
   }
 
   /*side menu background look*/
@@ -319,14 +322,15 @@
 
 /*look of the side menu on different screens*/
 .side-menu-norm {
-    background-color:  indianred;
-    width: 19em;
-    transition: width ease-in-out 0.2s;
+    width: 19rem;
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.5s ease-in-out;
 }
 .side-menu-sml {
-    background-color:black;
+    
     width: 100%;
-    transition: width ease-in-out 0.2s;
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.5s ease-in-out;
     position: fixed;
 }
 
@@ -334,17 +338,24 @@
 
 .sideopen {
     transform: translate(-19em, 0);
-    transition: width ease-in-out 0.2s;
+    transition: transform ease-in-out 0.5s;
 }
 
  /*div that appears over the whole page, closes side menu on click*/
 #close-side-menu-div {
-    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
     z-index: 100;
-    position: absolute;
     width: 100%;
-    height: 100%;
+    height: 0%;
     background-color: rgba(0, 0, 0, 0.7);
+    transition: height 0.5s ease-in-out;
+    transition-delay: 0.35s;
+}
+.dont-show-ham {
+    opacity: 0;
 }
 
 /*WIP*/
@@ -556,7 +567,7 @@ h1, h2, h3 {
 .prlx-mult {
     z-index: -30;
     height: 10rem; 
-    width: 10rem; 
+    width: 10rem;
 }
 .prlx-mult::after {
     opacity: 0.6;
@@ -574,6 +585,7 @@ h1, h2, h3 {
     z-index: -30;
     height: 7.5rem; 
     width: 7.5rem; 
+    will-change: transform;
 }
 .prlx-mult-med::after {
     opacity: 0.4;
@@ -592,6 +604,7 @@ h1, h2, h3 {
     height: 5rem; 
     width: 5rem; 
     filter: brightness(0.5);
+    will-change: transform;
 }
 .prlx-mult-sm::after {
     opacity: 0.3;
@@ -623,6 +636,9 @@ h1, h2, h3 {
     background: url("../img/back-squares.svg") no-repeat center;
     background-image: url("../img/back-squares.svg");
     background-size: contain;
+}
+.prlx-closer {
+    will-change: transform;
 }
 /*both classes are for the paralax experiment, gallery and the text*/
 
@@ -1676,7 +1692,7 @@ transform: translate3d(0, 0%, 0);}
 /*class that stops scrolling when the sidemenu is open*/
 .stopscroll {
     overflow: hidden;
-    position: relative;
+    height: 100%;
     margin: 0;
     padding: 0;
 }
@@ -2131,7 +2147,7 @@ transform: translate3d(0, 0%, 0);}
 
     .l1 {
         left: unset;
-        margin-right: 70%;
+        margin-right: 0%;
     }
 
     .l2 {
