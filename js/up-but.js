@@ -396,6 +396,7 @@ function isScreenCorrect() {
       window.addEventListener('scroll', singPrlx);
       bodi.classList.add("noSbar");
       document.documentElement.classList.add("noSbar");
+      scrolly.style.display = "block";
     }
 
     if (width < 769) {

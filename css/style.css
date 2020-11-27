@@ -61,6 +61,7 @@
 
 #scrolly {
     transform: translateX(5px);
+    display: none;
     position: fixed;
     height: 100%; 
     width: 10px; 
