@@ -2081,7 +2081,10 @@ transform: translate3d(0, 0%, 0);}
     .img-bck-txt-size {
         font-size: 2.1rem;
     }
-
+    .img-bck-outer-on-sm {
+        width: 80%;
+        margin: auto;
+    }
 /*pretvara layout footera iz row u kolone*/
     #footer01 {
         display: flex;
@@ -2246,7 +2249,7 @@ transform: translate3d(0, 0%, 0);}
         top: 100%;
     }
     .img-bck-outer-on-sm {
-        width: 70%;
+        width: 80%;
         align-self: center;
     }
     
