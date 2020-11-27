@@ -202,7 +202,6 @@
 /* Fixed sidenav, full height */
 .sidenav {
     height: 100%;
-   
     background-color:  indianred;
     position: fixed;
     z-index: 999;
@@ -325,9 +324,9 @@
     width: 19rem;
     transform: translate3d(0, 0, 0);
     transition: transform 0.5s ease-in-out;
+    position: fixed;
 }
 .side-menu-sml {
-    
     width: 100%;
     transform: translate3d(0, 0, 0);
     transition: transform 0.5s ease-in-out;
@@ -337,7 +336,7 @@
 /*Push the page sideways for the side menu*/
 
 .sideopen {
-    transform: translate(-19em, 0);
+    transform: translate3d(-19rem, 0, 0);
     transition: transform ease-in-out 0.5s;
 }
 
