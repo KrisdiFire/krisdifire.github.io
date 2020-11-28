@@ -247,8 +247,6 @@ scrollSideM();
 let closePrlx = document.getElementsByClassName("prlx-close");
 let medPrlx = document.getElementsByClassName("prlx-mult-med");
 let farPrlx = document.getElementsByClassName("prlx-mult-sm");
-let verTxt = document.getElementsByClassName("o5t")[0];
-let verTxt2 = document.getElementsByClassName("o6t")[0];
   
 function scrollElement() {
 
@@ -267,10 +265,6 @@ function scrollElement() {
   for (var p = 0; p < farPrlx.length; p++) {
     farPrlx[p].style.transform = "translate3d" + "(" + "0," + farY  + "rem" + ", 0" + ")";
   }
-//za vertikalni text - kod galerije paziti, jer ih nema pa izbacuje error.
-//Za ostale ne izbacuje jer ih for loop ne moze da nadje (zapamtiti).
-//  verTxt.style.transform = "translate3d" + "(" + "0," + mediumY  + "rem" + ", 0" + ")";
-//  verTxt2.style.transform = "translate3d" + "(" + "0," + farY  + "rem" + ", 0" + ")";
 }
 
 window.addEventListener("scroll", scrollElement);
@@ -287,7 +281,6 @@ function singPrlx() {
           elem_off = prlxClassClose[b].offsetTop,
           elemPar_h = prlxClassClose[b].parentNode.clientHeight,
           elemPar_off = prlxClassClose[b].parentNode.offsetTop,
-        //elemParPar_h = prlxClassClose[b].parentNode.parentNode.offsetHeight,
           elemParPar_off = prlxClassClose[b].parentNode.parentNode.offsetTop,
 
           diff = elem_off - elemPar_h,
@@ -464,7 +457,6 @@ window.addEventListener('resize', screenChange);
 //run run run
 screenChange();
 
-
 ////////////////////////////////////////
 
 //STOP scroll//
@@ -563,8 +555,6 @@ var closeBtns = document.getElementsByClassName("close-side-menu");
 for (var l = 0; l < closeBtns.length; l++) {
 /*add event listeners to the elements for the following functions*/
   closeBtns[l].addEventListener("click", closeSlideMenu);
-  //closes the dropdowns
-  closeBtns[l].addEventListener("click", closeDropdown);
 //enable scroll
   closeBtns[l].addEventListener("click", function() {
     setTimeout(function () {
@@ -603,4 +593,5 @@ for (var l = 0; l < closeBtns.length; l++) {
     sideNav.classList.remove("side-menu-norm");
     sideNav.classList.remove("side-menu-sml");
     wholePage.classList.remove("sideopen");
+    closeDropdown();
 }
