@@ -265,124 +265,6 @@ function prlxElements() {
     }
   }
 
-
-////////////////////////////////////////
-//FUNKCIJA ZA Screen Size Check// DVE MOGUCE
-////////////////////////////////////////////////
-
-var bodi = document.getElementsByTagName('body')[0];
-
-function largeOrSmallScreen() {
-
-  let width = window.innerWidth;
-
-    if (width >= 769) {
-      window.addEventListener('scroll', prlxElements);
-      bodi.classList.add("noSbar");
-      document.documentElement.classList.add("noSbar");
-      scrolly.style.display = "block";
-    }
-
-    if (width < 769) {
-      window.removeEventListener('scroll', prlxElements);
-//this removes the event listener for side social menu, rest is in the function SCR CHANGE
-      scrolledAm.style.height = 0 + "vh";
-      window.removeEventListener('scroll', scrollSideM);
-      document.documentElement.classList.remove("noSbar");
-
-//reset elements positions PRLX//
-    let prlxClassClose = document.getElementsByClassName('prlx-closer');
-
-    for (let b = 0; b < prlxClassClose.length; b++) {
-      prlxClassClose[b].style.transform = `translate3d(0, 0px, 0)`;
-    }
-  }
-}
-
-largeOrSmallScreen();
-window.addEventListener('resize', largeOrSmallScreen);
-
-/////////////////////////////////////////////////////////////////////////
-//FUNC FOR SCR CHANGE if the previous wasn't enough
-///////////////////////////////////////////////////////
-let mml = window.matchMedia ("(max-width: 10000px)");
-let mmm = window.matchMedia ("(max-width: 768px)");
-let mms = window.matchMedia ("(max-width: 480px)");
-
-let mml2 = window.matchMedia ("(min-width: 769px)");
-let mmm2 = window.matchMedia ("(min-width: 481px)");
-let mms2 = window.matchMedia ("(min-width: 200px)");
-//used to define current win size and stop the script from running until
-//another screensize change
-let largeWin = 0;
-let mediumWin = 0;
-let smallWin = 0;
-
-function screenChange() {
-
-  if ((mms.matches) && (mms2.matches) && (smallWin == 0)) {
-    //  onResizeCloseOpen();
-      smallWin = 1;
-      mediumWin = 0;
-      largeWin = 0;
-
-      contactNav.classList.add("social-menu");
-      contactNav.classList.remove("social-menu-side");
-      contactNav.classList.remove("soc-opacity-0");
-  }
-
-  if ((mmm.matches) && (mmm2.matches) && (mediumWin == 0)) {
-    //  onResizeCloseOpen();
-      mediumWin = 1;
-      smallWin = 0;
-      largeWin = 0;
-//side social menu to show in footer
-      contactNav.classList.add("social-menu");
-      contactNav.classList.remove("social-menu-side");
-      contactNav.classList.remove("soc-opacity-0");
-  }
-
-  if ((largeWin == 0) && (mml.matches) && (mml2.matches)) {
-    //  onResizeCloseOpen();
-      largeWin = 1;
-      mediumWin = 0;
-      smallWin = 0;
-
-      scrollSideM();
-      window.addEventListener('scroll', scrollSideM);
-  }
-}
-
-screenChange();
-window.addEventListener('resize', screenChange);
-
-/////////////////////////////////
-//IS element in view funk//
-//////////////////////////////////////
-function isInView(el) {
-  let box = el.getBoundingClientRect();
-  return box.top < window.innerHeight && box.bottom >= 0;
-}
-
-////////////////////////////////////////
-//STOP scroll//
-////////////////////////////////////////////////
-
-let htm = document.getElementsByTagName('html')[0];
-let bod = document.getElementsByTagName('body')[0];
-
-function stopScroll() {
-    if (sideNav.classList.contains('side-menu-norm')) {
-      bod.classList.add("stopscroll");
-    } 
-    if (sideNav.classList.contains('side-menu-sml')) {
-      bod.classList.add("stopscroll");
-    } 
-}
-function openScroll() {
-      bod.classList.remove("stopscroll");
-}
-
 ////////////////////////////////////////
 //SIDE MENU PART// - should rewrite
 ////////////////////////////////////////////////
@@ -449,7 +331,6 @@ function openSlideMenu(){
     closeSideDiv.style.height = '100vh';
 
 ////close side menu////
-//take all the elements in this class
 var closeBtns = document.getElementsByClassName("close-side-menu");
 //loop loop through all the elements
 for (var l = 0; l < closeBtns.length; l++) {
@@ -494,6 +375,129 @@ for (var l = 0; l < closeBtns.length; l++) {
     sideNav.classList.remove("side-menu-sml");
     wholePage.classList.remove("sideopen");
     closeDropdown();
+}
+
+////////////////////////////////////////
+//FUNKCIJA ZA Screen Size Check// DVE MOGUCE
+////////////////////////////////////////////////
+
+var bodi = document.getElementsByTagName('body')[0];
+
+function largeOrSmallScreen() {
+
+  let width = window.innerWidth;
+
+    if (width >= 769) {
+      window.addEventListener('scroll', prlxElements);
+      bodi.classList.add("noSbar");
+      document.documentElement.classList.add("noSbar");
+      scrolly.style.display = "block";
+    }
+
+    if (width < 769) {
+      window.removeEventListener('scroll', prlxElements);
+//this removes the event listener for side social menu, rest is in the function SCR CHANGE
+      scrolledAm.style.height = 0 + "vh";
+      window.removeEventListener('scroll', scrollSideM);
+      document.documentElement.classList.remove("noSbar");
+
+//reset elements positions PRLX//
+    let prlxClassClose = document.getElementsByClassName('prlx-closer');
+
+    for (let b = 0; b < prlxClassClose.length; b++) {
+      prlxClassClose[b].style.transform = `translate3d(0, 0px, 0)`;
+    }
+  }
+}
+
+largeOrSmallScreen();
+window.addEventListener('resize', largeOrSmallScreen);
+
+/////////////////////////////////////////////////////////////////////////
+//FUNC FOR SCR CHANGE if the previous wasn't enough
+///////////////////////////////////////////////////////
+let mml = window.matchMedia ("(max-width: 10000px)");
+let mmm = window.matchMedia ("(max-width: 768px)");
+let mms = window.matchMedia ("(max-width: 480px)");
+
+let mml2 = window.matchMedia ("(min-width: 769px)");
+let mmm2 = window.matchMedia ("(min-width: 481px)");
+let mms2 = window.matchMedia ("(min-width: 200px)");
+//used to define current win size and stop the script from running until
+//another screensize change
+let largeWin = 0;
+let mediumWin = 0;
+let smallWin = 0;
+
+function screenChange() {
+
+  if ((mms.matches) && (mms2.matches) && (smallWin == 0)) {
+    //  onResizeCloseOpen();
+      smallWin = 1;
+      mediumWin = 0;
+      largeWin = 0;
+
+      contactNav.classList.add("social-menu");
+      contactNav.classList.remove("social-menu-side");
+      contactNav.classList.remove("soc-opacity-0");
+
+      sideNav.style.display = "block";
+  }
+
+  if ((mmm.matches) && (mmm2.matches) && (mediumWin == 0)) {
+    //  onResizeCloseOpen();
+      mediumWin = 1;
+      smallWin = 0;
+      largeWin = 0;
+//side social menu to show in footer
+      contactNav.classList.add("social-menu");
+      contactNav.classList.remove("social-menu-side");
+      contactNav.classList.remove("soc-opacity-0");
+
+      sideNav.style.display = "block";
+  }
+
+  if ((largeWin == 0) && (mml.matches) && (mml2.matches)) {
+    //  onResizeCloseOpen();
+      largeWin = 1;
+      mediumWin = 0;
+      smallWin = 0;
+
+      sideNav.style.display = "none";
+
+      scrollSideM();
+      window.addEventListener('scroll', scrollSideM);
+  }
+}
+
+screenChange();
+window.addEventListener('resize', screenChange);
+
+/////////////////////////////////
+//IS element in view funk//
+//////////////////////////////////////
+function isInView(el) {
+  let box = el.getBoundingClientRect();
+  return box.top < window.innerHeight && box.bottom >= 0;
+}
+
+////////////////////////////////////////
+//STOP scroll//
+////////////////////////////////////////////////
+
+let htm = document.getElementsByTagName('html')[0];
+let bod = document.getElementsByTagName('body')[0];
+
+function stopScroll() {
+    if (sideNav.classList.contains('side-menu-norm')) {
+      bod.classList.add("stopscroll");
+    } 
+    if (sideNav.classList.contains('side-menu-sml')) {
+      bod.classList.add("stopscroll");
+    } 
+}
+function openScroll() {
+      bod.classList.remove("stopscroll");
 }
 
 ///UNUSED///
