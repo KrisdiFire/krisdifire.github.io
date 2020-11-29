@@ -443,6 +443,7 @@ h1, h2, h3 {
 /* Fixed sidenav, full height */
 .sidenav {
     height: 100%;
+    display: none;
     background-color:  indianred;
     position: fixed;
     z-index: 999;
