@@ -349,9 +349,14 @@ Array.prototype.forEach.call(elementsToShow0, function(element){
     });
 
 Array.prototype.forEach.call(elementsToShow1, function(element){
+
     if ((isInView(element)) && (element.classList.contains("dont-show-side"))) {
       element.classList.add('show-content-side');
-     }
+      }
+    if ((isInView(element)) && (element.classList.contains("dont-show"))) {
+      element.classList.add('show-content-img');
+      element.classList.remove('dont-show');
+      }
 
 Array.prototype.forEach.call(elementsToShow2, function(element){
     if ((isInView(element))) {
@@ -363,8 +368,8 @@ Array.prototype.forEach.call(elementsToShow4, function(element){
       });
   });
 
-scroll01(loop01);}
-
+scroll01(loop01);
+}
 // Call the loop for the first time
 loop01();
 

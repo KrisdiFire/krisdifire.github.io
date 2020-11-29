@@ -1679,7 +1679,7 @@ transform: translate3d(0, 0%, 0);}
 
 /*styles for the fade in effect*/
 .dont-show {
-    /*opacity: 0;*/
+    opacity: 0;
     transition: all ease-in-out 0.5s;
     transform: translateY(4rem);
 }
@@ -1689,6 +1689,11 @@ transform: translate3d(0, 0%, 0);}
     transform: translateY(0rem);
     transition: all ease-in-out 0.5s;
     transition-delay: 0.25s;
+}
+.show-content-img {
+    opacity: 1 !important;
+    transition: opacity ease-in-out 0.5s;
+    transition-delay: 0.35s;
 }
 .dont-show-side {
     transition: left 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
