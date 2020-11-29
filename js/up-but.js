@@ -319,6 +319,8 @@ Array.prototype.forEach.call(elementsToShow0, function(element){
 Array.prototype.forEach.call(elementsToShow1, function(element){
   if (element.classList.contains("dont-show-side")) {
       element.style.left = "-250%";}
+      if (element.classList.contains("img-bck-inner-div")) {
+        element.classList.add("dont-show");}
 });
 Array.prototype.forEach.call(elementsToShow3, function(element){
   if (element.classList.contains("pullDown")) {
