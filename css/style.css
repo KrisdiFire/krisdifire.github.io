@@ -13,6 +13,7 @@
 *::-moz-selection {
     background: #ce6a6b;
 }
+
 /*OPEN AND CLOSE SITE*/
 /*splash screen when loading the page or resizing*/
 .loading-scr {
@@ -26,14 +27,12 @@
     left: 0;
     bottom: 0;
     right: 0;
-    display: none;
+    display: none;/*change this and uncomment in .js to work*/
 }
-
 .z-ind-back {
     transition-delay: 1.5s;
     z-index: -10000;
 }
-
 .load-le {
     display: flex;
     position: absolute;
@@ -45,22 +44,18 @@
     z-index: 10000;
     overflow: hidden;
 }
-
 .hiw {
     height: 10rem;
     width: 10rem;
     filter: brightness(3);
     opacity: 1 !important;
 }
-
 .half-r {
     right: -5rem;
 }
-
 .half-l {
     left: -5rem;
 }
-
 .load-ri {
     display: flex;
     position: absolute;
@@ -72,7 +67,6 @@
     z-index: 10000;
     overflow: hidden;
 }
-
 .second-layer-r {
     position: absolute;
     height: 100%;
@@ -83,7 +77,6 @@
     z-index: 9000;
     overflow: hidden;
 }
-
 .second-layer-l {
     position: absolute;
     height: 100%;
@@ -94,13 +87,11 @@
     z-index: 9000;
     overflow: hidden;
 }
-
 .open-l {
     transform-origin: center;
     left: -200%;
     transition: left 1s cubic-bezier(0.8,0.4,0.35,1);
 }
-
 .open-r {
     transform-origin: center;
     right: -200%;
