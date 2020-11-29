@@ -234,145 +234,6 @@
     transition: 0s;
 }
 
-/*removing content*/
-.display-none {
-    display: none;
-}
-/*showing content*/
-.display-some {
-    display: block;
-}
-/*class which deactivates stuff on large screens, but displays them on small*/
-.not-on-lar {
-    display: none !important;
-}
-
-/*styles for the fade in effect*/
-.dont-show {
-    /*opacity: 0;*/
-    transition: all ease-in-out 0.5s;
-    transform: translateY(4rem);
-}
-.show-content {
-    opacity: 1 !important;
-    will-change: transform, opacity;
-    transform: translateY(0rem);
-    transition: all ease-in-out 0.5s;
-    transition-delay: 0.25s;
-}
-.dont-show-side {
-    transition: left 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
-   /* left: -250%; */
-}
-.show-content-side {
-    transition: left 1.25s cubic-bezier(0.22, 0.61, 0.36, 1) !important;
-    left: 0 !important;
-}
-
-/*opacity for background img*/
-.opacity-05 {
-    opacity: 0.5;
-}
-/*makes stuff gray*/
-.grayscale {
-    filter: grayscale(1);
-    -webkit-filter: grayscale(1); 
-    filter: grayscale(100%); 
-    -o-filter: grayscale(1);
-}
-
-/*removes padding from columns containing images etc.*/
-.nopad-lr {
-    padding: 0.5rem 0rem !important;
-}
-.nopad-tb {
-    padding: 0rem 0.5rem !important;
-}
-.nopad {
-    padding: 0rem !important;
-}
-.nomar {
-    margin: 0 !important;
-}
-
-/*makes content go to the top or bottom*/
-.top-auto {
-    bottom: 0rem;
-    margin-top: auto;
-}
-.bot-auto {
-    top: 0rem;
-    margin-bottom: auto;
-}
-.top-10rem-ls {
-    margin-top: 10rem;
-}
-.top-5rem-ls {
-    margin-top: 5rem;
-}
-.top-min-10rem-ls {
-    margin-top: -10rem;
-}
-.top-min-5rem-ls {
-    margin-top: -5rem;
-}
-.bottom-min-ls {
-    margin-bottom: -10rem;
-}
-
-/*brings elements forward*/
-.bring-front {
-    z-index: 10;
-}
-/*pushes elements behind*/
-.push-back {
-    z-index: -10;
-}
-
-/*relatively position an element (used mostly to keep absolute elements from flowing out of the container)*/
-.pos-rel {
-    position: relative;
-}
-/*pos absolut*/
-.pos-ab {
-    position: absolute;
-}
-/*used to position elements either to the right or to the left*/
-.mar-left {
-    margin-left: auto;
-    right: 0;
-}
-.mar-right {
-    left: 0;
-    margin-right: auto;
-}
-/*used almost exclusively for absolutely positioned elements*/
-.mar-cent-ver {
-    top: 50%;  /* position the top  edge of the element at the middle of the parent */
-    transform: translateY(-50%);                               
-}
-.mar-cent-hor {
-    left: 50%;  /* position the left  edge of the element at the middle of the parent */
-    transform: translateX(-50%);                              
-}
-.mar-cent {
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-}
-
-/*positioning of the content in a wrapper where display: flex; is enabled x/y*/
-.cont-cent {
-    justify-content: center;
-    align-items: center;
-}
-/*when placed on the content wrapper it positions the elements inside to the middle vertically, and horisontally when placed onto columns*/
-.cont-cent-ver {
-    align-items: center;
-}
-
 /*text sizes*/
 .larger-txt {
     font-size: 1.5rem;
@@ -1801,6 +1662,145 @@ transform: translate3d(0, 0%, 0);}
         max-height: 400px;
     }
 
+}
+/*Content display/pad/mar/op/pos edit classes*/
+/*removing content*/
+.display-none {
+    display: none;
+}
+/*showing content*/
+.display-some {
+    display: block;
+}
+/*class which deactivates stuff on large screens, but displays them on small*/
+.not-on-lar {
+    display: none !important;
+}
+
+/*styles for the fade in effect*/
+.dont-show {
+    /*opacity: 0;*/
+    transition: all ease-in-out 0.5s;
+    transform: translateY(4rem);
+}
+.show-content {
+    opacity: 1 !important;
+    will-change: transform, opacity;
+    transform: translateY(0rem);
+    transition: all ease-in-out 0.5s;
+    transition-delay: 0.25s;
+}
+.dont-show-side {
+    transition: left 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+   /* left: -250%; */
+}
+.show-content-side {
+    transition: left 1.25s cubic-bezier(0.22, 0.61, 0.36, 1) !important;
+    left: 0 !important;
+}
+
+/*opacity for background img*/
+.opacity-05 {
+    opacity: 0.5;
+}
+/*makes stuff gray*/
+.grayscale {
+    filter: grayscale(1);
+    -webkit-filter: grayscale(1); 
+    filter: grayscale(100%); 
+    -o-filter: grayscale(1);
+}
+
+/*removes padding from columns containing images etc.*/
+.nopad-lr {
+    padding: 0.5rem 0rem !important;
+}
+.nopad-tb {
+    padding: 0rem 0.5rem !important;
+}
+.nopad {
+    padding: 0rem !important;
+}
+.nomar {
+    margin: 0 !important;
+}
+
+/*makes content go to the top or bottom*/
+.top-auto {
+    bottom: 0rem;
+    margin-top: auto;
+}
+.bot-auto {
+    top: 0rem;
+    margin-bottom: auto;
+}
+.top-10rem-ls {
+    margin-top: 10rem;
+}
+.top-5rem-ls {
+    margin-top: 5rem;
+}
+.top-min-10rem-ls {
+    margin-top: -10rem;
+}
+.top-min-5rem-ls {
+    margin-top: -5rem;
+}
+.bottom-min-ls {
+    margin-bottom: -10rem;
+}
+
+/*brings elements forward*/
+.bring-front {
+    z-index: 10;
+}
+/*pushes elements behind*/
+.push-back {
+    z-index: -10;
+}
+
+/*relatively position an element (used mostly to keep absolute elements from flowing out of the container)*/
+.pos-rel {
+    position: relative;
+}
+/*pos absolut*/
+.pos-ab {
+    position: absolute;
+}
+/*used to position elements either to the right or to the left*/
+.mar-left {
+    margin-left: auto;
+    right: 0;
+}
+.mar-right {
+    left: 0;
+    margin-right: auto;
+}
+/*used almost exclusively for absolutely positioned elements*/
+.mar-cent-ver {
+    top: 50%;  /* position the top  edge of the element at the middle of the parent */
+    transform: translateY(-50%);                               
+}
+.mar-cent-hor {
+    left: 50%;  /* position the left  edge of the element at the middle of the parent */
+    transform: translateX(-50%);                              
+}
+.mar-cent {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+/*positioning of the content in a wrapper where display: flex; is enabled x/y*/
+.cont-cent {
+    justify-content: center;
+    align-items: center;
+}
+/*when placed on the content wrapper it positions the elements inside to the middle vertically, and horisontally when placed onto columns*/
+.cont-cent-ver {
+    align-items: center;
 }
 
 @media only screen and (min-width: 1366px) {
