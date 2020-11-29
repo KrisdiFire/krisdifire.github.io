@@ -303,37 +303,39 @@ function singPrlx() {
 //HERE the magic happens - fade in content//
 
 //////////////////////////////////////////////////
-let elementsToShow0 = document.querySelectorAll('.content-row01');
-let elementsToShow1 = document.querySelectorAll('.content01'); 
-let elementsToShow2 = document.querySelectorAll('.list-02'); 
-let elementsToShow3 = document.querySelectorAll('.pullDown'); 
-let elementsToShow4 = document.querySelectorAll('.list-blank'); 
-let elementsToShow5 = document.querySelectorAll('.separator01'); 
+let showRow = document.querySelectorAll('.content-row01');
+let showColumn = document.querySelectorAll('.content01'); 
+let showListWDot = document.querySelectorAll('.list-02'); 
+let listPullDown = document.querySelectorAll('.pullDown'); 
+let showListBlank = document.querySelectorAll('.list-blank'); 
+let separatorJSOff = document.querySelectorAll('.separator01'); 
 //funkcija kojom dodajem stil klasama dont-show i -side, da
 //ukoliko je JS dissabled, sadrzaj str bude renderovan umesto opacity = 0;
 function ifJSDisabled() {
-Array.prototype.forEach.call(elementsToShow0, function(element){
+
+Array.prototype.forEach.call(showRow, function(element){
     if (element.classList.contains("dont-show")) {
       element.style.opacity = "0";}
 });
-Array.prototype.forEach.call(elementsToShow1, function(element){
+Array.prototype.forEach.call(showColumn, function(element){
   if (element.classList.contains("dont-show-side")) {
       element.style.left = "-250%";}
-      if (element.classList.contains("img-bck-inner-div")) {
-        element.classList.add("dont-show");}
+  if (element.classList.contains("img-bck-inner-div")) {
+      element.classList.add("dont-show");}
 });
-Array.prototype.forEach.call(elementsToShow3, function(element){
+Array.prototype.forEach.call(listPullDown, function(element){
   if (element.classList.contains("pullDown")) {
       element.style.transform = "translateY(150%)";}
 });
-Array.prototype.forEach.call(elementsToShow4, function(element){
+Array.prototype.forEach.call(showListBlank, function(element){
   if (element.classList.contains("pullDown")) {
       element.style.transform = "translateY(150%)";}
 });
-Array.prototype.forEach.call(elementsToShow5, function(element){
+Array.prototype.forEach.call(separatorJSOff, function(element){
         if (element.classList.contains("js-remove")) {
             element.style.display = "none";}
 });
+
 }
 ifJSDisabled();
 // Detect request animation frame
@@ -343,14 +345,14 @@ function(callback){ window.setTimeout(callback, 3000/60);};
 
 function loop01() {
 
-Array.prototype.forEach.call(elementsToShow0, function(element){
+Array.prototype.forEach.call(showRow, function(element){
     if ((isInView(element)) && (element.classList.contains("dont-show"))) {
       element.classList.add('show-content');} 
    // else {
     //  element.classList.remove('show-content');}
     });
 
-Array.prototype.forEach.call(elementsToShow1, function(element){
+Array.prototype.forEach.call(showColumn, function(element){
 
     if ((isInView(element)) && (element.classList.contains("dont-show-side"))) {
       element.classList.add('show-content-side');
@@ -360,11 +362,11 @@ Array.prototype.forEach.call(elementsToShow1, function(element){
       element.classList.remove('dont-show');
       }
 
-Array.prototype.forEach.call(elementsToShow2, function(element){
+Array.prototype.forEach.call(showListWDot, function(element){
     if ((isInView(element))) {
       element.parentNode.classList.add('show-list-item');} 
     });
-Array.prototype.forEach.call(elementsToShow4, function(element){
+Array.prototype.forEach.call(showListBlank, function(element){
       if ((isInView(element))) {
         element.parentNode.classList.add('show-list-item');} 
       });
@@ -456,6 +458,7 @@ function screenChange() {
       mediumWin = 0;
       smallWin = 0;
 
+      scrollSideM();
       window.addEventListener('scroll', scrollSideM);
   }
 }
