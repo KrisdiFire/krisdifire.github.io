@@ -284,3 +284,25 @@ text-decoration: none; }
 .sl-wrapper .sl-image .sl-caption {
   background-color: rgba(0, 0, 0, 0.24);
 }
+
+/*this is used to style the navigation buttons L/R*/
+.sl-next, .sl-prev {
+    
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+.sl-next:hover, .sl-prev:hover {
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+  }
+/*unused atm*/
+@-webkit-keyframes fadeout {
+          
+          0% { opacity: 1; }
+          100% { opacity: 0; }
+  }
+@keyframes fadeout {
+         
+          0% { opacity: 1; }
+          100% { opacity: 0; }
+  }
