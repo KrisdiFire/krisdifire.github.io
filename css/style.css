@@ -1477,6 +1477,7 @@ transform: translate3d(0, 0%, 0);}
 }
 .img-bck-txt01, .img-bck-txt02 {
     opacity: 1;
+    font-family: 'Alata',"Lucida Sans Unicode", sans-serif;
     transition: opacity ease-in-out 0.6s;
 }
 .img-bck-txt-size {
