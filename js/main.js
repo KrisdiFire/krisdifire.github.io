@@ -17,7 +17,7 @@ Array.prototype.forEach.call(showRow, function(element){
 Array.prototype.forEach.call(showColumn, function(element){
   if (element.classList.contains("dont-show-side")) {
       element.style.left = "-250%";}
-  if (element.classList.contains("img-bck-inner-div")) {
+  if (element.classList.contains("img-bck-inner")) {
       element.classList.add("dont-show");}
 });
 Array.prototype.forEach.call(listPullDown, function(element){

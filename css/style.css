@@ -1593,25 +1593,30 @@ transform: translate3d(0, 0%, 0);}
   
 /*in combination with the lightbox, this is used to style the navigation*/
 .sl-next, .sl-prev {
-    -webkit-animation: fadeinout 4s linear forwards;
-    animation: fadeinout 4s linear forwards;
+    
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
 }
 .sl-next:hover, .sl-prev:hover {
-      -webkit-animation: fadeinout 4s linear forwards;
-      animation: fadeinout 4s linear forwards;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
     }
+/*unused atm*/
+@-webkit-keyframes fadeout {
+            
+            0% { opacity: 1; }
+            100% { opacity: 0; }
+    }
+@keyframes fadeout {
+           
+            0% { opacity: 1; }
+            100% { opacity: 0; }
+    }
+
 /*width for gallery container*/
 .gallery-cont-width {
     width: 90%;
 }
-@-webkit-keyframes fadeinout {
-            0%,100% { opacity: 0; }
-            50% { opacity: 1; }
-  }
-@keyframes fadeinout {
-            0%,100% { opacity: 0; }
-            50% { opacity: 1; }
-  }
 
 @media only screen and (min-width: 1367px) {
     
