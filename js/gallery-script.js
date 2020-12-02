@@ -3,7 +3,7 @@
   // Detect request animation frame
 var scroll = window.requestAnimationFrame ||
 // IE Fallback
-    function(callback){ window.setTimeout(callback, 1000/60);};
+function(callback){ window.setTimeout(callback, 1000/60);};
 
 var elementsToShow = document.querySelectorAll('.show-on-scroll'); 
 
@@ -52,6 +52,33 @@ Array.prototype.forEach.call(ol, function(opens) {
 
 });}
 
-filterContent();
+//filterContent();
+////////////////////////////////////////////////////////////////////
 
-
+const filteri = document.querySelectorAll('.filter').forEach(function (item) {
+  if (item.classList.contains('illu_gal')) {
+  item.addEventListener('click', function () {
+    filterContent('illu_gallery');
+    });
+  }
+  if (item.classList.contains('logo_gal')) {
+  item.addEventListener('click', function () {
+    filterContent('logo_gallery');
+    });
+  }
+  if (item.classList.contains('banner_gal')) {
+  item.addEventListener('click', function () {
+    filterContent('banner_gallery');
+    });
+  }
+  if (item.classList.contains('fun_gal')) {
+  item.addEventListener('click', function () {
+    filterContent('fun_gallery');
+    });
+  }
+  if (item.classList.contains('full_gal')) {
+  item.addEventListener('click', function () {
+    filterContent('gallery_full');
+    });
+  }
+});

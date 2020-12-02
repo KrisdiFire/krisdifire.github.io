@@ -20,7 +20,7 @@
     
 </head>
 
-<body><k></k>
+<body>
 
     <div id="scrolly">
         <div id="scrolled-am"></div>
@@ -53,11 +53,11 @@
 
     <div class="sidenav" id="sidenav">
         <div id="btn-close-div"><a class="close-side-menu">&times;</a></div>
-        <a class="close-side-menu" onclick="filterContent('illu')" >Illustration</a>
-        <a class="close-side-menu" onclick="filterContent('logo')" >Logo</a>
-        <a class="close-side-menu" onclick="filterContent('bann')" >Banner</a>
-        <a class="close-side-menu" onclick="filterContent('fun')" >Artsy</a> 
-        <a class="close-side-menu" onclick="filterAll();">All</a>
+        <a class="close-side-menu filter illu_gal">Illustration</a>
+        <a class="close-side-menu filter logo_gal">Logo</a>
+        <a class="close-side-menu filter banner_gal">Banner</a>
+        <a class="close-side-menu filter fun_gal">Artsy</a> 
+        <a class="close-side-menu filter full_gal">All</a>
      </div>
 
 <div id="whole-page01">
@@ -70,15 +70,15 @@
         <div class="main-menu-inner">
         <p><a class="home01" href="index.html">HOME</a></p>
         <ul class="table-1">
-            <li class="list"><a onclick="filterContent('illu_gal')" class="menu-item strike-through" >ILLUSTRATION</a>
+            <li class="list"><a class="menu-item strike-through filter illu_gal" >ILLUSTRATION</a>
             </li>
-            <li class="list"><a onclick="filterContent('logo_gal')" class="menu-item strike-through" >LOGO</a>
+            <li class="list"><a class="menu-item strike-through filter logo_gal" >LOGO</a>
             </li>
-            <li class="list"><a onclick="filterContent('banner_gal')" class="menu-item strike-through" >BANNER</a>
+            <li class="list"><a class="menu-item strike-through filter banner_gal" >BANNER</a>
             </li>
-            <li class="list"><a  onclick="filterContent('fun_gal')" class="menu-item strike-through" >ARTSY</a>
+            <li class="list"><a class="menu-item strike-through filter fun_gal" >ARTSY</a>
             </li>
-            <li class="list"><a onclick="filterContent('gallery_full')" class="menu-item strike-through" >ALL</a>
+            <li class="list"><a class="menu-item strike-through filter full_gal" >ALL</a>
             </li>
           </ul>
     
@@ -91,12 +91,12 @@
 
     <!--You may place the main menu here as well-->
 
-    <div class="separator01"><hr></div>
-    <div class="separator01"></div>
+    <div class="separator01 not-on-sm"><hr></div>
+    <div class="separator01 not-on-sm"></div>
 
-    <div class="content-row01 gallery-cont-width cont-cent-ver">
+    <div class="content-row01 gallery-cont-width cont-cent-ver cont-height50">
 
-        <div class="content01 col10 gallery">
+        <div class="content01 col10 gallery cont-cent-ver">
         
         <div class="gallery_spacing gallery_full">
 
@@ -129,9 +129,9 @@
 
         </div>
 
-        <div class="content01 col10 gallery">
+        <div class="content01 col10 gallery cont-cent-ver">
             
-            <div class="gallery_spacing illu_gal dont-show-gallery">
+            <div class="gallery_spacing illu_gallery dont-show-gallery">
 
                 <a href="img/Hurt_Illustration.png"><img class="image_gallery i-photo is-visible illu image" src="img/thumb/Hurt_Illustration.webp" alt="John Hurt" title="John Hurt" /></a>
                 <a href="img/Me_Illustration_full.png"><img class="image_gallery i-photo is-visible illu image" src="img/thumb/Me_Illustration_full.webp" alt="Self Portrait in Illustrator" title="Self Portrait in Illustrator"/></a>
@@ -144,9 +144,9 @@
 
       </div>
 
-            <div class="content01 col10 gallery">
+            <div class="content01 col10 gallery cont-cent-ver">
             
-                <div class="gallery_spacing logo_gal dont-show-gallery">
+                <div class="gallery_spacing logo_gallery dont-show-gallery">
 
                 <a href="img/Bar_Logo.png"><img class="image_gallery i-photo is-visible logo image" src="img/thumb/Bar_Logo.webp" alt="Logo for 5. Stanica" title="Logo for 5. Stanica"/></a>
                 <a href="img/ECLRecords-Logo.png"><img class="image_gallery i-photo is-visible logo image" src="img/thumb/ECLRecords-Logo.webp" alt="Logo for ECLR" title="Logo for ECLR"/></a>
@@ -160,9 +160,9 @@
 
           </div>
 
-          <div class="content01 col10 gallery">
+          <div class="content01 col10 gallery cont-cent-ver">
             
-            <div class="gallery_spacing banner_gal dont-show-gallery">
+            <div class="gallery_spacing banner_gallery dont-show-gallery">
 
                 <a href="img/vera-HA-1388x400_v2-01.png"><img class="image_gallery i-photo is-visible image" src="img/thumb/vera-HA-400x200_v1-bigger-01.png" alt="Natura Panonica Vera HA Set" title="Natura Panonica Vera HA Set"/></a>
                 <a href="img/vera-NMS-1388x400_v1-01.png"><img class="image_gallery i-photo is-visible image" src="img/thumb/vera-NMS-400x200_v1-bigger-01.png" alt="Natura Panonica Vera NMS Set" title="Natura Panonica Vera NMS Set"/></a>
@@ -172,9 +172,9 @@
 
         </div>
 
-        <div class="content01 col10 gallery">
+        <div class="content01 col10 gallery cont-cent-ver">
             
-            <div class="gallery_spacing fun_gal dont-show-gallery">
+            <div class="gallery_spacing fun_gallery dont-show-gallery">
 
                 <a href="img/default_cube_01.png"><img class="image_gallery i-photo is-visible image" src="img/thumb/default_cube_01_thumb.png" alt="Default Cube Art" title="Default Cube Art"/></a>
                 <a href="img/Reimagine.png"><img class="image_gallery i-photo is-visible image" src="img/thumb/Reimagine-thumb.webp" alt="Grungy Belgrade at night reimagined" title="Grungy Belgrade at night reimagined"/></a>
@@ -202,11 +202,11 @@
 
         <div id="footer-menu">
             <ul>
-                <li><a class="strike-through" onclick="filterContent('illu_gal')">ILLUSTRATION</a></li>
-                <li><a class="strike-through" onclick="filterContent('logo_gal')">LOGO</a></li>
-                <li><a class="strike-through" onclick="filterContent('banner_gal')">BANNER</a></li>
-                <li><a class="strike-through" onclick="filterContent('fun_gal')">ARTSY</a></li>
-                <li><a class="strike-through" onclick="filterContent('gallery_full')">ALL</a></li>
+                <li><a class="strike-through filter illu_gal" >ILLUSTRATION</a></li>
+                <li><a class="strike-through filter logo_gal" >LOGO</a></li>
+                <li><a class="strike-through filter banner_gal" >BANNER</a></li>
+                <li><a class="strike-through filter fun_gal" >ARTSY</a></li>
+                <li><a class="strike-through filter full_gal" >ALL</a></li>
             </ul>
         </div>
 
