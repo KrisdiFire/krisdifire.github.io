@@ -26,90 +26,32 @@ loop();
 
 // Helper function from: http://stackoverflow.com/a/7557433/274826
 function isElementInViewport(el) {
-
-var rect = el.getBoundingClientRect();
-    return (
-      (rect.top <= 0&& rect.bottom >= 0)||
-      (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.top <= (window.innerHeight || document.documentElement.clientHeight))||
-      (rect.top >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
-    );
+    let box = el.getBoundingClientRect();
+        return box.top < window.innerHeight && box.bottom >= 0;
 }
 ////////////////////////////////////////////
 ////////////////////////////////////////////
 
 //Funkcija za otvaranje odredjene kategorije
 
-var ise = document.getElementById("gallery01");
-var galimg = document.querySelectorAll(".gal-img");
-
-/*funkcija koja zatvara sve galerije koje nisu potrebne*/
-function closeRestFilter() {
-
-  var rl = document.querySelectorAll(".i-photo");
-  
-    [].forEach.call(rl, function(closes) {
-      closes.classList.add("dont-show-image");
-    });
-
-    [].forEach.call(rl, function(opens) {
-      opens.classList.remove("show-image");
-    });
-}
-
+var ise = document.getElementsByClassName("gallery_spacing");
 
 //filteri
 
 function filterContent(contentname){
-    
-  closeRestFilter();
 
 var ol = document.getElementsByClassName(contentname);
 
-[].forEach.call(ol, function(opens) {
-  opens.classList.remove("dont-show-image");
-});
+Array.prototype.forEach.call(ol, function(opens) {
 
-[].forEach.call(ol, function(opens) {
-  opens.classList.add("show-image");
-});
+    Array.prototype.forEach.call(ise, function(element) {
+    element.classList.add('dont-show-gallery');
+    });
+  
+    opens.classList.remove("dont-show-gallery");
 
-  ise.classList.remove("dont-show-image");
-}
+});}
 
-//Funkcija koja otvara sve slike//
-function filterAll(){
-//prvo da zatvori sve
-  closeRestFilter();
-
-  ise.classList.add("dont-show-image");
-
-  ise.classList.remove("dont-show-image");
-
-//gura separatorovom marginom sav content dole da se ne vidi animacija width i height-a
-  document.getElementById('push-down-filter').style.marginBottom = "100vh";
-  //dize gore (funkcija iz pagecontenta) da se ne vidi tranzicija dole
-  upTop();
-//uzima sve .image elemente
-  var il = document.querySelectorAll(".i-photo");
-  //za svaki element skida dont show image class
-  [].forEach.call(il, function(opens) {
-    opens.classList.remove("dont-show-image");
-  });
-      function marginNorm() {
-        //normalna margina separatora 
-          document.getElementById('push-down-filter').style.marginBottom = "0rem";
-      }
-//funkcija koja dopusta da se sve slike prvo ucitaju pa tek onda vraca marginu u normalu
-function marginNormTime() {
-  setTimeout(marginNorm, 250);
-}
-
-//executuje vracanje margine 
-marginNormTime(); 
-}
-
-filterAll();
+filterContent();
 
 

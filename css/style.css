@@ -1572,9 +1572,7 @@ transform: translate3d(0, 0%, 0);}
     will-change: height, opacity;
 }
   
-.dont-show-image {
-    position: absolute;
-    margin-top: -500rem;
+.dont-show-gallery {
     overflow: hidden; 
     height: 0;
     padding: 0;
@@ -1585,12 +1583,19 @@ transform: translate3d(0, 0%, 0);}
     -webkit-transition: opacity .25s ease-in-out;
 }
   
-.show-image {
+.show-gallery {
+    opacity: 1;
+    height: unset;
+    width: unset;
+    padding: unset;
+    overflow: visible;
     transition: opacity .25s ease-in-out;
     -moz-transition: opacity .25s ease-in-out;
     -webkit-transition: opacity .25s ease-in-out;
 }
-
+.gallery {
+    padding: 0;
+}
 /*width for gallery container*/
 .gallery-cont-width {
     width: 90%;

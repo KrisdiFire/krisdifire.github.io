@@ -40,13 +40,11 @@ let scroll01 = window.requestAnimationFrame ||
 // IE Fallback
 function(callback){ window.setTimeout(callback, 3000/60);};
 
-function loop01() {
+function loopThroughElements() {
 
 Array.prototype.forEach.call(showRow, function(element){
     if ((isInView(element)) && (element.classList.contains("dont-show"))) {
       element.classList.add('show-content');} 
-   // else {
-    //  element.classList.remove('show-content');}
     });
 Array.prototype.forEach.call(showColumn, function(element){
     if ((isInView(element)) && (element.classList.contains("dont-show-side"))) {
@@ -66,10 +64,10 @@ Array.prototype.forEach.call(showListBlank, function(element){
       });
   });
 
-scroll01(loop01);
+scroll01(loopThroughElements);
 }
 // Call the loop for the first time
-loop01();
+loopThroughElements();
 
 ////////////////////////////////////////
 //FUNCTION To show the button after scrolling 500px down from the top//
