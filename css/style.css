@@ -461,7 +461,7 @@ h1, h2, h3 {
   }
   /*side menu background look*/
 .sidenav::after {
-    background-image: url('../img/seamSquaresSMB.svg');
+  /*  background-image: url('../img/seamSquaresSMB.svg');*/
     background-position: center;
     background-size: contain;
     content: "";
@@ -1233,7 +1233,7 @@ transform: translate3d(0, 0%, 0);}
 #footer01 ul {
     list-style-type: none;
 }
-#footer01 div {
+#footer-menu {
     margin: 0rem 0rem 0rem 0.5rem;
 }
 
@@ -1998,10 +1998,9 @@ transform: translate3d(0, 0%, 0);}
         }
         #footer01 div {
            width: 100%;
-           margin: 0em;
         }
         #footer-menu {
-            margin-top: 1em !important;
+            margin-top: 1em ;
             width: 100%;
             display: flex;
             justify-content: center;
@@ -2011,12 +2010,13 @@ transform: translate3d(0, 0%, 0);}
             padding-inline-start: 0px;
         }
         .social-menu {
+            margin-top: 0.5em ;
             display: flex;
             justify-content: center;
         }
         .social-menu ul {
             padding-inline-start: 0px;
-            margin-top: 1rem;
+            margin-top: 0rem;
             flex-wrap: wrap;
             display: flex;
             justify-content: center;
@@ -2146,5 +2146,8 @@ transform: translate3d(0, 0%, 0);}
         
         #footer-wrapper {
             width: 100%;
+        }
+        .tooltiptext {
+            display: none;
         }
     }
