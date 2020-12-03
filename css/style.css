@@ -1150,7 +1150,9 @@ a[data-toggle="offCanvas"].activeOpen span:after {
 }
 
 .pullDown {display: inline-block;
-transform: translate3d(0, 0%, 0);}
+transform: translate3d(0, 0%, 0);
+will-change: transform;
+}
 
 .show-list-item li:nth-child(1) > .pullDown {
     transform:  translate3d(0, 0%, 0) !important;
@@ -1567,10 +1569,9 @@ transform: translate3d(0, 0%, 0);}
     display: flex;
     justify-content: center;
     align-items: baseline;
-    transition: opacity .25s ease-in-out;
-    -moz-transition: opacity .25s ease-in-out;
-    -webkit-transition: opacity .25s ease-in-out;
-    will-change: height, opacity;
+    transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
 }
   
 .dont-show-gallery {
@@ -1579,20 +1580,20 @@ transform: translate3d(0, 0%, 0);}
     padding: 0;
     width: 0;
     opacity: 0;
-    transition: opacity .25s ease-in-out;
-    -moz-transition: opacity .25s ease-in-out;
-    -webkit-transition: opacity .25s ease-in-out;
+    transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -webkit-transition: opacity .5s ease-in-out;
 }
-  
+/*unused*/
 .show-gallery {
     opacity: 1;
     height: unset;
     width: unset;
     padding: unset;
     overflow: visible;
-    transition: opacity .25s ease-in-out;
-    -moz-transition: opacity .25s ease-in-out;
-    -webkit-transition: opacity .25s ease-in-out;
+    transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -webkit-transition: opacity .5s ease-in-out;
 }
 .gallery {
     padding: 0;
@@ -1636,7 +1637,6 @@ transform: translate3d(0, 0%, 0);}
 }
 .show-content {
     opacity: 1 !important;
-    will-change: transform, opacity;
     transform: translateY(0rem);
     transition: all ease-in-out 0.5s;
     transition-delay: 0.25s;
