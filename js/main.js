@@ -341,6 +341,7 @@ var sideNav = document.getElementById('sidenav');
 var wholePage = document.getElementById('whole-page01');
 var openSideHam = document.getElementById('ham-menu');
 var closeSideDiv = document.getElementById('close-side-menu-div');
+var btnClose = document.getElementById('btn-close-div')
 //using event listener, make clicking on the ham menu do the following func
 openSideHam.addEventListener("click", openSlideMenu);
 openSideHam.addEventListener("click", stopScroll);
@@ -349,9 +350,14 @@ var mq = window.matchMedia ( "(max-width: 480px)");
 
 /*function for opening the side menu */
 function openSlideMenu(){
-    wholePage.classList.toggle('sideopen');
+  //  wholePage.classList.toggle('sideopen');
+    if (btnClose.style.opacity == 0) {
+      btnClose.style.opacity = 1;
+    }
     openSideHam.classList.add('dont-show-ham');
     closeSideDiv.style.height = '100vh';
+    closeSideDiv.style.transitionDelay = "0.5s";
+    sideNav.style.transitionDelay = "0s";
 
 ////close side menu////
 var closeBtns = document.getElementsByClassName("close-side-menu");
@@ -372,6 +378,7 @@ for (var l = 0; l < closeBtns.length; l++) {
       sideNav.classList.toggle("side-menu-sml");
       sideNav.style.width = "100%";
       sideNav.style.backgroundColor = "black";
+      sideNav.style.transitionDelay = "0s";
       closeSideDiv.style.opacity = '0';
     }
     
@@ -380,6 +387,7 @@ for (var l = 0; l < closeBtns.length; l++) {
       sideNav.style.width = "19rem";
       sideNav.style.backgroundColor = "indianred";
       closeSideDiv.style.opacity = '1';
+      sideNav.style.transitionDelay = "0s";
     }
   }
 /*closing the sm */
@@ -392,8 +400,20 @@ for (var l = 0; l < closeBtns.length; l++) {
       else {
         openSideHam.classList.add('dont-show-ham');
       }
+      
+      btnClose.style.opacity = 0;
+      
 //closing the side menu
+      if (mq.matches) {
+        sideNav.style.transitionDelay = "0s";
+      }
+      else {
+        sideNav.style.transitionDelay = "0.75s";
+      }
+
     closeSideDiv.style.height = '0%';
+    closeSideDiv.style.transitionDelay = "0s";
+    
     sideNav.classList.remove("side-menu-norm");
     sideNav.classList.remove("side-menu-sml");
     wholePage.classList.remove("sideopen");
