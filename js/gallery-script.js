@@ -56,29 +56,23 @@ Array.prototype.forEach.call(ol, function(opens) {
 ////////////////////////////////////////////////////////////////////
 
 const filteri = document.querySelectorAll('.filter').forEach(function (item) {
-  if (item.classList.contains('illu_gal')) {
-  item.addEventListener('click', function () {
+
+  item.addEventListener("click", function() {
+  
+  if (this.classList.contains("illu_gal")) {
     filterContent('illu_gallery');
-    });
   }
-  if (item.classList.contains('logo_gal')) {
-  item.addEventListener('click', function () {
+  if (this.classList.contains("logo_gal")) {
     filterContent('logo_gallery');
-    });
   }
-  if (item.classList.contains('banner_gal')) {
-  item.addEventListener('click', function () {
+  if (this.classList.contains("banner_gal")) {
     filterContent('banner_gallery');
-    });
   }
-  if (item.classList.contains('fun_gal')) {
-  item.addEventListener('click', function () {
+  if (this.classList.contains("fun_gal")) {
     filterContent('fun_gallery');
-    });
   }
-  if (item.classList.contains('full_gal')) {
-  item.addEventListener('click', function () {
+  if (this.classList.contains("full_gal")) {
     filterContent('gallery_full');
-    });
   }
+});
 });
