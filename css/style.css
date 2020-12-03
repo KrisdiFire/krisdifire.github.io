@@ -511,10 +511,21 @@ h1, h2, h3 {
     width: 100%;
     cursor: pointer;
     outline: none;
+    border-bottom: solid white 1px;
 }
 
 /* On mouse-over */
-.sidenav a:hover, .dropbtn:hover {
+.sidenav a:hover {
+    color: black;
+    background-color: white;
+    font-weight: 400;
+}
+.sidenav .about:hover {
+    color: black;
+    background-color: white;
+    font-weight: 600;
+}
+.dropbtn:hover {
     color: black;
     background-color: white;
 }
@@ -2044,7 +2055,8 @@ will-change: transform;
             padding-left: 3rem;
         }
         .sidenav::after {
-            background-size: 30%;
+            background-size: 50%;
+           /*background-image: url('../img/seamSquaresSMB.svg');*/
         }
         .image-div-small {
             height: 50px;

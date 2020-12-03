@@ -307,11 +307,13 @@ for (i = 0; i < dropdown.length; i++) {
 //if the container has display block, then put display none onto it
     if (dropdownContent.style.display === "block") {
       dropdownContent.style.display = "none";
+      dropdownContent.nextElementSibling.style.borderTop = "unset";
     } 
 //if it doesnt, close all other dropdowns and display this element
     else {
       closeDropdown();
       dropdownContent.style.display = "block";
+      dropdownContent.nextElementSibling.style.borderTop = "solid white 1px";
     }
   });
 }
@@ -334,6 +336,15 @@ function closeDropdown() {
 //do not display dropdown containers
 for (i; i < l; i++) {
     myClasses[i].style.display = 'none';
+  }
+
+  var dropdown = Array.from(document.getElementsByClassName("dropbtn"));
+  var aboutBut = document.getElementsByClassName("about")[0];
+  aboutBut.style.borderTop = "unset";
+
+  dropdown.forEach(borderTop);
+  function borderTop (element) {
+  element.style.borderTop = "unset";
   }
 }
 
@@ -368,7 +379,7 @@ for (var l = 0; l < closeBtns.length; l++) {
 //enable scroll
   closeBtns[l].addEventListener("click", function() {
     setTimeout(function () {
-      bod.classList.remove("stopscroll");}, 500);
+      bod.classList.remove("stopscroll");}, 750);
     });
 //end
 }
