@@ -458,6 +458,7 @@ h1, h2, h3 {
     -webkit-box-shadow: -5px 0px 5px 0px black;
     transform: translate3d(150%, 0, 0);
     transition: transform 0.5s ease-in-out;
+    will-change: transform;
   }
   /*side menu background look*/
 .sidenav::after {
@@ -780,7 +781,6 @@ a[data-toggle="offCanvas"].activeOpen span:after {
     z-index: -30;
     height: 7.5rem; 
     width: 7.5rem; 
-    will-change: transform;
 }
 .prlx-mult-med::after {
     opacity: 0.4;
@@ -799,7 +799,6 @@ a[data-toggle="offCanvas"].activeOpen span:after {
     height: 5rem; 
     width: 5rem; 
     filter: brightness(0.5);
-    will-change: transform;
 }
 .prlx-mult-sm::after {
     opacity: 0.3;
@@ -814,7 +813,7 @@ a[data-toggle="offCanvas"].activeOpen span:after {
     background-size: contain;
 }
 .prlx-closer {
-    will-change: transform;
+    
 }
 /*gallery text in square*/
 
