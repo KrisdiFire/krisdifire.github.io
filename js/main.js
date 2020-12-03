@@ -7,6 +7,8 @@ let showListWDot = document.querySelectorAll('.list-02');
 let listPullDown = document.querySelectorAll('.pullDown'); 
 let showListBlank = document.querySelectorAll('.list-blank'); 
 let separatorJSOff = document.querySelectorAll('.separator01'); 
+//var za gallery stranicu, da se animiraju slike pri scroll-u
+let elementsToShow = document.querySelectorAll('.show-on-scroll'); 
 //funkcija kojom dodajem stil klasama dont-show i -side, da
 //ukoliko je JS dissabled, sadrzaj str bude renderovan umesto opacity = 0;
 function ifJSDisabled() {
@@ -61,6 +63,14 @@ Array.prototype.forEach.call(showListWDot, function(element){
 Array.prototype.forEach.call(showListBlank, function(element){
       if ((isInView(element))) {
         element.parentNode.classList.add('show-list-item');} 
+      });
+//Za gallery str
+      Array.prototype.forEach.call(elementsToShow, function(element){
+        if (isInView(element)) {
+            element.classList.add('is-visible');}
+      //    else {
+      //    element.classList.remove('is-visible');
+      //  }
       });
   });
 
@@ -374,6 +384,54 @@ for (var l = 0; l < closeBtns.length; l++) {
     wholePage.classList.remove("sideopen");
     closeDropdown();
 }
+
+////////////////////////////////////////
+//GALLERY script//
+////////////////////////////////////////////////
+
+//Funkcija za otvaranje odredjene kategorije
+//naziv funk (u zagradu ce se ubaciti koja klasa kasnije)
+function filterContent(contentname){
+  let ise = document.getElementsByClassName("gallery_spacing");
+  //var koji uzima sve u toj klasi
+  let ol = document.getElementsByClassName(contentname);
+  //za svaki element te klase ce da odradi funk opens
+  Array.prototype.forEach.call(ol, function(opens) {
+  //pre nego sto odradi svoju funkciju, uzimamo sve galerije i sakrivamo ih klasom dsg
+      Array.prototype.forEach.call(ise, function(element) {
+      element.classList.add('dont-show-gallery');
+      });
+  //opens skida klasu kojom sakrivamo odredjenu galeriju, dok ostale ostaju skrivene
+      opens.classList.remove("dont-show-gallery");
+  
+});
+}
+
+//Ovim assignujemo koji kontent otvara koje dugme/ad
+//filteru assign sve elem s klasom .filteri, i za svaki od njih vrsimo funk preko (bilo koji naziv)
+const filteri = document.querySelectorAll('.filter').forEach(function (item) {
+  //na te elemente apliciramo event listener-a uz funkciju koja ce nalepiti koji kontent
+  //otvara po tome da li sadrzi odredjenu klasu. [ako u zagr pored funk ubacim parametar
+  //i njega koristim umesto "this", nece raditi = treba eksperimentisati]
+    item.addEventListener("click", function() {
+    
+    if (this.classList.contains("illu_gal")) {
+      filterContent('illu_gallery');
+    }
+    if (this.classList.contains("logo_gal")) {
+      filterContent('logo_gallery');
+    }
+    if (this.classList.contains("banner_gal")) {
+      filterContent('banner_gallery');
+    }
+    if (this.classList.contains("fun_gal")) {
+      filterContent('fun_gallery');
+    }
+    if (this.classList.contains("full_gal")) {
+      filterContent('gallery_full');
+    }
+  });
+  });
 
 ////////////////////////////////////////
 //FUNKCIJA ZA Screen Size Check// DVE MOGUCE
