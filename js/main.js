@@ -120,7 +120,7 @@ let mainMenu = document.getElementsByClassName('main-menu')[0];
 };
 
 ////////////////////////////////////////
-//FUNKCIJA ZA FADE-IN-OUT SideSocialMenu I racunica koliko je str odskrolovano od 0 - 100%//
+//Racunica koliko je str odskrolovano od 0 - 100%//
 ////////////////////////////////////////////////
 
 var contactNav = document.getElementById("soc-menu");
@@ -134,39 +134,17 @@ let scrolly = document.getElementById("scrolly"),
     scrolledAm = document.getElementById("scrolled-am"),
     scrollHand = document.getElementById("scroll-hand");
 
-function scrollSideM() {
-
-  let lowPerc = 55,
-  highPerc = 80;
+function scrollBar() {
 
 bodyHeight = Math.max(document.body.scrollHeight, document.body.offsetHeight) - window.innerHeight;
 //koliko se odskrolovalo pocevsi od vrha - nikad ne dodje do 100% jer mu fali window inner height
 bodyScrolled = (Math.max(document.documentElement.scrollTop, document.body.scrollTop, document.body.offsetTop));
 //koliko je totalno stranice odskrolovano u procentima (Math.round-uj ovo da bude od 1 - 100 celi br)
 totalBodyScrolledPerc = (bodyScrolled / bodyHeight * 100);
-
-//kad je izmedju social side
-  if (totalBodyScrolledPerc > lowPerc) {
-    contactNav.classList.add("soc-opacity-0");
-    contactNav.classList.add("social-menu");
-    }
-//kad je gore desno
-   else {
-    contactNav.classList.add("social-menu-side");
-    contactNav.classList.remove("soc-opacity-0");
-    contactNav.classList.remove("social-menu");
-    }
-//kad je dole
-   if (totalBodyScrolledPerc > highPerc) {
-    contactNav.classList.remove("social-menu-side");
-    contactNav.classList.remove("soc-opacity-0");
-    }
-
-    //scroll ammount za progressBar tj scrollbar - ako ovo postavim van ove funk, ne update-uje se kako treba, naci zasto//
+//scroll ammount za progressBar tj scrollbar - ako ovo postavim van ove funk, ne update-uje se kako treba, naci zasto//
 scrolledAm.style.height = totalBodyScrolledPerc + "vh";
 }
-
-scrollSideM();
+scrollBar();
 
 ////////////ZA HOLD DOWN SCROLL TP//////////////////
   let attachment = false, 
@@ -217,6 +195,43 @@ scrollSideM();
       if(e.type == 'mousedown' && attachment == true) {
         scrolly.classList.add('hoveredScrolly');}
     });
+
+////////////SIDE SOCIAL MENU///////////////
+function sideSocialMenuShow() {
+
+  let lowPerc = 55,
+  highPerc = 80;
+
+//kad je izmedju social side
+if (totalBodyScrolledPerc > lowPerc) {
+  contactNav.classList.add("soc-opacity-0");
+  contactNav.classList.add("social-menu");
+  }
+//kad je gore desno
+ else {
+  contactNav.classList.add("social-menu-side");
+  contactNav.classList.remove("soc-opacity-0");
+  contactNav.classList.remove("social-menu");
+  }
+//kad je dole
+ if (totalBodyScrolledPerc > highPerc) {
+  contactNav.classList.remove("social-menu-side");
+  contactNav.classList.remove("soc-opacity-0");
+  }
+
+//var to check if were on the gallery page, and turn off side soc menu
+let inGallery = document.getElementsByClassName('gallery_full')[0];
+if (inGallery!=null) {
+    removeEventListener("scroll", sideSocialMenuShow);
+    contactNav.classList.remove("social-menu-side");
+    contactNav.classList.remove("soc-opacity-0");
+    contactNav.classList.add("social-menu");
+}
+else {
+    addEventListener("scroll", sideSocialMenuShow);
+}
+}
+sideSocialMenuShow();
 
 ////////////////////////////////////////
 //FUNKCIJA ZA PARALAX//
@@ -448,13 +463,23 @@ function largeOrSmallScreen() {
       bodi.classList.add("noSbar");
       document.documentElement.classList.add("noSbar");
       scrolly.style.display = "block";
+
+      scrollBar();
+      window.addEventListener('scroll', scrollBar);
+      sideSocialMenuShow();
+      addEventListener("scroll", sideSocialMenuShow);
     }
 
     if (width < 769) {
       window.removeEventListener('scroll', prlxElements);
 //this removes the event listener for side social menu, rest is in the function SCR CHANGE
       scrolledAm.style.height = 0 + "vh";
-      window.removeEventListener('scroll', scrollSideM);
+      window.removeEventListener('scroll', scrollBar);
+
+      removeEventListener("scroll", sideSocialMenuShow);
+      contactNav.classList.add("social-menu");
+      contactNav.classList.remove("social-menu-side");
+//removes the class on the body/html that keeps the browser sidebar hidden
       document.documentElement.classList.remove("noSbar");
 
 //reset elements positions PRLX//
@@ -520,9 +545,6 @@ function screenChange() {
       smallWin = 0;
 
       sideNav.style.display = "none";
-
-      scrollSideM();
-      window.addEventListener('scroll', scrollSideM);
   }
 }
 

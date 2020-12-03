@@ -1991,7 +1991,8 @@ transform: translate3d(0, 0%, 0);}
     /*pretvara layout footera iz row u kolone*/
         #footer01 {
             display: flex;
-            flex-direction: column;
+            /*flex-direction: column;*/
+            flex-direction: column-reverse;
             justify-content: center;
             padding-left: 0;
         }
@@ -2000,6 +2001,7 @@ transform: translate3d(0, 0%, 0);}
            margin: 0em;
         }
         #footer-menu {
+            margin-top: 1em !important;
             width: 100%;
             display: flex;
             justify-content: center;
