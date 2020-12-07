@@ -1,6 +1,6 @@
 * {
-    font-family: 'Raleway', sans-serif !important;
-    font-weight: 400;
+   font-family: 'Castoro', serif !important;
+   font-weight: 400;
 }
 
 body {
@@ -105,10 +105,12 @@ body {
    justify-content:center;
    width: 100%;
    height: 100%;
-   border: 0.4rem solid rgb(255, 253, 250);
+   border: 1vw solid whitesmoke;
    border-radius:50%;
    box-shadow: 5px 5px 20px black;
-   background-color: rosybrown;
+  /* background-color: rosybrown;*/
+   background-color: #bbc4cc;
+  content: "";
    z-index: 1;
    box-shadow: 0px 0px 1px black;
 }
@@ -135,15 +137,14 @@ body {
    align-items: center;
    justify-content: center;
    position:absolute;
-   top:0px;
+   top: 0px;
    height:100%;
-   font-size: 5vh;
+   font-size: 4vh;
    z-index: 2;
 }
 
 .divi span {
-   text-shadow: 0px 0px 3px black;
-   color: white;
+   color: rgb(17, 17, 17);
    top: 0.5rem;
 }
 
@@ -226,13 +227,12 @@ span {
 }
 
 .circ {
-   height: 2rem;
-   width: 2rem;
+   height: 8%;
+   width: 8%;
    border-radius: 50%;
-   background-color:rgb(255, 253, 250);
+   background-color: #191919;
    display: block;
    position: absolute;
-   box-shadow: 0px 0px 1px 1px;
    z-index: 15;
    top: 50%;
     -webkit-transform: translateY(-50%);
@@ -253,7 +253,7 @@ span {
    z-index: 0;
    align-self: center;
    border-radius: 50%;
-   background-color: #bbc4cc;
+   background-color:whitesmoke;
    box-shadow: 0px 0px 1px 1px;
 
 }
@@ -261,7 +261,7 @@ span {
 #s {
    position:absolute;
    height: 100%;
-   width: 0.25rem;
+   width: 5%;
    z-index: 10;  
 }
 
@@ -269,18 +269,18 @@ span {
    height: 55%;
    margin-top: 50%;
    bottom: 35%;
-   margin-bottom: 50%;
    content: "";
    position: absolute;
    width: 100%;
    background-color: #bbc4cc;
-   box-shadow: 0px 0px 1px ;
+   background: url('../img/clock-img/dial-s.svg') no-repeat top center;
+   background-size: contain;
 }
 
 #m {
    position:absolute;
    height: 100%;
-   width: 0.6rem;
+   width: 8%;
    z-index: 9;
 }
 
@@ -289,32 +289,32 @@ span {
    height: 35%;
    margin-top: 20%;
    bottom: 50%;
-   margin-bottom: 50%;
    content: "";
    position: absolute;
    width: 100%;
    background-color:rgb(255, 253, 250);
-   box-shadow: 0px 0px 2px ;
+   background: url('../img/clock-img/dial-m.svg') no-repeat top center;
+   background-size: contain;
 }
 
 #h {
    position:absolute;
    height: 100%;
-   width: 1rem;
+   width: 15%;
    transition: all ease-in 0.2s;
    z-index: 8;
 }
 
 #h::after {
-   height: 25%;
+   height: 30%;
    margin-top: 20%;
    bottom: 50%;
-   margin-bottom: 50%;
    content: "";
    position: absolute;
    width: 100%;
    background-color: rgb(255, 253, 250);
-   box-shadow: 0px 0px 2px ;
+   background: url('../img/clock-img/dial-h.svg') no-repeat top center;
+   background-size: contain;
 }
 
 .KiA {
@@ -322,9 +322,9 @@ span {
    z-index: 1;
    margin-top: auto;
    margin-bottom: 25%;
-   font-size: 1.3rem;
-   color: rgb(255, 255, 255);
-   text-shadow: 0px 0px 2px rgb(22, 22, 22);
+   font-size: 1vw;
+   color: rgb(15, 15, 15);
+   font-family: 'Roboto', sans-serif !important;
 }
 
 @media only screen and (min-width: 1366px) {
@@ -385,6 +385,10 @@ span {
       width: 80vw;
       font-size: 1rem;
    }
+
+   .KiA {
+      font-size: 1.3rem;
+   }
 }
 
 @media only screen and (max-width: 480px) {
@@ -398,17 +402,7 @@ span {
       width: 1rem;
    }
 
-   #s {
-      width: 0.15rem;
-   }
-
-   #m {
-      width: 0.4rem;
-   }
-
-   #h {
-      width: 0.7rem;
-   }
+   
 
    .KiA {
       margin-bottom: 30%;
