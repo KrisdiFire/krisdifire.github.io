@@ -8,10 +8,10 @@
 }
 /*color of selected text*/
 *::selection {
-    background: #ce6a6b;
+    background: #3abdd4;
 }
 *::-moz-selection {
-    background: #ce6a6b;
+    background: #3abdd4;
 }
 
 /*OPEN AND CLOSE SITE*/
