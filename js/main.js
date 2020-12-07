@@ -1,1 +1,694 @@
-let showRow=document.querySelectorAll(".content-row01"),showColumn=document.querySelectorAll(".content01"),showListWDot=document.querySelectorAll(".list-02"),listPullDown=document.querySelectorAll(".pullDown"),showListBlank=document.querySelectorAll(".list-blank"),separatorJSOff=document.querySelectorAll(".separator01"),elementsToShow=document.querySelectorAll(".show-on-scroll");function ifJSDisabled(){Array.prototype.forEach.call(showRow,function(e){e.classList.contains("dont-show")&&(e.style.opacity="0")}),Array.prototype.forEach.call(showColumn,function(e){e.classList.contains("dont-show-side")&&(e.style.left="-250%"),e.classList.contains("img-bck-inner")&&e.classList.add("dont-show")}),Array.prototype.forEach.call(listPullDown,function(e){e.classList.contains("pullDown")&&(e.style.transform="translateY(150%)")}),Array.prototype.forEach.call(showListBlank,function(e){e.classList.contains("pullDown")&&(e.style.transform="translateY(150%)")}),Array.prototype.forEach.call(separatorJSOff,function(e){e.classList.contains("js-remove")&&(e.style.display="none")})}ifJSDisabled();let scroll01=window.requestAnimationFrame||function(e){window.setTimeout(e,50)};function loopThroughElements(){Array.prototype.forEach.call(showRow,function(e){isInView(e)&&e.classList.contains("dont-show")&&e.classList.add("show-content")}),Array.prototype.forEach.call(showColumn,function(e){isInView(e)&&e.classList.contains("dont-show-side")&&e.classList.add("show-content-side"),isInView(e)&&e.classList.contains("dont-show")&&(e.classList.add("show-content-img"),e.classList.remove("dont-show")),Array.prototype.forEach.call(showListWDot,function(e){isInView(e)&&e.parentNode.classList.add("show-list-item")}),Array.prototype.forEach.call(showListBlank,function(e){isInView(e)&&e.parentNode.classList.add("show-list-item")}),Array.prototype.forEach.call(elementsToShow,function(e){isInView(e)&&e.classList.add("is-visible")})}),scroll01(loopThroughElements)}loopThroughElements();let mybutton=document.getElementById("up");function scrollFunction(){document.body.scrollTop>500||document.documentElement.scrollTop>500?mybutton.classList.add("up-opacity"):mybutton.classList.remove("up-opacity")}function upTop(){document.body.scrollTop=0,document.documentElement.scrollTop=0}mybutton.addEventListener("click",upTop);let prevScrollPos=window.pageYOffset;window.onscroll=function(){let e=window.pageYOffset,t=document.getElementsByClassName("main-menu")[0];t.style.top=prevScrollPos>e?"0":"-3rem",prevScrollPos=e,scrollFunction()};var contactNav=document.getElementById("soc-menu");let bodyHeight=Math.max(document.body.scrollHeight,document.body.offsetHeight)-window.innerHeight,viewportPerc=0,totalBodyScrolledPerc=0,bodyScrolled=0,scrolly=document.getElementById("scrolly"),scrolledAm=document.getElementById("scrolled-am"),scrollHand=document.getElementById("scroll-hand");function scrollBar(){bodyHeight=Math.max(document.body.scrollHeight,document.body.offsetHeight)-window.innerHeight,bodyScrolled=Math.max(document.documentElement.scrollTop,document.body.scrollTop,document.body.offsetTop),totalBodyScrolledPerc=bodyScrolled/bodyHeight*100,scrolledAm.style.height=totalBodyScrolledPerc+"vh"}scrollBar();let lastPosition,position,attachment=!1;function sideSocialMenuShow(){totalBodyScrolledPerc>55?(contactNav.classList.add("soc-opacity-0"),contactNav.classList.add("social-menu")):(contactNav.classList.add("social-menu-side"),contactNav.classList.remove("soc-opacity-0"),contactNav.classList.remove("social-menu")),totalBodyScrolledPerc>80&&(contactNav.classList.remove("social-menu-side"),contactNav.classList.remove("soc-opacity-0")),null!=document.getElementsByClassName("gallery_full")[0]?(removeEventListener("scroll",sideSocialMenuShow),contactNav.classList.remove("social-menu-side"),contactNav.classList.remove("soc-opacity-0"),contactNav.classList.add("social-menu")):addEventListener("scroll",sideSocialMenuShow)}scrolly.addEventListener("mousedown",function(e){"mousedown"==e.type&&(attachment=!0,position=e.clientY/scrolly.offsetHeight*bodyHeight,window.scrollTo({top:position}),document.documentElement.style.scrollBehavior="initial")}),scrolly.addEventListener("mousemove",function(e){"mousemove"==e.type&&1==attachment&&(position=e.clientY/scrolly.offsetHeight*bodyHeight,window.scrollTo({top:position}),document.documentElement.style.scrollBehavior="initial")}),scrolly.addEventListener("mouseup",function(e){"mouseup"==e.type&&(attachment=!1,document.documentElement.style.scrollBehavior="smooth")}),window.addEventListener("mouseup",function(e){"mouseup"==e.type&&(attachment=!1,scrolly.classList.remove("hoveredScrolly"),document.documentElement.style.scrollBehavior="smooth",document.documentElement.classList.remove("blockSelect"))}),window.addEventListener("mousemove",function(e){"mousemove"==e.type&&1==attachment&&(position=e.clientY/scrolly.offsetHeight*bodyHeight,document.documentElement.style.scrollBehavior="initial",document.documentElement.classList.add("blockSelect"),window.scrollTo({top:position}))}),window.addEventListener("mousedown",function(e){"mousedown"==e.type&&1==attachment&&scrolly.classList.add("hoveredScrolly")}),sideSocialMenuShow();let closePrlx=document.getElementsByClassName("prlx-close"),medPrlx=document.getElementsByClassName("prlx-mult-med"),farPrlx=document.getElementsByClassName("prlx-mult-sm");function scrollPrlxCubes(){let e=window.pageYOffset/34,t=window.pageYOffset/66,o=window.pageYOffset/99;for(var s=0;s<closePrlx.length;s++)closePrlx[s].style.transform="translate3d(0,"+e+"rem, 0)";for(var l=0;l<medPrlx.length;l++)medPrlx[l].style.transform="translate3d(0,"+t+"rem, 0)";for(var n=0;n<farPrlx.length;n++)farPrlx[n].style.transform="translate3d(0,"+o+"rem, 0)"}function prlxElements(){let e=document.getElementsByClassName("prlx-closer");for(let t=0;t<e.length;t++){let o=window.pageYOffset,s=window.innerHeight,l=e[t].offsetHeight,n=e[t].offsetTop,i=e[t].parentNode.clientHeight,a=e[t].parentNode.offsetTop,c=e[t].parentNode.parentNode.offsetTop,d=(n-i)/Math.max(l,s),r=o-c-a+s/2-i/2,m=Math.round(r*d/2);e[t].style.transform=`translate3d(0,${1*m}px, 0)`}}window.addEventListener("scroll",scrollPrlxCubes);var i,dropdown=document.getElementsByClassName("dropbtn");for(i=0;i<dropdown.length;i++)dropdown[i].addEventListener("click",function(){this.classList.toggle("active");var e=this.nextElementSibling;"block"===e.style.display?(e.style.display="none",e.nextElementSibling.style.borderTop="unset"):(closeDropdown(),e.style.display="block",e.nextElementSibling.style.borderTop="solid white 1px")});function closeDropdown(){for(var e=document.querySelectorAll(".dropbtn"),t=0,o=e.length;t<o;t++)e[t].classList.remove("active");for(var s=document.querySelectorAll(".dropdown-container"),l=0,n=s.length;l<n;l++)s[l].style.display="none";var i=Array.from(document.getElementsByClassName("dropbtn")),a=document.getElementsByClassName("about")[0];null!=a&&(a.style.borderTop="unset"),i.forEach(function(e){e.style.borderTop="unset"})}var sideNav=document.getElementById("sidenav"),wholePage=document.getElementById("whole-page01"),openSideHam=document.getElementById("ham-menu"),closeSideDiv=document.getElementById("close-side-menu-div"),btnClose=document.getElementById("btn-close-div");openSideHam.addEventListener("click",openSlideMenu),openSideHam.addEventListener("click",stopScroll);var mq=window.matchMedia("(max-width: 480px)");function openSlideMenu(){0==btnClose.style.opacity&&(btnClose.style.opacity=1),openSideHam.classList.add("dont-show-ham"),closeSideDiv.style.height="100vh",closeSideDiv.style.transitionDelay="0.5s",sideNav.style.transitionDelay="0s";for(var e=document.getElementsByClassName("close-side-menu"),t=0;t<e.length;t++)e[t].addEventListener("click",closeSlideMenu),e[t].addEventListener("click",function(){setTimeout(function(){bod.classList.remove("stopscroll")},750)});mq.matches?(sideNav.classList.toggle("side-menu-sml"),sideNav.style.width="100%",sideNav.style.backgroundColor="black",sideNav.style.transitionDelay="0s",closeSideDiv.style.opacity="0"):(sideNav.classList.toggle("side-menu-norm"),sideNav.style.width="19rem",sideNav.style.backgroundColor="indianred",closeSideDiv.style.opacity="1",sideNav.style.transitionDelay="0s")}function closeSlideMenu(){openSideHam.classList.contains("dont-show-ham")?openSideHam.classList.remove("dont-show-ham"):openSideHam.classList.add("dont-show-ham"),btnClose.style.opacity=0,mq.matches?sideNav.style.transitionDelay="0s":sideNav.style.transitionDelay="0.75s",closeSideDiv.style.height="0%",closeSideDiv.style.transitionDelay="0s",sideNav.classList.remove("side-menu-norm"),sideNav.classList.remove("side-menu-sml"),wholePage.classList.remove("sideopen"),closeDropdown()}function filterContent(e){let t=document.getElementsByClassName("gallery_spacing"),o=document.getElementsByClassName(e);Array.prototype.forEach.call(o,function(e){Array.prototype.forEach.call(t,function(e){e.classList.add("dont-show-gallery")}),e.classList.remove("dont-show-gallery")})}const filteri=document.querySelectorAll(".filter").forEach(function(e){e.addEventListener("click",function(){this.classList.contains("illu_gal")&&filterContent("illu_gallery"),this.classList.contains("logo_gal")&&filterContent("logo_gallery"),this.classList.contains("banner_gal")&&filterContent("banner_gallery"),this.classList.contains("fun_gal")&&filterContent("fun_gallery"),this.classList.contains("full_gal")&&filterContent("gallery_full")})});var bodi=document.getElementsByTagName("body")[0];function largeOrSmallScreen(){let e=window.innerWidth;if(e>=769&&(window.addEventListener("scroll",prlxElements),bodi.classList.add("noSbar"),document.documentElement.classList.add("noSbar"),scrolly.style.display="block",scrollBar(),window.addEventListener("scroll",scrollBar),sideSocialMenuShow(),addEventListener("scroll",sideSocialMenuShow)),e<769){window.removeEventListener("scroll",prlxElements),scrolledAm.style.height="0vh",window.removeEventListener("scroll",scrollBar),removeEventListener("scroll",sideSocialMenuShow),contactNav.classList.add("social-menu"),contactNav.classList.remove("social-menu-side"),document.documentElement.classList.remove("noSbar");let e=document.getElementsByClassName("prlx-closer");for(let t=0;t<e.length;t++)e[t].style.transform="translate3d(0, 0px, 0)"}}largeOrSmallScreen(),window.addEventListener("resize",largeOrSmallScreen);let mml=window.matchMedia("(max-width: 10000px)"),mmm=window.matchMedia("(max-width: 768px)"),mms=window.matchMedia("(max-width: 480px)"),mml2=window.matchMedia("(min-width: 769px)"),mmm2=window.matchMedia("(min-width: 481px)"),mms2=window.matchMedia("(min-width: 200px)"),largeWin=0,mediumWin=0,smallWin=0;function screenChange(){mms.matches&&mms2.matches&&0==smallWin&&(smallWin=1,mediumWin=0,largeWin=0,contactNav.classList.add("social-menu"),contactNav.classList.remove("social-menu-side"),contactNav.classList.remove("soc-opacity-0"),sideNav.style.display="block"),mmm.matches&&mmm2.matches&&0==mediumWin&&(mediumWin=1,smallWin=0,largeWin=0,contactNav.classList.add("social-menu"),contactNav.classList.remove("social-menu-side"),contactNav.classList.remove("soc-opacity-0"),sideNav.style.display="block"),0==largeWin&&mml.matches&&mml2.matches&&(largeWin=1,mediumWin=0,smallWin=0,sideNav.style.display="none")}function isInView(e){let t=e.getBoundingClientRect();return t.top<window.innerHeight&&t.bottom>=0}screenChange(),window.addEventListener("resize",screenChange);let htm=document.getElementsByTagName("html")[0],bod=document.getElementsByTagName("body")[0];function stopScroll(){sideNav.classList.contains("side-menu-norm")&&bod.classList.add("stopscroll"),sideNav.classList.contains("side-menu-sml")&&bod.classList.add("stopscroll")}function openScroll(){bod.classList.remove("stopscroll")}
+//////////////////////////////////////////
+//If JS is disabled fallback//
+//////////////////////////////////////////////////
+let showRow = document.querySelectorAll('.content-row01');
+let showColumn = document.querySelectorAll('.content01'); 
+let showListWDot = document.querySelectorAll('.list-02'); 
+let listPullDown = document.querySelectorAll('.pullDown'); 
+let showListBlank = document.querySelectorAll('.list-blank'); 
+let separatorJSOff = document.querySelectorAll('.separator01'); 
+//var za gallery stranicu, da se animiraju slike pri scroll-u
+let elementsToShow = document.querySelectorAll('.show-on-scroll'); 
+//funkcija kojom dodajem stil klasama dont-show i -side, da
+//ukoliko je JS dissabled, sadrzaj str bude renderovan umesto opacity = 0;
+function ifJSDisabled() {
+Array.prototype.forEach.call(showRow, function(element){
+    if (element.classList.contains("dont-show")) {
+      element.style.opacity = "0";}
+});
+Array.prototype.forEach.call(showColumn, function(element){
+  if (element.classList.contains("dont-show-side")) {
+      element.style.left = "-250%";}
+  if (element.classList.contains("img-bck-inner")) {
+      element.classList.add("dont-show");}
+});
+Array.prototype.forEach.call(listPullDown, function(element){
+  if (element.classList.contains("pullDown")) {
+      element.style.transform = "translateY(150%)";}
+});
+Array.prototype.forEach.call(showListBlank, function(element){
+  if (element.classList.contains("pullDown")) {
+      element.style.transform = "translateY(150%)";}
+});
+Array.prototype.forEach.call(separatorJSOff, function(element){
+        if (element.classList.contains("js-remove")) {
+            element.style.display = "none";}
+});
+}
+ifJSDisabled();
+//If not, do this//
+// Detect request animation frame
+let scroll01 = window.requestAnimationFrame ||
+// IE Fallback
+function(callback){ window.setTimeout(callback, 3000/60);};
+
+function loopThroughElements() {
+
+Array.prototype.forEach.call(showRow, function(element){
+    if ((isInView(element)) && (element.classList.contains("dont-show"))) {
+      element.classList.add('show-content');} 
+    });
+Array.prototype.forEach.call(showColumn, function(element){
+    if ((isInView(element)) && (element.classList.contains("dont-show-side"))) {
+      element.classList.add('show-content-side');
+      }
+    if ((isInView(element)) && (element.classList.contains("dont-show"))) {
+      element.classList.add('show-content-img');
+      element.classList.remove('dont-show');
+      }
+/*Array.prototype.forEach.call(showListWDot, function(element){
+    if ((isInView(element))) {
+      element.parentNode.classList.add('show-list-item');} 
+    });
+Array.prototype.forEach.call(showListBlank, function(element){
+      if ((isInView(element))) {
+        element.parentNode.classList.add('show-list-item');} 
+    });*/
+      Array.prototype.forEach.call(listPullDown, function(element){
+        if ((isInView(element))) {
+          element.parentNode.classList.add('show-list-item');} 
+        });
+//Za gallery str
+      Array.prototype.forEach.call(elementsToShow, function(element){
+        if (isInView(element)) {
+            element.classList.add('is-visible');}
+      //    else {
+      //    element.classList.remove('is-visible');
+      //  }
+      });
+  });
+scroll01(loopThroughElements);
+}
+// Call the loop for the first time
+loopThroughElements();
+
+////////////////////////////////////////
+//FUNCTION To show the button after scrolling 500px down from the top//
+////////////////////////////////////////////////
+let mybutton = document.getElementById("up");
+
+function scrollFunction() {
+  if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+    mybutton.classList.add("up-opacity");
+  } else {
+    mybutton.classList.remove("up-opacity");
+  }
+}
+
+//assign an event listener to activate on click
+mybutton.addEventListener("click", upTop);
+
+// function to scroll up
+function upTop() {
+  document.body.scrollTop = 0; // Za Safari
+  document.documentElement.scrollTop = 0; // Za Chrome, Firefox, IE i Operu
+}
+
+////////////////////////////////////////
+//HIDE MMenu on scroll down//
+////////////////////////////////////////////////
+let prevScrollPos = window.pageYOffset;
+
+window.onscroll = function() {
+
+let currentScrollPos = window.pageYOffset;
+let mainMenu = document.getElementsByClassName('main-menu')[0];
+  if (prevScrollPos > currentScrollPos) {
+    mainMenu.style.top = "0";
+  } else {
+    mainMenu.style.top = "-3rem";
+  }
+  prevScrollPos = currentScrollPos;
+  scrollFunction();
+};
+
+////////////////////////////////////////
+//Racunica koliko je str odskrolovano od 0 - 100%//
+////////////////////////////////////////////////
+
+var contactNav = document.getElementById("soc-menu");
+
+let bodyHeight = Math.max(document.body.scrollHeight, document.body.offsetHeight) - window.innerHeight,
+    viewportPerc = 0,
+    totalBodyScrolledPerc = 0,
+    bodyScrolled = 0;
+
+let scrolly = document.getElementById("scrolly"),
+    scrolledAm = document.getElementById("scrolled-am"),
+    scrollHand = document.getElementById("scroll-hand");
+
+function scrollBar() {
+
+bodyHeight = Math.max(document.body.scrollHeight, document.body.offsetHeight) - window.innerHeight;
+//koliko se odskrolovalo pocevsi od vrha - nikad ne dodje do 100% jer mu fali window inner height
+bodyScrolled = (Math.max(document.documentElement.scrollTop, document.body.scrollTop, document.body.offsetTop));
+//koliko je totalno stranice odskrolovano u procentima (Math.round-uj ovo da bude od 1 - 100 celi br)
+totalBodyScrolledPerc = (bodyScrolled / bodyHeight * 100);
+//scroll ammount za progressBar tj scrollbar - ako ovo postavim van ove funk, ne update-uje se kako treba, naci zasto//
+scrolledAm.style.height = totalBodyScrolledPerc + "vh";
+}
+scrollBar();
+
+////////////ZA HOLD DOWN SCROLL TP//////////////////
+  let attachment = false, 
+      lastPosition, 
+      position;
+
+//scroll to a part of page
+  scrolly.addEventListener("mousedown", function(e){
+    if( e.type == "mousedown" ) { attachment = true; 
+      position = e.clientY / scrolly.offsetHeight * bodyHeight; 
+      window.scrollTo({
+      top: position});
+      document.documentElement.style.scrollBehavior = "initial";}
+    });
+//enable scrolling on mousepress + mousemove
+    scrolly.addEventListener("mousemove", function(e){
+      if( e.type == "mousemove" && attachment == true ){
+        position = e.clientY / scrolly.offsetHeight * bodyHeight;
+        window.scrollTo({
+        top: position});
+        document.documentElement.style.scrollBehavior = "initial";}
+    });
+//might be unnecessary, but does similar to the one below
+    scrolly.addEventListener("mouseup", function(e){
+      if( e.type == "mouseup" ) { 
+        attachment = false; 
+        document.documentElement.style.scrollBehavior = "smooth";
+    }});
+//when not pressing mouse button disable scrolling
+    window.addEventListener("mouseup", function(e){
+      if( e.type == "mouseup" ) { 
+        attachment = false; 
+        scrolly.classList.remove('hoveredScrolly');
+        document.documentElement.style.scrollBehavior = "smooth";
+        document.documentElement.classList.remove("blockSelect");}
+    });
+//enables scrolling through the page even when not moving over scrolly
+    window.addEventListener("mousemove", function(e){
+      if( e.type == "mousemove" && attachment == true ) { 
+        position = e.clientY / scrolly.offsetHeight * bodyHeight;
+        document.documentElement.style.scrollBehavior = "initial";
+        document.documentElement.classList.add("blockSelect");
+        window.scrollTo({
+        top: position});}
+    });
+//for scrolly to stay as hovered
+    window.addEventListener('mousedown', function(e) {
+      if(e.type == 'mousedown' && attachment == true) {
+        scrolly.classList.add('hoveredScrolly');}
+    });
+
+////////////SIDE SOCIAL MENU///////////////
+function sideSocialMenuShow() {
+
+  let lowPerc = 55,
+  highPerc = 80;
+
+//kad je izmedju social side
+if (totalBodyScrolledPerc > lowPerc) {
+  contactNav.classList.add("soc-opacity-0");
+  contactNav.classList.add("social-menu");
+  }
+//kad je gore desno
+ else {
+  contactNav.classList.add("social-menu-side");
+  contactNav.classList.remove("soc-opacity-0");
+  contactNav.classList.remove("social-menu");
+  }
+//kad je dole
+ if (totalBodyScrolledPerc > highPerc) {
+  contactNav.classList.remove("social-menu-side");
+  contactNav.classList.remove("soc-opacity-0");
+  }
+
+//var to check if were on the gallery page, and turn off side soc menu
+let inGallery = document.getElementsByClassName('gallery_full')[0];
+if (inGallery!=null) {
+    removeEventListener("scroll", sideSocialMenuShow);
+    contactNav.classList.remove("social-menu-side");
+    contactNav.classList.remove("soc-opacity-0");
+    contactNav.classList.add("social-menu");
+}
+else {
+    addEventListener("scroll", sideSocialMenuShow);
+}
+}
+sideSocialMenuShow();
+
+////////////////////////////////////////
+//FUNKCIJA ZA PARALAX//
+////////////////////////////////////////////////
+let closePrlx = document.getElementsByClassName("prlx-close");
+let medPrlx = document.getElementsByClassName("prlx-mult-med");
+let farPrlx = document.getElementsByClassName("prlx-mult-sm");
+  
+function scrollPrlxCubes() {
+
+  let closeY = window.pageYOffset/34;
+  let mediumY = window.pageYOffset/66;
+  let farY = window.pageYOffset/99;
+
+  for (var i = 0; i < closePrlx.length; i++) {
+    closePrlx[i].style.transform = "translate3d" + "(" + "0," + closeY  + "rem" + ", 0" + ")";
+  }
+
+  for (var o = 0; o < medPrlx.length; o++) {
+    medPrlx[o].style.transform = "translate3d" + "(" + "0," + mediumY  + "rem" + ", 0" + ")";
+  }
+
+  for (var p = 0; p < farPrlx.length; p++) {
+    farPrlx[p].style.transform = "translate3d" + "(" + "0," + farY  + "rem" + ", 0" + ")";
+  }
+}
+
+window.addEventListener("scroll", scrollPrlxCubes);
+
+function prlxElements() {
+
+  let prlxClassClose = document.getElementsByClassName('prlx-closer');
+    
+    for (let b = 0; b < prlxClassClose.length; b++) {
+
+      let win_off = window.pageYOffset,
+          win_h = window.innerHeight,
+          elem_h = prlxClassClose[b].offsetHeight,
+          elem_off = prlxClassClose[b].offsetTop,
+          elemPar_h = prlxClassClose[b].parentNode.clientHeight,
+          elemPar_off = prlxClassClose[b].parentNode.offsetTop,
+          elemParPar_off = prlxClassClose[b].parentNode.parentNode.offsetTop,
+
+          diff = elem_off - elemPar_h,
+          max = Math.max(elem_h, win_h),
+          speed = diff / max,
+
+          cont_scrolled = win_off - elemParPar_off - elemPar_off,
+          cont_scrolled0 = cont_scrolled + win_h/2 - elemPar_h/2,
+          
+          value = Math.round(cont_scrolled0 * speed/2);
+
+          prlxClassClose[b].style.transform = `translate3d(0,${value * 1}px, 0)`;
+    }
+  }
+
+////////////////////////////////////////
+//SIDE MENU PART// - should rewrite
+////////////////////////////////////////////////
+
+//* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropbtn");
+var i;
+
+//loop
+for (i = 0; i < dropdown.length; i++) {
+  //add an event listener for the following function
+  dropdown[i].addEventListener("click", function() {
+//activate the class active
+    this.classList.toggle("active");
+//variable using the active classes next sibling
+    var dropdownContent = this.nextElementSibling;
+//if the container has display block, then put display none onto it
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+      dropdownContent.nextElementSibling.style.borderTop = "unset";
+    } 
+//if it doesnt, close all other dropdowns and display this element
+    else {
+      closeDropdown();
+      dropdownContent.style.display = "block";
+      dropdownContent.nextElementSibling.style.borderTop = "solid white 1px";
+    }
+  });
+}
+
+//closes all dropdowns
+function closeDropdown() {
+//take all elements with class dropbtn
+  var dropActive = document.querySelectorAll('.dropbtn'),
+  //assign variables for the loop
+  o = 0,
+  p = dropActive.length;
+//loop through all the elements and remove the active class from them
+  for (o; o < p; o++) {
+    dropActive[o].classList.remove("active"); 
+  }
+//close dropdowns
+  var myClasses = document.querySelectorAll('.dropdown-container'),
+    i = 0,
+    l = myClasses.length;
+//do not display dropdown containers
+for (i; i < l; i++) {
+    myClasses[i].style.display = 'none';
+  }
+
+  var dropdown = Array.from(document.getElementsByClassName("dropbtn"));
+  var aboutBut = document.getElementsByClassName("about")[0];
+    if (aboutBut != null) {aboutBut.style.borderTop = "unset";}
+
+  dropdown.forEach(borderTop);
+  function borderTop (element) {
+  element.style.borderTop = "unset";
+  }
+}
+
+var sideNav = document.getElementById('sidenav');
+var wholePage = document.getElementById('whole-page01');
+var openSideHam = document.getElementById('ham-menu');
+var closeSideDiv = document.getElementById('close-side-menu-div');
+var btnClose = document.getElementById('btn-close-div')
+//using event listener, make clicking on the ham menu do the following func
+openSideHam.addEventListener("click", openSlideMenu);
+openSideHam.addEventListener("click", stopScroll);
+//assign the 480px media query to the variable "mq"
+var mq = window.matchMedia ( "(max-width: 480px)");
+
+/*function for opening the side menu */
+function openSlideMenu(){
+  //  wholePage.classList.toggle('sideopen');
+    if (btnClose.style.opacity == 0) {
+      btnClose.style.opacity = 1;
+    }
+    openSideHam.classList.add('dont-show-ham');
+    closeSideDiv.style.height = '100vh';
+    closeSideDiv.style.transitionDelay = "0.5s";
+    sideNav.style.transitionDelay = "0s";
+
+////close side menu////
+var closeBtns = document.getElementsByClassName("close-side-menu");
+//loop loop through all the elements
+for (var l = 0; l < closeBtns.length; l++) {
+/*add event listeners to the elements for the following functions*/
+  closeBtns[l].addEventListener("click", closeSlideMenu);
+//enable scroll
+  closeBtns[l].addEventListener("click", function() {
+    setTimeout(function () {
+      bod.classList.remove("stopscroll");}, 750);
+    });
+//end
+}
+
+//if the window matches 480px, use side menu sml class, or use side menu norm if not
+    if (mq.matches) {
+      sideNav.classList.toggle("side-menu-sml");
+      sideNav.style.width = "100%";
+      sideNav.style.backgroundColor = "black";
+      sideNav.style.transitionDelay = "0s";
+      closeSideDiv.style.opacity = '0';
+    }
+    
+    else {
+      sideNav.classList.toggle("side-menu-norm");
+      sideNav.style.width = "19rem";
+      sideNav.style.backgroundColor = "indianred";
+      closeSideDiv.style.opacity = '1';
+      sideNav.style.transitionDelay = "0s";
+    }
+  }
+/*closing the sm */
+  function closeSlideMenu(){
+
+      if (openSideHam.classList.contains('dont-show-ham')) {
+        openSideHam.classList.remove('dont-show-ham');
+      }
+
+      else {
+        openSideHam.classList.add('dont-show-ham');
+      }
+      
+      btnClose.style.opacity = 0;
+      
+//closing the side menu
+      if (mq.matches) {
+        sideNav.style.transitionDelay = "0s";
+      }
+      else {
+        sideNav.style.transitionDelay = "0.75s";
+      }
+
+    closeSideDiv.style.height = '0%';
+    closeSideDiv.style.transitionDelay = "0s";
+    
+    sideNav.classList.remove("side-menu-norm");
+    sideNav.classList.remove("side-menu-sml");
+    wholePage.classList.remove("sideopen");
+    closeDropdown();
+}
+
+////////////////////////////////////////
+//GALLERY script//
+////////////////////////////////////////////////
+
+//Funkcija za otvaranje odredjene kategorije
+//naziv funk (u zagradu ce se ubaciti koja klasa kasnije)
+function filterContent(contentname){
+  let ise = document.getElementsByClassName("gallery_spacing");
+  //var koji uzima sve u toj klasi
+  let ol = document.getElementsByClassName(contentname);
+  //za svaki element te klase ce da odradi funk opens
+  Array.prototype.forEach.call(ol, function(opens) {
+  //pre nego sto odradi svoju funkciju, uzimamo sve galerije i sakrivamo ih klasom dsg
+      Array.prototype.forEach.call(ise, function(element) {
+      element.classList.add('dont-show-gallery');
+      });
+  //opens skida klasu kojom sakrivamo odredjenu galeriju, dok ostale ostaju skrivene
+      opens.classList.remove("dont-show-gallery");
+  
+});
+}
+
+//Ovim assignujemo koji kontent otvara koje dugme/ad
+//filteru assign sve elem s klasom .filteri, i za svaki od njih vrsimo funk preko (bilo koji naziv)
+const filteri = document.querySelectorAll('.filter').forEach(function (item) {
+  //na te elemente apliciramo event listener-a uz funkciju koja ce nalepiti koji kontent
+  //otvara po tome da li sadrzi odredjenu klasu. [ako u zagr pored funk ubacim parametar
+  //i njega koristim umesto "this", nece raditi = treba eksperimentisati]
+    item.addEventListener("click", function() {
+    
+    if (this.classList.contains("illu_gal")) {
+      filterContent('illu_gallery');
+    }
+    if (this.classList.contains("logo_gal")) {
+      filterContent('logo_gallery');
+    }
+    if (this.classList.contains("banner_gal")) {
+      filterContent('banner_gallery');
+    }
+    if (this.classList.contains("fun_gal")) {
+      filterContent('fun_gallery');
+    }
+    if (this.classList.contains("full_gal")) {
+      filterContent('gallery_full');
+    }
+  });
+  });
+
+////////////////////////////////////////
+//FUNKCIJA ZA Screen Size Check// DVE MOGUCE
+////////////////////////////////////////////////
+
+var bodi = document.getElementsByTagName('body')[0];
+
+function largeOrSmallScreen() {
+
+  let width = window.innerWidth;
+
+    if (width >= 769) {
+      window.addEventListener('scroll', prlxElements);
+      bodi.classList.add("noSbar");
+      document.documentElement.classList.add("noSbar");
+      scrolly.style.display = "block";
+
+      scrollBar();
+      window.addEventListener('scroll', scrollBar);
+      sideSocialMenuShow();
+      addEventListener("scroll", sideSocialMenuShow);
+    }
+
+    if (width < 769) {
+      window.removeEventListener('scroll', prlxElements);
+//this removes the event listener for side social menu, rest is in the function SCR CHANGE
+      scrolledAm.style.height = 0 + "vh";
+      window.removeEventListener('scroll', scrollBar);
+
+      removeEventListener("scroll", sideSocialMenuShow);
+      contactNav.classList.add("social-menu");
+      contactNav.classList.remove("social-menu-side");
+//removes the class on the body/html that keeps the browser sidebar hidden
+      document.documentElement.classList.remove("noSbar");
+
+//reset elements positions PRLX//
+    let prlxClassClose = document.getElementsByClassName('prlx-closer');
+
+    for (let b = 0; b < prlxClassClose.length; b++) {
+      prlxClassClose[b].style.transform = `translate3d(0, 0px, 0)`;
+    }
+  }
+}
+
+largeOrSmallScreen();
+window.addEventListener('resize', largeOrSmallScreen);
+
+/////////////////////////////////////////////////////////////////////////
+//FUNC FOR SCR CHANGE if the previous wasn't enough
+///////////////////////////////////////////////////////
+let mml = window.matchMedia ("(max-width: 10000px)");
+let mmm = window.matchMedia ("(max-width: 768px)");
+let mms = window.matchMedia ("(max-width: 480px)");
+
+let mml2 = window.matchMedia ("(min-width: 769px)");
+let mmm2 = window.matchMedia ("(min-width: 481px)");
+let mms2 = window.matchMedia ("(min-width: 200px)");
+//used to define current win size and stop the script from running until
+//another screensize change
+let largeWin = 0;
+let mediumWin = 0;
+let smallWin = 0;
+
+function screenChange() {
+
+  if ((mms.matches) && (mms2.matches) && (smallWin == 0)) {
+    //  onResizeCloseOpen();
+      smallWin = 1;
+      mediumWin = 0;
+      largeWin = 0;
+
+      contactNav.classList.add("social-menu");
+      contactNav.classList.remove("social-menu-side");
+      contactNav.classList.remove("soc-opacity-0");
+
+      sideNav.style.display = "block";
+  }
+
+  if ((mmm.matches) && (mmm2.matches) && (mediumWin == 0)) {
+    //  onResizeCloseOpen();
+      mediumWin = 1;
+      smallWin = 0;
+      largeWin = 0;
+//side social menu to show in footer
+      contactNav.classList.add("social-menu");
+      contactNav.classList.remove("social-menu-side");
+      contactNav.classList.remove("soc-opacity-0");
+
+      sideNav.style.display = "block";
+  }
+
+  if ((largeWin == 0) && (mml.matches) && (mml2.matches)) {
+    //  onResizeCloseOpen();
+      largeWin = 1;
+      mediumWin = 0;
+      smallWin = 0;
+
+      sideNav.style.display = "none";
+  }
+}
+
+screenChange();
+window.addEventListener('resize', screenChange);
+
+/////////////////////////////////
+//IS element in view funk//
+//////////////////////////////////////
+function isInView(el) {
+  let box = el.getBoundingClientRect();
+  return box.top < window.innerHeight && box.bottom >= 0;
+}
+
+////////////////////////////////////////
+//STOP scroll//
+////////////////////////////////////////////////
+
+let htm = document.getElementsByTagName('html')[0];
+let bod = document.getElementsByTagName('body')[0];
+
+function stopScroll() {
+    if (sideNav.classList.contains('side-menu-norm')) {
+      bod.classList.add("stopscroll");
+    } 
+    if (sideNav.classList.contains('side-menu-sml')) {
+      bod.classList.add("stopscroll");
+    } 
+}
+function openScroll() {
+      bod.classList.remove("stopscroll");
+}
+
+///UNUSED///
+////////////////////////////////////////
+//Function before the site opens, and on screen change//
+////////////////////////////////////////////////
+/*
+let opel = document.getElementById("op-l");
+let oper = document.getElementById("op-r");
+
+let opel1 = document.getElementById("s-l-l");
+let oper1 = document.getElementById("s-l-r");
+//letiables for window sizes
+  let mml = window.matchMedia ("(max-width: 10000px)");
+  let mmm = window.matchMedia ("(max-width: 768px)");
+  let mms = window.matchMedia ("(max-width: 480px)");
+
+  let mml2 = window.matchMedia ("(min-width: 769px)");
+  let mmm2 = window.matchMedia ("(min-width: 481px)");
+  let mms2 = window.matchMedia ("(min-width: 200px)");
+//used to define current win size and stop the script from running until
+//another screensize change
+let largeWin = 0;
+let mediumWin = 0;
+let smallWin = 0;
+
+let hiwL = document.getElementsByClassName("hiw")[0];
+let hiwR = document.getElementsByClassName("hiw")[1];
+
+function openSite() {
+  opel.classList.add("open-l");
+  oper.classList.add("open-r");
+
+  hiwL.classList.remove("rotated-image");
+  hiwR.classList.remove("rotated-image");
+  setTimeout(openSiteSL, 350);
+//function from the side menu
+  unFreeze();
+}
+function openSiteSL() {
+  opel1.classList.add("open-l");
+  oper1.classList.add("open-r");
+}
+//stop scroll
+var bodi = document.getElementsByTagName('body')[0];
+function freeze() {
+  bodi.classList.add("stopscroll");
+}
+//add scroll
+function unFreeze() {
+  bodi.classList.remove("stopscroll");
+}
+//loading window var
+var loadWin = document.getElementById("load-win");
+//push load win back
+function disappear() {
+  loadWin.classList.add("z-ind-back");
+}
+//pull load win to front
+function appear() {
+  loadWin.classList.remove("z-ind-back");
+}
+function closeSite() {
+    opel.classList.remove("open-l");
+    oper.classList.remove("open-r");
+
+    opel1.classList.remove("open-l");
+    oper1.classList.remove("open-r");
+
+    hiwL.classList.add("rotated-image");
+    hiwR.classList.add("rotated-image");
+    appear();
+}
+//close and open the loading window
+function onResizeCloseOpen() {
+  freeze();
+  closeSite();
+  setTimeout(openSite, 1000);
+  setTimeout(disappear, 1500);
+  setTimeout(unFreeze, 1500);
+}
+*/
