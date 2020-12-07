@@ -34,6 +34,11 @@ Array.prototype.forEach.call(separatorJSOff, function(element){
         if (element.classList.contains("js-remove")) {
             element.style.display = "none";}
 });
+
+Array.prototype.forEach.call(elementsToShow, function(element){
+  if (element.classList.contains("image_gallery")) {
+      element.classList.add('i-photo');}
+});
 }
 ifJSDisabled();
 //If not, do this//
