@@ -161,47 +161,53 @@ scrollBar();
 
 //scroll to a part of page
   scrolly.addEventListener("mousedown", function(e){
-    if( e.type == "mousedown" ) { attachment = true; 
+    if( e.type === "mousedown" ) { 
+      attachment = true; 
       position = e.clientY / scrolly.offsetHeight * bodyHeight; 
       window.scrollTo({
       top: position});
-      document.documentElement.style.scrollBehavior = "initial";}
+      }
     });
 //enable scrolling on mousepress + mousemove
     scrolly.addEventListener("mousemove", function(e){
-      if( e.type == "mousemove" && attachment == true ){
+      if( e.type === "mousemove" && attachment === true ) {
         position = e.clientY / scrolly.offsetHeight * bodyHeight;
         window.scrollTo({
         top: position});
-        document.documentElement.style.scrollBehavior = "initial";}
+        document.documentElement.style.scrollBehavior = "initial";
+      }
     });
 //might be unnecessary, but does similar to the one below
-    scrolly.addEventListener("mouseup", function(e){
-      if( e.type == "mouseup" ) { 
+  /*  scrolly.addEventListener("mouseup", function(e){
+      if( e.type === "mouseup" ) { 
         attachment = false; 
         document.documentElement.style.scrollBehavior = "smooth";
-    }});
+      }
+    });*/
 //when not pressing mouse button disable scrolling
     window.addEventListener("mouseup", function(e){
-      if( e.type == "mouseup" ) { 
+      if( e.type === "mouseup" ) { 
         attachment = false; 
         scrolly.classList.remove('hoveredScrolly');
         document.documentElement.style.scrollBehavior = "smooth";
-        document.documentElement.classList.remove("blockSelect");}
+        document.documentElement.classList.remove("blockSelect");
+      }
     });
 //enables scrolling through the page even when not moving over scrolly
     window.addEventListener("mousemove", function(e){
-      if( e.type == "mousemove" && attachment == true ) { 
+      if( e.type === "mousemove" && attachment === true ) { 
         position = e.clientY / scrolly.offsetHeight * bodyHeight;
         document.documentElement.style.scrollBehavior = "initial";
         document.documentElement.classList.add("blockSelect");
         window.scrollTo({
-        top: position});}
+        top: position});
+      }
     });
 //for scrolly to stay as hovered
     window.addEventListener('mousedown', function(e) {
-      if(e.type == 'mousedown' && attachment == true) {
-        scrolly.classList.add('hoveredScrolly');}
+      if(e.type === 'mousedown' && attachment === true) {
+        scrolly.classList.add('hoveredScrolly');
+      }
     });
 
 ////////////SIDE SOCIAL MENU///////////////
@@ -255,15 +261,20 @@ function scrollPrlxCubes() {
   let farY = window.pageYOffset/99;
 
   for (var i = 0; i < closePrlx.length; i++) {
+    if (isInView(closePrlx[i])) {
     closePrlx[i].style.transform = "translate3d" + "(" + "0," + closeY  + "rem" + ", 0" + ")";
   }
-
+}
   for (var o = 0; o < medPrlx.length; o++) {
+    if (isInView(medPrlx[o])) {
     medPrlx[o].style.transform = "translate3d" + "(" + "0," + mediumY  + "rem" + ", 0" + ")";
   }
-
+}
   for (var p = 0; p < farPrlx.length; p++) {
-    farPrlx[p].style.transform = "translate3d" + "(" + "0," + farY  + "rem" + ", 0" + ")";
+
+    if (isInView(farPrlx[p])) {
+      farPrlx[p].style.transform = "translate3d" + "(" + "0," + farY  + "rem" + ", 0" + ")";
+    }
   }
 }
 
@@ -292,7 +303,9 @@ function prlxElements() {
           
           value = Math.round(cont_scrolled0 * speed/2);
 
+        //  if (isInView(prlxClassClose[b])) {
           prlxClassClose[b].style.transform = `translate3d(0,${value * 1}px, 0)`;
+     // }
     }
   }
 
@@ -360,7 +373,7 @@ var sideNav = document.getElementById('sidenav');
 var wholePage = document.getElementById('whole-page01');
 var openSideHam = document.getElementById('ham-menu');
 var closeSideDiv = document.getElementById('close-side-menu-div');
-var btnClose = document.getElementById('btn-close-div')
+var btnClose = document.getElementById('btn-close-div');
 //using event listener, make clicking on the ham menu do the following func
 openSideHam.addEventListener("click", openSlideMenu);
 openSideHam.addEventListener("click", stopScroll);
@@ -551,7 +564,7 @@ let smallWin = 0;
 
 function screenChange() {
 
-  if ((mms.matches) && (mms2.matches) && (smallWin == 0)) {
+  if ((mms.matches) && (mms2.matches) && (smallWin === 0)) {
     //  onResizeCloseOpen();
       smallWin = 1;
       mediumWin = 0;
@@ -564,7 +577,7 @@ function screenChange() {
       sideNav.style.display = "block";
   }
 
-  if ((mmm.matches) && (mmm2.matches) && (mediumWin == 0)) {
+  if ((mmm.matches) && (mmm2.matches) && (mediumWin === 0)) {
     //  onResizeCloseOpen();
       mediumWin = 1;
       smallWin = 0;
@@ -577,7 +590,7 @@ function screenChange() {
       sideNav.style.display = "block";
   }
 
-  if ((largeWin == 0) && (mml.matches) && (mml2.matches)) {
+  if ((largeWin === 0) && (mml.matches) && (mml2.matches)) {
     //  onResizeCloseOpen();
       largeWin = 1;
       mediumWin = 0;
