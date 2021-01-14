@@ -1,0 +1,139 @@
+/*!
+	By Kristian Firedi, krisdifire.github.io
+	Available for use under the MIT License
+	Version 1.1
+*/
+'use-strict';
+
+////////////////////////////////////////
+//Parallax Function w Lerp
+////////////////////////////////////////////////
+
+let value_lerp = 0;
+//initialisator
+function runner() {
+    let prlxElements = document.querySelectorAll('.prlx-element');
+    for (let i = 0, n = prlxElements.length; i < n; ++i) {
+        transform(prlxElements[i], value_lerp);
+    }
+}
+runner();
+window.addEventListener('scroll', runner);
+//get all parents
+function getParents(elem) {
+    let parents = [];
+    while (elem.parentNode && elem.parentNode.nodeName
+        .toLowerCase() != 'body') {
+        elem = elem.parentNode;
+        parents.push(elem);
+    }
+    return parents;
+}
+//calculate the position in order for the element to be in its starting position when in center of the screen
+function getValue(item) {
+    let parents = getParents(item),
+        win_h = window.innerHeight,
+        win_off = window.pageYOffset,
+        elemPar_h = item.parentNode.clientHeight,
+        totalParOff = [];
+    //for each parent, calculate its offset top, and push into array totalParOff
+    for (let i = 0, n = parents.length; i < n; ++i) {
+        totalParOff.push(parents[i].offsetTop);
+    }
+    //reduce all of the numbers in the totalParOff array into this var
+    let totalParOffSum = totalParOff.reduce(function (accumulator,
+            currentValue) {
+            return accumulator + currentValue;
+        }),
+        cont_scrolled = win_off - totalParOffSum + win_h / 2 - 
+        elemPar_h / 2;
+    return cont_scrolled * 50 / win_h;
+}
+//linear interpolation func
+function lerp(a, b, n) {
+    a = (1 - n) * a + n * b;
+    return Math.floor(a * 100) / 100;
+}
+//transform the elements based on the previous calculations and their respective classes
+function transform(el, vl) {
+    if (el.classList.contains('prlx-element') && (el.classList.contains('prlx-lerp') || 
+        el.classList.contains('prlx-norm') || el.classList.contains('prlx-stop-tb') || 
+        el.classList.contains('prlx-sideways')) == false) {
+        console.log(el);
+        throw 'Missing prlx-identifier on prlx-element';
+    }
+    if (el.closest(".prlx-section") == null) {
+        console.log(el);
+        throw 'Missing prlx-section at prlx-element';
+    }
+    //WITH LERP//
+    if (el.classList.contains("prlx-lerp") && (isInView(el.closest(".prlx-section")) || isInView(el)) && 
+        el.classList.contains("active") == false) {
+        el.classList.add('active');
+        let transformPrlxLerp = function () {
+            if (isInView(el.closest(".prlx-section")) || isInView(el)) {
+                let value = getValue(el) * el.dataset.prlx_speed;
+                vl = lerp(vl, value, 0.08);
+                el.style.transform =
+                    `matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, ${vl}, 0, 1)`;
+                window.requestAnimationFrame(transformPrlxLerp);
+            } else {
+                el.classList.remove("active");
+                window.cancelAnimationFrame(transformPrlxLerp);
+            }
+        };
+        transformPrlxLerp();
+    }
+    //WITHOUT LERP//
+    if (el.classList.contains("prlx-norm")) {
+        let transformPrlxNorm = function () {
+            if (isInView(el.closest(".prlx-section")) || isInView(el)) {
+                let value = getValue(el) * el.dataset.prlx_speed;
+                el.style.transform =
+                    `matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, ${value}, 0, 1)`;
+            }
+        };
+        transformPrlxNorm();
+    }
+    //STOPS AT SPECIFIED TOP / BOT//
+    if (el.classList.contains('prlx-stop-tb') && (isInView(el.closest(".prlx-section")) || isInView(el)) && 
+        el.classList.contains("active") == false) {
+        let value = getValue(el) * el.dataset.prlx_speed;
+        let stop_top = el.dataset.prlx_stop_t;
+        let stop_bot = el.dataset.prlx_stop_b;
+        if (value < stop_bot && value > stop_top * -1) {
+            el.style.transform =
+                `matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, ${value}, 0, 1)`;
+        }
+    }
+    //SIDEWAYS//
+    if (el.classList.contains('prlx-sideways') && (isInView(el.closest(".prlx-section")) || isInView(el))) {
+        let value = getValue(el) * el.dataset.prlx_speed;
+        if (el.classList.contains('sideways-with-lerp') == false) {
+            el.style.transform =
+                `matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, ${value}, 0, 0, 1)`;
+        }
+        if (el.classList.contains('sideways-with-lerp') && el.classList
+            .contains("active") == false) {
+            el.classList.add('active');
+            let transformSide = function () {
+                if (isInView(el.closest(".prlx-section")) || isInView(el)) {
+                    let value = getValue(el) * el.dataset.prlx_speed;
+                    vl = lerp(vl, value, 0.08);
+                    el.style.transform =
+                        `matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, ${vl}, 0, 0, 1)`;
+                    window.requestAnimationFrame(transformSide);
+                } else {
+                    el.classList.remove("active");
+                    window.cancelAnimationFrame(transformSide);
+                }
+            };
+            transformSide();
+        }
+    }
+}
+//is an element in the viewport (top/bot - it will work if it's hidden on the sides)
+function isInView(el) {
+    let box = el.getBoundingClientRect();
+    return box.top < window.innerHeight && box.bottom >= 0;
+}

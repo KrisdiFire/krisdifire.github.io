@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset='utf-8'>
+    
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    
+    <title>Parallax Effect</title>
+
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link defer rel="preconnect" href="https://fonts.gstatic.com">
+    <link defer href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    <link defer href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&display=swap" rel="stylesheet">
+    
+    <link defer rel='stylesheet' type='text/css' media='screen' href='css/parallax.css'>
+
+</head>
+<body class="">
+
+    <div id="scrolly">
+        <div id="scrolled-am">
+            <span id="scroll-hand"></span>
+        </div>
+    </div>
+    
+<div class="whole-page overflow-hidden">
+
+    <div class="page">
+
+        <div id="up" class="change-on-over up-opacity"><a>↑</a><div class="up-inner pos-ab align-self-cent push-back"></div></div>
+
+
+        <section class="content-row height100 prlx-section nopad">
+
+            <div class="content col10 height25">
+                <div class="title-lc">
+                    <a class="a1">Simple Parallax Lib</a>
+                    <a class="a2">V1.1</a>
+                </div>
+            </div>
+
+            <div class="content-row height50 nomar width-override">
+            
+                <div class="content col10 cont-cent">
+                    <div class="prlx-container-head mar-right">
+                        <span data-prlx_speed="1" class="scal-txt prlx-element prlx-lerp">L</span>
+                        <span data-prlx_speed="1.5" class="scal-txt prlx-element prlx-lerp">E</span>
+                        <span data-prlx_speed="-1" class="scal-txt prlx-element prlx-lerp">T'</span>
+                        <span class="scal-txt prlx-element0">S</span>
+                        <span class="scal-txt prlx-element0">&nbsp;</span>
+                        <span data-prlx_speed="2" class="scal-txt prlx-element prlx-lerp">S</span>
+                        <span class="scal-txt pos-rel">C</span>
+                        <span data-prlx_speed="1.25" class="scal-txt prlx-element prlx-lerp">R</span>
+                        <span data-prlx_speed="2.5" class="scal-txt prlx-element prlx-lerp ">O</span>
+                        <span data-prlx_speed="1" class="scal-txt prlx-element prlx-lerp ">L</span>
+                        <span data-prlx_speed="-1.75" class="scal-txt prlx-element prlx-lerp ">L</span>
+                    </div>
+
+                    <div class="content col10 overflow-hidden0 cont-cent">
+                        <hr style="display: none; margin-top: auto; border-color: black; background-color: black; width: 60vw;">
+                    </div>
+                    
+                    <div id="gc1" class="huge-circ circ-inside pos-ab"><p>1</p></div>
+                    <div data-prlx_speed="4" id="gc2" class="med-circ circ-inside prlx-element prlx-norm pos-ab"><p>2</p></div>
+                    <div data-prlx_speed="-4" id="gc3" class="big-circ circ-inside prlx-element prlx-norm pos-ab"><p>3</p></div>
+        
+                </div>
+        
+            </div>
+
+            <div class="content col10 pos-rel height25">
+                <p></p>
+                <hr style="margin-top: auto; border-color: black; background-color: black;">
+            </div>
+            
+        </section>
+
+        <section style="overflow: hidden;" class="content-row height50">
+
+            <div class="content col05">
+
+                <ul class="list-01">
+                    <li><a href="">Explanation</a></li>
+                    <!-- <hr style="margin-top: auto; border-color: black; background-color: black;"> -->
+                    <li><a href="">Examples</a></li>
+                    <!-- <hr style="margin-top: auto; border-color: black; background-color: black;"> -->
+                    <li><a href="">Support me</a></li>
+                </ul>             
+
+            </div>
+
+            <div class="content col02"></div>
+
+            <div class="content col03 black-bg">
+                <p class=" text-color-bg">This is a simple parallax effect library incorporating lerp and sideways transformations in order
+                    to introduce a modern feel into any webpage. It was built with simplicity in mind, so there are 
+                    no dependencies or scroll hacks here!
+                </p>
+            </div>
+
+        </section>
+
+        <section class="content-row height150 prlx-section">
+
+            <div class="content col10 pos-rel">
+                <p></p>
+                <hr style="margin-top: auto; border-color: black; background-color: black;">
+            </div>
+
+            <div class="content col10 height25">
+                <p>prlx-section</p>
+            </div>
+
+            <div style="height: 100%0; position: relative;" class="content col04">
+                <h2 data-prlx_speed="1" class="scal-txt-04 nopad-l-r text-color-bg left-black-bg prlx-element prlx-sideways sideways-with-lerp ">What do? <span style="font-size: 1rem; font-family: 'Montserrat', sans-serif; right: 0; top: 0; position: absolute; padding: 1rem;">prlx-sideways <br> with lerp </span> <span style="position: absolute; font-size: 1rem; font-family: 'Montserrat', sans-serif; top: -2rem; right: 1rem;
+                    transform-origin: center top;
+                    transform: translate3d(50%, 200%0, 0) rotate(90deg0); color: black;">speed x1</span> </h2>
+                <br>
+                <p style="border: solid black 2px;" class="nopad0">With a mixture of classes and data attributes,
+                    this script allows you to make elements that have start/stop positions, lerp up/down as well as sideways
+                    , or just achieve the good ol' parallax effect with relative ease. Also, the elements are moving only when their prlx-section parent, or 
+                    the element itself comes into the viewport so as to reduce the load on the users device.
+                </p>
+
+            </div>
+
+            <div class="content col02 cont-cent">
+                <div data-prlx_speed="3" data-prlx_stop_b="75" data-prlx_stop_t="150" id="gc4" class="huge-circ prlx-element prlx-stop-tb circ-inside"> <span id="stop-tb-txt">prlx-stop-tb <br> speed x3 </span>  </div>
+                <p style="position: absolute; text-decoration: underline;">center</p>
+            </div>
+
+            
+
+            <div data-prlx_speed="1.5" style="border: solid black 2px; overflow: hidden;" class="content col04 cont-cent height75 prlx-element prlx-norm">
+                <p style="position: absolute; top: 0; left: 0;" class="">prlx-norm</p>
+                <p style="position: absolute; right: 0; transform-origin: center top; transform: translate3d(50%, 50%, 0) rotate(90deg)">speed x1.5</p>
+                <div data-prlx_speed="2" style="border: solid black 2px; height: 20vw; width: 20vw;" class="content prlx-element prlx-lerp cont-cent">
+                <p style="position: absolute; top: 0; left: 0;">prlx-lerp</p>
+                <p style="position: absolute; right: 0; transform-origin: center top; transform: translate3d(50%, 50%, 0) rotate(90deg)">speed x2</p>
+                </div>
+
+            </div>
+
+            <div class="content col10 pos-rel height25">
+                <p></p>
+                <hr style="margin-top: auto; border-color: black; background-color: black;">
+            </div>
+
+        </section>
+
+        <section class="content-row height25">
+        </section>
+
+        <dsection class="content-row height50">
+        </dsection>
+
+        <section class="content-row height25 prlx-section">
+
+            <div class="prlx-element prlx-norm"></div>
+
+        </section>
+   
+    </div>
+
+</div>
+
+<section id="footer-01" class="footer-wrapper black-bg">
+
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+<script src='js/main-for-parallax.js'></script>
+<script src='js/simple-parallax-script.js'></script>
+
+</body>
+
+</html>

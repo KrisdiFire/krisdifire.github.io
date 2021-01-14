@@ -1,0 +1,825 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3 {
+    padding: 1rem;
+    font-family: 'Playfair Display', serif;
+    color: white;
+    font-weight: 400;
+}
+
+a {
+}
+
+/*up button style*/
+#up {
+    font-size: 2rem;
+    line-height: 1;
+    position: fixed;
+    height: 3rem;
+    width: 3rem;
+    margin: 1rem 4rem 1rem 1rem;
+    bottom: 0;
+    right: 0;
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; 
+    visibility: hidden;   
+    cursor: pointer;
+    border: black solid 0.1rem;
+    transition: all ease-in-out 0.75s;
+    transition-delay: 0.25s;
+    border-radius: 50%;
+}
+.up-opacity {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transition-delay: 0s !important;
+}
+#up:hover {
+    opacity: 1 !important;
+    width: 3rem;
+    height: 3rem;
+    transform-origin: center center;
+    transition: all .6s cubic-bezier(.17,.65,.3,1.3);;
+}
+
+#up a {
+    list-style: none;
+    text-decoration: none;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 3rem;
+    padding: 0.5rem;
+    font-weight: lighter;
+    color: black;
+    transition: all ease-in-out 0.25s;
+}
+#up:hover a {
+    color: bisque;
+    transition: all ease-in-out 0.25s;
+}
+.up-inner {
+    width: 0%;
+    height: 0%;
+    background-color: black;
+    border-radius: 50%;
+    transition: width .6s ease-out,
+                height .6s ease-out,
+                color ease-in-out .6s;
+}
+
+#up:hover .up-inner {
+    width: 110%;
+    height: 110%;
+    border-radius: 50%;
+    transition: width .6s cubic-bezier(.17,.65,.3,1.3),
+                height .6s cubic-bezier(.17,.65,.3,1.3),
+                color ease-in-out .6s;
+}
+
+.over-black a{
+    color: bisque !important;
+}
+
+.over-black{
+    border: 0.1rem solid bisque !important;
+}
+
+.over-black:hover a {
+    color: black !important;
+}
+.over-black div {
+    background-color: bisque;
+}
+
+/*text sizes*/
+.larger-txt {
+    font-size: 1.5rem;
+    transition: font-size ease 0.35s;
+}
+.huge-txt {
+    font-size: 3rem;
+    transition: font-size ease 0.35s;
+}
+.mega-txt {
+    font-size: 5rem;
+    transition: font-size ease 0.35s;
+}
+.largest-txt {
+    font-size: 9rem;
+    transition: font-size ease 0.35s;
+}
+.scal-txt {
+    font-size: 11vw;
+    transition: font-size ease 0.35s;
+}
+.scal-txt-02 {
+    font-size: 8vw;
+    transition: font-size ease 0.35s;
+}
+.scal-txt-03 {
+    font-size: 6vw;
+    transition: font-size ease 0.35s;
+}
+.scal-txt-04 {
+    font-size: 4vw;
+    transition: font-size ease 0.35s;
+}
+
+/*ScrollBar and fallback for my SB*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+.noScrollBar::-webkit-scrollbar {
+    width: 0px;
+}
+.noScrollBar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+::-webkit-scrollbar-track {
+    opacity: 1;
+    background-color: black;
+}
+.noScrollBar::-webkit-scrollbar-track {
+    opacity: 0;
+    background-color: black;
+}
+::-webkit-scrollbar-thumb {
+    width: 10px;
+    background: white; 
+}
+.noScrollBar::-webkit-scrollbar-thumb {
+    width: 10px;
+    background: white; 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(120, 120, 120); 
+}
+.noScrollBar::-webkit-scrollbar-thumb:hover {
+    background: rgb(120, 120, 120); 
+}
+/*My Scrollbar*/
+#scrolly {
+    transform: translateX(5px);
+    display: none;
+    position: fixed;
+    height: 100%; 
+    width: 10px; 
+   /* background-color: bisque;*/
+    right: 0px;
+    z-index: 25;
+    transition: transform ease-out 0.25s;
+    transition-delay: 1.5s;
+}
+#scrolly:hover {
+    transform: translateX(0px);
+    transition: transform ease-out 0.25s;
+    transition-delay: 0.35s;
+}
+.hoveredScrolly {
+    transform: translateX(0px) !important;
+    transition: transform ease-out 0.25s !important;
+    transition-delay: 0.25s !important;
+}
+#scrolled-am {
+    position: relative;
+    width: auto; 
+    background:  black; 
+    right: 0;
+    top: 0;
+    margin-top: -100vh; 
+    /*transition: height 0s ease;*/
+    height: 100vh;
+}
+#scroll-hand {
+    position: absolute;
+    height: 2rem;
+    width: 15px;
+    bottom: 0;
+    background-color:transparent;
+    margin-bottom: -1rem;
+}
+/*Block selection while scrolling*/
+.blockSelect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/*class that stops scrolling when the sidemenu is open*/
+.stopscroll {
+    overflow: hidden;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.separator {
+    height: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*background which overflows*/
+.left-black-bg {
+    position: relative;
+}
+.right-black-bg {
+    position: relative;
+}
+.left-black-bg::after {
+    background-color: rgb(0, 0, 0);
+    background-position: center;
+    content: "";
+    opacity: 1;
+    top: 0rem;
+    left: 0rem;
+    bottom: 0rem;
+    right: 0rem;
+    position: absolute;
+    z-index: -24; 
+    margin-left: -100vw;
+    margin-right: 0%;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+}
+.right-black-bg::after {
+    background-color: rgb(0, 0, 0);
+    background-position: center;
+    content: "";
+    opacity: 1;
+    top: 0rem;
+    left: 0rem;
+    bottom: 0rem;
+    right: 0rem;
+    position: absolute;
+    z-index: -24; 
+    margin-right: -100vw;
+    margin-left: 0%;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+}
+.left-white-bg {
+    position: relative;
+}
+.right-white-bg {
+    position: relative;
+}
+.left-white-bg::after {
+    background-color: #fff;
+    background-position: center;
+    content: "";
+    opacity: 1;
+    top: 0rem;
+    left: 0rem;
+    bottom: 0rem;
+    right: 0rem;
+    position: absolute;
+    z-index: -24; 
+    margin-left: -100vw;
+    margin-right: 0%;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+}
+.right-white-bg::after {
+    background-color:#fff;
+    background-position: center;
+    content: "";
+    opacity: 1;
+    top: 0rem;
+    left: 0rem;
+    bottom: 0rem;
+    right: 0rem;
+    position: absolute;
+    z-index: -24; 
+    margin-right: -100vw;
+    margin-left: 0%;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.black-bg {
+    background-color: black;
+}
+
+
+
+
+
+html {
+    scroll-behavior: smooth; 
+}
+
+body {
+    background-color: bisque;
+}
+
+.whole-page {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    transition: 0.4s;
+}
+
+.page {
+    
+}
+
+.content-row {
+    margin: 0 auto 0 auto;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: auto;
+    position: relative;
+}
+
+/*minimal height of the content wrapper (you don't need this often)*/
+.height200 {
+    min-height: 200vh;
+}
+.height150 {
+    min-height: 150vh;
+}
+.height100 {
+    min-height: 100vh;
+}
+.height75 {
+    min-height: 75vh;
+}
+.height50 {
+    min-height: 50vh;
+}
+.height25 {
+    min-height: 25vh;
+}
+
+.content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.content p {
+    padding: 1rem;
+    color: black;
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.text-color-bg {
+    color: bisque !important;
+}
+.text-color-white {
+    color: white !important;
+}
+.text-color-black {
+    color: black !important;
+}
+
+.col00 {
+    width: 0%;
+}
+/*max width of columns*/
+.col01 {
+    width: 10%;
+    /*width 100px*/
+}
+.col02 {
+    width: 20%;
+    /*width 200px*/
+}
+.col025 {
+    width: 25%;
+    /*width 300px*/
+}
+.col03 {
+    width: 30%;
+    /*width 400px*/
+}
+.col04 {
+    width: 40%;
+    /*width 500px*/
+}
+.col05 {
+    width: 50%;
+    /*width 600px*/
+}
+.col06 {
+    width: 60%;
+    /*width 700px*/
+}
+.col07 {
+    width: 70%;
+    /*width 800px*/
+}
+.col075 {
+    width: 75%;
+    /*width 900px*/
+}
+.col08 {
+    width: 80%;
+    /*width 1000px*/
+}
+.col09 {
+    width: 90%;
+    /*width 1100px*/
+}
+.col10 {
+    width: 100%;
+    /*width 1200px*/
+}
+
+.list-01 {
+    color: white;
+    padding-inline-start: 0px;
+    border: none;
+}
+.list-01 > li {
+    font-size: 1rem;
+    position: relative;
+    padding: 1rem;
+    width: 100%;
+    list-style: none;
+    line-height: 1rem;
+    /* margin-left: -0.5rem; */
+    /* margin-right: -0.5rem; */
+}
+
+.list-01 > li::before {
+    content: "\2022";
+    color: #3abdd4;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    font-size: 1.2rem;
+}
+
+.list-01 > li::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 1px;
+    background-color: #252525;
+}
+
+.list-01 > li > a {
+    /* position: relative; */
+    text-decoration: none;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*positioning of the content in a wrapper where display: flex; is enabled x/y*/
+.cont-cent {
+    justify-content: center;
+    align-items: center;
+}
+/*when placed on the content wrapper it positions the elements inside to the middle vertically, and horisontally when placed onto columns*/
+.cont-cent-ver {
+    align-items: center;
+}
+.cont-cent-hor {
+    justify-content: center;
+}
+/*align items inside of the content container*/
+.item-cent-hor {
+    align-items: center;
+}
+.item-cent-ver {
+    justify-content: center;
+}
+/*Align individual items to the center*/
+.align-self-cent {
+    align-self: center;
+    justify-self: center;
+}
+/*images that cover elements*/
+.image-div-cover-w {
+    /* object-fit: cover; */
+    width: 100%;
+    position: absolute;
+    height: 100%;
+}
+.image-div-cover-h {
+    position: absolute;
+    /* object-fit: cover; */
+    height: 100%;
+}
+.image-div-cover-wh {
+    position: absolute;
+    /* object-fit: cover; */
+}
+
+.twenty-container{
+    height: 20rem;
+    width: 20rem;
+}
+.twenty-five-height {
+    height: 25vh;
+}
+
+.image-higher {
+    height: 50vh;
+    width: 35vw;
+}
+.image-medium {
+    height: 30vw;
+    width: auto;
+}
+
+.prlx-element {
+    position: relative;
+   /* transition: transform3d ease-in-out 1.5s;*/
+}
+
+.prlx-lerp {
+    /* transition: transform ease ; */
+}
+
+.circ-inside, .circ-inside p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* color: transparent; */
+}
+
+.huge-circ {
+    border-radius: 50%;
+    position: absolute;
+    height: 18vw;
+    width: 18vw;
+}
+
+.big-circ {
+    border-radius: 50%;
+    position: absolute;
+    height: 10vw;
+    width: 10vw;
+}
+
+.med-circ {
+    border-radius: 50%;
+    position: absolute;
+    height: 6vw;
+    width: 6vw;
+}
+
+.small-circ {
+    border-radius: 50%;
+    position: absolute;
+    height: 4vw;
+    width: 4vw;
+}
+
+#gc1 {
+    right: -10vw;
+    /* top: 0vh; */
+    z-index: -10;
+    background-color: rgb(224, 110, 110);
+    filter: saturate(0.75);
+    border: 2px solid black;
+}
+#gc2 {
+    right: 15vw;
+    top: -15vh;
+    z-index: -20;
+    background-color: rgb(253, 168, 83);
+    filter: saturate(0.5);
+    border: 2px solid black;
+}
+#gc3 {
+    right: 30vw;
+    top: 50vh;
+    z-index: 20;
+    background-color: lightcoral;
+    border: 2px solid black;
+}
+#gc4 {
+    height: 6.5vw;
+    width: 6.5vw;
+    transform: translate(0, -50%);
+    z-index: 20;
+    border: 2px solid black;
+}
+
+#stop-tb-txt {
+    text-align: center;
+    bottom: -75%;
+    position: absolute;
+    width: max-content;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.title-lc {
+    height: 6vw;
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.title-lc .a1 {
+    position: relative;
+    /* font-size: 1.5vw; */
+}
+
+.title-lc .a2 {
+    margin-left: auto;
+    position: relative;
+    /* font-size:  1.5vw; */
+}
+
+.title-lc .a1::after, .title-lc .a2::after {
+    content: '';
+    width: 100%;
+    height: 0.75vw;
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    z-index: -10;
+    filter: saturate(0.75);
+    background-color: lightcoral;
+}
+
+.prlx-container-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 100%; */
+}
+/*the span items at the start of the page*/
+.prlx-container-head span:nth-child(6), .prlx-container-head span:nth-child(7) {
+    color: lightcoral;
+    filter: saturate(0.75);
+}
+
+.gray-circ {
+    border-radius: 50%;
+    background-color: gray;
+    position: absolute;
+    height: 4rem;
+    width: 4rem;
+    z-index: 15;
+}
+.gray-circ-topL {
+    left: -2rem;
+    top: -2rem;
+}
+.gray-circ-topR {
+    right: -2rem;
+    top: -2rem;
+}
+.gray-circ-medL {
+    left: -2rem;
+    top: 50%;
+}
+.gray-circ-medR {
+    right: -2rem;
+    top: 50%;
+}
+.gray-circ-botL {
+    bottom: -2rem;
+    left: -2rem;
+}
+.gray-circ-botR {
+    bottom: -2rem;
+    right: -2rem;
+}
+
+/*additional stuff*/
+.top-auto {
+    margin-top: auto;
+}
+.bot-auto {
+    margin-bottom: auto;
+}
+.push-back {
+    z-index: -25;
+}
+.nopad {
+    padding: 0 !important;
+}
+.nopad-t-b {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.nopad-l-r {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.nomar {
+    margin: 0 !important;
+}
+.pos-ab {
+    position: absolute !important;
+}
+.pos-rel {
+    position: relative;
+}
+
+/*used to position elements either to the right or to the left*/
+.mar-left {
+    margin-left: auto;
+    right: 0;
+}
+.mar-right {
+    left: 0;
+    margin-right: auto;
+}
+/*used almost exclusively for absolutely positioned elements*/
+.mar-cent-ver {
+    top: 50%;  /* position the top  edge of the element at the middle of the parent */
+    transform: translateY(-50%);                               
+}
+.mar-cent-hor {
+    left: 50%;  /* position the left  edge of the element at the middle of the parent */
+    transform: translateX(-50%);                              
+}
+.mar-cent {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.max-width-override {
+    max-width: unset !important;
+}
+
+.width-override {
+    width: 100%;
+}
+
+.no-trans {
+    transition: unset;
+}
+
+/*footer styles*/
+.footer-wrapper {
+    height: 10rem;
+    background-color: black;
+    color: white;
+    width: 100%;
+    bottom: 0;
+    align-self: flex-end;
+}
+
+@media only screen and (min-width: 90000px) {
+    .cont-width101 {
+        max-width: 1200px;
+    }
+    .scal-txt {
+        font-size: 14rem;
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .whole-page {
+        width: 100%;
+    }
+    .page {
+        max-width: 80vw;
+        margin: 0 auto 0 auto;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #scrolly {
+        display: none !important;
+    }
+    .prlx-element {
+        transform: translate3d(0, 0, 0) !important;
+    }
+}
