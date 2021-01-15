@@ -74,8 +74,26 @@ function transform(el, vl) {
             if (isInView(el.closest(".prlx-section")) || isInView(el)) {
                 let value = getValue(el) * el.dataset.prlx_speed;
                 vl = lerp(vl, value, 0.08);
-                el.style.transform =
-                    `matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, ${vl}, 0, 1)`;
+                let stop_t = el.dataset.prlx_stop_t;
+                let stop_b = el.dataset.prlx_stop_b;
+                if (el.classList.contains('with-stop')) {
+                    if (vl < stop_b && vl > stop_t * -1) {
+                        el.style.transform =
+                            `matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, ${vl}, 0, 1)`;
+                    }
+                    if (el.classList.contains('with-stop') && vl > stop_b && vl > stop_t * -1) {
+                        el.style.transform = 
+                            `matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, ${stop_b}, 0, 1)`;
+                    }
+                    if (el.classList.contains('with-stop') && vl < stop_b && vl < stop_t * -1) {
+                        el.style.transform = 
+                            `matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, ${stop_t * -1}, 0, 1)`;
+                    }
+                } else {
+                    el.style.transform =
+                        `matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, ${vl}, 0, 1)`;
+                }
+                
                 window.requestAnimationFrame(transformPrlxLerp);
             } else {
                 el.classList.remove("active");
@@ -89,29 +107,28 @@ function transform(el, vl) {
         let transformPrlxNorm = function () {
             if (isInView(el.closest(".prlx-section")) || isInView(el)) {
                 let value = getValue(el) * el.dataset.prlx_speed;
-                el.style.transform =
-                    `matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, ${value}, 0, 1)`;
+                let stop_t = el.dataset.prlx_stop_t;
+                let stop_b = el.dataset.prlx_stop_b;
+                if (el.classList.contains('with-stop')) {
+                    if (value < stop_b && value > stop_t * -1) {
+                        el.style.transform =
+                            `matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, ${value}, 0, 1)`;
+                    }
+                    if (el.classList.contains('with-stop') && value > stop_b && value > stop_t * -1) {
+                        el.style.transform = 
+                            `matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, ${stop_b}, 0, 1)`;
+                    }
+                    if (el.classList.contains('with-stop') && value < stop_b && value < stop_t * -1) {
+                        el.style.transform = 
+                            `matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, ${stop_t * -1}, 0, 1)`;
+                    }
+                } else {
+                    el.style.transform =
+                        `matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, ${value}, 0, 1)`;
+                }
             }
         };
         transformPrlxNorm();
-    }
-    //STOPS AT SPECIFIED TOP / BOT//
-    if (el.classList.contains('prlx-stop-tb') && (isInView(el.closest(".prlx-section")) || isInView(el)) && 
-        el.classList.contains("active") == false) {
-        let value = getValue(el) * el.dataset.prlx_speed;
-        let stop_t = el.dataset.prlx_stop_t;
-        let stop_b = el.dataset.prlx_stop_b;
-        if (value < stop_b && value > stop_t * -1) {
-            el.style.transform =
-                `matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, ${value}, 0, 1)`;
-        }
-        //
-        if (value > stop_b && value > stop_t * -1) {
-            el.style.transform = `matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, ${stop_b}, 0, 1)`;
-        }
-        if (value < stop_b && value < stop_t * -1) {
-            el.style.transform = `matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, ${stop_t * -1}, 0, 1)`;
-        }
     }
     //SIDEWAYS//
     if (el.classList.contains('prlx-sideways') && (isInView(el.closest(".prlx-section")) || isInView(el))) {
@@ -119,20 +136,50 @@ function transform(el, vl) {
         let stop_l = el.dataset.prlx_stop_l;
         let stop_r = el.dataset.prlx_stop_r;
         //without lerp
-        if (el.classList.contains('sideways-with-lerp') == false) {
-            el.style.transform =
-                `matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, ${value}, 0, 0, 1)`;
+        if (el.classList.contains('with-lerp') == false) {
+            if (el.classList.contains('with-stop')) {
+                if (value < stop_r && value > stop_l * -1) {
+                    el.style.transform =
+                       `matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, ${value}, 0, 0, 1)`;
+                }
+                if (el.classList.contains('with-stop') && value > stop_r && value > stop_l * -1) {
+                    el.style.transform = 
+                        `matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, ${stop_r}, 0, 0, 1)`;
+                }
+                if (el.classList.contains('with-stop') && value < stop_r && value < stop_l * -1) {
+                    el.style.transform = 
+                        `matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, ${stop_l * -1}, 0, 0, 1)`;
+                }
+            } else {
+                el.style.transform =
+                   `matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, ${value}, 0, 0, 1)`;
+            }
         }
         //with lerp
-        if (el.classList.contains('sideways-with-lerp') && el.classList
+        if (el.classList.contains('with-lerp') && el.classList
             .contains("active") == false) {
             el.classList.add('active');
             let transformSide = function () {
                 if (isInView(el.closest(".prlx-section")) || isInView(el)) {
                     let value = getValue(el) * el.dataset.prlx_speed;
                     vl = lerp(vl, value, 0.08);
-                    el.style.transform =
-                        `matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, ${vl}, 0, 0, 1)`;
+                    if (el.classList.contains('with-stop')) {
+                        if (vl < stop_r && vl > stop_l * -1) {
+                            el.style.transform =
+                               `matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, ${vl}, 0, 0, 1)`;
+                        }
+                        if (el.classList.contains('with-stop') && vl > stop_r && vl > stop_l * -1) {
+                            el.style.transform = 
+                                `matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, ${stop_r}, 0, 0, 1)`;
+                        }
+                        if (el.classList.contains('with-stop') && vl < stop_r && vl < stop_l * -1) {
+                            el.style.transform = 
+                                `matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, ${stop_l * -1}, 0, 0, 1)`;
+                        }
+                    } else {
+                        el.style.transform =
+                           `matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, ${vl}, 0, 0, 1)`;
+                    }
                     window.requestAnimationFrame(transformSide);
                 } else {
                     el.classList.remove("active");
@@ -148,6 +195,8 @@ function isInView(el) {
     let box = el.getBoundingClientRect();
     return box.top < window.innerHeight && box.bottom >= 0;
 }
+
+
 
 // var t1 = performance.now();
 

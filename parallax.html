@@ -116,7 +116,7 @@
             </div>
 
             <div style="height: auto; position: relative;" class="content col04">
-                <h2 data-prlx_speed="1" data-prlx_stop_r="20" data-prlx_stop_l="20" class="scal-txt-04 nopad-l-r text-color-bg left-black-bg prlx-element prlx-sideways sideways-with-lerp ">What do? <span style="font-size: 1rem; font-family: 'Montserrat', sans-serif; right: 0; top: 0; position: absolute; padding: 1rem;">prlx-sideways <br> with lerp </span> <span style="position: absolute; font-size: 1rem; font-family: 'Montserrat', sans-serif; top: -2rem; right: 1rem;
+                <h2 data-prlx_speed="1" data-prlx_stop_l="50" data-prlx_stop_r="0" class="scal-txt-04 nopad-l-r text-color-bg left-black-bg prlx-element prlx-sideways with-stop ">What do? <span style="font-size: 1rem; font-family: 'Montserrat', sans-serif; right: 0; top: 0; position: absolute; padding: 1rem;">prlx-sideways <br> with-lerp <br> with-stop </span> <span style="position: absolute; font-size: 1rem; font-family: 'Montserrat', sans-serif; top: -2rem; right: 1rem;
                     transform-origin: center top;
                     transform: translate3d(50%, 200%0, 0) rotate(90deg0); color: black;">speed x1</span> </h2>
                 <br>
@@ -133,7 +133,7 @@
             </div>
 
             <div class="content col02 cont-cent">
-                <div data-prlx_speed="3" data-prlx_stop_b="75" data-prlx_stop_t="150" id="gc4" class="huge-circ prlx-element prlx-stop-tb circ-inside"> <span id="stop-tb-txt">prlx-stop-tb <br> speed x3 </span>  </div>
+                <div data-prlx_speed="3" data-prlx_stop_b="75" data-prlx_stop_t="150" id="gc4" class="huge-circ prlx-element prlx-norm with-stop circ-inside"> <span id="stop-tb-txt">with-stop<br> speed x3 </span>  </div>
                 <p style="position: absolute; text-decoration: underline;">center</p>
             </div>
 
@@ -159,42 +159,44 @@
         <section class="content-row height25">
         </section>
 
-        <dsection class="content-row height25">
-            <div class="content col05 cont-cent-hor">
-                <h2 class="text-color-black scal-txt-04">How to setup?</h2>
-                <p></p>
-            </div>
-
-        </dsection>
+        
 
         <section class="content-row height50 prlx-section">
+
+            <dsection class="content-row height25">
+                <div class="content col05 cont-cent-hor">
+                    <h2 class="text-color-black scal-txt-04">How to setup?</h2>
+                    <p></p>
+                </div>
+    
+            </dsection>
 
             <div class="content col05 border-bl text-color-white cont-cent-hor">
                 <h2 class="text-color-black scal-txt-04">1.</h2>
                 <p>Set up a container element which will encapsulate the parallaxing elements, and give it a class name of <b> prlx-section</b>.</p>
             </div>
-            <div data-prlx_speed="-2" class="content col05 black-bg prlx-element prlx-sideways sideways-with-lerp text-color-white cont-cent-hor">
+            <div data-prlx_speed="-2" data-prlx_stop_l="0" data-prlx_stop_r="100" class="content col05 black-bg prlx-element prlx-sideways with-lerp with-stop text-color-white cont-cent-hor">
                 <h2 class="text-color-bg scal-txt-04">3.</h2>
                 <p class="text-color-bg">When the classes are in place, give each element the speed by which they'll move with
                     the <b>data-prlx_speed="x"</b>, where "x" is any number you wish. By adding a negative value, the element
                     will parallax in the opposite direction.
                 </p>
             </div>
-            <div data-prlx_speed="-2" class="content col05 black-bg prlx-element prlx-lerp text-color-white cont-cent-hor">
+            <div data-prlx_speed="-2" data-prlx_stop_t="0" data-prlx_stop_b="100" class="content col05 black-bg prlx-element prlx-lerp with-stop text-color-white cont-cent-hor">
                 <h2 class="text-color-bg scal-txt-04">2.</h2>
                 <p class="text-color-bg">When you have made the layout per your liking inside the section and want to parallax
                     some elements, give them the <b> <u> prlx-element </u></b> class, and one of the following in order for them to know
-                    how to move: <b><u>prlx-norm</u>, <u>prlx-lerp</u>, <u>prlx-stop-tb</u> or <u>prlx-sideways</u></b> (which can also lerp with the 
-                        addition of the <b> <u> sideways-with-lerp</u></b> class).
+                    how to move: <b><u>prlx-norm</u>, <u>prlx-lerp</u>, or <u>prlx-sideways</u></b> (which can also lerp with the 
+                        addition of the <b> <u>with-lerp</u></b> class).
                 </p>
             </div>
             <div style="transform: rotate(45deg); width: 50%; height: 100%;" class="content col050  text-color-white cont-cent-hor">
-                <div data-prlx_speed="-2" class=" prlx-element prlx-sideways sideways-with-lerp">
+                <div data-prlx_speed="-2" class=" prlx-element prlx-sideways with-lerp">
                     <div style="transform: rotate(-45deg);" class=" border-bl">
                     <h2 class="text-color-black scal-txt-04">4.</h2>
-                    <p>Exclusive to the prlx-stop-tb elements, they need <b> data-prlx_stop_t="x" & data-prlx_stop_b="x" </b> where 
-                        "x" is the value at which the element will stop at, and <b>..stop_t</b> and <b>..stop_b</b> are <b>top & bottom</b>.
-                        <br> (NOTE: no need to place negative values for either stop_t/b, this is taken care of ;)
+                    <p>Last but not least, you may stop the elements from moving when they reach a certain point by applying the <b><u>"with-stop"</u></b> class and <b> data-prlx_stop_t="x" or ...stop_b/l/r="x"</b> where 
+                        "x" is the value at which the element will stop at, and <b>..stop_t/b/l/r</b> stand for <b>top, bottom, left and right</b> (the last two only apply for sideways elements).
+                        <br> (NOTE: no need to place negative values for either stop_t/b/l/r, this is taken care of ;)
                     </p>
                 </div>
                 </div>
