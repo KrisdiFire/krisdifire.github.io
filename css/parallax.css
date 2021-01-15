@@ -786,9 +786,13 @@ body {
     transition: unset;
 }
 
+.border-bl {
+    border: solid black 2px;
+}
+
 /*footer styles*/
 .footer-wrapper {
-    height: 10rem;
+    height: 25vh;
     background-color: black;
     color: white;
     width: 100%;

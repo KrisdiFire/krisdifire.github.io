@@ -82,10 +82,12 @@
             <div class="content col05">
 
                 <ul class="list-01">
-                    <li><a href="">Explanation</a></li>
-                    <!-- <hr style="margin-top: auto; border-color: black; background-color: black;"> -->
-                    <li><a href="">Examples</a></li>
-                    <!-- <hr style="margin-top: auto; border-color: black; background-color: black;"> -->
+                    <li><a href="">Intro</a></li>
+
+                    <li><a href="">Examples & Explanation</a></li>
+
+                    <li><a href="">Setup</a></li>
+
                     <li><a href="">Support me</a></li>
                 </ul>             
 
@@ -113,15 +115,19 @@
                 <p>prlx-section</p>
             </div>
 
-            <div style="height: 100%0; position: relative;" class="content col04">
-                <h2 data-prlx_speed="1" class="scal-txt-04 nopad-l-r text-color-bg left-black-bg prlx-element prlx-sideways sideways-with-lerp ">What do? <span style="font-size: 1rem; font-family: 'Montserrat', sans-serif; right: 0; top: 0; position: absolute; padding: 1rem;">prlx-sideways <br> with lerp </span> <span style="position: absolute; font-size: 1rem; font-family: 'Montserrat', sans-serif; top: -2rem; right: 1rem;
+            <div style="height: auto; position: relative;" class="content col04">
+                <h2 data-prlx_speed="1" data-prlx_stop_r="20" data-prlx_stop_l="20" class="scal-txt-04 nopad-l-r text-color-bg left-black-bg prlx-element prlx-sideways sideways-with-lerp ">What do? <span style="font-size: 1rem; font-family: 'Montserrat', sans-serif; right: 0; top: 0; position: absolute; padding: 1rem;">prlx-sideways <br> with lerp </span> <span style="position: absolute; font-size: 1rem; font-family: 'Montserrat', sans-serif; top: -2rem; right: 1rem;
                     transform-origin: center top;
                     transform: translate3d(50%, 200%0, 0) rotate(90deg0); color: black;">speed x1</span> </h2>
                 <br>
-                <p style="border: solid black 2px;" class="nopad0">With a mixture of classes and data attributes,
+                <p class="border-bl">With a mixture of classes and data attributes,
                     this script allows you to make elements that have start/stop positions, lerp up/down as well as sideways
                     , or just achieve the good ol' parallax effect with relative ease. Also, the elements are moving only when their prlx-section parent, or 
                     the element itself comes into the viewport so as to reduce the load on the users device.
+                <br><br>
+                    Also, the elements will be in their origin position (in other words "0") when their parent element is exactly in the 
+                    center of the screen. To check, open the dev tools and inspect the elements while the "<u>center</u>" text is directly in the center
+                    of the moving circle. 
                 </p>
 
             </div>
@@ -153,13 +159,50 @@
         <section class="content-row height25">
         </section>
 
-        <dsection class="content-row height50">
+        <dsection class="content-row height25">
+            <div class="content col05 cont-cent-hor">
+                <h2 class="text-color-black scal-txt-04">How to setup?</h2>
+                <p></p>
+            </div>
+
         </dsection>
 
-        <section class="content-row height25 prlx-section">
+        <section class="content-row height50 prlx-section">
 
-            <div class="prlx-element prlx-norm"></div>
+            <div class="content col05 border-bl text-color-white cont-cent-hor">
+                <h2 class="text-color-black scal-txt-04">1.</h2>
+                <p>Set up a container element which will encapsulate the parallaxing elements, and give it a class name of <b> prlx-section</b>.</p>
+            </div>
+            <div data-prlx_speed="-2" class="content col05 black-bg prlx-element prlx-sideways sideways-with-lerp text-color-white cont-cent-hor">
+                <h2 class="text-color-bg scal-txt-04">3.</h2>
+                <p class="text-color-bg">When the classes are in place, give each element the speed by which they'll move with
+                    the <b>data-prlx_speed="x"</b>, where "x" is any number you wish. By adding a negative value, the element
+                    will parallax in the opposite direction.
+                </p>
+            </div>
+            <div data-prlx_speed="-2" class="content col05 black-bg prlx-element prlx-lerp text-color-white cont-cent-hor">
+                <h2 class="text-color-bg scal-txt-04">2.</h2>
+                <p class="text-color-bg">When you have made the layout per your liking inside the section and want to parallax
+                    some elements, give them the <b> <u> prlx-element </u></b> class, and one of the following in order for them to know
+                    how to move: <b><u>prlx-norm</u>, <u>prlx-lerp</u>, <u>prlx-stop-tb</u> or <u>prlx-sideways</u></b> (which can also lerp with the 
+                        addition of the <b> <u> sideways-with-lerp</u></b> class).
+                </p>
+            </div>
+            <div style="transform: rotate(45deg); width: 50%; height: 100%;" class="content col050  text-color-white cont-cent-hor">
+                <div data-prlx_speed="-2" class=" prlx-element prlx-sideways sideways-with-lerp">
+                    <div style="transform: rotate(-45deg);" class=" border-bl">
+                    <h2 class="text-color-black scal-txt-04">4.</h2>
+                    <p>Exclusive to the prlx-stop-tb elements, they need <b> data-prlx_stop_t="x" & data-prlx_stop_b="x" </b> where 
+                        "x" is the value at which the element will stop at, and <b>..stop_t</b> and <b>..stop_b</b> are <b>top & bottom</b>.
+                        <br> (NOTE: no need to place negative values for either stop_t/b, this is taken care of ;)
+                    </p>
+                </div>
+                </div>
+            </div>
 
+        </section>
+
+        <section class="content-row height25">
         </section>
    
     </div>
