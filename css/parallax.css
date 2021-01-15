@@ -624,7 +624,7 @@ body {
 #gc4 {
     height: 6.5vw;
     width: 6.5vw;
-    transform: translate(0, -50%);
+    /* transform: translate(0, -50%); */
     z-index: 20;
     border: 2px solid black;
 }
