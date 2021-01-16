@@ -1,61 +1,6 @@
 "use strict";
-//////////////////////////////////////////
-//If JS is disabled fallback//
-//////////////////////////////////////////////////
-let showRow = document.querySelectorAll('.content-row01');
-let showColumn = document.querySelectorAll('.content01');
-let separatorJSOff = document.querySelectorAll('.separator01');
-//funkcija kojom dodajem stil klasama dont-show i -side, da
-//ukoliko je JS dissabled, sadrzaj str bude renderovan umesto opacity = 0;
-function ifJSDisabled() {
-    Array.prototype.forEach.call(showRow, function (element) {
-        if (element.classList.contains("dont-show")) {
-            element.style.opacity = "0";
-        }
-    });
-    Array.prototype.forEach.call(showColumn, function (element) {
-        if (element.classList.contains("dont-show-side")) {
-            element.style.left = "-250%";
-        }
-        if (element.classList.contains("img-bck-inner")) {
-            element.classList.add("dont-show");
-        }
-    });
-    Array.prototype.forEach.call(separatorJSOff, function (element) {
-        if (element.classList.contains("js-remove")) {
-            element.style.display = "none";
-        }
-    });
-}
-ifJSDisabled();
-
-//////////////////////////////////////////////////////
-//Do something on page load, opposite of isJsDisabled function probably
-//////////////////////////////////////////////////////////////////
-let scroll01 = window.requestAnimationFrame ||
-    function (callback) {
-        window.setTimeout(callback, 3000 / 60);
-    };
-
-function loopThroughElements() {
-
-    Array.prototype.forEach.call(showRow, function (element) {
-        if ((isInView(element)) && (element.classList.contains("dont-show"))) {
-            element.classList.add('show-content');
-        }
-    });
-    Array.prototype.forEach.call(showColumn, function (element) {
-        if ((isInView(element)) && (element.classList.contains("dont-show-side"))) {
-            element.classList.add('show-content-side');
-        }
-    });
-    scroll01(loopThroughElements);
-}
-// Call the loop for the first time
-loopThroughElements();
-
 ////////////////////////////////////////
-//FUNCTION To show the button after scrolling 500px down from the top//
+//FUNCTION To show the button after scrolling 300px down from the top//
 ////////////////////////////////////////////////
 let upButton = document.getElementById("up");
 
@@ -229,10 +174,6 @@ window.addEventListener('resize', largeOrSmallScreen);
 /////////////////////////////////
 //IS element in view funk//
 //////////////////////////////////////
-function isInView(el) {
-    let box = el.getBoundingClientRect();
-    return box.top < window.innerHeight && box.bottom >= 0;
-}
 
 // Debounce function
 // function debounce(func, time) {

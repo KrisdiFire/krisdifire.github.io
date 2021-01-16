@@ -26,11 +26,11 @@
         </div>
     </div>
     
-<div class="whole-page overflow-hidden">
+<div class="whole-page">
 
     <div class="page">
 
-        <section class="content-row height100 prlx-section nopad">
+        <section style="height: 100vh;" class="content-row height100 prlx-section nopad">
 
             <div class="content col10 height25">
                 <div class="title-lc">
@@ -46,8 +46,8 @@
                         <span data-prlx_speed="1" class="scal-txt prlx-element prlx-lerp">L</span>
                         <span data-prlx_speed="1.5" class="scal-txt prlx-element prlx-lerp">E</span>
                         <span data-prlx_speed="-1" class="scal-txt prlx-element prlx-lerp">T'</span>
-                        <span class="scal-txt prlx-element0">S</span>
-                        <span class="scal-txt prlx-element0">&nbsp;</span>
+                        <span class="scal-txt">S</span>
+                        <span class="scal-txt">&nbsp;</span>
                         <span data-prlx_speed="2" class="scal-txt prlx-element prlx-lerp">S</span>
                         <span class="scal-txt pos-rel">C</span>
                         <span data-prlx_speed="1.25" class="scal-txt prlx-element prlx-lerp">R</span>
@@ -73,11 +73,7 @@
             
         </section>
 
-        <section style="overflow: hidden;" class="content-row height50">
-
-            <p style="position:relative;" class="nopad">
-                <a name="intro" style="position:absolute; top:-100px;"></a>
-            </p>
+        <section id="intro"  style="overflow: hidden;" class="content-row height50">
 
             <div class="content col05">
 
@@ -100,11 +96,14 @@
                     to introduce a modern feel into any webpage. It was built with simplicity in mind, so there are 
                     no dependencies or scroll hacks here!
                 </p>
+                <a href="" class="download" >
+                    DOWNLOAD
+                </a>
             </div>
 
         </section>
 
-        <section class="content-row height150 prlx-section">
+        <section id="examples" class="content-row height150 prlx-section">
 
             <div style="height: 0;" class="content col10 pos-rel">
                 <hr class="seg-hr">
@@ -113,10 +112,6 @@
             <div class="content col10 height25">
                 <p>prlx-section</p>
             </div>
-
-            <p style="position:relative;" class="nopad">
-                <a name="examples" style="position:absolute; top:-100px;"></a>
-            </p>
 
             <div style="height: auto; position: relative;" class="content col04 pull-front body-bg">
                 <h2 data-prlx_speed="4" data-prlx_stop_l="500" data-prlx_stop_r="0" class="scal-txt-04 nopad-l-r text-color-bg left-black-bg prlx-element prlx-sideways with-lerp with-stop ">What do? <span style="font-size: 1rem; font-family: 'Montserrat', sans-serif; right: 0; top: 0; position: absolute; padding: 1rem;" class="not-on-med">prlx-sideways <br> with-lerp <br> with-stop </span> <span style="position: absolute; font-size: 1rem; font-family: 'Montserrat', sans-serif; top: -2rem; right: 1rem;
@@ -163,11 +158,7 @@
 
         
 
-        <section class="content-row height50 prlx-section">
-
-            <p style="position:relative;" class="nopad">
-                <a name="setup" style="position:absolute; top:-100px;"></a>
-            </p>
+        <section id="setup"  class="content-row height50 prlx-section">
 
                 <div class="content col10 height25 cont-cent-hor0">
                     <h2 class="text-color-black scal-txt-04">How to setup?</h2>
@@ -264,7 +255,6 @@
         <div id="footer2"><p><span>Website designed and maintained by <span class="signature highlight-txt">Kristian Firedi</span>.</span></p></div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 <script src='js/main-for-parallax.js'></script>
 <script src='js/simple-parallax-script.js'></script>
 

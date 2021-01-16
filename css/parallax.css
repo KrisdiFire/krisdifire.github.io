@@ -5,14 +5,18 @@
     text-rendering: optimizeLegibility;
 }
 
+*::selection {
+    background: #3abdd4;
+}
+*::-moz-selection {
+    background: #3abdd4;
+}
+
 h1, h2, h3 {
     padding: 1rem;
     font-family: 'Playfair Display', serif;
     color: white;
     font-weight: 400;
-}
-
-a {
 }
 
 /*up button style*/
@@ -134,6 +138,7 @@ a {
     transition: font-size ease 0.35s;
 }
 
+
 /*ScrollBar and fallback for my SB*/
 ::-webkit-scrollbar {
     width: 10px;
@@ -216,21 +221,6 @@ a {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-}
-/*class that stops scrolling when the sidemenu is open*/
-.stopscroll {
-    overflow: hidden;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.separator {
-    height: 3rem;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 /*background which overflows*/
@@ -322,15 +312,14 @@ a {
     background-color: bisque;
 }
 
-
-
-
 html {
     scroll-behavior: smooth; 
 }
 
 body {
     background-color: bisque;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .whole-page {
@@ -339,15 +328,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
-
-    display: flex;
-    flex-direction: column;
     transition: 0.4s;
-}
-
-.page {
-    
 }
 
 .content-row {
@@ -539,30 +520,9 @@ body {
     /* object-fit: cover; */
 }
 
-.twenty-container{
-    height: 20rem;
-    width: 20rem;
-}
-.twenty-five-height {
-    height: 25vh;
-}
-
-.image-higher {
-    height: 50vh;
-    width: 35vw;
-}
-.image-medium {
-    height: 30vw;
-    width: auto;
-}
-
 .prlx-element {
     position: relative;
    /* transition: transform3d ease-in-out 1.5s;*/
-}
-
-.prlx-lerp {
-    /* transition: transform ease ; */
 }
 
 .circ-inside, .circ-inside p {
@@ -604,7 +564,7 @@ body {
     right: -10vw;
     /* top: 0vh; */
     z-index: -10;
-    background-color: rgb(224, 110, 110);
+    /* background-color: rgb(224, 110, 110); */
     filter: saturate(0.75);
     border: 2px solid black;
 }
@@ -678,8 +638,12 @@ body {
 }
 /*the span items at the start of the page*/
 .prlx-container-head span:nth-child(6), .prlx-container-head span:nth-child(7) {
-    color: lightcoral;
-    filter: saturate(0.75);
+    color: bisque;
+    text-shadow:
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px 1px 0 #000,
+         1px 1px 0 #000;
 }
 
 .el-name {
@@ -688,44 +652,22 @@ body {
     left: 0;
 }
 
+.download {
+    border: 2px solid bisque;
+    color: bisque;
+    /* font-family: 'Montserrat', sans-serif; */
+    font-size: 2rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-decoration: none;
+    text-align: center;
+}
+
 .speed-for-sq-r {
     position: absolute; 
     right: 0; 
     transform-origin: center top; 
     transform: translate3d(50%, 50%, 0) rotate(90deg)
-}
-
-.gray-circ {
-    border-radius: 50%;
-    background-color: gray;
-    position: absolute;
-    height: 4rem;
-    width: 4rem;
-    z-index: 15;
-}
-.gray-circ-topL {
-    left: -2rem;
-    top: -2rem;
-}
-.gray-circ-topR {
-    right: -2rem;
-    top: -2rem;
-}
-.gray-circ-medL {
-    left: -2rem;
-    top: 50%;
-}
-.gray-circ-medR {
-    right: -2rem;
-    top: 50%;
-}
-.gray-circ-botL {
-    bottom: -2rem;
-    left: -2rem;
-}
-.gray-circ-botR {
-    bottom: -2rem;
-    right: -2rem;
 }
 
 /*additional stuff*/
@@ -798,10 +740,6 @@ body {
 
 .width-override {
     width: 100%;
-}
-
-.no-trans {
-    transition: unset;
 }
 
 .border-bl {
@@ -989,9 +927,6 @@ body {
     .scal-txt-04 {
         font-size: 4vh;
     }
-    .prlx-element {
-        /* transform: translate3d(0, 0, 0) !important; */
-    }
     .title-lc .a1 {
         position: relative;
         font-size: 3vh;
@@ -1015,7 +950,9 @@ body {
         display: none;
     }
     .forth {
-        transform: rotate(0deg); width: 100%; height: 100%;
+        transform: rotate(0deg); 
+        width: 100%; 
+        height: 100%;
     }
     .forth-op {
         transform: rotate(0deg);

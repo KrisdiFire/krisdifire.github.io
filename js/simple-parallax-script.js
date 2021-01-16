@@ -195,9 +195,3 @@ function isInView(el) {
     let box = el.getBoundingClientRect();
     return box.top < window.innerHeight && box.bottom >= 0;
 }
-
-
-
-// var t1 = performance.now();
-
-// console.log("Call to doSomething took " + (t1 - t0) + " milliseconds.");
