@@ -318,7 +318,9 @@ a {
 .black-bg {
     background-color: black;
 }
-
+.body-bg {
+    background-color: bisque;
+}
 
 
 
@@ -646,13 +648,13 @@ body {
 
 .title-lc .a1 {
     position: relative;
-    /* font-size: 1.5vw; */
+    font-size: 1.5vw;
 }
 
 .title-lc .a2 {
     margin-left: auto;
     position: relative;
-    /* font-size:  1.5vw; */
+    font-size:  1.5vw;
 }
 
 .title-lc .a1::after, .title-lc .a2::after {
@@ -678,6 +680,19 @@ body {
 .prlx-container-head span:nth-child(6), .prlx-container-head span:nth-child(7) {
     color: lightcoral;
     filter: saturate(0.75);
+}
+
+.el-name {
+    position: absolute; 
+    top: 0; 
+    left: 0;
+}
+
+.speed-for-sq-r {
+    position: absolute; 
+    right: 0; 
+    transform-origin: center top; 
+    transform: translate3d(50%, 50%, 0) rotate(90deg)
 }
 
 .gray-circ {
@@ -722,6 +737,9 @@ body {
 }
 .push-back {
     z-index: -25;
+}
+.pull-front {
+    z-index: 100;
 }
 .nopad {
     padding: 0 !important;
@@ -789,24 +807,124 @@ body {
 .border-bl {
     border: solid black 2px;
 }
+.seg-hr {
+    margin-top: auto; 
+    border-color: black; 
+    background-color: black;
+}
+
+.forth {
+    transform: rotate(45deg); width: 50%; height: 100%;
+}
+.forth-op {
+    transform: rotate(-45deg);
+}
 
 /*footer styles*/
-.footer-wrapper {
-    height: 25vh;
+/*Style of the footer and its elements*/
+#footer-wrapper {
     width: 100%;
     bottom: 0;
-    align-self: flex-end;
+    padding: 1em 1em 1em 1em;
+    height: auto;
+    clear: both;
+    align-self: center;
+    height: max-content;
+    color: bisque;
+    overflow: hidden;
 }
-
 #footer {
     display: flex;
+    padding: 1em 0em;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    /* overflow: hidden; */
+}
+#footer01 ul {
+    list-style-type: none;
+}
+#footer-menu {
+    margin: 0rem 0rem 0rem 0.5rem;
+}
+
+#footer01 div ul li a {
+    text-decoration: none;
+    cursor: pointer;
+}
+/*social in footer*/
+.social-menu {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-start;
+    opacity: 1;
+    transition: opacity ease-in-out 0.25s;
+}
+.social-menu ul {
+    padding-inline-start: 0px;
+}
+.social-menu ul li {
+    display: inline-flex;
+    
+}
+.social-menu ul li a {
+    text-align: center;
+    list-style-type: none;
+    
+}
+/*Social media icons*/
+ .fa {
+    font-size: 1em;
+    width: 2.5em;
+    height: 2.5em;
+    text-align: center;
+    text-decoration: none;
+    margin: 0.5em 0.2em;
+    border-radius: 50%; 
+    display: flex !important; /*important je jer guglov stil ima drugaciji*/
+    justify-content: center;
     align-items: center;
     color: bisque;
+    border: bisque 0.1rem solid;
+    transition: ease-in-out 0.2s;
+} 
+.social-menu ul li .fa:hover {
+    opacity: 1;
+    color: black;
+    background-color: bisque;
 }
-#footer p {
-    margin: 0 auto;
+/*Tooltip stil*/
+.tooltip {
+    position: relative;
+    display: inline-block;
+    justify-content: center;
+}
+.tooltip .tooltiptext {
     font-family: 'Montserrat', sans-serif;
+    opacity: 0;
+    color: bisque;
+    border-radius: 10px;
+    padding: 6px 6px;
+    position: absolute;
+    z-index: 1;
+    margin-top: -1.5rem;
+    margin-right: 0.5rem;
+    transition: all 0.1s;
+    cursor: default;
+}
+.social-menu ul .tooltip a:hover + .tooltiptext {
+    opacity: 1;
+    transition: opacity ease-in-out 0.2s;
+}
+#footer2 {
+    display: flex;
+    align-items: center;
+    margin: 1rem auto;
     width: 90%;
+}
+#footer2 p {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0em;
 }
 
 @media only screen and (min-width: 90000px) {
@@ -826,13 +944,63 @@ body {
         max-width: 80vw;
         margin: 0 auto 0 auto;
     }
+    #footer {
+        max-width: 80vw;
+        margin: 0 auto 0 auto;
+    }
+    #footer2 {
+        max-width: 80vw;
+        margin: 0 auto 0 auto;
+    }
 }
 
 @media only screen and (max-width: 768px) {
     #scrolly {
         display: none !important;
     }
+    #up {
+        right: -1.5em;
+        z-index: 110;
+    }
+    .scal-txt-04 {
+        font-size: 4vh;
+    }
     .prlx-element {
-        transform: translate3d(0, 0, 0) !important;
+        /* transform: translate3d(0, 0, 0) !important; */
+    }
+    .title-lc .a1 {
+        position: relative;
+        font-size: 3vh;
+    }
+    
+    .title-lc .a2 {
+        margin-left: auto;
+        position: relative;
+        font-size:  3vh;
+    }
+    .content-row {
+        flex-direction: column;
+    }
+    .content {
+        width: 100%;
+    }
+    .forth {
+        transform: rotate(0deg); width: 100%; height: 100%;
+    }
+    .forth-op {
+        transform: rotate(0deg);
+    }
+    .not-on-med {
+        display: none;
+    }
+
+    #sml-sq-sp {
+        right: -3.5rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .not-on-sm {
+        display: none;
     }
 }
