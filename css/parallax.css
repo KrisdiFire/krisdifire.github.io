@@ -561,7 +561,10 @@ body {
 }
 
 #gc1 {
-    right: -10vw;
+    height: 50vw;
+    width: 50vw;
+    right: -20vw;
+    top: -20vw;
     /* top: 0vh; */
     z-index: -10;
     /* background-color: rgb(224, 110, 110); */
@@ -600,6 +603,7 @@ body {
 }
 
 .title-lc {
+    margin-top: 3vw;
     height: 6vw;
     display: flex;
     align-items: center;
@@ -608,17 +612,18 @@ body {
 
 .title-lc .a1 {
     position: relative;
-    font-size: 1.5vw;
+    /* text-decoration: underline; */
+    font-size: 3.5vw;
 }
 
 .title-lc .a2 {
     margin-left: auto;
     position: relative;
-    font-size:  1.5vw;
+    font-size:  4.5vw;
 }
 
 .title-lc .a1::after, .title-lc .a2::after {
-    content: '';
+    /* content: ''; */
     width: 100%;
     height: 0.75vw;
     position: absolute;
@@ -655,7 +660,7 @@ body {
 .download {
     border: 2px solid bisque;
     color: bisque;
-    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Montserrat', sans-serif;
     font-size: 2rem;
     margin-top: auto;
     margin-bottom: auto;
@@ -772,10 +777,11 @@ body {
     width: 100%;
     bottom: 0;
     padding: 1em 1em 1em 1em;
-    height: auto;
+    /* height: auto; */
     clear: both;
     align-self: center;
-    height: max-content;
+    /* height: max-content; */
+    height: 25vh;
     color: bisque;
     overflow: hidden;
 }
@@ -861,22 +867,19 @@ body {
     display: inline-block;
     justify-content: center;
 }
-.tooltip .tooltiptext {
+.tooltip a {
     font-family: 'Montserrat', sans-serif;
-    opacity: 0;
     color: bisque;
     border-radius: 10px;
-    padding: 6px 6px;
-    position: absolute;
+    padding: 6px 0px;
     z-index: 1;
     margin-top: -1.5rem;
     margin-right: 0.5rem;
     transition: all 0.1s;
-    cursor: default;
+    text-decoration: none;
 }
-.social-menu ul .tooltip a:hover + .tooltiptext {
-    opacity: 1;
-    transition: opacity ease-in-out 0.2s;
+.social-menu ul .tooltip a:hover{
+    
 }
 #footer2 {
     display: flex;
@@ -887,6 +890,16 @@ body {
 #footer2 p {
     font-family: 'Montserrat', sans-serif;
     margin: 0em;
+}
+
+@media (min-height: 1366px) and (min-width: 1024px) {
+
+    .prlx-container-head {
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+   
 }
 
 @media only screen and (min-width: 90000px) {
@@ -924,6 +937,11 @@ body {
         right: -1.5em;
         z-index: 110;
     }
+
+    .over-hide-med {
+        overflow: hidden;
+    }
+
     .scal-txt-04 {
         font-size: 4vh;
     }
@@ -966,6 +984,10 @@ body {
 
     #sml-sq-sp {
         right: -3.5rem;
+    }
+
+    #footer-wrapper {
+        height: max-content;
     }
 }
 
