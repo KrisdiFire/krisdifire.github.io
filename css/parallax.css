@@ -859,7 +859,7 @@ body {
 #footer-wrapper {
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 100%;
     bottom: 0;
     padding: 1em 1em 1em 1em;
     clear: both;
@@ -871,11 +871,10 @@ body {
 }
 #footer {
     display: flex;
-    padding: 1em 0em;
+    padding: 0 0 1rem 0;
     width: 90%;
     margin: auto;
     align-items: center;
-    /* overflow: hidden; */
 }
 #footer01 ul {
     list-style-type: none;
@@ -992,10 +991,12 @@ body {
     #footer {
         max-width: 80vw;
         margin: 0 auto 0 auto;
+        width: 70%;
     }
     #footer2 {
         max-width: 80vw;
         margin: auto;
+        width: 70%;
     }
 }
 
