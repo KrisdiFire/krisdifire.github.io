@@ -525,7 +525,6 @@ function largeOrSmallScreen() {
     if (width < 769) {
       // window.removeEventListener('scroll', prlxElements);
 //this removes the event listener for side social menu, rest is in the function SCR CHANGE
-      scrolledAm.style.height = 0 + "vh";
       window.removeEventListener('scroll', scrollBar);
 
       removeEventListener("scroll", sideSocialMenuShow);
