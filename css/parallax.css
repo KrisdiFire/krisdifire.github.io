@@ -587,10 +587,20 @@ body {
     border: 2px solid black;
 }
 #gc4 {
+    right: 0vw;
+    top: 25vh;
+    height: 8vw;
+    width: 8vw;
+    background-color: lightseagreen;
+    border: 2px solid black;
+    z-index: -1;
+}
+#gc5 {
     height: 6.5vw;
     width: 6.5vw;
-    /* transform: translate(0, -50%); */
-    z-index: 20;
+    background-color: rgb(253, 168, 83);
+    filter: saturate(0.5);
+    z-index: -1;
     border: 2px solid black;
 }
 
@@ -600,6 +610,16 @@ body {
     position: absolute;
     width: max-content;
     font-family: 'Montserrat', sans-serif;
+}
+
+.yell-bg {
+    background-color: rgb(253, 168, 83);;
+}
+.gree-bg {
+    background-color: lightseagreen;
+}
+.redi-bg {
+    background-color: lightcoral;
 }
 
 .title-lc {
@@ -769,6 +789,33 @@ body {
 
 .not-on-lar {
     display: none;
+}
+
+/*Strikethrough effect*/
+.strike-through:before, 
+.strike-through:after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 0.1rem;
+    top: 100%;
+    background: bisque;
+}
+  .strike-through:before {
+    left: -3%;
+}
+  .strike-through:after {
+    right: -3%;
+   transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+  .strike-through:hover:before {
+    width: 100%;
+   transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+  .strike-through:hover:after {
+    background: transparent;
+    width: 100%;
+    transition: 0s;
 }
 
 /*footer styles*/

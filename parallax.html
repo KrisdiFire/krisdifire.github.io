@@ -64,6 +64,7 @@
                     
                     <div data-prlx_speed="4" id="gc2" class="med-circ circ-inside prlx-element prlx-norm pos-ab"><p></p></div>
                     <div data-prlx_speed="-4" id="gc3" class="big-circ circ-inside prlx-element prlx-norm pos-ab"><p></p></div>
+                    <div id="gc4" class="big-circ circ-inside pos-ab"><p></p></div>
         
                 </div>
         
@@ -135,7 +136,7 @@
             </div>
 
             <div class="content col02 cont-cent not-on-med">
-                <div data-prlx_speed="3" data-prlx_stop_b="75" data-prlx_stop_t="150" id="gc4" class="huge-circ prlx-element prlx-norm with-stop circ-inside"> <span id="stop-tb-txt">with-stop<br> speed x3 </span>  </div>
+                <div data-prlx_speed="3" data-prlx_stop_b="75" data-prlx_stop_t="150" id="gc5" class="huge-circ prlx-element prlx-norm with-stop circ-inside"> <span id="stop-tb-txt">with-stop<br> speed x3 </span>  </div>
                 <p style="position: absolute; text-decoration: underline;">center</p>
             </div>
 
@@ -144,7 +145,7 @@
             <div data-prlx_speed="1.5" style="border: solid black 2px; overflow: hidden;" class="content col04 cont-cent height75 prlx-element prlx-norm">
                 <p class="el-name" >prlx-norm</p>
                 <p class="speed-for-sq-r">speed x1.5</p>
-                <div data-prlx_speed="2" style="border: solid black 2px; height: 20vw; width: 20vw;" class="content prlx-element prlx-lerp cont-cent">
+                <div data-prlx_speed="2" style="border: solid black 2px; height: 20vw; width: 20vw; background-color: lightcoral;" class="content prlx-element prlx-lerp cont-cent">
                 <p class="el-name">prlx-lerp</p>
                 <p class="speed-for-sq-r" id="sml-sq-sp">speed x2</p>
                 </div>
@@ -168,41 +169,41 @@
                     <h2 class="text-color-black scal-txt-04">How to setup?</h2>
                 </div>
 
-            <div class="content col05 border-bl text-color-white">
+            <div class="content col05 border-bl gree-bg text-color-white">
                 <h2 class="text-color-black scal-txt-04">1.</h2>
                 <p>Set up a container element which will encapsulate the parallaxing elements, and give it a class name of <b> prlx-section</b>.</p>
             </div>
    
-            <div data-prlx_speed="-2" data-prlx_stop_l="0" data-prlx_stop_r="100" class="content col05 black-bg prlx-element prlx-sideways with-lerp with-stop text-color-white">
-                <h2 class="text-color-bg scal-txt-04 not-on-med">3.</h2>
-                <p class="text-color-bg not-on-med">When the classes are in place, give each element the speed by which they'll move with
+            <div data-prlx_speed="-2" data-prlx_stop_l="0" data-prlx_stop_r="100" class="content col05 border-bl prlx-element prlx-sideways with-lerp with-stop text-color-white">
+                <h2 class="text-color-black scal-txt-04 not-on-med">3.</h2>
+                <p class="text-color-black not-on-med">When the classes are in place, give each element the speed by which they'll move with
                     the <b>data-prlx_speed="x"</b>, where "x" is any number you wish. By adding a negative value, the element
                     will parallax in the opposite direction.
                 </p>
-                <h2 class="text-color-bg scal-txt-04 not-on-lar">2.</h2>
-                <p class="text-color-bg not-on-lar">When you have made the layout per your liking inside the section and want to parallax
+                <h2 class="text-color-black scal-txt-04 not-on-lar">2.</h2>
+                <p class="text-color-black not-on-lar">When you have made the layout per your liking inside the section and want to parallax
                     some elements, give them the <b> <u> prlx-element </u></b> class, and one of the following in order for them to know
                     how to move: <b><u>prlx-norm</u>, <u>prlx-lerp</u>, or <u>prlx-sideways</u></b> (which can also lerp with the 
                         addition of the <b> <u>with-lerp</u></b> class).
                 </p>
             </div>
-            <div data-prlx_speed="-2" data-prlx_stop_t="0" data-prlx_stop_b="100" class="content col05 black-bg prlx-element prlx-lerp with-stop text-color-white">
-                <h2 class="text-color-bg scal-txt-04 not-on-med">2.</h2>
-                <p class="text-color-bg not-on-med">When you have made the layout per your liking inside the section and want to parallax
+            <div data-prlx_speed="-2" data-prlx_stop_t="0" data-prlx_stop_b="100" class="content col05 prlx-element border-bl prlx-lerp with-stop">
+                <h2 class="text-color-bg0 text-color-black scal-txt-04 not-on-med">2.</h2>
+                <p class="text-color-bg0 not-on-med">When you have made the layout per your liking inside the section and want to parallax
                     some elements, give them the <b> <u> prlx-element </u></b> class, and one of the following in order for them to know
                     how to move: <b><u>prlx-norm</u>, <u>prlx-lerp</u>, or <u>prlx-sideways</u></b> (which can also lerp with the 
                         addition of the <b> <u>with-lerp</u></b> class).
                 </p>
-                <h2 class="text-color-bg scal-txt-04 not-on-lar">3.</h2>
-                <p class="text-color-bg not-on-lar">When the classes are in place, give each element the speed by which they'll move with
+                <h2 class="text-color-bg0 scal-txt-04 not-on-lar">3.</h2>
+                <p class="text-color-bg0 not-on-lar">When the classes are in place, give each element the speed by which they'll move with
                     the <b>data-prlx_speed="x"</b>, where "x" is any number you wish. By adding a negative value, the element
                     will parallax in the opposite direction.
                 </p>
             </div>
    
             <div class="content col050 forth text-color-white">
-                <div data-prlx_speed="-2" data-prlx_stop_l="0" data-prlx_stop_r="500" class=" prlx-element prlx-sideways with-lerp with-stop">
-                    <div style="" class=" border-bl forth-op">
+                <div data-prlx_speed="-2" data-prlx_stop_l="0" data-prlx_stop_r="500" class=" prlx-element  prlx-sideways with-lerp with-stop">
+                    <div style="" class="redi-bg border-bl forth-op">
                     <h2 class="text-color-black scal-txt-04">4.</h2>
                     <p>Last but not least, you may stop the elements from moving when they reach a certain point by applying the <b><u>"with-stop"</u></b> class and <b> data-prlx_stop_t="x" or ...stop_b/l/r="x"</b> where 
                         "x" is the value at which the element will stop at, and <b>..stop_t/b/l/r</b> stand for <b>top, bottom, left and right</b> (the last two only apply for sideways elements).
@@ -228,19 +229,19 @@
         <div id="soc-menu" class="social-menu">
             <ul>
                 <li class="tooltip">
-                    <a href="mailto:kristianfiredi@gmail.com">gmail</a>  
+                    <a class="strike-through" href="mailto:kristianfiredi@gmail.com">gmail</a>  
                 </li>
                 <li class="tooltip">
-                    <a href="https://www.facebook.com/kristian.firedi" >facebook</a>  
+                    <a class="strike-through" href="https://www.facebook.com/kristian.firedi" >facebook</a>  
                 </li>
                 <li class="tooltip">
-                    <a href="https://www.linkedin.com/in/kristian-firedi-441574178/" >linkedIn</a>
+                    <a class="strike-through" href="https://www.linkedin.com/in/kristian-firedi-441574178/" >linkedIn</a>
                 </li>
                 <li class="tooltip">
-                    <a href="https://secure.skype.com/portal/profile" >skype</a>
+                    <a class="strike-through" href="https://secure.skype.com/portal/profile" >skype</a>
                 </li>
                 <li class="tooltip">
-                    <a href="https://www.instagram.com/naitsirk_firedi">instagram</a>
+                    <a class="strike-through" href="https://www.instagram.com/naitsirk_firedi">instagram</a>
                 </li>
             </ul>
         </div>
