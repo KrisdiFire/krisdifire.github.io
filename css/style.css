@@ -173,6 +173,8 @@
     box-shadow: inset 1px -1px 2px -1px black;
     right: 0;
     top: 0; 
+    margin-top: -100vh; 
+    height: 100vh;
     transition: height 0s ease;
 }
 #scroll-hand {
@@ -318,6 +320,8 @@ html {
 /*body style*/
 body {
     background-color: rgb(20, 20, 20);
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 /*style of all links on the page*/
@@ -891,7 +895,6 @@ a[data-toggle="offCanvas"].activeOpen span:after {
     z-index: 1;
     position: relative;
     min-height: 100vh;
-    overflow: hidden;
 }
 /*self explanatory*/
 .separator01 {
@@ -1172,7 +1175,7 @@ will-change: transform;
 .show-list-item .pullDown {
     transform:  translate3d(0, 0%, 0) !important;
     transition: ease-in-out 1s;
-    transition-delay: 0.5s;
+    transition-delay: 0.15s;
 }
 
 .show-list-item li:nth-child(1) > .pullDown {
@@ -1183,22 +1186,22 @@ will-change: transform;
 .show-list-item li:nth-child(2) > .pullDown {
     transform:  translate3d(0, 0%, 0) !important;
     transition: ease-in-out 0.50s;
-    transition-delay: 0.5s;
+    transition-delay: 0.35s;
 }
 .show-list-item li:nth-child(3) > .pullDown {
     transform:  translate3d(0, 0%, 0) !important;
     transition: ease-in-out 0.50s;
-    transition-delay: 0.75s;
+    transition-delay: 0.45s;
 }
 .show-list-item li:nth-child(4) > .pullDown {
     transform: translate3d(0, 0%, 0) !important;
     transition: ease-in-out 0.50s;
-    transition-delay: 1s;
+    transition-delay: 0.55s;
 }
 .show-list-item li:nth-child(5) > .pullDown {
     transform: translate3d(0, 0%, 0) !important;
     transition: ease-in-out 0.50s;
-    transition-delay: 1.25s;
+    transition-delay: 0.65;
 }
 .show-list-item li:nth-child(6) > .pullDown {
     transform: translate3d(0, 0%, 0) !important;
@@ -1208,7 +1211,7 @@ will-change: transform;
 .show-list-item li:nth-child(7) > .pullDown {
     transform: translate3d(0, 0%, 0) !important;
     transition: ease-in-out 0.50s;
-    transition-delay: 1.75s;
+    transition-delay: 0.75s;
 }
 .list-02 > li > div::before {
     content: "\2022";
@@ -1665,14 +1668,14 @@ will-change: transform;
 .show-content-img {
     opacity: 1 !important;
     transition: opacity ease-in-out 1s;
-    transition-delay: 0.35s;
+    transition-delay: 0.25s;
 }
 .dont-show-side {
     transition: left 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
    /* left: -250%; */
 }
 .show-content-side {
-    transition: left 1.25s cubic-bezier(0.22, 0.61, 0.36, 1) !important;
+    transition: left 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) !important;
     left: 0 !important;
 }
 

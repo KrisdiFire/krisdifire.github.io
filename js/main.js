@@ -150,7 +150,7 @@ bodyScrolled = (Math.max(document.documentElement.scrollTop, document.body.scrol
 //koliko je totalno stranice odskrolovano u procentima (Math.round-uj ovo da bude od 1 - 100 celi br)
 totalBodyScrolledPerc = (bodyScrolled / bodyHeight * 100);
 //scroll ammount za progressBar tj scrollbar - ako ovo postavim van ove funk, ne update-uje se kako treba, naci zasto//
-scrolledAm.style.height = totalBodyScrolledPerc + "vh";
+scrolledAm.style.transform = `translate3d(0,${totalBodyScrolledPerc}vh, 0)`;
 }
 scrollBar();
 
@@ -261,53 +261,53 @@ function scrollPrlxCubes() {
   let farY = window.pageYOffset/99;
 
   for (var i = 0; i < closePrlx.length; i++) {
-    if (isInView(closePrlx[i])) {
+    
     closePrlx[i].style.transform = "translate3d" + "(" + "0," + closeY  + "rem" + ", 0" + ")";
-  }
+  
 }
   for (var o = 0; o < medPrlx.length; o++) {
-    if (isInView(medPrlx[o])) {
+   
     medPrlx[o].style.transform = "translate3d" + "(" + "0," + mediumY  + "rem" + ", 0" + ")";
-  }
+  
 }
   for (var p = 0; p < farPrlx.length; p++) {
 
-    if (isInView(farPrlx[p])) {
+    // if (isInView(farPrlx[p])) {
       farPrlx[p].style.transform = "translate3d" + "(" + "0," + farY  + "rem" + ", 0" + ")";
-    }
+    // }
   }
 }
 
 window.addEventListener("scroll", scrollPrlxCubes);
 
-function prlxElements() {
+// function prlxElements() {
 
-  let prlxClassClose = document.getElementsByClassName('prlx-closer');
+//   let prlxClassClose = document.getElementsByClassName('prlx-closer');
     
-    for (let b = 0; b < prlxClassClose.length; b++) {
+//     for (let b = 0; b < prlxClassClose.length; b++) {
 
-      let win_off = window.pageYOffset,
-          win_h = window.innerHeight,
-          elem_h = prlxClassClose[b].offsetHeight,
-          elem_off = prlxClassClose[b].offsetTop,
-          elemPar_h = prlxClassClose[b].parentNode.clientHeight,
-          elemPar_off = prlxClassClose[b].parentNode.offsetTop,
-          elemParPar_off = prlxClassClose[b].parentNode.parentNode.offsetTop,
+//       let win_off = window.pageYOffset,
+//           win_h = window.innerHeight,
+//           elem_h = prlxClassClose[b].offsetHeight,
+//           elem_off = prlxClassClose[b].offsetTop,
+//           elemPar_h = prlxClassClose[b].parentNode.clientHeight,
+//           elemPar_off = prlxClassClose[b].parentNode.offsetTop,
+//           elemParPar_off = prlxClassClose[b].parentNode.parentNode.offsetTop,
 
-          diff = elem_off - elemPar_h,
-          max = Math.max(elem_h, win_h),
-          speed = diff / max,
+//           diff = elem_off - elemPar_h,
+//           max = Math.max(elem_h, win_h),
+//           speed = diff / max,
 
-          cont_scrolled = win_off - elemParPar_off - elemPar_off,
-          cont_scrolled0 = cont_scrolled + win_h/2 - elemPar_h/2,
+//           cont_scrolled = win_off - elemParPar_off - elemPar_off,
+//           cont_scrolled0 = cont_scrolled + win_h/2 - elemPar_h/2,
           
-          value = Math.round(cont_scrolled0 * speed/2);
+//           value = Math.round(cont_scrolled0 * speed/2);
 
-        //  if (isInView(prlxClassClose[b])) {
-          prlxClassClose[b].style.transform = `translate3d(0,${value * 1}px, 0)`;
-     // }
-    }
-  }
+//         //  if (isInView(prlxClassClose[b])) {
+//           prlxClassClose[b].style.transform = `translate3d(0,${value * 1}px, 0)`;
+//      // }
+//     }
+//   }
 
 ////////////////////////////////////////
 //SIDE MENU PART// - should rewrite
@@ -511,7 +511,7 @@ function largeOrSmallScreen() {
   let width = window.innerWidth;
 
     if (width >= 769) {
-      window.addEventListener('scroll', prlxElements);
+      // window.addEventListener('scroll', prlxElements);
       bodi.classList.add("noSbar");
       document.documentElement.classList.add("noSbar");
       scrolly.style.display = "block";
@@ -523,7 +523,7 @@ function largeOrSmallScreen() {
     }
 
     if (width < 769) {
-      window.removeEventListener('scroll', prlxElements);
+      // window.removeEventListener('scroll', prlxElements);
 //this removes the event listener for side social menu, rest is in the function SCR CHANGE
       scrolledAm.style.height = 0 + "vh";
       window.removeEventListener('scroll', scrollBar);
