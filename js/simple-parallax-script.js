@@ -14,7 +14,9 @@ let value_lerp = 0;
 function runner() {
     let prlxElements = document.querySelectorAll('.prlx-element');
     for (let i = 0, n = prlxElements.length; i < n; ++i) {
-        transform(prlxElements[i], value_lerp);
+        if (window.innerWidth > 768) { 
+                transform(prlxElements[i], value_lerp);
+        } else { prlxElements[i].style.transform = `translate3d(0, 0, 0)`; }
     }
 }
 runner();
