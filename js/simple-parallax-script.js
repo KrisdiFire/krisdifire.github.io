@@ -203,6 +203,6 @@ function transform(el, vl) {
 }
 //is an element in the viewport (top/bot - it will work if it's hidden on the sides)
 function isInView(el) {
-    let square = el.getBoundingClientRect();
-    return square.top < window.innerHeight && square.bottom >= 0;
+    let rect = el.getBoundingClientRect();
+    return rect.top < window.innerHeight && rect.bottom >= 0;
 }
