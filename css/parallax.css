@@ -852,6 +852,8 @@ body {
 /*footer styles*/
 /*Style of the footer and its elements*/
 #footer-wrapper {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     bottom: 0;
     padding: 1em 1em 1em 1em;
@@ -860,6 +862,7 @@ body {
     align-self: center;
     /* height: max-content; */
     height: 25vh;
+    max-height: 10rem;
     color: bisque;
     overflow: hidden;
 }
@@ -906,23 +909,7 @@ body {
     width: 0;
     height: 0;
 }
-/*Social media icons*/
- .fa {
-    font-size: 1em;
-    width: 2.5em;
-    height: 2.5em;
-    text-align: center;
-    text-decoration: none;
-    margin: 0.5em 0.2em;
-    border-radius: 50%; 
-    display: flex !important; /*important je jer guglov stil ima drugaciji*/
-    justify-content: center;
-    align-items: center;
-    color: bisque;
-    border: bisque 0.1rem solid;
-    transition: ease-in-out 0.2s;
-    background-color: transparent;
-} 
+
 .social-menu ul li .fa:hover {
     opacity: 1;
     color: black;
@@ -956,10 +943,10 @@ body {
     transition: all 0.1s;
     text-decoration: none;
 }
-.social-menu ul .tooltip a:hover{
-    
-}
+
 #footer2 {
+    margin-top: auto;
+    margin-bottom: auto;
     display: flex;
     align-items: center;
     margin: 1rem auto;
@@ -1003,7 +990,7 @@ body {
     }
     #footer2 {
         max-width: 80vw;
-        margin: 0 auto 0 auto;
+        margin: auto;
     }
 }
 
