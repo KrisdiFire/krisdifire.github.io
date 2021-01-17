@@ -15,6 +15,10 @@
 .grainy {
     height: 100vh;
   }
+
+  .grainy:hover {
+      opacity: 1;
+  }
   
   .grainy:after {
     animation: grain 8s steps(10) infinite;
