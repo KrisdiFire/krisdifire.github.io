@@ -859,7 +859,8 @@ body {
 #footer-wrapper {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 80%;
+    /* max-width: 1200px; */
     bottom: 0;
     padding: 1em 1em 1em 1em;
     /* height: auto; */
