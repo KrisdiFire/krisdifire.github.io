@@ -830,9 +830,7 @@ a[data-toggle="offCanvas"].activeOpen span:after {
     background-image: url("../img/back-squares.svg");
     background-size: contain;
 }
-.prlx-closer {
-    
-}
+
 /*gallery text in square*/
 
 .gal-txt {
@@ -1879,6 +1877,10 @@ will-change: transform;
         }
         .l9 {
             top: -80rem;
+        }
+
+        .prlx-element {
+            transition: none !important;
         }
     
     /*displays stuff which wasnt displayed when viewed on smaller screens*/
