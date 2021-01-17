@@ -202,6 +202,70 @@
     padding: 0;
 }
 
+/*Parallax link*/
+.prlx-project {
+    display: flex;
+    position: relative;
+    height: 400px;
+    max-height: 400px;
+    max-width: 400px;
+    object-fit: cover;
+    transition: opacity ease-in-out 0.3s, filter ease-in-out 0.3s;
+    opacity: 0.6;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+
+    background-color: bisque;
+}
+.heigth-perc50 {
+    height: 50%;
+}
+.width-perc75{
+    width: 75%;
+    display: flex;
+}
+.height-perc75 {
+    height: 75%;
+}
+.width-perc50 {
+    width: 50%;
+    display: flex;
+}
+.border-bl {
+    border: 2px solid black;
+}
+
+.grainy {
+    height: 100vh;
+  }
+  
+  .grainy:after {
+    animation: grain 8s steps(10) infinite;
+    background-image: url("../grain.jpg");
+    content: "";
+    height: 300%;
+    left: -50%;
+    opacity: 0.3;
+    position: fixed;
+    top: -100%;
+    width: 300%;
+    /* z-index: 1; */
+  }
+  
+  @keyframes grain {
+    0%, 100% { transform:translate(0, 0) }
+    10% { transform:translate(-5%, -10%) }
+    20% { transform:translate(-15%, 5%) }
+    30% { transform:translate(7%, -25%) }
+    40% { transform:translate(-5%, 25%) }
+    50% { transform:translate(-15%, 10%) }
+    60% { transform:translate(15%, 0%) }
+    70% { transform:translate(0%, 15%) }
+    80% { transform:translate(3%, 35%) }
+    90% { transform:translate(-10%, 10%) }
+  }
+/*end parallax link*/
 /*Strikethrough effect*/
 .strike-through:before, 
 .strike-through:after {
