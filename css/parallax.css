@@ -694,7 +694,8 @@ body {
 .prlx-container-head span:nth-child(6), .prlx-container-head span:nth-child(7) {
     /* color: lightcoral; */
     color: rgb(253, 168, 83);
-    filter: saturate(0.5);
+    color: lightseagreen;
+    /* filter: saturate(0.5); */
     text-shadow:
         -1px -1px 0 #000,  
          1px -1px 0 #000,
@@ -1072,5 +1073,36 @@ body {
 @media only screen and (max-width: 480px) {
     .not-on-sm {
         display: none;
+    }
+    #gc1 {
+        height: 50vw;
+        width: 50vw;
+        right: -20vw;
+        top: -20vw;
+        /* top: 0vh; */
+        z-index: -10;
+        /* background-color: rgb(224, 110, 110); */
+        filter: saturate(0.75);
+        border: 2px solid black;
+    }
+    #gc2 {
+        right: 15vw;
+        top: -15vh;
+        z-index: -20;
+        background-color: rgb(253, 168, 83);
+        filter: saturate(0.5);
+        border: 2px solid black;
+    }
+    #gc3 {
+        height: 15vh;
+        width: 15vh;
+   
+        top: 40vh;
+        right: 10vh;
+    }
+    #gc4 {
+        top: 15vh;
+        height: 15vw;
+        width: 15vw;
     }
 }
