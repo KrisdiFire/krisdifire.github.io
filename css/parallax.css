@@ -22,16 +22,16 @@
   
   .grainy:after {
     animation: grain 8s steps(10) infinite;
-    background-image: url("../grain.jpg");
+    background-image: url("../grain-llll.png");
     content: "";
     height: 300%;
     left: -50%;
-    opacity: 0.2;
+    opacity: 0.25;
     position: fixed;
     top: -100%;
     width: 300%;
     pointer-events: none;
-    z-index: 100;
+    /* z-index: 100; */
   }
   
   @keyframes grain {
@@ -43,7 +43,7 @@
     50% { transform:translate(-15%, 10%) }
     60% { transform:translate(15%, 0%) }
     70% { transform:translate(0%, 15%) }
-    80% { transform:translate(3%, 35%) }
+    80% { transform:translate(3%, 25%) }
     90% { transform:translate(-10%, 10%) }
   }
 /*//////////////////////////////////////////////////////*/
