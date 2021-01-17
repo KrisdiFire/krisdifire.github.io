@@ -167,6 +167,16 @@ h1, h2, h3 {
     transition: font-size ease 0.35s;
 }
 
+.heigth-perc50 {
+    height: 50%;
+}
+.heigth-perc75 {
+    height: 75%;
+}
+.width-perc50 {
+    width: 50%;
+    display: flex;
+}
 
 /*ScrollBar and fallback for my SB*/
 ::-webkit-scrollbar {
