@@ -14,7 +14,9 @@ let elementsToShow = document.querySelectorAll('.show-on-scroll');
 function ifJSDisabled() {
 Array.prototype.forEach.call(showRow, function(element){
     if (element.classList.contains("dont-show")) {
-      element.style.opacity = "0";}
+      element.style.opacity = "0";
+      element.style.transform = 'translateY(4rem)';
+    }
 });
 Array.prototype.forEach.call(showColumn, function(element){
   if (element.classList.contains("dont-show-side")) {

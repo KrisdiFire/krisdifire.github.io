@@ -1726,9 +1726,9 @@ will-change: transform;
 
 /*styles for the fade in effect*/
 .dont-show {
-    opacity: 0;
+    /* opacity: 0; */
     transition: all ease-in-out 0.5s;
-    transform: translateY(4rem);
+    /* transform: translateY(4rem); */
 }
 .show-content {
     opacity: 1 !important;
