@@ -45,9 +45,9 @@ Array.prototype.forEach.call(elementsToShow, function(element){
 ifJSDisabled();
 //If not, do this//
 // Detect request animation frame
-let scroll01 = window.requestAnimationFrame ||
+// let scroll01 = window.requestAnimationFrame ||
 // IE Fallback
-function(callback){ window.setTimeout(callback, 3000/60);};
+// function(callback){ window.setTimeout(callback, 3000/60);};
 
 function loopThroughElements() {
 
@@ -84,10 +84,11 @@ Array.prototype.forEach.call(showListBlank, function(element){
       //  }
       });
   });
-scroll01(loopThroughElements);
+// scroll01(loopThroughElements);
 }
 // Call the loop for the first time
 loopThroughElements();
+window.addEventListener('scroll', loopThroughElements);
 
 ////////////////////////////////////////
 //FUNCTION To show the button after scrolling 500px down from the top//
@@ -238,16 +239,17 @@ if (totalBodyScrolledPerc > lowPerc) {
 //var to check if were on the gallery page, and turn off side soc menu
 let inGallery = document.getElementsByClassName('gallery_full')[0];
 if (inGallery!=null) {
-    removeEventListener("scroll", sideSocialMenuShow);
+    // window.removeEventListener("scroll", sideSocialMenuShow);
     contactNav.classList.remove("social-menu-side");
     contactNav.classList.remove("soc-opacity-0");
     contactNav.classList.add("social-menu");
 }
 else {
-    addEventListener("scroll", sideSocialMenuShow);
+    // window.addEventListener("scroll", sideSocialMenuShow);
 }
 }
 sideSocialMenuShow();
+window.addEventListener("scroll", sideSocialMenuShow);
 
 ////////////////////////////////////////
 //FUNKCIJA ZA PARALAX//
@@ -257,29 +259,21 @@ let medPrlx = document.getElementsByClassName("prlx-mult-med");
 let farPrlx = document.getElementsByClassName("prlx-mult-sm");
   
 function scrollPrlxCubes() {
-
   let closeY = window.pageYOffset/34;
   let mediumY = window.pageYOffset/66;
   let farY = window.pageYOffset/99;
-
   for (var i = 0; i < closePrlx.length; i++) {
-    
     closePrlx[i].style.transform = "translate3d" + "(" + "0," + closeY  + "rem" + ", 0" + ")";
-  
 }
   for (var o = 0; o < medPrlx.length; o++) {
-   
     medPrlx[o].style.transform = "translate3d" + "(" + "0," + mediumY  + "rem" + ", 0" + ")";
-  
 }
   for (var p = 0; p < farPrlx.length; p++) {
-
     // if (isInView(farPrlx[p])) {
       farPrlx[p].style.transform = "translate3d" + "(" + "0," + farY  + "rem" + ", 0" + ")";
     // }
   }
 }
-
 window.addEventListener("scroll", scrollPrlxCubes);
 
 // function prlxElements() {
@@ -317,10 +311,8 @@ window.addEventListener("scroll", scrollPrlxCubes);
 
 //* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
 var dropdown = document.getElementsByClassName("dropbtn");
-var i;
-
 //loop
-for (i = 0; i < dropdown.length; i++) {
+for (let i = 0; i < dropdown.length; i++) {
   //add an event listener for the following function
   dropdown[i].addEventListener("click", function() {
 //activate the class active
@@ -344,27 +336,20 @@ for (i = 0; i < dropdown.length; i++) {
 //closes all dropdowns
 function closeDropdown() {
 //take all elements with class dropbtn
-  var dropActive = document.querySelectorAll('.dropbtn'),
-  //assign variables for the loop
-  o = 0,
-  p = dropActive.length;
+  var dropActive = document.querySelectorAll('.dropbtn');
 //loop through all the elements and remove the active class from them
-  for (o; o < p; o++) {
+  for (let o = 0; o < dropActive.length; o++) {
     dropActive[o].classList.remove("active"); 
   }
 //close dropdowns
-  var myClasses = document.querySelectorAll('.dropdown-container'),
-    i = 0,
-    l = myClasses.length;
+  var myClasses = document.querySelectorAll('.dropdown-container');
 //do not display dropdown containers
-for (i; i < l; i++) {
+for (let i = 0; i < myClasses.length; i++) {
     myClasses[i].style.display = 'none';
   }
-
   var dropdown = Array.from(document.getElementsByClassName("dropbtn"));
   var aboutBut = document.getElementsByClassName("about")[0];
     if (aboutBut != null) {aboutBut.style.borderTop = "unset";}
-
   dropdown.forEach(borderTop);
   function borderTop (element) {
   element.style.borderTop = "unset";
