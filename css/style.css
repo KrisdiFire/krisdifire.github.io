@@ -1732,7 +1732,7 @@ will-change: transform;
 }
 .show-content {
     opacity: 1 !important;
-    transform: translateY(0rem);
+    transform: translateY(0rem) !important;
     transition: all ease-in-out 0.5s;
     transition-delay: 0.25s;
 }
