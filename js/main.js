@@ -22,7 +22,8 @@ Array.prototype.forEach.call(showColumn, function(element){
   if (element.classList.contains("dont-show-side")) {
       element.style.left = "-250%";}
   if (element.classList.contains("img-bck-inner")) {
-      element.classList.add("dont-show");}
+      element.classList.add("dont-show");
+      element.style.opacity = "0";}
 });
 Array.prototype.forEach.call(listPullDown, function(element){
   if (element.classList.contains("pullDown")) {
@@ -51,16 +52,17 @@ ifJSDisabled();
 function loopThroughElements() {
 
 Array.prototype.forEach.call(showRow, function(element){
-    if ((isInView(element)) && (element.classList.contains("dont-show"))) {
+    if ((isInView(element)) && (element.classList.contains("dont-show") && element.classList.contains('show-content') == false)) {
       element.classList.add('show-content');} 
     });
 Array.prototype.forEach.call(showColumn, function(element){
-    if ((isInView(element)) && (element.classList.contains("dont-show-side"))) {
+    if ((isInView(element)) && (element.classList.contains("dont-show-side")  && element.classList.contains('show-content-side') == false)) {
       element.classList.add('show-content-side');
       }
-    if ((isInView(element)) && (element.classList.contains("dont-show"))) {
+    if ((isInView(element)) && (element.classList.contains("dont-show")  && element.classList.contains('show-content-img') == false)) {
       element.classList.add('show-content-img');
       element.classList.remove('dont-show');
+      element.style.opacity = "1";
       }
 /*Array.prototype.forEach.call(showListWDot, function(element){
     if ((isInView(element))) {
@@ -71,12 +73,12 @@ Array.prototype.forEach.call(showListBlank, function(element){
         element.parentNode.classList.add('show-list-item');} 
     });*/
       Array.prototype.forEach.call(listPullDown, function(element){
-        if ((isInView(element))) {
+        if ((isInView(element)) && element.classList.contains('show-list-item') == false) {
           element.parentNode.classList.add('show-list-item');} 
         });
 //Za gallery str
       Array.prototype.forEach.call(elementsToShow, function(element){
-        if (isInView(element)) {
+        if (isInView(element) && element.classList.contains('is-visible') == false) {
             element.classList.add('is-visible');}
       //    else {
       //    element.classList.remove('is-visible');
