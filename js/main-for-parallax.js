@@ -158,22 +158,16 @@ function largeOrSmallScreen() {
         htm.classList.add("noScrollBar");
         scrolly.style.display = "block";
         scrollBar();
-        //window.addEventListener('scroll', scrollBar);
     }
 
     if (winWidth < 769) {
         bodi.classList.remove("noScrollBar");
         htm.classList.remove("noScrollBar");
         scrolly.style.display = "none";
-        //window.removeEventListener('scroll', scrollBar);
     }
 }
 largeOrSmallScreen();
 window.addEventListener('resize', largeOrSmallScreen);
-
-/////////////////////////////////
-//IS element in view funk//
-//////////////////////////////////////
 
 // Debounce function
 // function debounce(func, time) {
