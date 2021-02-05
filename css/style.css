@@ -173,8 +173,8 @@
     box-shadow: inset 1px -1px 2px -1px black;
     right: 0;
     top: 0; 
-    margin-top: -100vh; 
-    height: 100vh;
+    margin-top: -150vh; 
+    height: 150vh;
     transition: height 0s ease;
 }
 #scroll-hand {
