@@ -123,9 +123,9 @@ window.onscroll = function() {
 let currentScrollPos = window.pageYOffset;
 let mainMenu = document.getElementsByClassName('main-menu')[0];
   if (prevScrollPos > currentScrollPos) {
-    mainMenu.style.top = "0";
+    mainMenu.style.transform = "translateY(0)";
   } else {
-    mainMenu.style.top = "-3rem";
+    mainMenu.style.transform = "translateY(-3rem)";
   }
   prevScrollPos = currentScrollPos;
   scrollFunction();
@@ -255,24 +255,22 @@ window.addEventListener("scroll", sideSocialMenuShow);
 ////////////////////////////////////////
 //FUNKCIJA ZA PARALAX//
 ////////////////////////////////////////////////
-let closePrlx = document.getElementsByClassName("prlx-close");
-let medPrlx = document.getElementsByClassName("prlx-mult-med");
-let farPrlx = document.getElementsByClassName("prlx-mult-sm");
+let closePrlx = document.querySelectorAll(".prlx-close");
+let medPrlx = document.querySelectorAll(".prlx-mult-med");
+let farPrlx = document.querySelectorAll(".prlx-mult-sm");
   
 function scrollPrlxCubes() {
   let closeY = window.pageYOffset/34;
   let mediumY = window.pageYOffset/66;
   let farY = window.pageYOffset/99;
-  for (var i = 0; i < closePrlx.length; i++) {
+  for (let i = 0; i < closePrlx.length; i++) {
     closePrlx[i].style.transform = "translate3d" + "(" + "0," + closeY  + "rem" + ", 0" + ")";
 }
-  for (var o = 0; o < medPrlx.length; o++) {
+  for (let o = 0; o < medPrlx.length; o++) {
     medPrlx[o].style.transform = "translate3d" + "(" + "0," + mediumY  + "rem" + ", 0" + ")";
 }
-  for (var p = 0; p < farPrlx.length; p++) {
-    // if (isInView(farPrlx[p])) {
+  for (let p = 0; p < farPrlx.length; p++) {
       farPrlx[p].style.transform = "translate3d" + "(" + "0," + farY  + "rem" + ", 0" + ")";
-    // }
   }
 }
 window.addEventListener("scroll", scrollPrlxCubes);
