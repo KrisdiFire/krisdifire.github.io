@@ -119,14 +119,6 @@ function lerp(a, b, n) {
     a = (1 - n) * a + n * b;
     return Math.floor(a * 100) / 100;
 }
-
-// function isItInThere (section, element) {
-//     return  section.top <= element.top &&
-//             section.bottom >= element.bottom &&
-//             section.left <= element.left &&
-//             section.right >= element.right;
-// }
-
 //check for stop pos and/or lerp 
 function transOptions(elem, stop_1, stop_2, value) {
     if (isInView(elem.closest(".prlx-section")) || isInView(elem)) {
