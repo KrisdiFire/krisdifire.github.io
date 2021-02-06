@@ -119,12 +119,20 @@ function lerp(a, b, n) {
     a = (1 - n) * a + n * b;
     return Math.floor(a * 100) / 100;
 }
+
+// function isItInThere (section, element) {
+//     return  section.top <= element.top &&
+//             section.bottom >= element.bottom &&
+//             section.left <= element.left &&
+//             section.right >= element.right;
+// }
+
 //check for stop pos and/or lerp 
 function transOptions(elem, stop_1, stop_2, value) {
     if (isInView(elem.closest(".prlx-section")) || isInView(elem)) {
         if (elem.classList.contains("stop-at-parent")) {
             let elemParRect = elem.parentNode.getBoundingClientRect();
-            let elemRect = elem.getBoundingClientRect();
+            let elemRect = elem.getBoundingClientRect();    
             if (elem.classList.contains('prlx-sideways') == false) {
                 stop_1 = (elemParRect.height / 2 - (elemRect.height / 2));
                 stop_2 = (elemParRect.height / 2 - (elemRect.height / 2));
@@ -137,14 +145,12 @@ function transOptions(elem, stop_1, stop_2, value) {
             .classList.contains('stop-at-parent') == false ||
             (value < stop_1 && value > stop_2 * -1)) {
             doer(elem, value);
-        } else if (value > stop_1 && value > stop_2 * -1) {
+        } else if (value > stop_1 && value > stop_2 * -1/* && elem
+            .classList.contains("stop-at-parent") == false*/) {
             doer(elem, stop_1);
-        } else if (value < stop_1 && value < stop_2 * -1) {
-            if (elem.classList.contains("stop-at-parent")) {
-                doer(elem, stop_2 * -1);
-            } else {
-                doer(elem, stop_2);
-            }
+        } else if (value < stop_1 && value < stop_2 * -1 && elem
+            .classList.contains("stop-at-parent") == false) {
+            doer(elem, stop_2);
         }
     }
 }
