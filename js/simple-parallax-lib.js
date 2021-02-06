@@ -148,9 +148,12 @@ function transOptions(elem, stop_1, stop_2, value) {
         } else if (value > stop_1 && value > stop_2 * -1/* && elem
             .classList.contains("stop-at-parent") == false*/) {
             doer(elem, stop_1);
-        } else if (value < stop_1 && value < stop_2 * -1 && elem
-            .classList.contains("stop-at-parent") == false) {
-            doer(elem, stop_2);
+        } else if (value < stop_1 && value < stop_2 * -1) {
+            if (elem.classList.contains("stop-at-parent")) {
+                doer(elem, stop_2 * -1);
+            } else {
+                doer(elem, stop_2);
+            }
         }
     }
 }
