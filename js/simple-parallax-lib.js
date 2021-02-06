@@ -141,8 +141,7 @@ function transOptions(elem, stop_1, stop_2, value) {
                 stop_2 = (elemParRect.width / 2 - (elemRect.width / 2));
             }
         }
-        if ((stop_1 == undefined || stop_2 == undefined) && elem
-            .classList.contains('stop-at-parent') == false ||
+        if ((stop_1 == undefined || stop_2 == undefined) ||
             (value < stop_1 && value > stop_2 * -1)) {
             doer(elem, value);
         } else if (value > stop_1 && value > stop_2 * -1) {
