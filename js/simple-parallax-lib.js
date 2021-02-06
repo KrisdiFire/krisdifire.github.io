@@ -145,8 +145,7 @@ function transOptions(elem, stop_1, stop_2, value) {
             .classList.contains('stop-at-parent') == false ||
             (value < stop_1 && value > stop_2 * -1)) {
             doer(elem, value);
-        } else if (value > stop_1 && value > stop_2 * -1/* && elem
-            .classList.contains("stop-at-parent") == false*/) {
+        } else if (value > stop_1 && value > stop_2 * -1) {
             doer(elem, stop_1);
         } else if (value < stop_1 && value < stop_2 * -1) {
             if (elem.classList.contains("stop-at-parent")) {
