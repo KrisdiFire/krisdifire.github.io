@@ -39,7 +39,7 @@
             <div class="content col10 height25">
                 <div class="title-lc">
                     <a class="a1">Simple Parallax Lib</a>
-                    <a class="a2">V1.2</a>
+                    <a class="a2">V1.21</a>
                 </div>
             </div>
 
@@ -126,7 +126,7 @@
                     transform: translate3d(50%, 200%0, 0) rotate(90deg0); color: black;">speed x4</span> </h2>
                 <br>
                 <p class="border-bl">With a mixture of classes and data attributes,
-                    this script allows you to make elements that have start/stop positions, lerp up/down as well as sideways, or just achieve the good ol' parallax effect with relative ease. Also, the elements are moving only when their prlx-section parent, or the element itself comes into the viewport so as to reduce the load on the users device.
+                    this script allows you to make elements that have start/stop positions, lerp up/down as well as sideways, or just achieve the good ol' parallax effect with relative ease. The elements are moving only when their prlx-section parent, or the element itself comes into the viewport so as to reduce the load on the users device.
                 <br><br>
                     Also, the elements will be in their origin position (in other words "0") when their parent element is exactly in the 
                     center of the screen. <span class="not-on-med"> To check, open the dev tools and inspect the elements while the "<u>center</u>" text is directly in the center
@@ -178,11 +178,11 @@
                 <h2 class="text-color-black scal-txt-04 not-on-med">3.</h2>
                 <p class="text-color-black not-on-med">When the classes are in place, give each element the speed by which they'll move with
                     the <b>data-prlx-speed="x"</b>, where "x" is any number you wish. By adding a negative value, the element
-                    will parallax in the opposite direction.
+                    will parallax in the opposite direction, and the value of 10 is the scroll speed of the window, so the element will act as if fixed in the viewport.
                 </p>
                 <h2 class="text-color-black scal-txt-04 not-on-lar">2.</h2>
-                <p class="text-color-black not-on-lar">When you have made the layout per your liking inside the section and want to parallax
-                    some elements, give them the <b> <u> prlx-element </u></b> class, and one of the following in order for them to know
+                <p class="text-color-black not-on-lar">When you have made the layout per your liking inside the section and want to add parallaxing
+                    elements, give them the <b> <u> prlx-element </u></b> class, and one of the following in order for them to know
                     how to move: <b><u>prlx-norm</u>, <u>prlx-lerp</u>, or <u>prlx-sideways</u></b> (which can also lerp with the 
                         addition of the <b> <u>with-lerp</u></b> class).
                 </p>
@@ -190,15 +190,15 @@
         <div class="content col05">
             <div data-prlx-speed="-2" data-prlx-stop-s="0" style="height: 100%;"  class="content col10 border-bl prlx-element prlx-lerp">
                 <h2 class="text-color-bg0 text-color-black scal-txt-04 not-on-med">2.</h2>
-                <p class="text-color-bg0 not-on-med">When you have made the layout per your liking inside the section and want to parallax
-                    some elements, give them the <b> <u> prlx-element </u></b> class, and one of the following in order for them to know
+                <p class="text-color-bg0 not-on-med">When you have made the layout per your liking inside the section and want to add parallaxing
+                    elements, give them the <b> <u> prlx-element </u></b> class, and one of the following in order for them to know
                     how to move: <b><u>prlx-norm</u>, <u>prlx-lerp</u>, or <u>prlx-sideways</u></b> (which can also lerp with the 
                         addition of the <b> <u>with-lerp</u></b> class).
                 </p>
                 <h2 class="text-color-bg0 text-color-black scal-txt-04 not-on-lar">3.</h2>
                 <p class="text-color-bg0 not-on-lar">When the classes are in place, give each element the speed by which they'll move with
                     the <b>data-prlx-speed="x"</b>, where "x" is any number you wish. By adding a negative value, the element
-                    will parallax in the opposite direction.
+                    will parallax in the opposite direction, and the value of 10 is the scroll speed of the window, so the element will act as if fixed in the viewport.
                 </p>
             </div>
         </div>
@@ -207,9 +207,13 @@
                 <div data-prlx-speed="-2" data-prlx-stop-s="0" class=" prlx-element prlx-sideways with-lerp">
                     <div class="redi-bg border-bl forth-op">
                     <h2 class="text-color-black scal-txt-04">4.</h2>
-                    <p>Last but not least, you may stop the elements from moving when they reach a certain point by applying data-prlx-stop-t="x" or ...stop_b/l/r="x" where 
-                        "x" is the value at which the element will stop at, and <b>..stop-t/b/l/r</b> stand for <b>top, bottom, left and right</b> (the last two only apply for sideways elements).
-                        <br> (NOTE: no need to place negative values for either stop-t/b/l/r, this is taken care of ;)
+                    <p>Last but not least, you may stop the elements from moving when they reach a certain point by applying data-prlx-stop-sp="x" or ...stop_ep="x" where 
+                        "x" is the value at which the element will stop at, and <b>..stop-sp/ep</b> stand for <b>start point, end point</b>.
+                        <br> (NOTE: no need to place negative values for either of them, it is taken care of ;) <br>
+                        As of v1.21, you may stop the element at it's parent elements edge by usin ...stop-s, or ...stop-e. <br>
+                        These are calculated by percentage, so data-prlx-stop-s="0" is the top (or left) edge of the parent, and stop-e="100" is the end.
+                        Furthermore, these stop positions are lower priority than the point ones, so ..stop-sp/ep will overwrite them. <br>
+                        And finally, by omitting all stop positions, the element will move without restriction as long as it, or its prlx-section, are in view.
                     </p>
                 </div>
                 </div>
@@ -217,9 +221,9 @@
 
         </section>
 
-        <section style="height: 25vh; width: 100%;"></section>
+        <!-- <section style="height: 25vh; width: 100%;"></section> -->
 
-        <section class="content-row height50 cont-cent prlx-section">
+        <!-- <section class="content-row height50 cont-cent prlx-section">
             <div class="content col10 height25 cont-cent-hor0">
                 <h2 class="text-color-black scal-txt-04">As of v1.2</h2>
             </div>
@@ -231,13 +235,13 @@
                 </div>
             </div>
             <div style="border: 2px solid black;" class="content col05 cont-cent">
-                <div data-prlx-stop-s="0" data-prlx-stop-e="100"  data-prlx-speed="5" style="background-color:black; height: 25vh; width: 50%;" class="content col10 cont-cent prlx-element prlx-sideways with-lerp by-percent">
+                <div data-prlx-stop-s="0"  data-prlx-stop-e="100"  data-prlx-speed="-5" style="background-color:black; height: 25vh; width: 50%;" class="content col10 cont-cent prlx-element prlx-sideways with-lerp by-percent">
                     <h2 class="text-color-bg scal-txt-04">New!</h2>
                 </div>
             </div>
-        </section>
+        </section> -->
 
-        <section style="height: 25vh; width: 100%;"></section>
+        <!-- <section style="height: 25vh; width: 100%;"></section>
 
         <section style="height: 100vh; width: 100%; border: 2px solid black;" class="prlx-section content-row cont-cent overflow-hidden">
         
@@ -249,7 +253,7 @@
         
             <div class="prlx-element prlx-sideways with-lerp by-percent" data-prlx-speed="-5" data-prlx-stop-s="0" data-prlx-stop-e="100" style="height: 25%; width: 50%; border: 1px solid saddlebrown;"></div>
 
-        </section>
+        </section> -->
 
         <section style="height: 25vh; width: 100%;"></section>
 
