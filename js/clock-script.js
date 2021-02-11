@@ -1,4 +1,4 @@
-function sekunde() {
+function clock() {
 //take the date and time
     let today = new Date();
     let hour = today.getHours();
@@ -25,9 +25,7 @@ function sekunde() {
 
 
 //do this every second
-   setTimeout(sekunde,1000);
+   setTimeout(clock,1000);
 }
 //run script
-    sekunde();
-    
-    
+    clock();
