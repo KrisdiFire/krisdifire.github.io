@@ -255,25 +255,25 @@ window.addEventListener("scroll", sideSocialMenuShow);
 ////////////////////////////////////////
 //FUNKCIJA ZA PARALAX//
 ////////////////////////////////////////////////
-let closePrlx = document.querySelectorAll(".prlx-close");
-let medPrlx = document.querySelectorAll(".prlx-mult-med");
-let farPrlx = document.querySelectorAll(".prlx-mult-sm");
+// let closePrlx = document.querySelectorAll(".prlx-close");
+// let medPrlx = document.querySelectorAll(".prlx-mult-med");
+// let farPrlx = document.querySelectorAll(".prlx-mult-sm");
   
-function scrollPrlxCubes() {
-  let closeY = window.pageYOffset/34;
-  let mediumY = window.pageYOffset/66;
-  let farY = window.pageYOffset/99;
-  for (let i = 0; i < closePrlx.length; i++) {
-    closePrlx[i].style.transform = "translate3d" + "(" + "0," + closeY  + "rem" + ", 0" + ")";
-}
-  for (let o = 0; o < medPrlx.length; o++) {
-    medPrlx[o].style.transform = "translate3d" + "(" + "0," + mediumY  + "rem" + ", 0" + ")";
-}
-  for (let p = 0; p < farPrlx.length; p++) {
-      farPrlx[p].style.transform = "translate3d" + "(" + "0," + farY  + "rem" + ", 0" + ")";
-  }
-}
-window.addEventListener("scroll", scrollPrlxCubes);
+// function scrollPrlxCubes() {
+  // let closeY = window.pageYOffset/34;
+  // let mediumY = window.pageYOffset/66;
+  // let farY = window.pageYOffset/99;
+//   for (let i = 0; i < closePrlx.length; i++) {
+//     closePrlx[i].style.transform = "translate3d" + "(" + "0," + closeY  + "rem" + ", 0" + ")";
+// }
+//   for (let o = 0; o < medPrlx.length; o++) {
+//     medPrlx[o].style.transform = "translate3d" + "(" + "0," + mediumY  + "rem" + ", 0" + ")";
+// }
+//   for (let p = 0; p < farPrlx.length; p++) {
+//       farPrlx[p].style.transform = "translate3d" + "(" + "0," + farY  + "rem" + ", 0" + ")";
+//   }
+// }
+// window.addEventListener("scroll", scrollPrlxCubes);
 
 // function prlxElements() {
 

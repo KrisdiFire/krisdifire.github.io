@@ -17,33 +17,29 @@ function clock() {
     let chour = hour * 30 + min/2;
 //adjust the dials by styling them with the variables above and 
 //adding "deg" to the ends of the numbers
-        seconds.style.transform="rotate("+ csec +"deg)";
-            minutes.style.transform="rotate("+ cmin +"deg)";
-                hours.style.transform="rotate("+ chour +"deg)"; 
-                
-  //  if (hour < 12 ) {}
-
-
+        seconds.style.transform="rotate3d(0, 0, 1,"+ csec + "deg" + ")";
+            minutes.style.transform="rotate3d(0, 0, 1,"+ cmin + "deg" +")";
+                hours.style.transform="rotate3d(0, 0, 1,"+ chour + "deg" + ")"; 
+                // rotate3d(0, 0, 1, 45deg);
 //do this every second
    setTimeout(clock,1000);
 }
 //run script
-    clock();
+clock();
 
 function numbers_size1 () {
     if (window.innerHeight > window.innerWidth) {
         let divi = document.querySelectorAll('.divi');
-        Array.prototype.forEach.call(divi, function(el) {
-            if (window.innerWidth > 768) {
-                if (el.classList.contains('speci0')) {
-                    el.style.fontSize = "6vw"; 
-                } else {
-                    el.style.fontSize = "4vw"; 
+            Array.prototype.forEach.call(divi, function(el) {
+                if (window.innerWidth > 768) {
+                    if (el.classList.contains('speci0')) {
+                        el.style.fontSize = "6vw"; 
+                    } else {
+                        el.style.fontSize = "4vw"; 
+                }
             }
-        }
         });
     }
 }
 numbers_size1();
-
 window.addEventListener('resize', numbers_size1);

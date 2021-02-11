@@ -907,17 +907,16 @@ a[data-toggle="offCanvas"].activeOpen span:after {
 
 /*paralax squares classes*/
 .l10 {
-    top: -50rem;
 }
 .l1 {
-    top: 20rem
+    right: -3.75rem;
+    top: 5rem;
 }
 .l2 {
     top: 1rem;
 }
 .l20 {
-    top: -7rem;
-    left: -2.5rem;
+   
 }
 .l3 {
     top: 19rem;
@@ -934,14 +933,16 @@ a[data-toggle="offCanvas"].activeOpen span:after {
     top: 10rem;
 }
 .l7 {
-    top: -15rem;
+    top: 40%;
+    position: absolute;
+    align-self: center;
+    justify-self: center
 }
 .l8 {
     left: -2.5rem;
     top: 10rem;
 }
 .l9 {
-    top: -45rem;
 }
 /* parallax end*/
 
