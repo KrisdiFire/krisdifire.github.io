@@ -1,17 +1,6 @@
-* {
+.body-clock {
    font-family: 'Castoro', serif !important;
    font-weight: 400;
-}
-
-body {
-   background-color: lightslategray !important;
-   background-size: 100px 100px;
-   background-position: center;
-   background-image: linear-gradient(90deg, transparent 50%, rgba(255,255,255,.5) 50%);
-}
-
-.content-row01 {
-   color: black;
 }
 
 .img-frame1 {
@@ -150,10 +139,14 @@ body {
    top: 0.25rem;
 }
 
-span {
+.clock span {
    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
    top: 0;
-   position: absolute;
+   position: absolute;  
+}
+
+.clock span::first-letter {
+   /* text-shadow: 2px 2px 2px #CE5937; */
 }
 
 .divi:nth-child(1) {
@@ -170,10 +163,11 @@ span {
 }
 .divi:nth-child(3){
     transform: rotate(90deg);
+    font-size: 10vh;
 }
 .divi:nth-child(3) span {
    /* transform: rotate(-90deg); */
-   font-size: 10vh;
+   
    top: 0;
 }
 .divi:nth-child(4){
@@ -190,10 +184,11 @@ span {
 }
 .divi:nth-child(6){
    transform:rotate(180deg);
+   font-size: 10vh;
 }
 .divi:nth-child(6) span {
    /* transform: rotate(-180deg); */
-   font-size: 10vh;
+  
    top: 0;
 }
 .divi:nth-child(7){
@@ -210,10 +205,11 @@ span {
 }
 .divi:nth-child(9){
    transform:rotate(270deg);
+   font-size: 10vh;
 }
 .divi:nth-child(9) span {
    /* transform: rotate(-270deg); */
-   font-size: 10vh;
+   
    top: 0;
 }
 .divi:nth-child(10){
@@ -230,11 +226,12 @@ span {
 }
 .divi:nth-child(12){
    transform:rotate(360deg);
+   font-size: 10vh;
 }
 .divi:nth-child(12) span {
    /* transform: rotate(-360deg); */
    /* font-family: initial !important; */
-   font-size: 10vh;
+  
    top: 0;
 }
 
@@ -341,8 +338,8 @@ span {
 
 @media only screen and (min-width: 1366px) {
 
-   .cont-width101 {
-      max-width: none;
+   .cont-width-full {
+      max-width: none !important;
    }
 
 }
@@ -395,7 +392,7 @@ span {
    .clock {
       height: 80vw;
       width: 80vw;
-      font-size: 1rem;
+      font-size: 9vw;
    }
 
    .divi:nth-child(3) span {
@@ -423,7 +420,7 @@ span {
 @media only screen and (max-width: 480px) {
 
    .clock {
-      font-size: 1rem;
+      font-size: 2vh;
    }
 
    .circ {
@@ -440,8 +437,8 @@ span {
 
 @media only screen and (max-width: 340px) {
 
-   * {
-      font-size: 1.2rem !important;
+   .clock {
+      font-size: 1.4rem !important;
    }
 
    .KiA {

@@ -29,3 +29,21 @@ function clock() {
 }
 //run script
     clock();
+
+function numbers_size1 () {
+    if (window.innerHeight > window.innerWidth) {
+        let divi = document.querySelectorAll('.divi');
+        Array.prototype.forEach.call(divi, function(el) {
+            if (window.innerWidth > 768) {
+                if (el.classList.contains('speci0')) {
+                    el.style.fontSize = "6vw"; 
+                } else {
+                    el.style.fontSize = "4vw"; 
+            }
+        }
+        });
+    }
+}
+numbers_size1();
+
+window.addEventListener('resize', numbers_size1);
