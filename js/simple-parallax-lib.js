@@ -63,8 +63,7 @@ class PrlxElements {
     runner() {
         this.cache.forEach((elem) => {
             if (elem.wasIrun == false) {
-                elem.sy = getValue(elem.el, elem.stop_1, elem.stop_2, 
-                    elem.parent, elem.speed);
+                    doer(elem.el, elem.sy);
                 elem.wasIrun = true;
             }
             if (isInView(elem.el.closest('.prlx-section'))) {
