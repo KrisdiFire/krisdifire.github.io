@@ -394,6 +394,9 @@
       width: 80vw;
       font-size: 9vw;
    }
+   .clock .divi {
+      font-size: 9vw;
+   }
 
    .divi:nth-child(3) span {
       /* transform: rotate(-90deg); */
