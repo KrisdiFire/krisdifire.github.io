@@ -1316,7 +1316,7 @@ will-change: transform;
     width: 80%;
     margin: auto;
     align-items: center;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 #footer01 ul {
     list-style-type: none;
