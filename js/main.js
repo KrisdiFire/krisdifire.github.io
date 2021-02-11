@@ -137,10 +137,10 @@ let mainMenu = document.getElementsByClassName('main-menu')[0];
 
 var contactNav = document.getElementById("soc-menu");
 
-let bodyHeight = Math.max(document.body.scrollHeight, document.body.offsetHeight) - window.innerHeight,
-    viewportPerc = 0,
-    totalBodyScrolledPerc = 0,
-    bodyScrolled = 0;
+let bodyHeightFS = Math.max(document.body.scrollHeight, document.body.offsetHeight) - window.innerHeight,
+    viewportPercFS = 0,
+    totalBodyScrolledPercFS = 0,
+    bodyScrolledFS = 0;
 
 let scrolly = document.getElementById("scrolly"),
     scrolledAm = document.getElementById("scrolled-am"),
@@ -148,13 +148,13 @@ let scrolly = document.getElementById("scrolly"),
 
 function scrollBar() {
 
-bodyHeight = Math.max(document.body.scrollHeight, document.body.offsetHeight) - window.innerHeight;
+bodyHeightFS = Math.max(document.body.scrollHeight, document.body.offsetHeight) - window.innerHeight;
 //koliko se odskrolovalo pocevsi od vrha - nikad ne dodje do 100% jer mu fali window inner height
-bodyScrolled = (Math.max(document.documentElement.scrollTop, document.body.scrollTop, document.body.offsetTop));
+bodyScrolledFS = (Math.max(document.documentElement.scrollTop, document.body.scrollTop, document.body.offsetTop));
 //koliko je totalno stranice odskrolovano u procentima (Math.round-uj ovo da bude od 1 - 100 celi br)
-totalBodyScrolledPerc = (bodyScrolled / bodyHeight * 100);
+totalBodyScrolledPercFS = (bodyScrolledFS / bodyHeightFS * 100);
 //scroll ammount za progressBar tj scrollbar - ako ovo postavim van ove funk, ne update-uje se kako treba, naci zasto//
-scrolledAm.style.transform = `translate3d(0,${totalBodyScrolledPerc}vh, 0)`;
+scrolledAm.style.transform = `translate3d(0,${totalBodyScrolledPercFS}vh, 0)`;
 }
 scrollBar();
 
@@ -167,7 +167,7 @@ scrollBar();
   scrolly.addEventListener("mousedown", function(e){
     if( e.type === "mousedown" ) { 
       attachment = true; 
-      position = e.clientY / scrolly.offsetHeight * bodyHeight; 
+      position = e.clientY / scrolly.offsetHeight * bodyHeightFS; 
       window.scrollTo({
       top: position});
       }
@@ -175,7 +175,7 @@ scrollBar();
 //enable scrolling on mousepress + mousemove
     scrolly.addEventListener("mousemove", function(e){
       if( e.type === "mousemove" && attachment === true ) {
-        position = e.clientY / scrolly.offsetHeight * bodyHeight;
+        position = e.clientY / scrolly.offsetHeight * bodyHeightFS;
         window.scrollTo({
         top: position});
         document.documentElement.style.scrollBehavior = "initial";
@@ -200,7 +200,7 @@ scrollBar();
 //enables scrolling through the page even when not moving over scrolly
     window.addEventListener("mousemove", function(e){
       if( e.type === "mousemove" && attachment === true ) { 
-        position = e.clientY / scrolly.offsetHeight * bodyHeight;
+        position = e.clientY / scrolly.offsetHeight * bodyHeightFS;
         document.documentElement.style.scrollBehavior = "initial";
         document.documentElement.classList.add("blockSelect");
         window.scrollTo({
@@ -221,7 +221,7 @@ function sideSocialMenuShow() {
   highPerc = 80;
 
 //kad je izmedju social side
-if (totalBodyScrolledPerc > lowPerc) {
+if (totalBodyScrolledPercFS > lowPerc) {
   contactNav.classList.add("soc-opacity-0");
   contactNav.classList.add("social-menu");
   }
@@ -232,7 +232,7 @@ if (totalBodyScrolledPerc > lowPerc) {
   contactNav.classList.remove("social-menu");
   }
 //kad je dole
- if (totalBodyScrolledPerc > highPerc) {
+ if (totalBodyScrolledPercFS > highPerc) {
   contactNav.classList.remove("social-menu-side");
   contactNav.classList.remove("soc-opacity-0");
   }

@@ -69,23 +69,23 @@ window.addEventListener("scroll", function () {
 //Racunica koliko je str odskrolovano od 0 - 100%//
 ////////////////////////////////////////////////
 
-let bodyHeight = Math.max(document.body.scrollHeight, document.body.offsetHeight) - window.innerHeight,
-    viewportPerc = 0,
-    totalBodyScrolledPerc = 0,
-    bodyScrolled = 0;
+let bodyHeightFS = Math.max(document.body.scrollHeight, document.body.offsetHeight) - window.innerHeight,
+    viewportPercFS = 0,
+    totalBodyScrolledPercFS = 0,
+    bodyScrolledFS = 0;
 
 let scrolly = document.getElementById("scrolly"),
     scrolledAm = document.getElementById("scrolled-am"),
     scrollHand = document.getElementById("scroll-hand");
 
 function scrollBar() {
-    bodyHeight = Math.max(document.body.scrollHeight, document.body.offsetHeight) - window.innerHeight;
+    bodyHeightFS = Math.max(document.documentElement.scrollHeight, document.body.offsetHeight) - window.innerHeight;
     //koliko se odskrolovalo pocevsi od vrha - nikad ne dodje do 100% jer mu fali window inner height
-    bodyScrolled = (Math.max(document.documentElement.scrollTop, document.body.scrollTop, document.body.offsetTop));
+    bodyScrolledFS = (Math.max(document.documentElement.scrollTop, document.body.offsetTop));
     //koliko je totalno stranice odskrolovano u procentima (Math.round-uj ovo da bude od 1 - 100 celi br)
-    totalBodyScrolledPerc = (bodyScrolled / bodyHeight * 100);
+    totalBodyScrolledPercFS = (bodyScrolledFS / bodyHeightFS * 100);
     //scroll ammount za progressBar tj scrollbar - ako ovo postavim van ove funk, ne update-uje se kako treba, naci zasto//
-    scrolledAm.style.transform = `translate3d(0,${totalBodyScrolledPerc}vh, 0)`;
+    scrolledAm.style.transform = `translate3d(0,${totalBodyScrolledPercFS}vh, 0)`;
 }
 scrollBar();
 window.addEventListener('scroll', scrollBar);
