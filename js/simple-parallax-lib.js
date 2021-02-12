@@ -66,7 +66,7 @@ class PrlxElements {
                     doer(elem.el, elem.sy);
                 elem.wasIrun = true;
             }
-            if (isInView(elem.el.closest('.prlx-section'))) {
+            if (isInView(elem.el.closest('.prlx-section')) || isInView(elem.el)) {
                 elem.sy = getValue(elem.el, elem.stop_1, elem.stop_2, 
                     elem.parent, elem.speed);
             }
