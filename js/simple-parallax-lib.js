@@ -172,7 +172,6 @@ function lerp(a, b, n) {
 //check for stop pos and/or lerp 
 function transOptions(elem, stop_2, stop_1, value) {
     if (isInView(elem.closest(".prlx-section")) || isInView(elem)) {
-
         if (value > stop_1) {
             doer(elem, stop_1);
         } else if (value < stop_2 * -1) {
