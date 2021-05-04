@@ -1238,7 +1238,7 @@ will-change: transform;
 .show-list-item .pullDown {
     transform:  translate3d(0, 0%, 0) !important;
     transition: ease-in-out 0.5s;
-    transition-delay: 0.05s;
+    transition-delay: 0.1s;
 }
 
 .show-list-item li:nth-child(1) > .pullDown {
