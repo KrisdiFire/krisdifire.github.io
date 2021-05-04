@@ -27,11 +27,11 @@ Array.prototype.forEach.call(showColumn, function(element){
 });
 Array.prototype.forEach.call(listPullDown, function(element){
   if (element.classList.contains("pullDown")) {
-      element.style.transform = "translateY(150%)";}
+      element.style.transform = "translateY(-150%)";}
 });
 Array.prototype.forEach.call(showListBlank, function(element){
   if (element.classList.contains("pullDown")) {
-      element.style.transform = "translateY(150%)";}
+      element.style.transform = "translateY(-150%)";}
 });
 Array.prototype.forEach.call(separatorJSOff, function(element){
         if (element.classList.contains("js-remove")) {
