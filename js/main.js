@@ -403,7 +403,7 @@ for (var l = 0; l < closeBtns.length; l++) {
     else {
       sideNav.classList.toggle("side-menu-norm");
       sideNav.style.width = "19rem";
-      sideNav.style.backgroundColor = "indianred";
+      sideNav.style.backgroundColor = "rgb(255,166,61)";
       closeSideDiv.style.opacity = '1';
       sideNav.style.transitionDelay = "0s";
     }

@@ -310,7 +310,7 @@
     transition: font-size ease 0.35s;
 }
 .largest-txt {
-    font-size: 9rem;
+    font-size: 8rem;
     font-weight: 900 !important;
     transition: font-size ease 0.35s;
 }
@@ -318,7 +318,9 @@
     font-weight: 900;
     line-height: 8rem;
     text-align: unset !important;
-    font-family: 'Alata',"Lucida Sans Unicode", sans-serif;
+    font-family: 'Spartan', sans-serif;
+    /* font-family: 'Libre Franklin', sans-serif; */
+    /* font-family: 'Alata',"Lucida Sans Unicode", sans-serif; */
     line-height: 9rem;
     transition: font-size ease 0.35s;
 }
@@ -352,10 +354,13 @@
     text-shadow: 0px 0px 1px rgb(255, 255, 255);
 }
 .red-text {
-    color: rgb(255, 95, 95);
+    /* color: rgb(255, 95, 95); */
+    /* color: rgb(62,138,128); */
+    color: rgb(184,184,104);
 }
 .blue-text {
-    color: #3abdd4;
+    /* color: #3abdd4; */
+    color: rgb(255,166,61);
 }
 /*classes to position headings and/or other text chunks*/
 .center-hX {
@@ -383,7 +388,7 @@ html {
 
 /*body style*/
 body {
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(30, 30, 30);
     overflow-x: hidden;
     overflow-y: scroll;
 }
@@ -398,8 +403,11 @@ hr {
 /*heading styles*/
 h1, h2, h3 {
     padding: 0.5rem;
-    font-family: 'Alata',"Lucida Sans Unicode", sans-serif;
-    font-weight: 600 !important;
+    font-family: 'Spartan', sans-serif;
+    /* font-family: 'Cormorant', serif; */
+    /* font-family: 'Libre Franklin', sans-serif; */
+    /* font-family: 'Alata',"Lucida Sans Unicode", sans-serif; */
+    font-weight: 100 !important;
 }
 
 /*Main menu stil*/
@@ -454,6 +462,8 @@ h1, h2, h3 {
 }
 
 .main-menu-inner ul li a {
+    /* font-family: 'Cormorant', serif !important;
+    font-size: 1.25rem; */
     display: block;
     color: white;
     margin: 1em 1em;
@@ -859,6 +869,20 @@ a[data-toggle="offCanvas"].activeOpen span:after {
     background-image: url("../img/back-squares.svg");
     background-size: contain;
 }
+.prlx-mult::before {
+    opacity: 0.6;
+    background-position: center;
+    content: "";
+    height: 10rem;
+    width: 10rem;
+    position: absolute;
+    z-index: -30;
+    background: url("../img/back-squares.svg") no-repeat center;
+    background-image: url("../img/back-squares.svg");
+    background-size: contain;
+}
+
+
 .prlx-mult-med {
     z-index: -30;
     height: 7.5rem; 
@@ -1081,7 +1105,8 @@ a[data-toggle="offCanvas"].activeOpen span:after {
     position: relative;
 }
 .left-black-bg::after {
-    background-color: rgba(30, 30, 30, 1);
+    background-color: rgba(40, 40, 40, 1);
+    /* background-color: rgb(63,125,244); */
     background-position: center;
     content: "";
     opacity: 1;
@@ -1344,6 +1369,8 @@ will-change: transform;
 
 #footer-menu ul li a {
     position: relative;
+    /* font-family: 'Cormorant', serif !important;
+    font-size: 1.25rem; */
 }
 
 /*social on the side*/
@@ -1551,8 +1578,8 @@ will-change: transform;
     max-height: 400px;
     max-width: 400px;
     object-fit: cover;
-    transition: opacity ease-in-out 0.3s, filter ease-in-out 0.3s;
-    opacity: 0.6;
+    transition: ease-in-out 0.3s, filter ease-in-out 0.3s;
+    opacity: 1;
     filter: grayscale(70%);
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
@@ -1560,7 +1587,8 @@ will-change: transform;
 }
 .img-bck-inner:hover, .img-bck-inner:hover .img-bck {
     opacity: 1;
-    transition: opacity ease-in-out 0.6s;
+    filter: grayscale(0%);
+    transition: filter ease-in-out 0.6s, opacity ease-in-out 0.6s;
 }
 .img-bck-inner:hover .img-bck-txt01, .img-bck-inner:hover .img-bck-txt02 {
     opacity: 0;
@@ -1697,6 +1725,31 @@ will-change: transform;
 /*width for gallery container*/
 .gallery-cont-width {
     width: 90%;
+}
+
+.exp-txt {
+    margin-top: -15rem !important;
+}
+
+.small-num-part {
+    color: white;
+    font-size: 2rem;
+    font-family: 'Cormorant', serif !important;
+    /* font-family: 'Libre Franklin', sans-serif !important; */
+    position: absolute;
+}
+
+.num-1-part {
+    margin-top: -0.15rem;
+    margin-left: -3rem;
+}
+.num-2-part {
+    margin-top: 7%;
+    margin-left: -3rem;
+}
+.num-3-part {
+    margin-top: -0.5rem;
+    margin-left: -3rem;
 }
 
 @media only screen and (min-width: 1367px) {
@@ -1861,7 +1914,7 @@ will-change: transform;
             font-size: 12rem;
         }
         .scal-txt-02 {
-            font-size: 8rem;
+            font-size: 7rem;
         }
 
         #footer01, #footer02 {
@@ -2021,7 +2074,7 @@ will-change: transform;
             font-size: 8rem;
         }
         .scal-txt-02 {
-            font-size: 6rem;
+            font-size: 4.5rem;
         }
     /*changes from row to column representation*/
         .content-row01 {
@@ -2133,6 +2186,30 @@ will-change: transform;
         #footer02 {
             justify-content: center;
         }
+
+        .exp-txt {
+            margin-top: 0rem;
+        }
+
+        .small-num-part {
+            color: white;
+            font-size: 1.75rem;
+            font-family: 'Cormorant', serif !important;
+            position: absolute;
+        }
+        
+        .num-1-part {
+            margin-top: -0.5rem;
+            margin-left: -2.5rem;
+        }
+        .num-2-part {
+            margin-top: -0.5rem;
+            margin-left: -2.5rem;
+        }
+        .num-3-part {
+            margin-top: -0.5rem;
+            margin-left: -2.5rem;
+        }
     }
     
     @media only screen and (max-width: 480px) {
@@ -2216,7 +2293,7 @@ will-change: transform;
             font-size: 5rem;
         }
         .scal-txt-02 {
-            font-size: 3rem;
+            font-size: 2.5rem;
         }
     
         .content-row01 {
@@ -2247,6 +2324,26 @@ will-change: transform;
             bottom: 0;
         /*    left: 85%;*/
             top: 100%;
+        }
+
+        .small-num-part {
+            color: white;
+            font-size: 1.2rem;
+            font-family: 'Cormorant', serif !important;
+            position: absolute;
+        }
+        
+        .num-1-part {
+            margin-top: -0.2rem;
+            margin-left: -2rem;
+        }
+        .num-2-part {
+            margin-top: -0.2rem;
+            margin-left: -2rem;
+        }
+        .num-3-part {
+            margin-top: -0.2rem;
+            margin-left: -2rem;
         }
         
         #footer-wrapper {
