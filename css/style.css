@@ -1731,6 +1731,10 @@ will-change: transform;
     margin-top: -15rem !important;
 }
 
+.exp-poz {
+    top:-250px;
+}
+
 .small-num-part {
     color: white;
     font-size: 2rem;
@@ -2189,6 +2193,10 @@ will-change: transform;
 
         .exp-txt {
             margin-top: 0rem;
+        }
+
+        .exp-poz {
+            top: 0px;
         }
 
         .small-num-part {
