@@ -1,42 +1,69 @@
 <!DOCTYPE html>
 <html lang="en" class="">
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link href="css/style-clock.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="js/main.js" rel="javascript" />
+  <link rel="stylesheet" href="css/simple-lightbox.css?v2.2.1" />
+  <link href="js/simple-lightbox.js" rel="javascript" />
 
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link href="css/style-clock.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="js/main.js" rel="javascript">
-    <link rel="stylesheet" href="css/simple-lightbox.css?v2.2.1"/>
-    <link href="js/simple-lightbox.js" rel="javascript">
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    defer
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Alata&display=swap"
+  />
+  <link
+    defer
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+  />
+  <link
+    defer
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+  />
+  <link
+    defer
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link defer rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alata&display=swap">
-    <link defer rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
-    <link defer rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap">
-    <link defer rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@1,300&family=DM+Serif+Text&family=Libre+Franklin:ital,wght@1,100&family=Spartan:wght@600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@1,300&family=DM+Serif+Text&family=Libre+Franklin:ital,wght@1,100&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Libre+Franklin:ital,wght@1,100&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" rel="stylesheet">
-<head>
-
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@1,300&family=DM+Serif+Text&family=Libre+Franklin:ital,wght@1,100&family=Spartan:wght@600&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@1,300&family=DM+Serif+Text&family=Libre+Franklin:ital,wght@1,100&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Libre+Franklin:ital,wght@1,100&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap"
+    rel="stylesheet"
+  />
+  <head>
     <title>Kristian Firedi Design & Web Development</title>
 
-    <meta name="description" content="Kristian Firedi - Graphic Designer & Flutter Developer from Serbia"/>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Kristian Firedi - Graphic Designer & Flutter Developer from Serbia"
+    />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
 
-</head>
-
-<body class="">
-
+  <body class="">
     <div id="scrolly">
-        <div id="scrolled-am">
-            <span id="scroll-hand"></span>
-        </div>
+      <div id="scrolled-am">
+        <span id="scroll-hand"></span>
+      </div>
     </div>
-<!-- 
+    <!-- 
     <div id="load-win" class="loading-scr">
         <div id="op-l" class="load-le">
             <div class="prlx-mult hiw mar-cent-ver pos-ab half-r"></div>
@@ -51,331 +78,454 @@
     </div> -->
 
     <div class="bg-line-cont">
-        <div class="lines not-on-sm">
-        </div>
-        <div class="lines">
-        </div>
-        <div class="lines not-on-sm">
-        </div>
-        <div class="lines ">
-        </div>
+      <div class="lines not-on-sm"></div>
+      <div class="lines"></div>
+      <div class="lines not-on-sm"></div>
+      <div class="lines"></div>
     </div>
 
     <div class="sidenav" id="sidenav">
-        <div id="btn-close-div"><a class="close-side-menu">&times;</a></div>
-        
-        <button class="dropbtn">WHAT I DO</button>
+      <div id="btn-close-div"><a class="close-side-menu">&times;</a></div>
 
-       <div class="dropdown-container">
-            <a class="close-side-menu" href="#work">Works</a>
-            <a class="close-side-menu" href="#exp">Education</a>
-            <a class="close-side-menu" href="gallery.html">Gallery</a>
-       </div>
+      <button class="dropbtn">WHAT I DO</button>
 
-       <button class="dropbtn">CONTACT</button>
+      <div class="dropdown-container">
+        <a class="close-side-menu" href="#work">Works</a>
+        <a class="close-side-menu" href="#exp">Education</a>
+        <a class="close-side-menu" href="gallery.html">Gallery</a>
+      </div>
 
-       <div class="dropdown-container">
-            <a href="mailto:kristianfiredi@gmail.com">gmail</a>
-            <a href="https://www.facebook.com/kristian.firedi">Facebook</a>
-            <a href="https://www.linkedin.com/in/kristian-firedi-441574178/">LinkedIn</a>
-            <a href="https://secure.skype.com/portal/profile">Skype</a>
-            <a href="https://www.instagram.com/naitsirk_firedi">Instagram</a>
-       </div>
-            <a class="close-side-menu about" href="#about">ABOUT</a>
-     </div>
+      <button class="dropbtn">CONTACT</button>
 
-     <div class="close-side-menu" id="close-side-menu-div"></div> 
-
-<div id="whole-page01">
-
-    <div id="up"><a>&#8679;</a></div> 
-
-    <nav class="main-menu" id="main-nav"> 
-        <div class="main-menu-inner">
-        <p><a class="home01" href="index.html">HOME</a></p>
-        <ul class="table-1">
-            <li class="list"><a class="menu-item strike-through" href="#work">WORK</a></li>
-            <li class="list"><a class="menu-item strike-through" href="#exp">EDUCATION</a></li>
-            <li class="list"><a class="menu-item strike-through" href="gallery.html">GALLERY</a></li>
-            <li class="list"><a class="menu-item strike-through" href="#about">ABOUT</a></li>
-          </ul>
-    
-        <a class="display-none" id="ham-menu" data-toggle="offCanvas" aria-expanded="false" aria-controls="offCanvas"><span></span></a>
-    
+      <div class="dropdown-container">
+        <a href="mailto:kristianfiredi@gmail.com">gmail</a>
+        <a href="https://www.facebook.com/kristian.firedi">Facebook</a>
+        <a href="https://www.linkedin.com/in/kristian-firedi-441574178/"
+          >LinkedIn</a
+        >
+        <a href="https://secure.skype.com/portal/profile">Skype</a>
+        <a href="https://www.instagram.com/naitsirk_firedi">Instagram</a>
+      </div>
+      <a class="close-side-menu about" href="#about">ABOUT</a>
     </div>
-    </nav>
-    
-<div id="page01">
 
-    <div class="content-row01">
+    <div class="close-side-menu" id="close-side-menu-div"></div>
 
-        <div class="content01 cont-cent col05 not-on-med">
+    <div id="whole-page01">
+      <div id="up"><a>&#8679;</a></div>
+
+      <nav class="main-menu" id="main-nav">
+        <div class="main-menu-inner">
+          <p><a class="home01" href="index.html">HOME</a></p>
+          <ul class="table-1">
+            <li class="list">
+              <a class="menu-item strike-through" href="#work">WORK</a>
+            </li>
+            <li class="list">
+              <a class="menu-item strike-through" href="#exp">EDUCATION</a>
+            </li>
+            <li class="list">
+              <a class="menu-item strike-through" href="gallery.html"
+                >GALLERY</a
+              >
+            </li>
+            <li class="list">
+              <a class="menu-item strike-through" href="#about">ABOUT</a>
+            </li>
+          </ul>
+
+          <a
+            class="display-none"
+            id="ham-menu"
+            data-toggle="offCanvas"
+            aria-expanded="false"
+            aria-controls="offCanvas"
+            ><span></span
+          ></a>
         </div>
+      </nav>
 
-        <div class="content01 cont-cent00 col05 not-on-medi pos-rel">
+      <div id="page01">
+        <div class="content-row01">
+          <div class="content01 cont-cent col05 not-on-med"></div>
 
-            <div style="    overflow: hidden;
-            width: 100%;
-            height: 80vh;
-            position: absolute; margin-left: -1%;">
-            <div class="content-row01 pos-ab cont-width101 not-on-med">
-                <img class="img-bck00 image img-bck-right-med0 push-back pos-ab" style="width: 120%; opacity: 50%; margin-left: -10%;" src="img/Kristian-Firedi.46579df1.webp" alt="">
+          <div class="content01 cont-cent00 col05 not-on-medi pos-rel">
+            <div
+              style="
+                overflow: hidden;
+                width: 100%;
+                height: 80vh;
+                position: absolute;
+                margin-left: -1%;
+              "
+            >
+              <div class="content-row01 pos-ab cont-width101 not-on-med">
+                <img
+                  class="img-bck00 image img-bck-right-med0 push-back pos-ab"
+                  style="width: 120%; opacity: 50%; margin-left: -10%"
+                  src="img/Kristian-Firedi.46579df1.webp"
+                  alt=""
+                />
+              </div>
+              <!-- </div> -->
+
+              <!-- <div class="content01 col05 vertical-text o6t red-text">FLUTTER DEVELOPER</div> -->
+              <!-- <div class="content01 col05 vertical-text o5t red-text">GRAPHIC DESIGNER</div> -->
             </div>
-            <!-- </div> -->
 
-            <!-- <div class="content01 col05 vertical-text o6t red-text">FLUTTER DEVELOPER</div> -->
-            <!-- <div class="content01 col05 vertical-text o5t red-text">GRAPHIC DESIGNER</div> -->
+            <div class="separator01"><hr /></div>
+            <div class="separator01 not-on-med"><hr /></div>
 
-        </div>
-
-        <div class="separator01"><hr></div>
-        <div class="separator01 not-on-med"><hr></div>
-            
-            <div style="height: 10rem; width: 10rem; filter: brightness(1); margin-top: 7rem; display: none;" class="pos-ab prlx-mult l0"><p style="text-align: center;" class="pos-ab mar-cent-ver display-none">Graphic Designer <br>
-                & Web Developer</p>
+            <div
+              style="
+                height: 10rem;
+                width: 10rem;
+                filter: brightness(1);
+                margin-top: 7rem;
+                display: none;
+              "
+              class="pos-ab prlx-mult l0"
+            >
+              <p
+                style="text-align: center"
+                class="pos-ab mar-cent-ver display-none"
+              >
+                Graphic Designer <br />
+                & Web Developer
+              </p>
             </div>
+          </div>
 
-        </div>
+          <div class="separator01 not-on-sm nopad">
+            <hr />
 
-        <div class="separator01 not-on-sm nopad"><hr>
-            
             <div class="content01 col05 pos-rel cont-cent"></div>
 
-                <div class="content01 col05 pos-rel cont-cent">
-                    <div class="not-on-lar prlx-mult-sm-ow pos-ab"></div>
-                </div>
-
+            <div class="content01 col05 pos-rel cont-cent">
+              <div class="not-on-lar prlx-mult-sm-ow pos-ab"></div>
+            </div>
+          </div>
         </div>
 
-    </div>
+        <div class="content-row01 cont-height75 cont-cent-ver prlx-section">
+          <div class="content01 col05 pos-rel cont-cent nopad not-on-lar">
+            <div
+              style="right: -2.5rem; top: 3rem"
+              class="prlx-mult-sm pos-ab not-on-sm"
+            ></div>
+          </div>
 
-    <div class="content-row01 cont-height75 cont-cent-ver prlx-section">
+          <div class="content01 col10">
+            <p class="largest-txt intro-txt blue-text nopad">
+              Hello<span class="white-text font-norm">,</span>
+            </p>
+            <p class="left-hX nopad-lr largest-txt intro-txt white-text">
+              my name is
+            </p>
+            <p class="left-hX nopad-lr largest-txt intro-txt white-text">
+              Kristian
+            </p>
+            <div class="content01 col05 not-on-lar opacity-05 mar-left">
+              FLUTTER DEVELOPER & <br />GRAPHIC DESIGNER
+            </div>
+          </div>
 
-                <div class="content01 col05 pos-rel cont-cent nopad not-on-lar">
-                    <div style="right: -2.5rem; top: 3rem;" class="prlx-mult-sm pos-ab not-on-sm"></div>
-                </div>
+          <div class="content01 col025"></div>
 
-        <div class="content01 col10">
-            <p class="largest-txt intro-txt blue-text nopad">Hello<span class="white-text font-norm">,</span></p>
-            <p class="left-hX nopad-lr largest-txt intro-txt white-text">my name is</p>
-            <p class="left-hX nopad-lr largest-txt intro-txt white-text">Kristian</p>
-            <div class="content01 col05 not-on-lar opacity-05 mar-left">FLUTTER DEVELOPER & <br>GRAPHIC DESIGNER</div>
-        </div>    
+          <div class="content01 col05 cont-cent"></div>
 
-        <div class="content01 col025">
-        </div>
-    
-        <div class="content01 col05 cont-cent">
-        </div>
-
-        <div class="content01 col05 cont-cent">
+          <div class="content01 col05 cont-cent">
             <div class="prlx-mult pos-ab not-on-med l2"></div>
-            <div data-prlx-speed="3" class="prlx-mult-med not-on-lar not-ab-sm pos-ab l2"></div>
+            <div
+              data-prlx-speed="3"
+              class="prlx-mult-med not-on-lar not-ab-sm pos-ab l2"
+            ></div>
+          </div>
+
+          <div class="content01 col05 cont-cent prlx-section">
+            <div
+              data-prlx-speed="2"
+              class="prlx-mult-sm prlx-element prlx-norm pos-ab not-on-lar l3"
+            ></div>
+            <div
+              data-prlx-speed="2"
+              class="prlx-mult-sm prlx-element prlx-norm not-on-med pos-ab l3i"
+            ></div>
+          </div>
         </div>
 
-        <div class="content01 col05 cont-cent prlx-section">
-            <div data-prlx-speed="2" class="prlx-mult-sm prlx-element prlx-norm pos-ab not-on-lar l3"></div>
-            <div data-prlx-speed="2" class="prlx-mult-sm prlx-element prlx-norm not-on-med pos-ab l3i"></div>
-        </div>
+        <div class="separator01 not-on-sm"><hr /></div>
+        <div class="separator01"><hr /></div>
 
-    </div>
-
-    <div class="separator01 not-on-sm"><hr></div>
-    <div class="separator01"><hr></div>
-
-    <div class="content-row01 cont-height75 prlx-section">
-
-        <div class="content01 bring-front col10">
-
-            <p style="position:relative;" class="nopad">
-                <a name="about" style="position:absolute; top:-100px;"></a>
+        <div class="content-row01 cont-height75 prlx-section">
+          <div class="content01 bring-front col10">
+            <p style="position: relative" class="nopad">
+              <a name="about" style="position: absolute; top: -100px"></a>
             </p>
 
             <h2 class="right-hX red-text0 overrdie-to-cent scal-txt-02">
-                
-                <span class="small-num-part num-1-part">01:</span>
-                
-                ABOUT<span class="white-text font-norm0">:</span></h2>
+              <span class="small-num-part num-1-part">01:</span>
 
-        </div>
+              ABOUT<span class="white-text font-norm0">:</span>
+            </h2>
+          </div>
 
-        <div class="content-row01 nopad col10 flex-op-dir-sm nomar max-width-override">
+          <div
+            class="content-row01 nopad col10 flex-op-dir-sm nomar max-width-override"
+          >
+            <div
+              data-prlx-speed="-2"
+              class="content01 bring-front col03 left-black-bg bot-auto dont-show-side prlx-norm prlx-element"
+            >
+              <h2 class="left-hX huge-txt">Skills</h2>
 
-        <div data-prlx-speed="-2" class="content01 bring-front col03 left-black-bg bot-auto dont-show-side prlx-norm prlx-element">
-
-            <h2 class="left-hX huge-txt">Skills</h2>
-    
-            <ul class="list-01">
+              <ul class="list-01">
                 <li>Flutter Development</li>
                 <li>Web Design & Dev</li>
                 <li>Project Management</li>
                 <li>Graphic Design</li>
                 <li>Illustration</li>
-            </ul>
+              </ul>
+            </div>
 
-        </div>
+            <div class="content01 bring-front col02">
+              <div
+                data-prlx-speed="2"
+                class="prlx-mult-med prlx-element prlx-norm prlx-mult0 pos-ab l1"
+              ></div>
+            </div>
 
-        <div class="content01 bring-front col02">
-            <div data-prlx-speed="2" class="prlx-mult-med prlx-element prlx-norm prlx-mult0 pos-ab l1"></div>
-        </div>
+            <div class="content01 bring-front col05">
+              <p>
+                I'm Kristian Firedi, a strong admirer of all things
+                design-related, as well as art in general no matter the medium,
+                with a passion for both science and the ever-improving tech it
+                creates.
+              </p>
 
-        <div class="content01 bring-front col05">
+              <p>
+                My start was the hobby of making levels, textures, and simple 3d
+                models for various games, some of which have received prizes
+                and/or players acclaim, which has since led me into graphic
+                design and coding.
+              </p>
 
-            <p>I'm Kristian Firedi, a strong admirer of all things design-related, 
-                as well as art in general no matter the medium, 
-                with a passion for both science and the ever-improving tech it creates.
-            </p>
+              <p>
+                My current engagements include mobile app and web development,
+                with graphic design sprinkled on the side, but I am constantly
+                on the lookout for new things to learn, and ways to improve.
+              </p>
+            </div>
+          </div>
 
-            <p>My start was the hobby of making levels, textures, and simple 3d models for various games,
-                some of which have received prizes and/or players acclaim, which has since
-                led me into graphic design and coding.
-            </p>
-                
-            <p>My current engagements include mobile app and web development, with graphic design
-                sprinkled on the side, but I am constantly on the lookout for new things to learn,
-                and ways to improve.
-            </p>
+          <div class="content01 col05 nopad cont-cent"></div>
 
-        </div>
+          <div style="height: 0.5rem" class="content01 col05 nopad cont-cent">
+            <div
+              data-prlx-speed="4"
+              class="not-on-med prlx-mult-sm prlx-element prlx-norm pos-ab l5"
+            ></div>
+          </div>
 
-    </div>
-
-        <div class="content01 col05 nopad cont-cent">
-        </div>
-
-        <div style="height: 0.5rem;" class="content01 col05 nopad cont-cent">
-            <div data-prlx-speed="4" class=" not-on-med prlx-mult-sm prlx-element prlx-norm pos-ab l5"></div>
-        </div>
-
-        <div class="content01 col05 nopad cont-cent">
+          <div class="content01 col05 nopad cont-cent">
             <!-- <div class="prlx-mult pos-ab l6"></div> -->
-        </div>
+          </div>
 
-        <div class="content01 col05 nopad">
-        </div>
+          <div class="content01 col05 nopad"></div>
 
-        <div class="content01 col05 cont-cent">
-          <!--  <div class="pos-ab prlx-mult not-on-med l20"></div>-->
-        </div>
+          <div class="content01 col05 cont-cent">
+            <!--  <div class="pos-ab prlx-mult not-on-med l20"></div>-->
+          </div>
 
-       <div class="content01 bring-front col05">
+          <div class="content01 bring-front col05">
+            <!--      <h2 class="left-hX huge-txt">Education</h2>  -->
 
-      <!--      <h2 class="left-hX huge-txt">Education</h2>  -->
+            <h2 class="left-hX huge-txt">Experience</h2>
 
-      <h2 class="left-hX huge-txt">Experience</h2>
-    
             <ul class="list-blank">
-
-                <li><div class="pullDown">Flutter Developer at <span class="highlight-txt" >NS WEB DEVELOPMENT LLC</span> Mar 2021 - Present </div></li>
-                <li><div class="pullDown">Project Management <span class="highlight-txt" >TalkBridge</span> August 2019 - March 2020</div></li>
-                <li><div class="pullDown">Graphic Design <span class="highlight-txt">Embibe</span> November 2019 - February 2020</div></li>
-                <li><div class="pullDown">Graphic Design <span class="highlight-txt">Prometej</span> September - October 2017</div></li>
-<!--
+              <li>
+                <div class="pullDown">
+                  Flutter Developer at
+                  <span class="highlight-txt">NS WEB DEVELOPMENT LLC</span> Mar
+                  2021 - Present
+                </div>
+              </li>
+              <li>
+                <div class="pullDown">
+                  Project Management
+                  <span class="highlight-txt">TalkBridge</span> August 2019 -
+                  March 2020
+                </div>
+              </li>
+              <li>
+                <div class="pullDown">
+                  Graphic Design
+                  <span class="highlight-txt">Embibe</span> November 2019 -
+                  February 2020
+                </div>
+              </li>
+              <li>
+                <div class="pullDown">
+                  Graphic Design
+                  <span class="highlight-txt">Prometej</span> September -
+                  October 2017
+                </div>
+              </li>
+              <!--
                 <li><div class="pullDown">Faculty of Philosophy in Novi Sad 2018 - / Masters degree in Romanian Language and Literature</div></li>
                     <li><div class="pullDown">Faculty of Philosophy in Novi Sad 2014 - 2018 / (BA) Philologist, Romanian Language and Literature</div></li>
                     <li><div class="pullDown">University "1st December 1918" Feb-July 2018 / Erasmus+ Student exchange program</div></li>
                     <li><div class="pullDown">West University in Timisoara Feb - June 2017 / Erasmus+ Student exchange program</div></li>
                     -->
             </ul>
-
-        </div> 
-
-    </div>
-
-    <div class="separator01"><hr></div>
-    <div class="separator01 not-on-med"><hr></div>
-    <div class="separator01 not-on-med"><hr></div>
-
-    <div class="content-row01 cont-height50 prlx-section">
-
-        <div class="content01 col05 cont-cent">
-            <div data-prlx-speed="4" class="prlx-mult-sm prlx-element prlx-norm pos-ab l8"></div>
+          </div>
         </div>
 
-        <div class="content01 col05 cont-cent">
-            <div data-prlx-speed="2" class="prlx-mult-sm prlx-element prlx-norm l4 pos-ab display-none"></div>
-        </div>
+        <div class="separator01"><hr /></div>
+        <div class="separator01 not-on-med"><hr /></div>
+        <div class="separator01 not-on-med"><hr /></div>
 
+        <div class="content-row01 cont-height50 prlx-section">
+          <div class="content01 col05 cont-cent">
+            <div
+              data-prlx-speed="4"
+              class="prlx-mult-sm prlx-element prlx-norm pos-ab l8"
+            ></div>
+          </div>
 
+          <div class="content01 col05 cont-cent">
+            <div
+              data-prlx-speed="2"
+              class="prlx-mult-sm prlx-element prlx-norm l4 pos-ab display-none"
+            ></div>
+          </div>
 
+          <div class="content01 col04">
+            <div class="content01 col10 nopad mar-right bring-front">
+              <p style="position: relative" class="nopad prlx-element0">
+                <a name="work" style="position: absolute; top: -250px"></a>
+              </p>
+              <h2
+                class="left-hX blue-text0 overrdie-to-cent scal-txt-02 pos-ab not-ab-sm not-on-lar"
+              >
+                <span class="small-num-part num-2-part">02:</span>
 
-        <div class="content01 col04">
-
-            <div class="content01 col10 nopad mar-right bring-front">  
-                <p style="position:relative;" class="nopad prlx-element0">
-                    <a name="work" style="position:absolute; top:-250px;"></a>
-                </p>          
-                <h2 class="left-hX blue-text0 overrdie-to-cent scal-txt-02 pos-ab not-ab-sm not-on-lar">
-                    
-                    <span class="small-num-part num-2-part">02:</span>
-
-                    WORK<span class="font-norm0 white-text">:</span></h2>
+                WORK<span class="font-norm0 white-text">:</span>
+              </h2>
             </div>
 
             <div class="separator01 not-on-lar"></div>
 
             <div class="content01 col10 nopad img-bck-outer cont-cent">
-        
-                <div data-prlx-speed="1.5" class="content01 gallery mar-right col10 nopad img-bck-inner prlx-top-minus prlx-norm prlx-element">
-        
-                    <h2 data-prlx-speed="-2" class=" prlx-element prlx-norm left-hX overrdie-to-cent scal-txt-02 bot-auto pos-ab not-ab-sm not-on-med img-bck-txt01">
-                        
-                        <span class="small-num-part num-2-part">02:</span>
-                        
-                        WORK<span class="white-text font-norm0">:</span></h2>
-        
-                    <p class="pos-ab top-auto white-text img-bck-txt-size img-bck-onhov">PALM <br> SUNSET</p>
-        
-                    <a class="a-img-bck" href="img/palm-tree-bg-edit.webp"><img style="display: none;" title="Photo Editing"></a><img class="img-bck img-bck-right-med push-back" src="img/palm-tree-bg-edit.webp" alt="Palm trees background edit" title="Palm trees background edit"/>
-                    
-                    <p class="img-bck-txt02 img-bck-lowerT not-on-lar img-bck-txt-size pos-ab top-auto white-text 0not-on-lar">PHOTO EDITING</p>
-        
-                </div>
-        
-            </div>
-        
-            <div class="separator01"></div>
-            <div class="separator01 not-on-med "></div>
-            <div class="separator01 not-on-med "></div>
-            <div class="separator01 not-on-med "></div>
+              <div
+                data-prlx-speed="1.5"
+                class="content01 gallery mar-right col10 nopad img-bck-inner prlx-top-minus prlx-norm prlx-element"
+              >
+                <h2
+                  data-prlx-speed="-2"
+                  class="prlx-element prlx-norm left-hX overrdie-to-cent scal-txt-02 bot-auto pos-ab not-ab-sm not-on-med img-bck-txt01"
+                >
+                  <span class="small-num-part num-2-part">02:</span>
 
-            <div class="content01 col10 nopad img-bck-outer cont-cent ">
+                  WORK<span class="white-text font-norm0">:</span>
+                </h2>
 
-                <div data-prlx-speed="1.5" class="content01 gallery mar-right col10 nopad img-bck-inner prlx-element prlx-norm prlx-top-minus">
-        
-                    <p class="img-bck-txt-size pos-ab right-hX top-auto white-text img-bck-onhov not-on-lar">JOHN <br> HURT</p>
-                    <p class="img-bck-txt-size pos-ab left-hX top-auto white-text img-bck-onhov not-on-med not-on-sm">JOHN <br> HURT</p>
-        
-                        <a class="a-img-bck" href="img/Hurt_Illustration.png"><img style="display: none;" title="Illustration"></a><img class="img-bck img-bck-right-med push-back" src="img/thumb/Hurt_Illustration.webp" alt="">
-        
-                    <p class="img-bck-txt01 img-bck-lowerT not-on-lar img-bck-txt-size pos-ab top-auto white-text 0not-on-lar">ILLUSTRATION</p>
-        
-                </div>
-        
+                <p
+                  class="pos-ab top-auto white-text img-bck-txt-size img-bck-onhov"
+                >
+                  PALM <br />
+                  SUNSET
+                </p>
+
+                <a class="a-img-bck" href="img/palm-tree-bg-edit.webp"
+                  ><img style="display: none" title="Photo Editing" /></a
+                ><img
+                  class="img-bck img-bck-right-med push-back"
+                  src="img/palm-tree-bg-edit.webp"
+                  alt="Palm trees background edit"
+                  title="Palm trees background edit"
+                />
+
+                <p
+                  class="img-bck-txt02 img-bck-lowerT not-on-lar img-bck-txt-size pos-ab top-auto white-text 0not-on-lar"
+                >
+                  PHOTO EDITING
+                </p>
+              </div>
             </div>
 
             <div class="separator01"></div>
-            <div class="separator01 not-on-med "></div>
-            <div class="separator01 not-on-med "></div>
-            <div class="separator01 not-on-med "></div>
+            <div class="separator01 not-on-med"></div>
+            <div class="separator01 not-on-med"></div>
+            <div class="separator01 not-on-med"></div>
+
             <div class="content01 col10 nopad img-bck-outer cont-cent">
-        
-                <div data-prlx-speed="1.5" class="content01 gallery mar-right col10 nopad prlx-top-minus img-bck-inner prlx-norm prlx-element">
-        
-                    <p class="img-bck-txt-size pos-ab top-auto left-hX white-text img-bck-onhov">ORTOSTIM</p>
-                    
-                    <a class="a-img-bck" href="img/NovIvkeLogo-Gotovo.png"><img style="display: none;" title="Logo Design"></a><img class="img-bck img-bck-left-med push-back" src="img/thumb/NovIvkeLogo-Gotovo.webp" alt="">
-                    
-                    <p class="img-bck-txt02 img-bck-lowerT not-on-lar img-bck-txt-size pos-ab top-auto white-text 0not-on-lar">LOGO DESIGN</p>
-                
-                </div>
-        
+              <div
+                data-prlx-speed="1.5"
+                class="content01 gallery mar-right col10 nopad img-bck-inner prlx-element prlx-norm prlx-top-minus"
+              >
+                <p
+                  class="img-bck-txt-size pos-ab right-hX top-auto white-text img-bck-onhov not-on-lar"
+                >
+                  JOHN <br />
+                  HURT
+                </p>
+                <p
+                  class="img-bck-txt-size pos-ab left-hX top-auto white-text img-bck-onhov not-on-med not-on-sm"
+                >
+                  JOHN <br />
+                  HURT
+                </p>
+
+                <a class="a-img-bck" href="img/Hurt_Illustration.png"
+                  ><img style="display: none" title="Illustration" /></a
+                ><img
+                  class="img-bck img-bck-right-med push-back"
+                  src="img/thumb/Hurt_Illustration.webp"
+                  alt=""
+                />
+
+                <p
+                  class="img-bck-txt01 img-bck-lowerT not-on-lar img-bck-txt-size pos-ab top-auto white-text 0not-on-lar"
+                >
+                  ILLUSTRATION
+                </p>
+              </div>
             </div>
 
-        </div>
+            <div class="separator01"></div>
+            <div class="separator01 not-on-med"></div>
+            <div class="separator01 not-on-med"></div>
+            <div class="separator01 not-on-med"></div>
+            <div class="content01 col10 nopad img-bck-outer cont-cent">
+              <div
+                data-prlx-speed="1.5"
+                class="content01 gallery mar-right col10 nopad prlx-top-minus img-bck-inner prlx-norm prlx-element"
+              >
+                <p
+                  class="img-bck-txt-size pos-ab top-auto left-hX white-text img-bck-onhov"
+                >
+                  ORTOSTIM
+                </p>
 
-        <div class="content01 col02 pos-rel">
-            
+                <a class="a-img-bck" href="img/NovIvkeLogo-Gotovo.png"
+                  ><img style="display: none" title="Logo Design" /></a
+                ><img
+                  class="img-bck img-bck-left-med push-back"
+                  src="img/thumb/NovIvkeLogo-Gotovo.webp"
+                  alt=""
+                />
+
+                <p
+                  class="img-bck-txt02 img-bck-lowerT not-on-lar img-bck-txt-size pos-ab top-auto white-text 0not-on-lar"
+                >
+                  LOGO DESIGN
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="content01 col02 pos-rel">
             <!-- <div class="separator01 not-on-lar"></div> -->
 
             <!-- <div class="content01 col00 nopad not-on-lar">
@@ -384,12 +534,14 @@
 
             <!-- <div class="separator01 not-on-lar"></div> -->
 
-                    <div data-prlx-speed="3" style="align-self: center;" class="prlx-mult0 prlx-element prlx-norm prlx-mult-med l7"></div>
+            <div
+              data-prlx-speed="3"
+              style="align-self: center"
+              class="prlx-mult0 prlx-element prlx-norm prlx-mult-med l7"
+            ></div>
+          </div>
 
-        </div>
-
-        <div class="content01 col04">
-
+          <div class="content01 col04">
             <!-- <div class="content01 col02 push-back">
                 <p style="position:relative;" class="nopad">
                     <a name="exp" style="position:absolute; top:-150px;"></a>
@@ -397,50 +549,100 @@
             </div> -->
 
             <div class="content01 col10 nopad img-bck-outer cont-cent">
+              <div
+                data-prlx-speed="-1"
+                class="content01 prlx-top-minus-25 mar-right col10 nopad img-bck-inner prlx-element prlx-norm"
+              >
+                <h2
+                  data-prlx-speed="-2"
+                  style="right: 0"
+                  class="prlx-element prlx-norm pos-ab scal-txt-02 not-on-med display-none img-bck-txt01"
+                >
+                  WEB<span class="white-text font-norm">:</span>
+                </h2>
 
-                <div data-prlx-speed="-1" class="content01 prlx-top-minus-25 mar-right col10 nopad img-bck-inner prlx-element prlx-norm">
-        
-                    <h2 data-prlx-speed="-2" style="right: 0;" class="prlx-element prlx-norm pos-ab scal-txt-02 not-on-med display-none img-bck-txt01">WEB<span class="white-text font-norm">:</span></h2>
-        
-                    <p class="img-bck-txt-size pos-ab top-auto white-text right-hX img-bck-onhov left-hX">BARE <br> BONES</p>
-        
-                        <a class="a-img-bck" href="bareBones-temp/BareBones.html"><img style="display: none;" title="Web design and development"> </a><img class="img-bck image img-bck-left-med push-back" src="img/thumb/BBTemp2.webp" alt="">
-                
-                    <p class="img-bck-txt01 img-bck-lowerT not-on-lar img-bck-txt-size pos-ab top-auto white-text 0not-on-lar">TEMPLATE</p>
-        
-                </div>
-        
+                <p
+                  class="img-bck-txt-size pos-ab top-auto white-text right-hX img-bck-onhov left-hX"
+                >
+                  BARE <br />
+                  BONES
+                </p>
+
+                <a class="a-img-bck" href="bareBones-temp/BareBones.html"
+                  ><img
+                    style="display: none"
+                    title="Web design and development"
+                  /> </a
+                ><img
+                  class="img-bck image img-bck-left-med push-back"
+                  src="img/thumb/BBTemp2.webp"
+                  alt=""
+                />
+
+                <p
+                  class="img-bck-txt01 img-bck-lowerT not-on-lar img-bck-txt-size pos-ab top-auto white-text 0not-on-lar"
+                >
+                  TEMPLATE
+                </p>
+              </div>
             </div>
-
-           
 
             <div class="separator01 not-on-med js-remove"></div>
             <div class="separator01"></div>
-            <div class="separator01 not-on-med "></div>
+            <div class="separator01 not-on-med"></div>
 
             <div class="content01 col10 nopad img-bck-outer cont-cent">
+              <div
+                data-prlx-speed="-1"
+                style="overflow: hidden"
+                class="content01 mar-right col10 nopad img-bck-inner prlx-element prlx-norm"
+              >
+                <p
+                  class="img-bck-txt-size pos-ab top-auto white-text img-bck-onhov not-on-lar"
+                >
+                  PARALLAX
+                </p>
+                <p
+                  class="img-bck-txt-size pos-ab top-auto white-text img-bck-onhov not-on-med not-on-sm right-hX"
+                >
+                  PARALLAX
+                </p>
 
-                <div data-prlx-speed="-1" style="overflow: hidden;" class="content01 mar-right col10 nopad img-bck-inner prlx-element prlx-norm">
-        
-                    <p class="img-bck-txt-size pos-ab top-auto white-text img-bck-onhov not-on-lar">PARALLAX</p>
-                    <p class="img-bck-txt-size pos-ab top-auto white-text img-bck-onhov not-on-med not-on-sm right-hX">PARALLAX</p>
-        
-                        <a class="a-img-bck" href="parallax.html"><img style="display: none;" title="clock-js"></a> 
-                        
-                        <div style="z-index: -1;" class="prlx-project img-bck border-bl cont-cent nomar grainy">
-                            <div data-prlx-speed="2" class="width-perc75 height-perc75 border-bl cont-cent nomar prlx-element prlx-lerp">
-                                <div data-prlx-speed="1.5" class="width-perc50 heigth-perc50 border-bl cont-cent nomar prlx-element prlx-lerp">
-                                    <div data-prlx-speed="1" class="width-perc50 border-bl cont-cent heigth-perc50 nomar prlx-element prlx-lerp">
-                                        <div data-prlx-speed="0.5" class="width-perc50 border-bl cont-cent heigth-perc50 nomar prlx-element prlx-lerp"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-        
-                    <p class="img-bck-txt02 img-bck-lowerT not-on-lar img-bck-txt-size pos-ab top-auto white-text 0not-on-lar">LIBRARY</p>
-        
+                <a class="a-img-bck" href="parallax.html"
+                  ><img style="display: none" title="clock-js"
+                /></a>
+
+                <div
+                  style="z-index: -1"
+                  class="prlx-project img-bck border-bl cont-cent nomar grainy"
+                >
+                  <div
+                    data-prlx-speed="2"
+                    class="width-perc75 height-perc75 border-bl cont-cent nomar prlx-element prlx-lerp"
+                  >
+                    <div
+                      data-prlx-speed="1.5"
+                      class="width-perc50 heigth-perc50 border-bl cont-cent nomar prlx-element prlx-lerp"
+                    >
+                      <div
+                        data-prlx-speed="1"
+                        class="width-perc50 border-bl cont-cent heigth-perc50 nomar prlx-element prlx-lerp"
+                      >
+                        <div
+                          data-prlx-speed="0.5"
+                          class="width-perc50 border-bl cont-cent heigth-perc50 nomar prlx-element prlx-lerp"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-        
+
+                <p
+                  class="img-bck-txt02 img-bck-lowerT not-on-lar img-bck-txt-size pos-ab top-auto white-text 0not-on-lar"
+                >
+                  LIBRARY
+                </p>
+              </div>
             </div>
 
             <div class="separator01 not-on-med js-remove"></div>
@@ -450,18 +652,43 @@
             <div class="separator01 not-on-med"></div>
 
             <div class="content01 col10 nopad img-bck-outer cont-cent">
+              <div
+                data-prlx-speed="-1"
+                class="content01 prlx-top-minus-25 mar-right col10 nopad img-bck-inner prlx-element prlx-norm"
+              >
+                <h2
+                  data-prlx-speed="-2"
+                  style="right: 0"
+                  class="prlx-element prlx-norm pos-ab scal-txt-02 not-on-med display-none img-bck-txt01"
+                >
+                  WEB<span class="white-text font-norm">:</span>
+                </h2>
 
-                <div data-prlx-speed="-1" class="content01 prlx-top-minus-25 mar-right col10 nopad img-bck-inner prlx-element prlx-norm">
-        
-                    <h2 data-prlx-speed="-2" style="right: 0;" class="prlx-element prlx-norm pos-ab scal-txt-02 not-on-med display-none img-bck-txt01">WEB<span class="white-text font-norm">:</span></h2>
-        
-                    <p class="img-bck-txt-size pos-ab top-auto white-text right-hX img-bck-onhov left-hX not-on-med">CLOCK</p>
-        
-                        <a class="a-img-bck" href="clock.html"></a>
-                        
-                        <div style="padding-top: 100%; width: 100%; height: 50%; position: relative; box-shadow: none !important;" class="clock img-bck image img-bck-left-med push-back">
+                <p
+                  class="img-bck-txt-size pos-ab top-auto white-text right-hX img-bck-onhov left-hX not-on-med"
+                >
+                  GALLERY
+                </p>
 
-                            <div style="-webkit-filter: invert(100%); filter: invert(100%); position: absolute; top: 0; left: 0; text-shadow: 5px 3px 2px #F0F0F0;" class="okvir">
+                <a class="a-img-bck" href="gallery.html"></a>
+
+                <img
+                  class="img-bck img-bck-left-med push-back"
+                  src="img/thumb/Untitled-1-01.png"
+                  alt=""
+                />
+
+                <!-- <div
+                  style="
+                    padding-top: 100%;
+                    width: 100%;
+                    height: 50%;
+                    position: relative;
+                    box-shadow: none !important;
+                  "
+                  class=" img-bck image img-bck-left-med push-back"
+                > -->
+                <!-- <div style="-webkit-filter: invert(100%); filter: invert(100%); position: absolute; top: 0; left: 0; text-shadow: 5px 3px 2px #F0F0F0;" class="okvir">
                                 <div class="divi"><span>l</span></div>
                                 <div class="divi"><span>l</span></div>  
                                 <div class="divi speci0"><span>l</span></div> 
@@ -479,13 +706,15 @@
                                 <div id="m"><div class="min"></div></div>
                                 <div id="h"><div class="hou"></div></div>
                                 <div class="KiA display-none">K & A</div>
-                            </div>
-                    </div>
-                
-                    <p class="img-bck-txt01 img-bck-lowerT not-on-lar img-bck-txt-size pos-ab top-auto white-text 0not-on-lar">CLOCK</p>
-        
-                </div>
-        
+                            </div> -->
+                <!-- </div> -->
+
+                <p
+                  class="img-bck-txt01 img-bck-lowerT not-on-lar img-bck-txt-size pos-ab top-auto white-text 0not-on-lar"
+                >
+                  GALLERY
+                </p>
+              </div>
             </div>
 
             <!-- <div class="separator01"></div>
@@ -502,56 +731,71 @@
             </div> -->
 
             <div class="content01 col025"></div>
+          </div>
 
+          <div class="separator01 not-on-med"></div>
+
+          <div class="content01 col00 not-on-lar">
+            <div class="separator01"></div>
+          </div>
         </div>
-
-   <div class="separator01 not-on-med"></div>
-
-    <div class="content01 col00 not-on-lar"><div class="separator01"></div></div>
-
-    </div>
 
         <div class="content-row01 prlx-section">
-            <div class="content01 col10 cont-cent nopad" style="height: 3rem;">
-                <div data-prlx-speed="3" data-prlx-stop-s="0" class="prlx-mult-med prlx-element prlx-norm not-on-med l10 pos-ab"></div>
-            </div>
+          <div class="content01 col10 cont-cent nopad" style="height: 3rem">
+            <div
+              data-prlx-speed="3"
+              data-prlx-stop-s="0"
+              class="prlx-mult-med prlx-element prlx-norm not-on-med l10 pos-ab"
+            ></div>
+          </div>
         </div>
 
+        <div class="separator01 not-on-lar"><hr /></div>
 
-    <div class="separator01 not-on-lar"><hr></div>
+        <div class="separator01 not-on-lar"></div>
 
-    <div class="separator01 not-on-lar"></div>
-
-    <div class="content-row01 cont-height75 cont-cent-ver">
-
-        <div class="content-row01 cont-width101">
-
+        <div class="content-row01 cont-height75 cont-cent-ver">
+          <div class="content-row01 cont-width101">
             <div class="content01 col02 push-back">
-                <p style="position:relative;" class="nopad">
-                    <a name="exp" style="position:absolute;" class="exp-poz"></a>
-                </p>
+              <p style="position: relative" class="nopad">
+                <a name="exp" style="position: absolute" class="exp-poz"></a>
+              </p>
             </div>
-        
-            <div class="content01 col10 prlx-section">
-            
-                <h2 class="left-hX huge-txt top-auto overrdie-to-cent scal-txt-02 prlx-element prlx-norm exp-txt" data-prlx-speed="1.5">
 
+            <div class="content01 col10 prlx-section">
+              <h2
+                class="left-hX huge-txt top-auto overrdie-to-cent scal-txt-02 prlx-element prlx-norm exp-txt"
+                data-prlx-speed="1.5"
+              >
                 <span class="small-num-part num-3-part">03:</span>
 
-                    EDUCATION<span class="white-text font-norm0">:</span></h2>
-
+                EDUCATION<span class="white-text font-norm0">:</span>
+              </h2>
             </div>
-        
 
             <div class="content01 nopad col05">
-            <ul class="list-02 ">
+              <ul class="list-02">
+                <li>
+                  <div class="pullDown">
+                    UDEMY - Dart and Flutter: The Complete Developer's Guide
+                  </div>
+                </li>
+                <li>
+                  <div class="pullDown">
+                    Faculty of Philosophy in Novi Sad 2018 - / Masters degree in
+                    Romanian Language and Literature
+                  </div>
+                </li>
+                <li>
+                  <div class="pullDown">
+                    Faculty of Philosophy in Novi Sad 2014 - 2018 / (BA)
+                    Philologist, Romanian Language and Literature
+                  </div>
+                </li>
 
-                    <li><div class="pullDown">Faculty of Philosophy in Novi Sad 2018 - / Masters degree in Romanian Language and Literature</div></li>
-                    <li><div class="pullDown">Faculty of Philosophy in Novi Sad 2014 - 2018 / (BA) Philologist, Romanian Language and Literature</div></li>
-                    <li><div class="pullDown">High school of Economics in Kikinda 2008 - 2012 / Security Technitian</div></li>
-                    <!-- <li><div class="pullDown">University "1st December 1918" Feb-July 2018 / Erasmus+ Student exchange program</div></li> -->
-                    <!-- <li><div class="pullDown">West University in Timisoara Feb - June 2017 / Erasmus+ Student exchange program</div></li> -->
-<!--
+                <!-- <li><div class="pullDown">University "1st December 1918" Feb-July 2018 / Erasmus+ Student exchange program</div></li> -->
+                <!-- <li><div class="pullDown">West University in Timisoara Feb - June 2017 / Erasmus+ Student exchange program</div></li> -->
+                <!--
                 <li><div class="pullDown">Flutter Developer at <span class="highlight-txt" >NS WEB DEVELOPMENT LLC</span> Mar 2021 - Present </div></li>
                 <li><div class="pullDown">Project Management <span class="highlight-txt" >TalkBridge</span> August 2019 - March 2020</div></li>
                 <li><div class="pullDown">Graphic Design <span class="highlight-txt">Embibe</span> November 2019 - February 2020</div></li>
@@ -559,101 +803,166 @@
 
 -->
 
-                <li class="not-on-lar"><div class="pullDown">University "1st December 1918" Feb-July 2018 / Erasmus+ Student exchange program</div></li><br>
-                <li class="not-on-lar"><div class="pullDown">West University in Timisoara Feb - June 2017 / Erasmus+ Student exchange program</div></li>
+                <li class="not-on-lar">
+                  <div class="pullDown">
+                    University "1st December 1918" Feb-July 2018 / Erasmus+
+                    Student exchange program
+                  </div>
+                </li>
+                <!-- <br /> -->
+                <li class="not-on-lar">
+                  <div class="pullDown">
+                    West University in Timisoara Feb - June 2017 / Erasmus+
+                    Student exchange program
+                  </div>
+                </li>
+                <li class="not-on-lar">
+                  <div class="pullDown">
+                    High school of Economics in Kikinda 2008 - 2012 / Security
+                    Technitian
+                  </div>
+                </li>
                 <!-- <li class="not-on-lar"><div class="pullDown">Volunteer at the International conference for the Faculty of Philosophy October 2018</div></li> -->
-            
-            </ul>
-         </div>
-         <div  class="content01 col05 cont-cent-ver nopad bot-auto">
-
-            <ul class="list-02 not-on-med">
-
-                <li><div class="pullDown">University "1st December 1918" Feb-July 2018 / Erasmus+ Student exchange program</div></li>
-                <li><div class="pullDown">West University in Timisoara Feb - June 2017 / Erasmus+ Student exchange program</div></li>
+              </ul>
+            </div>
+            <div class="content01 col05 cont-cent-ver nopad bot-auto">
+              <ul class="list-02 not-on-med">
+                <li>
+                  <div class="pullDown">
+                    University "1st December 1918" Feb-July 2018 / Erasmus+
+                    Student exchange program
+                  </div>
+                </li>
+                <li>
+                  <div class="pullDown">
+                    West University in Timisoara Feb - June 2017 / Erasmus+
+                    Student exchange program
+                  </div>
+                </li>
+                <li>
+                  <div class="pullDown">
+                    High school of Economics in Kikinda 2008 - 2012 / Security
+                    Technitian
+                  </div>
+                </li>
 
                 <!-- <li><div class="pullDown">Volunteer at the National contest in Romanian for the Faculty of Philosophy May 2019</div></li> -->
                 <!-- <li><div class="pullDown">Volunteer at the Regional contest in Romanian for the Faculty of Philosophy April 2019</div></li> -->
                 <!-- <li><div class="pullDown">Volunteer at the International conference for the Faculty of Philosophy October 2018</div></li> -->
-
-
-            </ul>
-         </div>
-
+              </ul>
+            </div>
+          </div>
         </div>
 
-    </div>
+        <div class="separator01"><hr /></div>
+        <div class="separator01"><hr /></div>
 
-    <div class="separator01"><hr></div>
-    <div class="separator01"><hr></div>
-
-    <div class="content-row01 cont-height50 cont-cent-ver">
-
-        <div style="margin-top: 0;" class="content01 col08">
-
-            <p class="mega-txt un-justify-txt"> <span class="small-num-part num-3-part not-on-med" style="margin-top: 0rem;">04:</span>I am always up for new projects and eager to develop your interesting ideas.</p>
-            
+        <div class="content-row01 cont-height50 cont-cent-ver">
+          <div style="margin-top: 0" class="content01 col08">
+            <p class="mega-txt un-justify-txt">
+              <span
+                class="small-num-part num-3-part not-on-med"
+                style="margin-top: 0rem"
+                >04:</span
+              >I am always up for new projects and eager to develop your
+              interesting ideas.
+            </p>
+          </div>
         </div>
 
-    </div>
-
-    <div class="content-row01 cont-cent-ver dont-show">
-        <div class="content01 col04">
+        <div class="content-row01 cont-cent-ver dont-show">
+          <div class="content01 col04"></div>
+          <div class="content01 col06">
+            <div class="content01 mar-left overrdie-to-cent">
+              <span class="red-text0 blue-text huge-txt"
+                >Contact me<span class="white-text huge-txt">.</span></span
+              >
+            </div>
+          </div>
         </div>
-        <div class="content01 col06">
-            <div class="content01 mar-left overrdie-to-cent"><span class="red-text0 blue-text huge-txt">Contact me<span class="white-text huge-txt">.</span></span></div>
-        </div>
-    </div>
 
-    <!--You may place the footer here also-->
+        <!--You may place the footer here also-->
+      </div>
 
-</div>
-
-<div id="footer-wrapper">
-    <hr>
-    <div id="footer01">
-
-        <div id="footer-menu">
+      <div id="footer-wrapper">
+        <hr />
+        <div id="footer01">
+          <div id="footer-menu">
             <ul>
-                <li><a class="strike-through" href="#work">WORK</a></li>
-                <li><a class="strike-through" href="#exp">EDUCATION</a></li>
-                <li><a class="strike-through" href="gallery.html">GALLERY</a></li>
-                <li><a class="strike-through" href="#about">ABOUT</a></li>
+              <li><a class="strike-through" href="#work">WORK</a></li>
+              <li><a class="strike-through" href="#exp">EDUCATION</a></li>
+              <li><a class="strike-through" href="gallery.html">GALLERY</a></li>
+              <li><a class="strike-through" href="#about">ABOUT</a></li>
             </ul>
+          </div>
+
+          <div id="soc-menu" class="social-menu">
+            <ul>
+              <li class="tooltip">
+                <a
+                  href="mailto:kristianfiredi@gmail.com"
+                  class="fa fa-google"
+                ></a
+                ><span class="tooltiptext">gmail</span>&nbsp;
+              </li>
+              <li class="tooltip">
+                <a
+                  href="https://www.facebook.com/kristian.firedi"
+                  class="fa fa-facebook"
+                ></a
+                ><span class="tooltiptext">Facebook</span>&nbsp;
+              </li>
+              <li class="tooltip">
+                <a
+                  href="https://www.linkedin.com/in/kristian-firedi-441574178/"
+                  class="fa fa-linkedin"
+                ></a
+                ><span class="tooltiptext">LinkedIn</span>&nbsp;
+              </li>
+              <li class="tooltip">
+                <a
+                  href="https://secure.skype.com/portal/profile"
+                  class="fa fa-skype"
+                ></a
+                ><span class="tooltiptext">Skype</span>&nbsp;
+              </li>
+              <li class="tooltip">
+                <a
+                  href="https://www.instagram.com/naitsirk_firedi"
+                  class="fa fa-instagram"
+                ></a
+                ><span class="tooltiptext">Instagram</span>&nbsp;
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <div id="soc-menu" class="social-menu">
-            <ul>
-                <li class="tooltip"><a href="mailto:kristianfiredi@gmail.com" class="fa fa-google"></a><span class="tooltiptext">gmail</span>&nbsp;</li>
-                <li class="tooltip"><a href="https://www.facebook.com/kristian.firedi" class="fa fa-facebook"></a><span class="tooltiptext">Facebook</span>&nbsp;</li>
-                <li class="tooltip"><a href="https://www.linkedin.com/in/kristian-firedi-441574178/" class="fa fa-linkedin"></a><span class="tooltiptext">LinkedIn</span>&nbsp;</li>
-                <li class="tooltip"><a href="https://secure.skype.com/portal/profile" class="fa fa-skype"></a><span class="tooltiptext">Skype</span>&nbsp;</li>
-                <li class="tooltip"><a href="https://www.instagram.com/naitsirk_firedi" class="fa fa-instagram"></a><span class="tooltiptext">Instagram</span>&nbsp;</li>
-            </ul>
+        <hr />
+
+        <div id="footer02">
+          <p>
+            <span class="not-on-med">&nbsp;</span
+            ><span
+              >Website designed and maintained by
+              <span class="signature highlight-txt">Kristian Firedi</span
+              >.</span
+            >
+          </p>
         </div>
+      </div>
     </div>
 
-    <hr>
+    <script src="js/main.js"></script>
 
-        <div id="footer02"><p><span class="not-on-med">&nbsp;</span><span>Website designed and maintained by <span class="signature highlight-txt">Kristian Firedi</span>.</span></p></div>
-</div>
+    <script src="js/simple-parallax-lib.js"></script>
 
-</div>
+    <script src="js/clock-script.js" type="text/javascript"></script>
 
-<script src="js/main.js">
-</script>
-
-<script src="js/simple-parallax-lib.js"></script>
-
-<script src="js/clock-script.js" type="text/javascript"></script>
-
-<script src="js/simple-lightbox.js?v2.2.1"></script>
-<script>
-    (function() {
-        var $gallery = new SimpleLightbox('.gallery a', {});
-    })();
-</script>
-
-</body>
-
+    <script src="js/simple-lightbox.js?v2.2.1"></script>
+    <script>
+      ;(function () {
+        var $gallery = new SimpleLightbox('.gallery a', {})
+      })()
+    </script>
+  </body>
 </html>
